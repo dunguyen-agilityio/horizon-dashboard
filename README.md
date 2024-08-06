@@ -39,9 +39,9 @@
 
 ## Deployment
 
-- Vercel // TODO: link deploy here
-  - Develop build: .....
-  - Latest sprint build: .....
+- Develop build:
+  - Application: [here](https://horizon-dashboard-one.vercel.app/)
+  - Storybook: [here](https://horizon-dashboard-storybook.vercel.app/)
 
 ## How to run
 
