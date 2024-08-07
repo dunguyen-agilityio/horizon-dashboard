@@ -1,7 +1,13 @@
 import { nextui } from '@nextui-org/theme';
 import type { Config } from 'tailwindcss';
 
-import { colors, backgroundColor, fontSizes, height, width } from './src/theme';
+import {
+  colors,
+  backgroundColor,
+  fontSizes,
+  height,
+  width,
+} from './src/themes';
 
 const config: Config = {
   content: [
