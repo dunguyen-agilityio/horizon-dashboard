@@ -1,14 +1,24 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { cn } from '@nextui-org/theme';
+import { DM_Sans } from 'next/font/google';
 
-// Components
+// Styles
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+// Component
+import Providers from './providers';
+
+// Layouts
+import Navbar from '@/layouts/Navbar';
+
+const inter = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
-  title: 'Next.js Boilerplate',
-  description: 'Next.js 14+ boilerplate app',
+  title: 'Horizon',
+  description: 'Horizon Dashboard',
   icons: [
     {
       rel: 'icon',
@@ -23,8 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(inter.className, 'bg-secondary dark:bg-indigo-dark')}>
+        <Providers>
+          <Navbar />
+          <main>{children}</main>
+        </Providers>
+      </body>
     </html>
   );
 }

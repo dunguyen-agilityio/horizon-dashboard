@@ -7,6 +7,7 @@ import {
   fontSizes,
   height,
   width,
+  backgroundImages,
 } from './src/themes';
 
 const config: Config = {
@@ -21,6 +22,7 @@ const config: Config = {
       fontSize: fontSizes,
       height,
       width,
+      backgroundImage: backgroundImages,
     },
   },
   darkMode: 'class',
