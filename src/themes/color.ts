@@ -22,3 +22,7 @@ export const backgroundColor = {
   light: colors.gray,
   dark: colors['indigo-dark'],
 };
+
+export const backgroundImages = {
+  'gradient-primary': `linear-gradient(135deg, ${colors.purple[650]}, ${colors.blue[450]})`,
+};
