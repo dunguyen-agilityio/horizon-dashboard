@@ -1,10 +1,10 @@
 'use client';
 
-import Moon from '@/icons/Moon';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 // Components
+import Moon from '@/icons/Moon';
 import { Button } from '@nextui-org/button';
 
 interface ToggleThemeProps {
