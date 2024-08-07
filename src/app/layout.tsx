@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-
-// Components
-import './globals.css';
-import Providers from './providers';
-import Navbar from '@/layouts/Navbar';
 import { cn } from '@nextui-org/theme';
+import { DM_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+// Styles
+import './globals.css';
+
+// Component
+import Providers from './providers';
+
+// Layouts
+import Navbar from '@/layouts/Navbar';
+
+const inter = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Horizon',
