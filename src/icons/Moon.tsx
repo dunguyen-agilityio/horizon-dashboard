@@ -1,6 +1,8 @@
 import { colors } from '@/themes';
 
-const Moon = ({ isDark }: { isDark: boolean }) => {
+import { IconProps } from '@/types/common';
+
+const Moon = ({ isDark, ...rest }: { isDark: boolean } & IconProps) => {
   const { white, secondary } = colors;
 
   return (
@@ -10,6 +12,7 @@ const Moon = ({ isDark }: { isDark: boolean }) => {
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <g clipPath="url(#clip0_101_12742)">
         <path
