@@ -5,13 +5,19 @@ import { useEffect, useState } from 'react';
 
 // Components
 import Moon from '@/icons/Moon';
-import { Button } from '@nextui-org/button';
+import { cn } from '@nextui-org/theme';
+import Button from '../Button';
 
 interface ToggleThemeProps {
   className?: string;
+  variant?: 'primary' | 'secondary';
 }
 
-const ToggleTheme = ({ className }: ToggleThemeProps) => {
+const ToggleTheme = ({
+  className,
+  variant = 'primary',
+  ...rest
+}: ToggleThemeProps) => {
   const { theme, setTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
@@ -23,15 +29,27 @@ const ToggleTheme = ({ className }: ToggleThemeProps) => {
 
   const isDark = theme === 'dark';
 
+  const handleChangeTheme = () => {
+    setTheme(isDark ? 'light' : 'dark');
+  };
+
+  const isPrimary = variant === 'primary';
+
   return (
     <Button
-      variant="light"
-      onClick={() => {
-        setTheme(isDark ? 'light' : 'dark');
-      }}
-      className={className}
+      size="fit"
+      onClick={handleChangeTheme}
+      className={cn(
+        'rounded-full flex justify-center items-center',
+        isPrimary
+          ? 'p-2 bg-transparent'
+          : 'h-[60px] min-w-[60px] bg-gradient-primary',
+        className,
+      )}
+      variant={isPrimary ? undefined : 'light'}
+      {...rest}
     >
-      <Moon isDark={isDark} />
+      <Moon isDark={isPrimary ? isDark : true} />
     </Button>
   );
 };
