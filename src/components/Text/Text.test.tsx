@@ -3,7 +3,8 @@ import Text, { type TextProps } from '.';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 describe('Text tests', () => {
-  const setup = (props: TextProps = {}) => render(<Text {...props} />);
+  const setup = (props: TextProps = {}) =>
+    render(<Text {...props}>Hello Wold!</Text>);
 
   it('Should match snapshot', () => {
     const { container } = setup();
