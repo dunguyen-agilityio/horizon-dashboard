@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleTheme tests Should match snapshot 1`] = `
+<div>
+  <button
+    class="z-0 group relative box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover min-w-fit h-fit rounded-full flex justify-center items-center p-2 bg-transparent"
+    type="button"
+  >
+    <svg
+      fill="none"
+      height="18"
+      viewBox="0 0 18 18"
+      width="18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        clip-path="url(#clip0_101_12742)"
+      >
+        <path
+          d="M9.95703 18C12.733 18 15.2684 16.737 16.9481 14.6675C17.1966 14.3613 16.9256 13.9141 16.5416 13.9872C12.1751 14.8188 8.16522 11.4709 8.16522 7.06303C8.16522 4.52398 9.52444 2.18914 11.7335 0.931992C12.074 0.738211 11.9884 0.221941 11.6015 0.150469C11.059 0.0504468 10.5086 8.21369e-05 9.95703 0C4.98914 0 0.957031 4.02578 0.957031 9C0.957031 13.9679 4.98281 18 9.95703 18Z"
+          fill="#a3aed0"
+        />
+      </g>
+      <defs>
+        <clippath
+          id="clip0_101_12742"
+        >
+          <rect
+            fill="#a3aed0"
+            height="18"
+            width="18"
+          />
+        </clippath>
+      </defs>
+    </svg>
+  </button>
+</div>
+`;
