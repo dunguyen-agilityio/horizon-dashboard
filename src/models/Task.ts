@@ -1,10 +1,16 @@
 import { User } from './User';
 
-export const enum STATUS {
+export const enum LABEL {
   PENDING = 'Pending',
-  UPDATE = 'Updates',
+  UPDATES = 'Updates',
   DONE = 'Done',
-  ERROR = 'Errors',
+  ERRORS = 'Errors',
+}
+
+export const enum STATUS {
+  BACKLOG = 'backlog',
+  IN_PROGRESS = 'in-progress',
+  DONE = 'done',
 }
 
 export class Task {
@@ -14,9 +20,9 @@ export class Task {
   createdAt!: Date | string;
   updatedAt!: Date | string;
   dueDate?: Date | string;
-  startedData?: Date | string;
+  startedDate?: Date | string;
   status!: STATUS;
-  labels!: string[];
+  labels!: LABEL[];
   assignees?: User[];
   cover?: string;
 
@@ -27,9 +33,9 @@ export class Task {
       createdAt,
       updatedAt,
       dueDate,
-      startedData,
-
+      startedDate,
       assignees = [],
+      labels = [],
     } = task || {};
 
     Object.assign(this, {
@@ -37,10 +43,11 @@ export class Task {
       title,
       description,
       assignees,
+      labels: labels.length ? labels : [LABEL.PENDING],
       dueDate: dueDate ? new Date(dueDate) : undefined,
       createdAt: createdAt ? new Date(createdAt) : undefined,
       updatedAt: updatedAt ? new Date(updatedAt) : undefined,
-      startedData: startedData ? new Date(startedData) : undefined,
+      startedDate: startedDate ? new Date(startedDate) : undefined,
     });
   }
 }
