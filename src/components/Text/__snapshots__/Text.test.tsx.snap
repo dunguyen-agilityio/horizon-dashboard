@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text tests Should match snapshot 1`] = `
+<div>
+  <p
+    class="text-primary dark:text-white text-medium leading-xl"
+  >
+    Hello Wold!
+  </p>
+</div>
+`;
+
+exports[`Text tests Should match snapshot 2`] = `
+<div>
+  <h1
+    class="text-secondary dark:text-secondary text-2xl font-bold leading-2xl"
+  >
+    Hello Wold!
+  </h1>
+</div>
+`;
+
+exports[`Text tests Should match snapshot 3`] = `
+<div>
+  <h1
+    class="text-secondary dark:text-secondary text-2xl font-bold leading-2xl"
+  >
+    Hello Wold!
+  </h1>
+</div>
+`;

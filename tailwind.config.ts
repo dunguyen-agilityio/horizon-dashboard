@@ -8,6 +8,7 @@ import {
   height,
   width,
   backgroundImages,
+  lineHeight,
 } from './src/themes';
 
 const config: Config = {
@@ -20,6 +21,7 @@ const config: Config = {
       colors,
       backgroundColor,
       fontSize: fontSizes,
+      lineHeight,
       height,
       width,
       backgroundImage: backgroundImages,
