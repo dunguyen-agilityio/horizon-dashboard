@@ -14,54 +14,54 @@ type Story = StoryObj<typeof meta>;
 
 export const Medium: Story = {
   args: {
-    text: 'Medium',
+    children: 'Medium',
   },
 };
 
 export const ExtraLarge2: Story = {
   args: {
     size: TEXT_SIZE['2xl'],
-    text: '2 Extra Large',
+    children: '2 Extra Large',
   },
 };
 
 export const ExtraLarge: Story = {
   args: {
     size: TEXT_SIZE.xl,
-    text: 'Extra Large',
+    children: 'Extra Large',
   },
 };
 
 export const Large: Story = {
   args: {
     size: TEXT_SIZE.lg,
-    text: 'Large',
+    children: 'Large',
   },
 };
 
 export const Small: Story = {
   args: {
     size: TEXT_SIZE.sm,
-    text: 'Small',
+    children: 'Small',
   },
 };
 
 export const ExtraSmall: Story = {
   args: {
     size: TEXT_SIZE.xs,
-    text: 'Extra Small',
+    children: 'Extra Small',
   },
 };
 
 export const Primary: Story = {
   args: {
-    text: 'Primary',
+    children: 'Primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    text: 'Secondary',
+    children: 'Secondary',
     variant: TEXT_VARIANT.SECONDARY,
   },
 };

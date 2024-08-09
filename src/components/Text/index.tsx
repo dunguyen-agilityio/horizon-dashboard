@@ -18,7 +18,6 @@ const variants: { [key in TEXT_VARIANT]: string } = {
 export interface TextProps {
   size?: TEXT_SIZE;
   variant?: TEXT_VARIANT;
-  text?: string;
   as?: keyof React.ReactHTML;
   className?: string;
 }
