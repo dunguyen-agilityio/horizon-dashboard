@@ -2,6 +2,7 @@ import React from 'react';
 import type { Preview } from '@storybook/react';
 
 import Providers from '../src/app/providers';
+import RootLayout from '../src/layouts/RootLayout';
 
 import '../src/app/globals.css';
 
@@ -14,12 +15,15 @@ const preview: Preview = {
       },
     },
     nextjs: { appDirectory: true },
+    layout: 'centered',
   },
 
   decorators: (Story) => (
-    <Providers>
-      <Story />
-    </Providers>
+    <RootLayout>
+      <Providers>
+        <Story />
+      </Providers>
+    </RootLayout>
   ),
 };
 

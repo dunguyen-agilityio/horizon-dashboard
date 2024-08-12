@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { cn } from '@nextui-org/theme';
-import { DM_Sans } from 'next/font/google';
 
 // Styles
 import './globals.css';
@@ -10,11 +8,7 @@ import Providers from './providers';
 
 // Layouts
 import Navbar from '@/layouts/Navbar';
-
-const inter = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-});
+import RootLayout from '@/layouts/RootLayout';
 
 export const metadata: Metadata = {
   title: 'Horizon',
@@ -27,19 +21,17 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default function AppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, 'bg-secondary dark:bg-indigo-dark')}>
-        <Providers>
-          <Navbar />
-          <main>{children}</main>
-        </Providers>
-      </body>
-    </html>
+    <RootLayout asChild>
+      <Providers>
+        <Navbar />
+        <main className="mx-auto w-full">{children}</main>
+      </Providers>
+    </RootLayout>
   );
 }
