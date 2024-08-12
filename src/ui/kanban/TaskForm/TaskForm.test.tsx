@@ -32,7 +32,7 @@ describe('Task Form tests', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should show error message when click Create button and title invalid', async () => {
+  it('Should show error message when click Create button with invalid title', async () => {
     const { getByTestId, getByText, queryByText } = setup();
 
     act(() =>
