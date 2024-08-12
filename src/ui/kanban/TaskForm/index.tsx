@@ -14,12 +14,12 @@ import { STATUS } from '@/models/Task';
 import { type TaskFormData } from '@/types/task';
 
 // Constants
-import { TASK_MESSAGE } from '@/constants/messages';
+import { MESSAGES } from '@/constants/messages';
 
 interface TaskFormProps {
+  status: STATUS;
   onClose: () => void;
   onSubmit: (data: TaskFormData) => Promise<void>;
-  status: STATUS;
 }
 
 const TaskForm = ({ onClose, onSubmit, status }: TaskFormProps) => {
@@ -36,13 +36,12 @@ const TaskForm = ({ onClose, onSubmit, status }: TaskFormProps) => {
 
   const handleSubmitData = handleSubmit(async (data: TaskFormData) => {
     startTransition(async () => {
-      console.log(data);
       await onSubmit(data);
     });
   });
 
   return (
-    <div className="relative h-[155px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white dark:bg-indigo-light overflow-hidden">
+    <div className="relative min-h-[155px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white dark:bg-indigo-light overflow-hidden">
       <form
         onSubmit={handleSubmitData}
         className="flex flex-col gap-4"
@@ -53,7 +52,7 @@ const TaskForm = ({ onClose, onSubmit, status }: TaskFormProps) => {
           name="title"
           rules={{
             minLength: {
-              message: TASK_MESSAGE.MIN_LENGTH,
+              message: MESSAGES.TASK.MIN_LENGTH,
               value: 6,
             },
           }}
@@ -77,7 +76,7 @@ const TaskForm = ({ onClose, onSubmit, status }: TaskFormProps) => {
             isDisabled={!isDirty}
             className="bg-transparent"
           >
-            Create task
+            {isPending ? <Spinner size="sm" color="success" /> : 'Create task'}
           </Button>
           <Button variant="faded" onClick={onClose} className="bg-transparent">
             Cancel
@@ -85,9 +84,7 @@ const TaskForm = ({ onClose, onSubmit, status }: TaskFormProps) => {
         </div>
       </form>
       {isPending && (
-        <div className="absolute inset-0 bg-gray/60 cursor-not-allowed flex justify-center items-center">
-          <Spinner color="primary" />
-        </div>
+        <div className="absolute inset-0 cursor-not-allowed flex justify-center items-center" />
       )}
     </div>
   );

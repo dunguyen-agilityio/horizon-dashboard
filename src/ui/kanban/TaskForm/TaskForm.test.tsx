@@ -1,7 +1,7 @@
 import { act, fireEvent, render, waitFor } from '@testing-library/react';
 import TaskForm from '.';
 import { STATUS } from '@/models/Task';
-import { TASK_MESSAGE } from '@/constants/messages';
+import { MESSAGES } from '@/constants/messages';
 
 const mockChangedTitle = 'Implement Task Board Component';
 
@@ -42,7 +42,7 @@ describe('Task Form tests', () => {
     act(() => fireEvent.click(getByText('Create task')));
 
     await waitFor(() => {
-      expect(queryByText(TASK_MESSAGE.MIN_LENGTH)).toBeTruthy();
+      expect(queryByText(MESSAGES.TASK.MIN_LENGTH)).toBeTruthy();
       expect(mockOnSubmit).not.toHaveBeenCalled();
     });
   });
