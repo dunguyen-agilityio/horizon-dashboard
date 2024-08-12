@@ -14,7 +14,7 @@ export const useTask = () => {
   useEffect(() => {
     const getData = async () => {
       setIsLoading(true);
-      await new Promise((res) => setTimeout(res, 1000));
+      // TODO: Handle get List tasks when API ready
       setTasks(MOCK_TASKS);
       setIsLoading(false);
     };
