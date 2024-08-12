@@ -25,6 +25,7 @@ const preview: Preview = {
       </Providers>
     </RootLayout>
   ),
+  tags: ['autodocs'],
 };
 
 export default preview;
