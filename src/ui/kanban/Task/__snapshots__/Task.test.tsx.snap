@@ -3,7 +3,7 @@
 exports[`Task tests Should match snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white dark:bg-indigo-light max-w-[466px]"
+    class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
   >
     <div
       class="flex justify-between"

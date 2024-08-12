@@ -24,6 +24,9 @@ import { formatStatus } from '@/utils/task';
 import { useTask } from '@/hooks/useTask';
 import { Spinner } from '@nextui-org/react';
 
+// Styles
+import './scroll.css';
+
 interface ColumnProps {
   status: STATUS;
 }
@@ -47,8 +50,8 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
   };
 
   return (
-    <div className="flex-1 max-w-[514px] p-6">
-      <div className="flex justify-between">
+    <div className="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo">
+      <div className="flex justify-between pl-6 pr-4">
         <Text size={TEXT_SIZE.lg} as="h2" className="max-w-[90%]">
           {formatStatus(status)}
         </Text>
@@ -63,23 +66,25 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
           <Add />
         </Button>
       </div>
-      <div className="flex flex-col gap-5 mt-6">
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          <>
-            {isAdding && (
-              <TaskForm
-                onClose={handleHiddenTaskForm}
-                onSubmit={handleAddNewTask}
-                status={status}
-              />
-            )}
-            {tasks.map(({ id, ...rest }) => (
-              <Task key={id} {...rest} />
-            ))}
-          </>
-        )}
+      <div className="h-[905px] pl-4 pr-2">
+        <div className="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]">
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <>
+              {isAdding && (
+                <TaskForm
+                  onClose={handleHiddenTaskForm}
+                  onSubmit={handleAddNewTask}
+                  status={status}
+                />
+              )}
+              {tasks.map(({ id, ...rest }) => (
+                <Task key={id} {...rest} />
+              ))}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

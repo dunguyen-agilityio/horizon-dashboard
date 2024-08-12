@@ -25,7 +25,7 @@ export const Task = ({
   TaskModel,
   'title' | 'description' | 'labels' | 'cover' | 'assignees'
 >) => (
-  <div className="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white dark:bg-indigo-light max-w-[466px]">
+  <div className="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]">
     <div className="flex justify-between">
       <Text size={TEXT_SIZE.lg} as="h3" className="max-w-[90%]">
         {title}
