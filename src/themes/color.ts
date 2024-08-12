@@ -21,6 +21,7 @@ export const colors = {
 export const backgroundColor = {
   light: colors.gray,
   dark: colors['indigo-dark'],
+  primary: '#3965ff',
 };
 
 export const backgroundImages = {

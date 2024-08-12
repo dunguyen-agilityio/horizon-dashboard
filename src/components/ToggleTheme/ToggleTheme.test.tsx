@@ -27,12 +27,26 @@ describe('ToggleTheme tests', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should match snapshot', async () => {
-    const { getByTestId } = render(<ToggleTheme data-testid="toggle-theme" />);
-
+  it('Update theme will called correctly', async () => {
+    const { getByTestId } = render(
+      <ToggleTheme variant="secondary" data-testid="toggle-theme" />,
+    );
     act(() => fireEvent.click(getByTestId('toggle-theme')));
     await waitFor(() =>
       expect(mockSetTheme).toHaveBeenNthCalledWith(1, 'dark'),
+    );
+  });
+
+  it('Update theme will called correctly', async () => {
+    (useTheme as jest.Mock).mockImplementation(() => ({
+      theme: 'dark',
+      setTheme: mockSetTheme,
+    }));
+
+    const { getByTestId } = render(<ToggleTheme data-testid="toggle-theme" />);
+    act(() => fireEvent.click(getByTestId('toggle-theme')));
+    await waitFor(() =>
+      expect(mockSetTheme).toHaveBeenNthCalledWith(1, 'light'),
     );
   });
 });
