@@ -1,5 +1,5 @@
 import { LABEL } from '@/models/Task';
-import { CHIP_COLOR } from '@/types/Chip';
+import { CHIP_COLOR } from '@/types/chip';
 
 export const formatStatus = (status: string) =>
   status
