@@ -5,7 +5,7 @@ import { Task } from '.';
 import { MOCK_TASKS } from '@/mocks/task';
 
 const mockTask = MOCK_TASKS[0];
-const mockCover = '/default-task-cover.png';
+const mockCover = '/default-task-cover.webp';
 
 const meta = {
   title: 'Components/Task',
