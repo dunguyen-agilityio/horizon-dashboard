@@ -3,7 +3,7 @@ import { User } from '@/models/User';
 export const MOCK_USERS = [
   {
     id: '1',
-    userName: 'user1',
+    userName: 'Adela Parkson',
     avatar: '/default-avatar.webp',
     firstName: 'User 1',
     email: 'user1@gmail.com',
