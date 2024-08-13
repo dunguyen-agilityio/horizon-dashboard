@@ -3,7 +3,7 @@
 exports[`Task Form tests Should match snapshot 1`] = `
 <div>
   <div
-    class="relative min-h-[155px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white dark:bg-indigo-light overflow-hidden"
+    class="relative pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
   >
     <form
       class="flex flex-col gap-4"
