@@ -56,8 +56,8 @@ exports[`Task tests Should match snapshot 1`] = `
         decoding="async"
         loading="lazy"
         sizes="100vw"
-        src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-        srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+        src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+        srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
         style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
       />
     </div>
@@ -84,8 +84,8 @@ exports[`Task tests Should match snapshot 1`] = `
             decoding="async"
             height="20"
             loading="lazy"
-            src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-            srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+            src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+            srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
             style="color: transparent;"
             width="20"
           />
@@ -101,8 +101,8 @@ exports[`Task tests Should match snapshot 1`] = `
             decoding="async"
             height="20"
             loading="lazy"
-            src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-            srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+            src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+            srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
             style="color: transparent;"
             width="20"
           />
@@ -118,8 +118,8 @@ exports[`Task tests Should match snapshot 1`] = `
             decoding="async"
             height="20"
             loading="lazy"
-            src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-            srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+            src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+            srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
             style="color: transparent;"
             width="20"
           />

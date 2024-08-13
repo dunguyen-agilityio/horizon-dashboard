@@ -6,7 +6,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
     class="flex gap-6 xl:max-w-[1590px]"
   >
     <div
-      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -49,7 +49,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
         </button>
       </div>
       <div
-        class="h-[905px] pl-4 pr-2"
+        class="pl-4 pr-2 h-fit"
       >
         <div
           class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
@@ -73,7 +73,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -116,7 +116,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
         </button>
       </div>
       <div
-        class="h-[905px] pl-4 pr-2"
+        class="pl-4 pr-2 h-fit"
       >
         <div
           class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
@@ -140,7 +140,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -183,7 +183,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
         </button>
       </div>
       <div
-        class="h-[905px] pl-4 pr-2"
+        class="pl-4 pr-2 h-fit"
       >
         <div
           class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
@@ -216,7 +216,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
     class="flex gap-6 xl:max-w-[1590px]"
   >
     <div
-      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -258,7 +258,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
         </button>
       </div>
       <div
-        class="h-[905px] pl-4 pr-2"
+        class="pl-4 pr-2 h-[905px]"
       >
         <div
           class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
@@ -317,8 +317,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -345,8 +345,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -362,8 +362,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -379,8 +379,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -477,8 +477,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -494,8 +494,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -511,8 +511,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -595,8 +595,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -623,8 +623,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -640,8 +640,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -657,8 +657,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -741,8 +741,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -769,8 +769,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -786,8 +786,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -803,8 +803,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -901,8 +901,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -918,8 +918,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -935,8 +935,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1019,8 +1019,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -1047,8 +1047,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1064,8 +1064,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1081,8 +1081,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1115,7 +1115,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
       </div>
     </div>
     <div
-      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -1157,7 +1157,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
         </button>
       </div>
       <div
-        class="h-[905px] pl-4 pr-2"
+        class="pl-4 pr-2 h-[905px]"
       >
         <div
           class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
@@ -1216,8 +1216,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -1244,8 +1244,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1261,8 +1261,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1278,8 +1278,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1376,8 +1376,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1393,8 +1393,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1410,8 +1410,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1494,8 +1494,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -1522,8 +1522,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1539,8 +1539,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1556,8 +1556,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1640,8 +1640,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -1668,8 +1668,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1685,8 +1685,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1702,8 +1702,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1800,8 +1800,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1817,8 +1817,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1834,8 +1834,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1918,8 +1918,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -1946,8 +1946,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1963,8 +1963,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -1980,8 +1980,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2014,7 +2014,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
       </div>
     </div>
     <div
-      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -2056,7 +2056,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
         </button>
       </div>
       <div
-        class="h-[905px] pl-4 pr-2"
+        class="pl-4 pr-2 h-[905px]"
       >
         <div
           class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
@@ -2115,8 +2115,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -2143,8 +2143,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2160,8 +2160,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2177,8 +2177,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2275,8 +2275,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2292,8 +2292,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2309,8 +2309,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2393,8 +2393,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -2421,8 +2421,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2438,8 +2438,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2455,8 +2455,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2539,8 +2539,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -2567,8 +2567,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2584,8 +2584,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2601,8 +2601,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2699,8 +2699,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2716,8 +2716,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2733,8 +2733,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2817,8 +2817,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75"
-                srcset="/_next/image?url=%2Fdefault-task-cover.png&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.png&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.png&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.png&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.png&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.png&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.png&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.png&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -2845,8 +2845,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2862,8 +2862,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />
@@ -2879,8 +2879,8 @@ exports[`TaskBoard Should match snapshot 2`] = `
                     decoding="async"
                     height="20"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.png&w=48&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.png&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.png&w=48&q=75 2x"
+                    src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
                     style="color: transparent;"
                     width="20"
                   />

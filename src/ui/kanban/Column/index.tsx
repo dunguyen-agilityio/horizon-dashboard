@@ -22,7 +22,7 @@ import { formatStatus } from '@/utils/task';
 
 // Hooks
 import { useTask } from '@/hooks/useTask';
-import { Spinner } from '@nextui-org/react';
+import { cn, Spinner } from '@nextui-org/react';
 
 // Styles
 import './scroll.css';
@@ -44,13 +44,12 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
   };
 
   // TODO: Will handle later when API ready
-  const handleAddNewTask = async (data: TaskFormData) => {
-    console.log('data', data);
+  const handleAddNewTask = async (_: TaskFormData) => {
     setIsAdding(false);
   };
 
   return (
-    <div className="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo">
+    <div className="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo">
       <div className="flex justify-between pl-6 pr-4">
         <Text size={TEXT_SIZE.lg} as="h2" className="max-w-[90%]">
           {formatStatus(status)}
@@ -66,7 +65,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
           <Add />
         </Button>
       </div>
-      <div className="h-[905px] pl-4 pr-2">
+      <div className={cn('pl-4 pr-2', tasks.length ? 'h-[905px]' : 'h-fit')}>
         <div className="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]">
           {isLoading ? (
             <Spinner />
