@@ -3,10 +3,10 @@
 exports[`TaskBoard Should match snapshot 1`] = `
 <div>
   <div
-    class="flex justify-between xl:max-w-[1590px]"
+    class="flex gap-6 xl:max-w-[1590px]"
   >
     <div
-      class="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -73,7 +73,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -140,7 +140,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -213,10 +213,10 @@ exports[`TaskBoard Should match snapshot 1`] = `
 exports[`TaskBoard Should match snapshot 2`] = `
 <div>
   <div
-    class="flex justify-between xl:max-w-[1590px]"
+    class="flex gap-6 xl:max-w-[1590px]"
   >
     <div
-      class="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -1115,7 +1115,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
       </div>
     </div>
     <div
-      class="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -2014,7 +2014,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
       </div>
     </div>
     <div
-      class="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+      class="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"

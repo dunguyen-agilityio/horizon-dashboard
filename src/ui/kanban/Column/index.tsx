@@ -50,7 +50,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
   };
 
   return (
-    <div className="max-w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo">
+    <div className="w-[514px] pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo">
       <div className="flex justify-between pl-6 pr-4">
         <Text size={TEXT_SIZE.lg} as="h2" className="max-w-[90%]">
           {formatStatus(status)}
