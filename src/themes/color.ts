@@ -9,11 +9,13 @@ export const colors = {
   gray: '#f4f7fe',
   'indigo-dark': '#0b1437',
   'indigo-light': '#1b254b',
+  foreground: '#707eae',
   indigo: '#111C44',
   blue: {
     450: '#4318ff',
   },
   purple: {
+    50: '#8f9bba',
     650: '#868cff',
     750: '#7551ff',
   },
@@ -23,6 +25,7 @@ export const backgroundColor = {
   light: colors.gray,
   dark: colors['indigo-dark'],
   primary: '#3965ff',
+  content1: colors['indigo-light'],
 };
 
 export const backgroundImages = {
