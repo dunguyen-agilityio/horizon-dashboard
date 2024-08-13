@@ -1,0 +1,977 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Column tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+  >
+    <div
+      class="flex justify-between pl-6 pr-4"
+    >
+      <h2
+        class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+      >
+        Backlog
+      </h2>
+      <button
+        aria-label="edit-button"
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground bg-gray data-[hover=true]:bg-gray dark:bg-indigo-light"
+        data-testid="add-button"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="[&>path]:stroke-primary [&>path]:dark:stroke-white"
+          fill="none"
+          height="17"
+          viewBox="0 0 19 17"
+          width="19"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.32703 3.71619V13.2787"
+            stroke="#4318FF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+          <path
+            d="M14.3896 8.49744H4.26459"
+            stroke="#4318FF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="pl-4 pr-2 h-fit"
+    >
+      <div
+        class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
+      >
+        <div
+          aria-label="Loading"
+          class="relative inline-flex flex-col gap-2 items-center justify-center"
+        >
+          <div
+            class="relative flex w-8 h-8"
+          >
+            <i
+              class="absolute w-full h-full rounded-full animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent border-3 border-b-primary"
+            />
+            <i
+              class="absolute w-full h-full rounded-full opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent border-3 border-b-primary"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Column tests Should match snapshot 2`] = `
+<div>
+  <div
+    class="w-[514px] h-fit pb-4 pt-6 rounded-[20px] bg-white dark:bg-indigo"
+  >
+    <div
+      class="flex justify-between pl-6 pr-4"
+    >
+      <h2
+        class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+      >
+        Backlog
+      </h2>
+      <button
+        aria-label="edit-button"
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground bg-gray data-[hover=true]:bg-gray dark:bg-indigo-light"
+        data-testid="add-button"
+        type="button"
+      >
+        <svg
+          class="[&>path]:stroke-primary [&>path]:dark:stroke-white"
+          fill="none"
+          height="17"
+          viewBox="0 0 19 17"
+          width="19"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.32703 3.71619V13.2787"
+            stroke="#4318FF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+          <path
+            d="M14.3896 8.49744H4.26459"
+            stroke="#4318FF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="pl-4 pr-2 h-[905px]"
+    >
+      <div
+        class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-[20px]"
+      >
+        <div
+          class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <h3
+              class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+            >
+              Option to use local/server version feature
+            </h3>
+            <button
+              aria-label="edit-button"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover p-0 min-w-fit h-fit bg-transparent"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="17"
+                viewBox="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_101_11790)"
+                >
+                  <path
+                    d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_101_11790"
+                  >
+                    <rect
+                      fill="white"
+                      height="17"
+                      width="17"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative min-h-[285px] min-w-[308px]"
+          >
+            <img
+              alt="cover"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </div>
+          <p
+            class="text-secondary dark:text-secondary text-medium leading-xl"
+          >
+            It usually displays this message when you close an unsaved page when you do it on purpose, and it's getting frustrated to see this every time.
+          </p>
+          <div
+            class="flex justify-between mt-5 items-center"
+          >
+            <div
+              class="flex items-center justify-center h-auto w-max"
+              role="group"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+                tabindex="-1"
+              >
+                <span
+                  aria-label="+1"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+                  role="img"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+            <div
+              class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 bg-success text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              <span
+                class="flex-1 text-inherit font-normal px-2"
+              >
+                Done
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <h3
+              class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+            >
+              Add/modify your own CSS-Selectors
+            </h3>
+            <button
+              aria-label="edit-button"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover p-0 min-w-fit h-fit bg-transparent"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="17"
+                viewBox="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_101_11790)"
+                >
+                  <path
+                    d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_101_11790"
+                  >
+                    <rect
+                      fill="white"
+                      height="17"
+                      width="17"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <p
+            class="text-secondary dark:text-secondary text-medium leading-xl"
+          >
+            Website Design: The ability to add/modify your own CSS-Selectors like it's done in Venus.
+          </p>
+          <div
+            class="flex justify-between mt-5 items-center"
+          >
+            <div
+              class="flex items-center justify-center h-auto w-max"
+              role="group"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+                tabindex="-1"
+              >
+                <span
+                  aria-label="+1"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+                  role="img"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+            <div
+              class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 bg-success text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              <span
+                class="flex-1 text-inherit font-normal px-2"
+              >
+                Done
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <h3
+              class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+            >
+              Shortcode for templates to display correctly
+            </h3>
+            <button
+              aria-label="edit-button"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover p-0 min-w-fit h-fit bg-transparent"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="17"
+                viewBox="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_101_11790)"
+                >
+                  <path
+                    d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_101_11790"
+                  >
+                    <rect
+                      fill="white"
+                      height="17"
+                      width="17"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative min-h-[285px] min-w-[308px]"
+          >
+            <img
+              alt="cover"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </div>
+          <p
+            class="text-secondary dark:text-secondary text-medium leading-xl"
+          >
+            When you save some sections as a template and then paste a shortcode to a new page, the layout is broken, some styles are missing - in the editor.
+          </p>
+          <div
+            class="flex justify-between mt-5 items-center"
+          >
+            <div
+              class="flex items-center justify-center h-auto w-max"
+              role="group"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+                tabindex="-1"
+              >
+                <span
+                  aria-label="+1"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+                  role="img"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+            <div
+              class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 bg-danger text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              <span
+                class="flex-1 text-inherit font-normal px-2"
+              >
+                Errors
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <h3
+              class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+            >
+              [UX Design] - Set the default Library tab
+            </h3>
+            <button
+              aria-label="edit-button"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover p-0 min-w-fit h-fit bg-transparent"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="17"
+                viewBox="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_101_11790)"
+                >
+                  <path
+                    d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_101_11790"
+                  >
+                    <rect
+                      fill="white"
+                      height="17"
+                      width="17"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative min-h-[285px] min-w-[308px]"
+          >
+            <img
+              alt="cover"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </div>
+          <p
+            class="text-secondary dark:text-secondary text-medium leading-xl"
+          >
+            Create your Dashboard with Drag & Drop technique.
+          </p>
+          <div
+            class="flex justify-between mt-5 items-center"
+          >
+            <div
+              class="flex items-center justify-center h-auto w-max"
+              role="group"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+                tabindex="-1"
+              >
+                <span
+                  aria-label="+1"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+                  role="img"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+            <div
+              class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 bg-primary text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              <span
+                class="flex-1 text-inherit font-normal px-2"
+              >
+                Updates
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <h3
+              class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+            >
+              [UX Design] - Set the default Library tab
+            </h3>
+            <button
+              aria-label="edit-button"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover p-0 min-w-fit h-fit bg-transparent"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="17"
+                viewBox="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_101_11790)"
+                >
+                  <path
+                    d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_101_11790"
+                  >
+                    <rect
+                      fill="white"
+                      height="17"
+                      width="17"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <p
+            class="text-secondary dark:text-secondary text-medium leading-xl"
+          >
+            Create your Dashboard with Drag & Drop technique.
+          </p>
+          <div
+            class="flex justify-between mt-5 items-center"
+          >
+            <div
+              class="flex items-center justify-center h-auto w-max"
+              role="group"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+                tabindex="-1"
+              >
+                <span
+                  aria-label="+1"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+                  role="img"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+            <div
+              class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 bg-primary text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              <span
+                class="flex-1 text-inherit font-normal px-2"
+              >
+                Updates
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <h3
+              class="text-primary dark:text-white text-extra font-bold leading-large max-w-[90%]"
+            >
+              [UX Design] - Set the default Library tab
+            </h3>
+            <button
+              aria-label="edit-button"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover p-0 min-w-fit h-fit bg-transparent"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="17"
+                viewBox="0 0 17 17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_101_11790)"
+                >
+                  <path
+                    d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_101_11790"
+                  >
+                    <rect
+                      fill="white"
+                      height="17"
+                      width="17"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative min-h-[285px] min-w-[308px]"
+          >
+            <img
+              alt="cover"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fdefault-task-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fdefault-task-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fdefault-task-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fdefault-task-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdefault-task-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdefault-task-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdefault-task-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdefault-task-cover.webp&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </div>
+          <p
+            class="text-secondary dark:text-secondary text-medium leading-xl"
+          >
+            Create your Dashboard with Drag & Drop technique.
+          </p>
+          <div
+            class="flex justify-between mt-5 items-center"
+          >
+            <div
+              class="flex items-center justify-center h-auto w-max"
+              role="group"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  data-nimg="1"
+                  decoding="async"
+                  height="20"
+                  loading="lazy"
+                  src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
+                  srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+                  style="color: transparent;"
+                  width="20"
+                />
+              </span>
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+                tabindex="-1"
+              >
+                <span
+                  aria-label="+1"
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+                  role="img"
+                >
+                  +1
+                </span>
+              </span>
+            </div>
+            <div
+              class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 bg-primary text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              <span
+                class="flex-1 text-inherit font-normal px-2"
+              >
+                Updates
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

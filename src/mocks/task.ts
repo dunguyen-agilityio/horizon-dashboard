@@ -14,7 +14,7 @@ export const MOCK_TASKS: Task[] = [
     status: STATUS.IN_PROGRESS,
     title: 'Option to use local/server version feature',
     updatedAt: 'Fri, 09 Aug 2024 03:25:32 GMT',
-    cover: '/default-task-cover.png',
+    cover: '/default-task-cover.webp',
     assignees: MOCK_USERS,
   },
   {
@@ -37,7 +37,7 @@ export const MOCK_TASKS: Task[] = [
     status: STATUS.BACKLOG,
     title: 'Shortcode for templates to display correctly',
     updatedAt: 'Fri, 09 Aug 2024 03:25:32 GMT',
-    cover: '/default-task-cover.png',
+    cover: '/default-task-cover.webp',
     assignees: MOCK_USERS,
   },
   {
@@ -49,7 +49,7 @@ export const MOCK_TASKS: Task[] = [
     title: '[UX Design] - Set the default Library tab',
     updatedAt: 'Fri, 09 Aug 2024 03:25:32 GMT',
     assignees: MOCK_USERS,
-    cover: '/default-task-cover.png',
+    cover: '/default-task-cover.webp',
   },
   {
     id: '5',
@@ -70,6 +70,6 @@ export const MOCK_TASKS: Task[] = [
     title: '[UX Design] - Set the default Library tab',
     updatedAt: 'Fri, 09 Aug 2024 03:25:32 GMT',
     assignees: MOCK_USERS,
-    cover: '/default-task-cover.png',
+    cover: '/default-task-cover.webp',
   },
 ];

@@ -9,6 +9,7 @@ export const colors = {
   gray: '#f4f7fe',
   'indigo-dark': '#0b1437',
   'indigo-light': '#1b254b',
+  indigo: '#111C44',
   blue: {
     450: '#4318ff',
   },

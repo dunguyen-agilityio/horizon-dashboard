@@ -41,7 +41,7 @@ const TaskForm = ({ onClose, onSubmit, status }: TaskFormProps) => {
   });
 
   return (
-    <div className="relative min-h-[155px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white dark:bg-indigo-light overflow-hidden">
+    <div className="relative pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]">
       <form
         onSubmit={handleSubmitData}
         className="flex flex-col gap-4"

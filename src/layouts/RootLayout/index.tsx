@@ -12,7 +12,7 @@ const RootLayout = ({
 }: React.PropsWithChildren<{ asChild?: boolean }>) => {
   const className = cn(
     inter.className,
-    'w-full bg-secondary dark:bg-indigo-dark',
+    'w-full bg-secondary dark:bg-indigo-dark min-h-screen',
   );
 
   if (!asChild) return children;
