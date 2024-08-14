@@ -6,7 +6,6 @@ import { DOMElement } from '@nextui-org/system';
 
 interface InputSearchProps {
   onSearch: (value: string) => void;
-
   className?: string;
   value?: string;
   defaultValue?: string;
@@ -57,14 +56,16 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
       );
     }, [startContent, getInputProps, getInnerWrapperProps, onSearch]);
 
+    const handleClickStartContent = () => {
+      domRef.current?.focus();
+    };
+
     return (
       <Component {...getBaseProps()}>
         <div
           {...getInputWrapperProps()}
           role="button"
-          onClick={() => {
-            domRef.current?.focus();
-          }}
+          onClick={handleClickStartContent}
         >
           {innerWrapper}
         </div>
