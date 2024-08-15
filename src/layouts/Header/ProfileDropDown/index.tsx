@@ -51,10 +51,11 @@ const ProfileDropDown = () => {
 
   return (
     <Popover
-      placement="bottom"
+      placement="bottom-end"
       showArrow={true}
       isOpen={isVisible}
       onOpenChange={handleCloseDropDown}
+      className="before:bg-gray before:dark:bg-indigo-light"
     >
       <PopoverTrigger>
         <button

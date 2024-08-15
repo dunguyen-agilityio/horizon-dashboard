@@ -25,7 +25,7 @@ import { useTask } from '@/hooks/useTask';
 import { cn, Spinner } from '@nextui-org/react';
 
 // Styles
-import './scroll.css';
+import '@/styles/scroll.css';
 
 interface ColumnProps {
   status: STATUS;
