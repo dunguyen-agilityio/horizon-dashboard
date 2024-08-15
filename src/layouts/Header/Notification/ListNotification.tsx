@@ -19,11 +19,11 @@ interface ListNotificationProps {
 }
 
 const ListNotification = ({ notifies, onSelect }: ListNotificationProps) => (
-  <div data-testid="notification-list">
+  <div data-testid="notification-list" className="w-full">
     <Listbox
       classNames={{
-        base: 'max-w-md',
-        list: 'max-h-[500px] overflow-y-scroll scrollbar pr-2',
+        list: 'max-h-[500px] w-full sm:w-[400px] overflow-y-scroll scrollbar pr-2',
+        emptyContent: '',
       }}
       items={notifies}
       label="Assigned to"

@@ -23,7 +23,7 @@ const Notification = ({ notifies }: NotificationProps) => {
     <Popover
       placement="bottom"
       showArrow={true}
-      className="before:bg-gray before:dark:bg-indigo-light"
+      className="before:bg-gray data-[placement=bottom]:before:left-[64%] before:dark:bg-indigo-light"
     >
       <PopoverTrigger>
         <button
