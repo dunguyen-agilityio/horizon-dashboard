@@ -51,7 +51,7 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
       return (
         <div {...getInnerWrapperProps()}>
           {startContent}
-          <input {...rest} onChange={handleChange} />
+          <input {...rest} onChange={handleChange} data-testid="input-search" />
         </div>
       );
     }, [startContent, getInputProps, getInnerWrapperProps, onSearch]);

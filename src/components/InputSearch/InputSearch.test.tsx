@@ -15,7 +15,7 @@ describe('Input search tests', () => {
 
   it('Should auto focus input when user click start content', async () => {
     const { getByRole, getByTestId } = render(
-      <InputSearch onSearch={mockSearch} data-testid="input-search" />,
+      <InputSearch onSearch={mockSearch} />,
     );
     const startContent = getByRole('button');
     expect(startContent).toBeInTheDocument();
@@ -27,9 +27,7 @@ describe('Input search tests', () => {
   });
 
   it('mockOnSearch will triggered when user typing input', async () => {
-    const { getByTestId } = render(
-      <InputSearch onSearch={mockSearch} data-testid="input-search" />,
-    );
+    const { getByTestId } = render(<InputSearch onSearch={mockSearch} />);
     const mockChange = 'value';
 
     act(() => {
