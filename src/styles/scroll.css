@@ -29,10 +29,8 @@
 
 .light .scrollbar::-webkit-scrollbar-thumb {
   background: #a3aed0;
-  /* border: 3px solid #a3aed0; */
 }
 
 .dark .scrollbar::-webkit-scrollbar-thumb {
   background: #0b1437;
-  /* border: 3px solid #707eae; */
 }

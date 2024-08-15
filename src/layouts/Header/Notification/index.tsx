@@ -1,11 +1,18 @@
+import { useRouter } from 'next/navigation';
+
+// Components
 import NotifyIcon from '@/icons/Notify';
+import ListNotification from './ListNotification';
 import { Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 
-import ListNotification from './ListNotification';
-import { useRouter } from 'next/navigation';
+// Models
 import { Notify } from '@/models/Notify';
 
-const Notification = ({ notifies }: { notifies: Notify[] }) => {
+interface NotificationProps {
+  notifies: Notify[];
+}
+
+const Notification = ({ notifies }: NotificationProps) => {
   const { push } = useRouter();
 
   const handleSelect = (key: React.Key) => {

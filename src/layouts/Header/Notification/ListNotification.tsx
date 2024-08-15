@@ -1,22 +1,24 @@
 'use client';
 
-import { Listbox, ListboxItem } from '@nextui-org/listbox';
-import { formatDateRelativeToNow } from '@/utils/format';
-import Text from '@/components/Text';
-import { TEXT_SIZE } from '@/types/text';
+// Libs
 import { cn } from '@nextui-org/theme';
+
+// Components
+import { Listbox, ListboxItem } from '@nextui-org/listbox';
+
+// Models
+import { Notify } from '@/models/Notify';
 
 // Styles
 import '@/styles/scroll.css';
-import { Notify } from '@/models/Notify';
+import NotifyItem from './NotifyItem';
 
-const ListNotification = ({
-  notifies,
-  onSelect,
-}: {
+interface ListNotificationProps {
   notifies: Notify[];
   onSelect: (key: React.Key) => void;
-}) => (
+}
+
+const ListNotification = ({ notifies, onSelect }: ListNotificationProps) => (
   <div data-testid="notification-list">
     <Listbox
       classNames={{
@@ -28,34 +30,17 @@ const ListNotification = ({
       variant="flat"
       onAction={onSelect}
     >
-      {({ message, createdAt, unread, link }) => (
+      {({ link, id, unread, ...rest }) => (
         <ListboxItem
           key={link}
-          textValue={message}
+          textValue={id}
           className={cn(
-            'border-b-secondary dark:border-b-indigo border-b-1',
-            unread ? 'bg-default/40' : 'rounded-b-none hover:rounded-b-small',
+            'border-b-secondary dark:border-b-indigo border-b-1 data-[hover=true]:bg-default/20',
+            unread ? 'bg-default/20' : 'rounded-b-none hover:rounded-b-small',
           )}
           data-testid="notification-item"
         >
-          <div className="flex gap-2 items-center">
-            <div className="flex-1 flex flex-col">
-              <Text size={TEXT_SIZE.md} className="font-bold">
-                Reminder
-              </Text>
-              <Text size={TEXT_SIZE.sm} className="whitespace-break-spaces">
-                Your task is scheduled to start in 10 minutes.
-              </Text>
-              <Text size={TEXT_SIZE.xs}>
-                {formatDateRelativeToNow(createdAt)}
-              </Text>
-            </div>
-            <div className="w-10 pr-2">
-              {unread && (
-                <div className="bg-green-500 w-2 h-2 rounded-full float-end" />
-              )}
-            </div>
-          </div>
+          <NotifyItem unread={unread} {...rest} />
         </ListboxItem>
       )}
     </Listbox>
