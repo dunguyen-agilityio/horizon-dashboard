@@ -4,7 +4,7 @@ exports[`NavItem component Should match snapshot 1`] = `
 <div>
   <a
     class="flex justify-between"
-    href="/marketplace"
+    href="marketplace"
   >
     <div
       class="flex w-full items-center gap-3 pl-8"
