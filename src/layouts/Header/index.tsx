@@ -3,7 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Constants
-import { routes } from '@/constants/routes';
+import { ROUTES } from '@/constants/routes';
 import { QUERY_KEY } from '@/constants/common';
 
 // Types
@@ -27,7 +27,7 @@ const Header = () => {
   const { push } = useRouter();
   const pathname = usePathname();
 
-  const { title, href } = routes.find(({ href }) => href === pathname) || {};
+  const { title, href } = ROUTES.find(({ href }) => href === pathname) || {};
 
   const query = searchParams.get(QUERY_KEY) ?? '';
 
