@@ -66,7 +66,7 @@ const Header = () => {
           </>
         )}
       </div>
-      <div className="px-[10px] py-[6px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
+      <div className="h-fit px-[10px] py-[10px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
         <InputSearch onSearch={debounce(handleSearch)} defaultValue={query} />
         <div className="absolute top-0 right-0 sm:static flex gap-2 sm:gap-6 items-center">
           <Notification notifies={MOCK_NOTIFIES} />
