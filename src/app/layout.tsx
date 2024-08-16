@@ -29,8 +29,10 @@ export default function AppLayout({
   return (
     <RootLayout asChild>
       <Providers>
-        <Navbar />
-        <main className="mx-auto w-full">{children}</main>
+        <div className="flex">
+          <Navbar />
+          <main className="mx-auto w-full">{children}</main>
+        </div>
       </Providers>
     </RootLayout>
   );
