@@ -1,1 +1,1 @@
-export type Route = { title: string; href?: string };
+export type Route = { title: string; href: string };
