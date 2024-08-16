@@ -20,6 +20,7 @@ import { debounce } from '@/utils/debounce';
 
 // Mocks
 import { MOCK_NOTIFIES } from '@/mocks/notify';
+import Menu from '@/icons/Menu';
 
 const Header = () => {
   const searchParams = useSearchParams();
@@ -41,10 +42,16 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between">
-      <div>
+    <header className="flex justify-between flex-col gap-4 sm:flex-row sm:gap-0 relative">
+      <div className="flex flex-col gap-1">
         {title && (
           <>
+            <button
+              aria-label="Menu Button"
+              className="cursor-pointer block sm:hidden"
+            >
+              <Menu />
+            </button>
             <Breadcrumbs separator="/">
               <BreadcrumbItem className="dark:[&_span]:text-white" isCurrent>
                 Pages
@@ -53,7 +60,7 @@ const Header = () => {
                 {title}
               </BreadcrumbItem>
             </Breadcrumbs>
-            <Text size={TEXT_SIZE['2xl']} className="mt-[2px]">
+            <Text size={TEXT_SIZE['2xl']} className="mt-1">
               {title}
             </Text>
           </>
@@ -61,11 +68,13 @@ const Header = () => {
       </div>
       <div className="px-[10px] py-[6px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
         <InputSearch onSearch={debounce(handleSearch)} defaultValue={query} />
-        <Notification notifies={MOCK_NOTIFIES} />
-        <ToggleTheme />
-        <ProfileDropDown />
+        <div className="absolute top-0 right-0 sm:static flex gap-2 sm:gap-6 items-center">
+          <Notification notifies={MOCK_NOTIFIES} />
+          <ToggleTheme />
+          <ProfileDropDown />
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 

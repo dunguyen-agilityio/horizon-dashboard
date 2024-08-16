@@ -26,7 +26,11 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
       ref,
       type: 'search',
       placeholder: 'Search...',
-      startContent: <SearchIcon />,
+      startContent: (
+        <span>
+          <SearchIcon />
+        </span>
+      ),
       // custom styles
       classNames: {
         input: [
