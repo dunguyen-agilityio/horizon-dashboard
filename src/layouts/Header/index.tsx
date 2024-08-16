@@ -10,6 +10,7 @@ import { QUERY_KEY } from '@/constants/common';
 import { TEXT_SIZE } from '@/types/text';
 
 // Components
+import Menu from '@/icons/Menu';
 import Notification from './Notification';
 import ProfileDropDown from './ProfileDropDown';
 import { ToggleTheme, Text, InputSearch } from '@/components';
@@ -20,7 +21,6 @@ import { debounce } from '@/utils/debounce';
 
 // Mocks
 import { MOCK_NOTIFIES } from '@/mocks/notify';
-import Menu from '@/icons/Menu';
 
 const Header = () => {
   const searchParams = useSearchParams();

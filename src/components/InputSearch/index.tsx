@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef, useMemo } from 'react';
 
 import SearchIcon from '@/icons/Search';
 import { useInput } from '@nextui-org/input';
@@ -43,7 +43,7 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
       },
     });
 
-    const innerWrapper = React.useMemo(() => {
+    const innerWrapper = useMemo(() => {
       const { onChange, ...rest } = getInputProps();
 
       const handleChange = (e: React.FormEvent<DOMElement>) => {
