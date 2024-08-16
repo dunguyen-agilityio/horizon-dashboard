@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand component Should match snapshot 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <div
+      class="flex gap-1 justify-center p-14 pb-12 bg-white dark:bg-indigo"
+    >
+      <h1
+        class="text-primary dark:text-white text-xl leading-extra className leading-8 font-poppins font-extrabold"
+      >
+        HORIZON
+      </h1>
+      <h1
+        class="text-primary dark:text-white text-xl leading-extra leading-8 font-poppins font-normal"
+      >
+        FREE
+      </h1>
+    </div>
+  </a>
+</div>
+`;
