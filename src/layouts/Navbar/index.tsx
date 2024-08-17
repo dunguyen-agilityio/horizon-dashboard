@@ -1,3 +1,5 @@
+'use client';
+
 // Components
 import { NavItem } from '@/components';
 
@@ -8,20 +10,24 @@ import { ROUTES } from '@/constants/routes';
 import { Moon, Cart, User, Kanban, Chart, Lock } from '@/icons';
 
 import { Navigate } from '@/types/navigate';
+import { usePathname } from 'next/navigation';
 
-const listNavIcon = [
+const listNavIcon = (isActive?: boolean) => [
   <Moon key={'moonIcon'} />,
   <Cart key={'cartIcon'} />,
-  <Chart key={'chartIcon'} />,
+  <Chart isActive={isActive} key={'chartIcon'} />,
   <Kanban key={'KanbanIcon'} />,
   <User key={'userIcon'} />,
   <Lock key={'lockIcon'} />,
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const navIcon = listNavIcon();
+
   const navigate: Navigate[] = ROUTES.map((route, index) => ({
     ...route,
-    icon: listNavIcon[index],
+    icon: navIcon[index],
   }));
 
   return (
@@ -33,6 +39,7 @@ const Navbar = () => {
             href={navItem.href}
             icon={navItem.icon}
             label={navItem.title}
+            isActive={navItem.href === pathname}
           />
         ))}
       </div>
