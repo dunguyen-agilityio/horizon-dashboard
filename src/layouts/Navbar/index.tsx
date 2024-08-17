@@ -31,7 +31,7 @@ const Navbar = () => {
   }));
 
   return (
-    <nav className="bg-white flex flex-col justify-between dark:bg-indigo w-[290px] h-[1152px]">
+    <nav className="bg-white flex flex-col justify-between dark:bg-indigo w-[240px] lg:w-[290px] h-[1152px]">
       <div className="flex flex-col pt-[38px] gap-5">
         {navigate.map((navItem, index) => (
           <NavItem
