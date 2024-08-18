@@ -16,7 +16,10 @@ const NavItem = ({ icon, label, isActive, href }: INavItemProps) => (
   <Link href={href} className="flex justify-between">
     <div className="flex w-full items-center gap-3 pl-8">
       <i
-        className="w-6 h-6 flex justify-center items-center"
+        className={cn(
+          'w-6 h-6 flex justify-center items-center dark:fill-white',
+          { 'fill-blue-450': isActive, 'fill-secondary': !isActive },
+        )}
         data-testid="nav-icon"
       >
         {icon}
