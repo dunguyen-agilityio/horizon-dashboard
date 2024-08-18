@@ -7,15 +7,15 @@ import { NavItem } from '@/components';
 import { ROUTES } from '@/constants/routes';
 
 // Icons
-import { Moon, Cart, User, Kanban, Chart, Lock } from '@/icons';
+import { Home, Cart, User, Kanban, Chart, Lock } from '@/icons';
 
 import { Navigate } from '@/types/navigate';
 import { usePathname } from 'next/navigation';
 
-const listNavIcon = (isActive?: boolean) => [
-  <Moon key={'moonIcon'} />,
+const listNavIcon = [
+  <Home key={'homeIcon'} />,
   <Cart key={'cartIcon'} />,
-  <Chart isActive={isActive} key={'chartIcon'} />,
+  <Chart key={'chartIcon'} />,
   <Kanban key={'KanbanIcon'} />,
   <User key={'userIcon'} />,
   <Lock key={'lockIcon'} />,
@@ -23,11 +23,10 @@ const listNavIcon = (isActive?: boolean) => [
 
 const Navbar = () => {
   const pathname = usePathname();
-  const navIcon = listNavIcon();
 
   const navigate: Navigate[] = ROUTES.map((route, index) => ({
     ...route,
-    icon: navIcon[index],
+    icon: listNavIcon[index],
   }));
 
   return (
