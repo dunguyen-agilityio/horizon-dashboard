@@ -1,3 +1,4 @@
+export { default as BoxIcon } from './BoxIcon';
 export { default as Button } from './Button';
 export { default as Brand } from './Brand';
 export { default as Text } from './Text';

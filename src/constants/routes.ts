@@ -2,7 +2,7 @@ import { Route } from '@/types/route';
 
 export const ROUTES: Route[] = [
   {
-    title: 'Dashboard',
+    title: 'Main Dashboard',
     href: '/dashboard',
   },
   { title: 'NFT Marketplace', href: '/nft-marketplace' },
