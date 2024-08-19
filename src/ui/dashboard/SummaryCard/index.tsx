@@ -2,7 +2,7 @@
 import { cn } from '@nextui-org/theme';
 
 // Components
-import Text from '../Text';
+import Text from '@/components/Text';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';

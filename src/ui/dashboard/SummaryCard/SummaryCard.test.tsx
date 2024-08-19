@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import SummaryCard from '.';
 
+import SummaryCard from '.';
 import AddIcon from '@/icons/Add';
 
 describe('SummaryCard tests', () => {

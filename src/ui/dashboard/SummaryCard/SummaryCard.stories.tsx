@@ -5,7 +5,7 @@ import SummaryCard from '.';
 import AddIcon from '@/icons/Add';
 
 const meta = {
-  title: 'Components/SummaryCard',
+  title: 'ui/SummaryCard',
   component: SummaryCard,
   tags: ['autodocs'],
 } satisfies Meta<typeof SummaryCard>;
