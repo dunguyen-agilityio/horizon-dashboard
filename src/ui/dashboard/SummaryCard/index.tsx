@@ -57,7 +57,8 @@ const SummaryCard = ({
         </Text>
         <Text as="span" className={trendStyle}>
           {trendUnit}
-        </Text>{' '}
+        </Text>
+        &nbsp;
         {trendDescription}
       </Text>
     );
@@ -87,7 +88,8 @@ const SummaryCard = ({
           {title}
         </Text>
         <Text className="font-bold text-[24px]" as="b">
-          {` ${unit}${counter}`}
+          &nbsp;
+          {`${unit}${counter}`}
         </Text>
         {renderTrendContent()}
       </div>

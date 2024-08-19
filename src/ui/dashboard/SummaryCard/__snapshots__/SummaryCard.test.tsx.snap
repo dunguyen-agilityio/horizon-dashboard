@@ -43,7 +43,8 @@ exports[`SummaryCard tests Should match snapshot 1`] = `
       <b
         class="text-primary dark:text-white leading-xl font-bold text-[24px]"
       >
-         $350.5
+         
+        $350.5
       </b>
     </div>
   </div>
@@ -93,7 +94,8 @@ exports[`SummaryCard tests Should match snapshot 2`] = `
       <b
         class="text-primary dark:text-white leading-xl font-bold text-[24px]"
       >
-         $350.5
+         
+        $350.5
       </b>
       <p
         class="text-secondary dark:text-secondary leading-xl text-tiny"
@@ -108,7 +110,7 @@ exports[`SummaryCard tests Should match snapshot 2`] = `
         >
           %
         </span>
-         
+         
         since last month
       </p>
     </div>
@@ -159,7 +161,8 @@ exports[`SummaryCard tests Should match snapshot 3`] = `
       <b
         class="text-primary dark:text-white leading-xl font-bold text-[24px]"
       >
-         $350.5
+         
+        $350.5
       </b>
       <p
         class="text-secondary dark:text-secondary leading-xl text-tiny"
@@ -174,7 +177,7 @@ exports[`SummaryCard tests Should match snapshot 3`] = `
         >
           %
         </span>
-         
+         
         since last month
       </p>
     </div>
