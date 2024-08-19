@@ -1,6 +1,6 @@
 // Components
 import Link from 'next/link';
-import { Text } from '@/components';
+import { BoxIcon, Text } from '@/components';
 
 // Utils
 import { cn } from '@nextui-org/theme';
@@ -15,15 +15,13 @@ interface INavItemProps {
 const NavItem = ({ icon, label, isActive, href }: INavItemProps) => (
   <Link href={href} className="flex justify-between">
     <div className="flex w-full items-center gap-3 pl-8">
-      <i
-        className={cn(
-          'w-6 h-6 flex justify-center items-center dark:fill-white',
-          { 'fill-blue-450': isActive, 'fill-secondary': !isActive },
-        )}
-        data-testid="nav-icon"
-      >
-        {icon}
-      </i>
+      <BoxIcon
+        customClass={cn('dark:fill-white', {
+          'fill-blue-450': isActive,
+          'fill-secondary': !isActive,
+        })}
+        icon={icon}
+      />
       <Text
         className={cn('font-medium', isActive ? 'font-bold' : 'text-secondary')}
       >
