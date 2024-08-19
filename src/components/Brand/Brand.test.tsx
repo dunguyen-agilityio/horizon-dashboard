@@ -9,7 +9,7 @@ describe('Brand component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should match snapshot', () => {
+  it('Should render correct brand name', () => {
     const { getByText } = render(<Brand />);
 
     const brandName = getByText('HORIZON');
