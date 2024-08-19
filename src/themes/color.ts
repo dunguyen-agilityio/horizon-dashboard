@@ -19,6 +19,9 @@ export const colors = {
     650: '#868cff',
     750: '#7551ff',
   },
+  green: {
+    700: '#05cd99',
+  },
 };
 
 export const backgroundColor = {

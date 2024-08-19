@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SummaryCard tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-[20px] min-w-[248px]"
+  >
+    <div
+      class="h-14 min-w-14 rounded-full bg-gray dark:bg-indigo-light flex justify-center items-center p-3"
+    >
+      <svg
+        class="[&>path]:stroke-primary [&>path]:dark:stroke-white"
+        fill="none"
+        height="17"
+        viewBox="0 0 19 17"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.32703 3.71619V13.2787"
+          stroke="#4318FF"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+        <path
+          d="M14.3896 8.49744H4.26459"
+          stroke="#4318FF"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div>
+      <p
+        class="text-secondary dark:text-secondary text-small font-medium"
+      >
+        Earnings
+      </p>
+      <p
+        class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+      >
+        $350.5
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SummaryCard tests Should match snapshot 2`] = `
+<div>
+  <div
+    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-[20px] min-w-[248px]"
+  >
+    <div
+      class="h-14 min-w-14 rounded-full flex justify-center items-center p-0 bg-red-700 dark:bg-red-700"
+    >
+      <svg
+        class="[&>path]:stroke-primary [&>path]:dark:stroke-white"
+        fill="none"
+        height="17"
+        viewBox="0 0 19 17"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.32703 3.71619V13.2787"
+          stroke="#4318FF"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+        <path
+          d="M14.3896 8.49744H4.26459"
+          stroke="#4318FF"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div>
+      <p
+        class="text-secondary dark:text-secondary text-small font-medium"
+      >
+        Earnings
+      </p>
+      <p
+        class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+      >
+        $350.5
+      </p>
+      <p
+        class="text-secondary dark:text-secondary leading-xl text-tiny"
+      >
+        <span
+          class="text-primary dark:text-white leading-xl font-bold text-tiny !text-green-700"
+        >
+          +20.3
+        </span>
+        <span
+          class="text-primary dark:text-white leading-xl font-bold text-tiny !text-green-700"
+        >
+          %
+        </span>
+         
+        since last month
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SummaryCard tests Should match snapshot 3`] = `
+<div>
+  <div
+    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-[20px] min-w-[248px]"
+  >
+    <div
+      class="h-14 min-w-14 rounded-full flex justify-center items-center p-0 bg-red-700 dark:bg-red-700"
+    >
+      <svg
+        class="[&>path]:stroke-primary [&>path]:dark:stroke-white"
+        fill="none"
+        height="17"
+        viewBox="0 0 19 17"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.32703 3.71619V13.2787"
+          stroke="#4318FF"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+        <path
+          d="M14.3896 8.49744H4.26459"
+          stroke="#4318FF"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div>
+      <p
+        class="text-secondary dark:text-secondary text-small font-medium"
+      >
+        Earnings
+      </p>
+      <p
+        class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+      >
+        $350.5
+      </p>
+      <p
+        class="text-secondary dark:text-secondary leading-xl text-tiny"
+      >
+        <span
+          class="text-primary dark:text-white leading-xl font-bold text-tiny !text-red-700"
+        >
+          -9
+        </span>
+        <span
+          class="text-primary dark:text-white leading-xl font-bold text-tiny !text-red-700"
+        >
+          %
+        </span>
+         
+        since last month
+      </p>
+    </div>
+  </div>
+</div>
+`;
