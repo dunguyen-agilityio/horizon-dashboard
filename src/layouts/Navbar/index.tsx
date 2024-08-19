@@ -1,5 +1,9 @@
 'use client';
 
+// Libs
+import { useMemo } from 'react';
+import { usePathname } from 'next/navigation';
+
 // Components
 import { NavItem } from '@/components';
 
@@ -9,30 +13,34 @@ import { ROUTES } from '@/constants/routes';
 // Icons
 import { Home, Cart, User, Kanban, Chart, Lock } from '@/icons';
 
+// Types
 import { Navigate } from '@/types/navigate';
-import { usePathname } from 'next/navigation';
 
 const listNavIcon = [
-  <Home key={'homeIcon'} />,
-  <Cart key={'cartIcon'} />,
-  <Chart key={'chartIcon'} />,
-  <Kanban key={'KanbanIcon'} />,
-  <User key={'userIcon'} />,
-  <Lock key={'lockIcon'} />,
+  <Home key="homeIcon" />,
+  <Cart key="cartIcon" />,
+  <Chart key="chartIcon" />,
+  <Kanban key="KanbanIcon" />,
+  <User key="userIcon" />,
+  <Lock key="lockIcon" />,
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
 
-  const navigate: Navigate[] = ROUTES.map((route, index) => ({
-    ...route,
-    icon: listNavIcon[index],
-  }));
+  const listNavigate: Navigate[] = useMemo(
+    () =>
+      ROUTES.map((route, index) => ({
+        ...route,
+        icon: listNavIcon[index],
+      })),
+    [],
+  );
 
   return (
     <nav className="bg-white flex flex-col justify-between dark:bg-indigo w-[240px] lg:w-[290px] h-[1152px]">
       <div className="flex flex-col pt-[38px] gap-5">
-        {navigate.map((navItem, index) => (
+        {listNavigate.map((navItem, index) => (
           <NavItem
             key={`${navItem.title}-${index}`}
             href={navItem.href}
@@ -42,6 +50,8 @@ const Navbar = () => {
           />
         ))}
       </div>
+
+      {/* TODO: Will add  */}
     </nav>
   );
 };
