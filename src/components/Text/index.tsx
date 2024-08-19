@@ -28,9 +28,13 @@ const Text = ({
   as: Component = 'p',
   variant = TEXT_VARIANT.PRIMARY,
   className,
+  ...props
 }: React.PropsWithChildren<TextProps>) => {
   return (
-    <Component className={`${variants[variant]} ${cn(sizes[size], className)}`}>
+    <Component
+      className={`${variants[variant]} ${cn(sizes[size], className)}`}
+      {...props}
+    >
       {children}
     </Component>
   );

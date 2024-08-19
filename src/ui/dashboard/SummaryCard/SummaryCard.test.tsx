@@ -15,8 +15,8 @@ describe('SummaryCard tests', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should match snapshot', () => {
-    const { container } = render(
+  it('Should render correctly', () => {
+    const { getByTestId } = render(
       <SummaryCard
         title="Earnings"
         counter={350.5}
@@ -26,11 +26,12 @@ describe('SummaryCard tests', () => {
         trendDescription="since last month"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(getByTestId('additional-trend')).toBeInTheDocument();
+    expect(getByTestId('additional-trend')).toHaveClass('!text-green-700');
   });
 
-  it('Should match snapshot', () => {
-    const { container } = render(
+  it('Should render correctly', () => {
+    const { getByTestId } = render(
       <SummaryCard
         title="Earnings"
         counter={350.5}
@@ -40,6 +41,7 @@ describe('SummaryCard tests', () => {
         trendDescription="since last month"
       />,
     );
-    expect(container).toMatchSnapshot();
+    expect(getByTestId('additional-trend')).toBeInTheDocument();
+    expect(getByTestId('additional-trend')).toHaveClass('!text-red-700');
   });
 });

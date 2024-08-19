@@ -52,7 +52,7 @@ const SummaryCard = ({
 
     return (
       <Text className="text-tiny" variant={TEXT_VARIANT.SECONDARY}>
-        <Text as="span" className={trendStyle}>
+        <Text as="span" className={trendStyle} data-testid="additional-trend">
           {trendValue > 0 ? `+${trendValue}` : trendValue}
         </Text>
         <Text as="span" className={trendStyle}>
