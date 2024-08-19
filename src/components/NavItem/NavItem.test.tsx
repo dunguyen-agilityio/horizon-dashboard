@@ -21,7 +21,7 @@ describe('NavItem component', () => {
     const { getByTestId } = render(
       <NavItem href={navHref} icon={<Moon />} label={navLabel} />,
     );
-    const navIcon = getByTestId('nav-icon');
+    const navIcon = getByTestId('moon-icon');
     expect(navIcon).toBeInTheDocument();
   });
 

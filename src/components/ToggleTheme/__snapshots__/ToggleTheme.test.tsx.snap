@@ -8,6 +8,7 @@ exports[`ToggleTheme tests Should match snapshot 1`] = `
   >
     <svg
       class="[&_path]:fill-secondary dark:[&_path]:fill-white [&_rect]:fill-secondary dark:[&_rect]:fill-white"
+      data-testid="moon-icon"
       fill="none"
       height="18"
       viewBox="0 0 18 18"

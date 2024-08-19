@@ -9,13 +9,13 @@ exports[`Input search tests Should match snapshot 1`] = `
     data-slot="base"
   >
     <div
-      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 data-[hover=true]:bg-default-200 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background bg-gray group-data-[focus=true]:bg-gray dark:bg-indigo-dark dark:group-data-[focus=true]:bg-indigo-dark rounded-[30px]"
+      class="relative inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 data-[hover=true]:bg-default-200 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-96 xl:w-fit bg-gray group-data-[focus=true]:bg-gray dark:bg-indigo-dark dark:group-data-[focus=true]:bg-indigo-dark rounded-[30px]"
       data-slot="input-wrapper"
       role="button"
       style="cursor: text;"
     >
       <div
-        class="w-full items-center h-full box-border flex gap-[11px] pl-[20px]"
+        class="w-full items-center h-full box-border flex gap-[11px] pl-[8px]"
         data-slot="inner-wrapper"
       >
         <span>
@@ -46,13 +46,13 @@ exports[`Input search tests Should match snapshot 1`] = `
           </svg>
         </span>
         <input
-          aria-label="Search..."
+          aria-label="Search"
           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small group-data-[has-value=true]:text-default-foreground placeholder-purple-50 dark:placeholder-white text-primary dark:text-white"
           data-has-start-content="true"
           data-slot="input"
           data-testid="input-search"
           id="react-aria-:r0:"
-          placeholder="Search..."
+          placeholder="Search"
           type="search"
           value=""
         />
