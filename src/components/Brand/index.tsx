@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 const Brand = () => (
   <Link href="/">
-    <div className="flex gap-1 justify-center p-14 pb-12 bg-white dark:bg-indigo">
+    <div className="flex gap-1 justify-center py-12 px-6 lg:px-12 lg:pt-14 lg:pb-12 bg-white dark:bg-indigo">
       <Text
         as="h1"
         size={TEXT_SIZE.xl}

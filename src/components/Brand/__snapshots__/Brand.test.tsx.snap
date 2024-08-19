@@ -6,7 +6,7 @@ exports[`Brand component Should match snapshot 1`] = `
     href="/"
   >
     <div
-      class="flex gap-1 justify-center p-14 pb-12 bg-white dark:bg-indigo"
+      class="flex gap-1 justify-center py-12 px-6 lg:px-12 lg:pt-14 lg:pb-12 bg-white dark:bg-indigo"
     >
       <h1
         class="text-primary dark:text-white text-xl leading-extra className leading-8 font-poppins font-extrabold"
