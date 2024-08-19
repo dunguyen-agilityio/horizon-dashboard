@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxIcon component Should render BoxIcon match snapshot 1`] = `
+<div>
+  <i
+    class="fill-secondary dark:fill-white w-6 h-6 flex justify-center items-center"
+  >
+    <svg
+      data-testid="kanban-icon"
+      height="18"
+      width="18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 10h6c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1H1C.45 0 0 .45 0 1v8c0 .55.45 1 1 1Zm0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1Zm10 0h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1ZM10 1v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1Z"
+      />
+    </svg>
+  </i>
+</div>
+`;
