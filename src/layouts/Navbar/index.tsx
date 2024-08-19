@@ -1,10 +1,9 @@
-import { ToggleTheme, Brand } from '@/components';
+import { Brand } from '@/components';
 
 const Navbar = () => {
   return (
-    <div className="bg-white dark:bg-indigo w-[290px]">
+    <div className="bg-white dark:bg-indigo w-[290px] hidden sm:block">
       <Brand />
-      <ToggleTheme className="h-[60px] min-w-[60px] rounded-full flex justify-center items-center bg-gradient-primary" />
     </div>
   );
 };
