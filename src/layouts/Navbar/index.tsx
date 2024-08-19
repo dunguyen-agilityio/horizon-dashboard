@@ -51,7 +51,7 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* TODO: Will add  */}
+      {/* TODO: Will add Banner component inside */}
     </nav>
   );
 };
