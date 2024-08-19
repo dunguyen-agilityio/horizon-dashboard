@@ -13,11 +13,11 @@ describe('NavItem component', () => {
   const { container } = render(
     <NavItem href={navHref} icon={<Moon />} label={navLabel} isActive />,
   );
-  it('Should match snapshot', () => {
+  it('NavItem should match snapshot', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should render icon', () => {
+  it('NavItem should contain correct icon', () => {
     const { getByTestId } = render(
       <NavItem href={navHref} icon={<Moon />} label={navLabel} />,
     );
@@ -25,7 +25,7 @@ describe('NavItem component', () => {
     expect(navIcon).toBeInTheDocument();
   });
 
-  it('Should trigg', () => {
+  it('NavItem should trigger function when simulator onClick', () => {
     const { getByText } = render(
       <NavItem href={navHref} icon={<Moon />} label={navLabel} />,
     );
