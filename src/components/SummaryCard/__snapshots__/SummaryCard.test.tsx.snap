@@ -32,17 +32,19 @@ exports[`SummaryCard tests Should match snapshot 1`] = `
         />
       </svg>
     </div>
-    <div>
-      <p
+    <div
+      class="flex flex-col gap-[3px]"
+    >
+      <span
         class="text-secondary dark:text-secondary text-small font-medium"
       >
         Earnings
-      </p>
-      <p
+      </span>
+      <b
         class="text-primary dark:text-white leading-xl font-bold text-[24px]"
       >
-        $350.5
-      </p>
+         $350.5
+      </b>
     </div>
   </div>
 </div>
@@ -80,17 +82,19 @@ exports[`SummaryCard tests Should match snapshot 2`] = `
         />
       </svg>
     </div>
-    <div>
-      <p
+    <div
+      class="flex flex-col gap-[3px]"
+    >
+      <span
         class="text-secondary dark:text-secondary text-small font-medium"
       >
         Earnings
-      </p>
-      <p
+      </span>
+      <b
         class="text-primary dark:text-white leading-xl font-bold text-[24px]"
       >
-        $350.5
-      </p>
+         $350.5
+      </b>
       <p
         class="text-secondary dark:text-secondary leading-xl text-tiny"
       >
@@ -144,17 +148,19 @@ exports[`SummaryCard tests Should match snapshot 3`] = `
         />
       </svg>
     </div>
-    <div>
-      <p
+    <div
+      class="flex flex-col gap-[3px]"
+    >
+      <span
         class="text-secondary dark:text-secondary text-small font-medium"
       >
         Earnings
-      </p>
-      <p
+      </span>
+      <b
         class="text-primary dark:text-white leading-xl font-bold text-[24px]"
       >
-        $350.5
-      </p>
+         $350.5
+      </b>
       <p
         class="text-secondary dark:text-secondary leading-xl text-tiny"
       >

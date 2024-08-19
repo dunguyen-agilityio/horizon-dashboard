@@ -82,11 +82,13 @@ const SummaryCard = ({
           {additionalContent}
         </div>
       )}
-      <div>
-        <Text size={TEXT_SIZE.sm} variant={TEXT_VARIANT.SECONDARY}>
+      <div className="flex flex-col gap-[3px]">
+        <Text size={TEXT_SIZE.sm} variant={TEXT_VARIANT.SECONDARY} as="span">
           {title}
         </Text>
-        <Text className="font-bold text-[24px]">{`${unit}${counter}`}</Text>
+        <Text className="font-bold text-[24px]" as="b">
+          {` ${unit}${counter}`}
+        </Text>
         {renderTrendContent()}
       </div>
     </div>
