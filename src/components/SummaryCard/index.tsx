@@ -7,7 +7,7 @@ import Text from '../Text';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
-type LayoutVariant = 'default' | 'reverse';
+type LayoutVariant = 'primary' | 'secondary';
 
 type TrendInfo =
   | {
@@ -27,12 +27,12 @@ interface SummaryCardProps {
 }
 
 const classes = {
-  default: '',
-  reverse: 'flex-row-reverse justify-end',
+  primary: '',
+  secondary: 'flex-row-reverse justify-end',
 } as Record<LayoutVariant, string>;
 
 const SummaryCard = ({
-  variant = 'default',
+  variant = 'primary',
   additionalContent,
   counter,
   title,

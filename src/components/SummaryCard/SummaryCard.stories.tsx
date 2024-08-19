@@ -23,7 +23,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    variant: 'reverse',
+    variant: 'secondary',
     title: 'Earnings',
     counter: 350.5,
     additionalContent: <AddIcon />,
@@ -41,7 +41,7 @@ export const CustomAdditionalContent: Story = {
 
 export const Increment: Story = {
   args: {
-    variant: 'reverse',
+    variant: 'secondary',
     title: 'Earnings',
     counter: 350.5,
     trendValue: 20,
@@ -51,7 +51,7 @@ export const Increment: Story = {
 
 export const Decrement: Story = {
   args: {
-    variant: 'reverse',
+    variant: 'secondary',
     title: 'Earnings',
     counter: 350.5,
     trendValue: -20,
