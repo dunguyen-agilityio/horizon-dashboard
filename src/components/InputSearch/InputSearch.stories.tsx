@@ -7,6 +7,11 @@ const meta = {
   title: 'Components/InputSearch',
   component: InputSearch,
   tags: ['autodocs'],
+  decorators: (Story) => (
+    <div className="bg-white dark:bg-indigo p-4 rounded-[30px]">
+      <Story />
+    </div>
+  ),
 } satisfies Meta<typeof InputSearch>;
 
 export default meta;

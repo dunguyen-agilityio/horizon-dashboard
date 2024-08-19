@@ -4,6 +4,7 @@ import type { Preview } from '@storybook/react';
 import Providers from '../src/app/providers';
 import RootLayout from '../src/layouts/RootLayout';
 
+import './style.css';
 import '../src/app/globals.css';
 
 const preview: Preview = {
