@@ -105,6 +105,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             data-testid="nav-icon"
           >
             <svg
+              data-testid="kanban-icon"
               height="18"
               width="18"
               xmlns="http://www.w3.org/2000/svg"
