@@ -1,0 +1,7 @@
+html body {
+  background: #f4f7fe;
+}
+
+html.dark body {
+  background: #0b1437;
+}
