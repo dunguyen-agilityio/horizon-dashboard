@@ -7,6 +7,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 
 // Models
 import { Notify } from '@/models/Notify';
+import { BoxIcon } from '@/components';
 
 interface NotificationProps {
   notifies: Notify[];
@@ -30,7 +31,7 @@ const Notification = ({ notifies }: NotificationProps) => {
           className="focus-visible:outline-none aria-expanded:scale-1 aria-expanded:opacity-100"
           data-testid="notify-button"
         >
-          <NotifyIcon />
+          <BoxIcon icon={<NotifyIcon />} />
         </button>
       </PopoverTrigger>
       <PopoverContent className="bg-gray dark:bg-indigo-light min-w-[320px] items-start w-full pr-[2px]">

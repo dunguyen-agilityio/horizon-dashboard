@@ -42,13 +42,13 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between flex-col gap-4 sm:flex-row sm:gap-0 relative">
-      <div className="flex flex-col gap-1">
+    <header className="relative flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0">
+      <div className="flex flex-col gap-1 mr-2">
         {title && (
           <>
             <button
               aria-label="Menu Button"
-              className="cursor-pointer block sm:hidden"
+              className="cursor-pointer block xl:hidden pt-1"
             >
               <Menu />
             </button>
@@ -66,9 +66,9 @@ const Header = () => {
           </>
         )}
       </div>
-      <div className="h-fit px-[10px] py-[10px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
+      <div className="h-fit p-[10px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
         <InputSearch onSearch={debounce(handleSearch)} defaultValue={query} />
-        <div className="absolute top-0 right-0 sm:static flex gap-2 sm:gap-6 items-center">
+        <div className="absolute top-0 right-0 xl:static flex gap-2 sm:gap-6 items-center">
           <Notification notifies={MOCK_NOTIFIES} />
           <ToggleTheme />
           <ProfileDropDown />
