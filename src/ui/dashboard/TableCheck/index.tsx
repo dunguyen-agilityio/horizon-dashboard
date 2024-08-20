@@ -1,5 +1,5 @@
 import { Text } from '@/components';
-import { TCheck } from '@/types/check';
+import { Check } from '@/types/check';
 import { TColumn } from '@/types/common';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
@@ -34,10 +34,10 @@ const columns: TColumn[] = [
 ];
 
 interface TableCheckProps {
-  data: TCheck[];
+  data: Check[];
 }
 
-const formatDataCheck = (row: TCheck, key: keyof TCheck) => {
+const formatDataCheck = (row: Check, key: keyof Check) => {
   switch (key) {
     case 'createdAt':
       return (getKeyValue(row, key) as Date).toLocaleDateString('en-US', {
@@ -66,11 +66,11 @@ const TableCheck = ({ data }: TableCheckProps) => (
       aria-label="Rows actions table example with dynamic content"
       selectionMode="multiple"
       selectionBehavior="toggle"
-      className="mt-6 [&_*:not(span,svg,label)]:bg-white [&_*:not(span,svg,label)]:dark:bg-indigo first:[&_th]:pr-0 first:[&_tr>*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none"
+      className="mt-6 [&_*:not(span,svg,label)]:bg-white [&_*:not(span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-4 [&_*:is(th,td)]:pb-0 [&>div]:overflow-visible"
     >
       <TableHeader columns={columns}>
         {({ key, label }) => (
-          <TableColumn key={key} className={key === 'name' ? 'pr-0' : ''}>
+          <TableColumn key={key} className={key === 'name' ? 'pl-0' : ''}>
             <Text variant={TEXT_VARIANT.SECONDARY} size={TEXT_SIZE.sm}>
               {label}
             </Text>
@@ -88,7 +88,7 @@ const TableCheck = ({ data }: TableCheckProps) => (
                 )}
               >
                 <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
-                  {formatDataCheck(item, columnKey as keyof TCheck)}
+                  {formatDataCheck(item, columnKey as keyof Check)}
                 </Text>
               </TableCell>
             )}

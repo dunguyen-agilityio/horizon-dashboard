@@ -1,6 +1,6 @@
-import { TCheck } from '@/types/check';
+import { Check } from '@/types/check';
 
-export const MOCK_CHECKS: TCheck[] = [
+export const MOCK_CHECKS: Check[] = [
   {
     id: '1',
     name: 'Tony Reichert',
