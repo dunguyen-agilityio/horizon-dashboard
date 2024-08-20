@@ -15,3 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: { rows: MOCK_CHECKS },
 };
+
+export const Empty: Story = {
+  args: { rows: [] },
+};

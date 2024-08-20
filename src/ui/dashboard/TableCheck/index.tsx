@@ -71,7 +71,7 @@ const TableCheck = ({ rows }: TableCheckProps) => (
           </TableColumn>
         )}
       </TableHeader>
-      <TableBody items={rows}>
+      <TableBody items={rows} emptyContent={'No rows to display.'}>
         {(item) => (
           <TableRow key={item.id}>
             {(columnKey) => (
