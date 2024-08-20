@@ -9,6 +9,8 @@ import {
   width,
   backgroundImages,
   lineHeight,
+  borderRadius,
+  boxShadow,
 } from './src/themes';
 
 const config: Config = {
@@ -25,12 +27,22 @@ const config: Config = {
       height,
       width,
       backgroundImage: backgroundImages,
-      boxShadow: {
-        'light-card': '0px 18px 40px 0px rgba(112, 144, 176, 0.12)',
-      },
+      boxShadow,
+      borderRadius,
     },
   },
   darkMode: 'class',
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: { default: { '100': colors.gray } },
+        },
+        dark: {
+          colors: { default: { '100': colors['indigo-light'] } },
+        },
+      },
+    }),
+  ],
 };
 export default config;
