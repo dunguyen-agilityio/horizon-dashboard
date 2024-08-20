@@ -34,6 +34,27 @@ const SignInPage = () => (
             >
               Enter your username and password to sign in!
             </Text>
+            <Button className="bg-blue-450 dark:bg-purple-750 w-full py-7">
+              <Text
+                size={TEXT_SIZE.sm}
+                className="text-white font-bold leading-4"
+              >
+                Sign In
+              </Text>
+            </Button>
+            <div className="flex gap-1 mt-6">
+              <Text
+                size={TEXT_SIZE.sm}
+                className="font-normal dark:text-secondary"
+              >
+                Not registered yet?
+              </Text>
+              <Link>
+                <Text size={TEXT_SIZE.sm} className="font-bold">
+                  Create an Account
+                </Text>
+              </Link>
+            </div>
           </div>
 
           <Text className="text-secondary" size={TEXT_SIZE.sm}>
