@@ -3,7 +3,7 @@
 exports[`SummaryCard tests Should match snapshot 1`] = `
 <div>
   <div
-    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-[20px] min-w-[248px]"
+    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-md min-w-[248px]"
   >
     <div
       class="h-14 min-w-14 rounded-full bg-gray dark:bg-indigo-light flex justify-center items-center p-3"
@@ -41,7 +41,7 @@ exports[`SummaryCard tests Should match snapshot 1`] = `
         Earnings
       </span>
       <b
-        class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+        class="text-primary dark:text-white text-1.5xl font-bold leading-xl"
       >
          
         $350.5

@@ -7,7 +7,8 @@ export const fontSizes = {
   xl: '1.625rem', //  26px
   extra: '1.375rem', //22px
   '2xl': '2.125rem', // 34px
-  '3xl': '2.5rem', //  40px
+  '3xl': '2.5rem', //  40px,
+  '1.5xl': '1.5rem', // 24px
 };
 
 export const lineHeight = {

@@ -67,7 +67,7 @@ const SummaryCard = ({
   return (
     <div
       className={cn(
-        'flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-[20px] min-w-[248px]',
+        'flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-md min-w-[248px]',
         classes[variant],
       )}
     >
@@ -87,7 +87,7 @@ const SummaryCard = ({
         <Text size={TEXT_SIZE.sm} variant={TEXT_VARIANT.SECONDARY} as="span">
           {title}
         </Text>
-        <Text className="font-bold text-[24px]" as="b">
+        <Text size={TEXT_SIZE.extra} as="b">
           &nbsp;
           {`${unit}${counter}`}
         </Text>
