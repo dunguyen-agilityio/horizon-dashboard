@@ -1,8 +1,5 @@
+// Components
 import { Text } from '@/components';
-import { Check } from '@/types/check';
-import { TColumn } from '@/types/common';
-import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-
 import {
   Table,
   TableHeader,
@@ -11,8 +8,14 @@ import {
   TableRow,
   TableCell,
   getKeyValue,
-  cn,
-} from '@nextui-org/react';
+} from '@nextui-org/table';
+
+import { cn } from '@nextui-org/theme';
+
+// Types
+import { Check } from '@/types/check';
+import { TColumn } from '@/types/common';
+import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const columns: TColumn[] = [
   {
@@ -66,7 +69,7 @@ const TableCheck = ({ data }: TableCheckProps) => (
       aria-label="Rows actions table example with dynamic content"
       selectionMode="multiple"
       selectionBehavior="toggle"
-      className="mt-6 [&_*:not(span,svg,label)]:bg-white [&_*:not(span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-4 [&_*:is(th,td)]:pb-0 [&>div]:overflow-visible"
+      className="mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
     >
       <TableHeader columns={columns}>
         {({ key, label }) => (
