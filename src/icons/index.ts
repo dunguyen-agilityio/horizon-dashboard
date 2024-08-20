@@ -1,4 +1,5 @@
 export { default as Add } from './Add';
+export { default as ArrowRight } from './ArrowRight';
 export { default as Cart } from './Cart';
 export { default as Chart } from './Chart';
 export { default as Home } from './Home';
