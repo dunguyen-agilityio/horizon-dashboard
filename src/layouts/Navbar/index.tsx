@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 
 // Components
-import { NavItem } from '@/components';
+import { Banner, NavItem } from '@/components';
 
 // Constants
 import { ROUTES } from '@/constants/routes';
@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white flex flex-col justify-between dark:bg-indigo w-[240px] lg:w-[290px] h-[1152px]">
-      <div className="flex flex-col pt-[38px] gap-5">
+      <div className="flex flex-col justify-between pt-[38px] gap-5">
         {listNavigate.map((navItem, index) => (
           <NavItem
             key={`${navItem.title}-${index}`}
@@ -50,8 +50,9 @@ const Navbar = () => {
           />
         ))}
       </div>
-
-      {/* TODO: Will add Banner component inside */}
+      <div className="mb-6">
+        <Banner />
+      </div>
     </nav>
   );
 };

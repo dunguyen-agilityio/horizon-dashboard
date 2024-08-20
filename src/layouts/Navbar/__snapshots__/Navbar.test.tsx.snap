@@ -6,7 +6,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
     class="bg-white flex flex-col justify-between dark:bg-indigo w-[240px] lg:w-[290px] h-[1152px]"
   >
     <div
-      class="flex flex-col pt-[38px] gap-5"
+      class="flex flex-col justify-between pt-[38px] gap-5"
     >
       <a
         class="flex justify-between"
@@ -172,6 +172,47 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           </p>
         </div>
       </a>
+    </div>
+    <div
+      class="mb-6"
+    >
+      <div
+        class="w-[300px] h-[250px] flex items-end justify-center"
+      >
+        <div
+          class="w-[228px] h-[190px] bg-gradient-to-br from-purple-750 to-blue-450 rounded-2xl relative"
+        >
+          <div
+            class="w-[94px] h-[94px] top-[-47px] left-[65px] relative bg-gradient-to-br from-purple-750 to-blue-450 rounded-full border-5 border-white dark:border-indigo"
+          >
+            <img
+              alt="vector"
+              class="absolute top-[22px] left-[22px]"
+              data-nimg="1"
+              decoding="async"
+              height="41"
+              loading="lazy"
+              src="/vector.svg"
+              style="color: transparent;"
+              width="41"
+            />
+          </div>
+          <div
+            class="absolute top-[70px]"
+          >
+            <h1
+              class="text-primary dark:text-white leading-xl text-medium text-white font-bold leading-9 text-center"
+            >
+              Upgrade to PRO
+            </h1>
+            <h2
+              class="text-primary dark:text-white text-small text-white leading-5 font-medium text-center"
+            >
+              to get access to all features! Connect with Venus World!
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 </div>
