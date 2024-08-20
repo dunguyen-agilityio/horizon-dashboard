@@ -23,9 +23,8 @@ const Error = ({
         Oops. Something went wrong!
       </Text>
       <Text className="text-lg dark:text-white text-indigo-dark mb-8 mx-4 md:mx-10 lg:mx-60 xl:mx-96 2xl:mx-[600px]">
-        {error.message
-          ? error.message
-          : 'Please try refreshing or return to the previous page.'}
+        {error?.message ||
+          'Please try refreshing or return to the previous page.'}
       </Text>
       <Button color="danger" onClick={() => reset()}>
         Try again
