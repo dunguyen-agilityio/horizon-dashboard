@@ -34,7 +34,7 @@ const columns: TColumn[] = [
 ];
 
 interface TableCheckProps {
-  rows: TCheck[];
+  data: TCheck[];
 }
 
 const formatDataCheck = (row: TCheck, key: keyof TCheck) => {
@@ -51,7 +51,7 @@ const formatDataCheck = (row: TCheck, key: keyof TCheck) => {
   }
 };
 
-const TableCheck = ({ rows }: TableCheckProps) => (
+const TableCheck = ({ data }: TableCheckProps) => (
   <div className="flex-1 bg-white dark:bg-indigo pt-5 pl-[30px] pb-[28px] pr-[25px] rounded-md">
     <Text as="h2" size={TEXT_SIZE.extra}>
       Check Table
@@ -71,7 +71,7 @@ const TableCheck = ({ rows }: TableCheckProps) => (
           </TableColumn>
         )}
       </TableHeader>
-      <TableBody items={rows} emptyContent={'No rows to display.'}>
+      <TableBody items={data} emptyContent="No rows to display.">
         {(item) => (
           <TableRow key={item.id}>
             {(columnKey) => (
