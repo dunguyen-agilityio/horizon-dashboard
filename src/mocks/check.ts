@@ -5,7 +5,7 @@ export const MOCK_CHECKS: TCheck[] = [
     id: '1',
     name: 'Tony Reichert',
     progress: 45,
-    quantity: 20,
+    quantity: 20442,
     createdAt: new Date('2024-08-14T08:25:04.188Z'),
   },
   {

@@ -20,12 +20,12 @@ const columns: TColumn[] = [
     label: 'NAME',
   },
   {
-    key: 'quantity',
-    label: 'QUANTITY',
-  },
-  {
     key: 'progress',
     label: 'PROGRESS',
+  },
+  {
+    key: 'quantity',
+    label: 'QUANTITY',
   },
   {
     key: 'createdAt',
@@ -45,6 +45,12 @@ const formatDataCheck = (row: TCheck, key: keyof TCheck) => {
         month: 'short',
         year: 'numeric',
       });
+
+    case 'progress':
+      return `${getKeyValue(row, key)}%`;
+
+    case 'quantity':
+      return getKeyValue(row, key).toLocaleString('de-DE');
 
     default:
       return getKeyValue(row, key);
