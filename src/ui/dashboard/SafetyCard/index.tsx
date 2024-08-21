@@ -23,7 +23,8 @@ const SafetyCard = () => (
     </div>
     <Button
       color="primary"
-      className="dark:bg-purple-750 w-full mt-[36px] font-bold text-sm"
+      disabled
+      className="dark:bg-purple-750 w-full mt-[36px] font-bold text-sm disabled:cursor-not-allowed disabled:opacity-70"
     >
       Cards
     </Button>
