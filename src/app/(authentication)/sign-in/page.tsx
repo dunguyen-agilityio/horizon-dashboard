@@ -128,28 +128,29 @@ const SignInPage = () => {
                   Sign In
                 </Text>
               </Button>
-
-              <div className="flex gap-1">
-                <Text
-                  size={TEXT_SIZE.sm}
-                  variant={TEXT_VARIANT.TERTIARY}
-                  className="font-normal leading-6"
-                >
-                  Not registered yet?
-                </Text>
-                <Link href="/create-account">
+              <div className="flex justify-center sm:justify-start">
+                <div className="flex gap-1">
                   <Text
                     size={TEXT_SIZE.sm}
-                    variant={TEXT_VARIANT.QUATERNARY}
-                    className="font-bold leading-6"
+                    variant={TEXT_VARIANT.TERTIARY}
+                    className="font-normal leading-6"
                   >
-                    Create an Account
+                    Not registered yet?
                   </Text>
-                </Link>
+                  <Link href="/create-account">
+                    <Text
+                      size={TEXT_SIZE.sm}
+                      variant={TEXT_VARIANT.QUATERNARY}
+                      className="font-bold leading-6"
+                    >
+                      Create an Account
+                    </Text>
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <Text className="text-secondary" size={TEXT_SIZE.sm}>
+            <Text className="text-secondary text-center" size={TEXT_SIZE.sm}>
               © 2022 Horizon UI. All Rights Reserved. Made with love by Simple!
             </Text>
           </div>
