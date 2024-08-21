@@ -17,7 +17,7 @@ const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
     <div className="hidden 2xl:block">
       <div className="w-[965px] h-[1152px] relative">
         <Image
-          src="/wallpaper.png"
+          src="/wallpaper.webp"
           alt="wall-paper"
           fill
           style={{
