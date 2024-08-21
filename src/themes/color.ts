@@ -12,6 +12,9 @@ export const colors = {
   'indigo-light': '#1b254b',
   foreground: '#707eae',
   indigo: '#111C44',
+  amber: {
+    450: '#E0E5F2',
+  },
   blue: {
     450: '#4318ff',
   },
