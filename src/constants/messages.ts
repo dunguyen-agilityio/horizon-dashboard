@@ -6,4 +6,5 @@ export const MESSAGES = {
 
 export const ERROR_MESSAGES = {
   FIELD_REQUIRED: 'This field is required.',
+  FORMAT: (label: string) => `${label} does not follow the correct format.`,
 };
