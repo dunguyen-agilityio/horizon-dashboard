@@ -10,7 +10,7 @@ interface TeamMemberProps {
 }
 
 const TeamMember = ({ members }: TeamMemberProps) => (
-  <div className="bg-white dark:bg-indigo rounded-md p-7 w-full sm:w-[382px]">
+  <div className="bg-white dark:bg-indigo rounded-md p-7 w-full sm:w-card">
     <div className="flex justify-between items-center">
       <Text as="h2" className="text-lg leading-xl font-bold">
         Team Members

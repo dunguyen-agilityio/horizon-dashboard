@@ -3,7 +3,7 @@
 exports[`TeamMembers tests Should match snapshot 1`] = `
 <div>
   <div
-    class="bg-white dark:bg-indigo rounded-md p-7 w-full sm:w-[382px]"
+    class="bg-white dark:bg-indigo rounded-md p-7 w-full sm:w-card"
   >
     <div
       class="flex justify-between items-center"

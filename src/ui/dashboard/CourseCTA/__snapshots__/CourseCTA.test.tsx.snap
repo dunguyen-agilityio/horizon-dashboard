@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableCheck tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="w-full sm:w-card rounded-md overflow-hidden"
+  >
+    <div
+      class="bg-white dark:bg-indigo px-[26px] pt-[27px] pb-[30px]"
+    >
+      <div
+        class="flex gap-3 items-center"
+      >
+        <span
+          class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny text-default-foreground bg-red-50 dark:bg-indigo-light rounded-[15px] p-[10px] h-12 w-12"
+          tabindex="-1"
+        >
+          <span
+            aria-label="avatar"
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+            role="img"
+          >
+            <svg
+              class="[&_path]:fill-red-750 [&_path]:dark:fill-white"
+              fill="none"
+              height="28"
+              viewBox="0 0 28 28"
+              width="28"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#clip0_201_2793)"
+              >
+                <path
+                  d="M22.7265 14.4084C20.8948 9.64835 14.3732 9.39169 15.9482 2.47335C16.0648 1.96002 15.5165 1.56335 15.0732 1.83169C10.8382 4.32835 7.79317 9.33335 10.3482 15.89C10.5582 16.4267 9.92817 16.9284 9.47317 16.5784C7.3615 14.98 7.13984 12.6817 7.3265 11.0367C7.3965 10.43 6.60317 10.1384 6.26484 10.64C5.4715 11.8534 4.6665 13.8134 4.6665 16.765C5.10984 23.2984 10.6282 25.305 12.6115 25.5617C15.4465 25.9234 18.5148 25.3984 20.7198 23.38C23.1465 21.1284 24.0332 17.535 22.7265 14.4084ZM11.8998 20.2767C13.5798 19.8684 14.4432 18.655 14.6765 17.5817C15.0615 15.9134 13.5565 14.28 14.5715 11.6434C14.9565 13.825 18.3865 15.19 18.3865 17.57C18.4798 20.5217 15.2832 23.0534 11.8998 20.2767Z"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_201_2793"
+                >
+                  <rect
+                    fill="white"
+                    height="28"
+                    width="28"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </span>
+        </span>
+        <div>
+          <span
+            class="text-secondary dark:text-secondary leading-xl text-tiny font-bold !leading-5 block"
+          >
+            Business Design
+          </span>
+          <b
+            class="text-primary dark:text-white text-medium leading-xl font-bold"
+          >
+            New lesson is available
+          </b>
+        </div>
+      </div>
+      <h2
+        class="text-primary dark:text-white leading-xl text-[20px] font-bold leading-xl pt-[38px]"
+      >
+        What do you need to know to create better products?
+      </h2>
+    </div>
+    <div
+      class="bg-grayest dark:bg-indigo-light px-[26px] pb-8 pt-4"
+    >
+      <div
+        class="flex gap-[26px]"
+      >
+        <div
+          class="flex gap-[6px] items-center"
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#clip0_201_2798)"
+            >
+              <path
+                d="M15.0698 1.01001H9.06982V3.01001H15.0698V1.01001ZM11.0698 14.01H13.0698V8.01001H11.0698V14.01ZM19.0998 7.39001L20.5198 5.97001C20.0898 5.46001 19.6198 4.98001 19.1098 4.56001L17.6898 5.98001C16.1398 4.74001 14.1898 4.00001 12.0698 4.00001C7.09982 4.00001 3.06982 8.03001 3.06982 13C3.06982 17.97 7.08982 22 12.0698 22C17.0498 22 21.0698 17.97 21.0698 13C21.0698 10.89 20.3298 8.94001 19.0998 7.39001ZM12.0698 20.01C8.19982 20.01 5.06982 16.88 5.06982 13.01C5.06982 9.14001 8.19982 6.01001 12.0698 6.01001C15.9398 6.01001 19.0698 9.14001 19.0698 13.01C19.0698 16.88 15.9398 20.01 12.0698 20.01Z"
+                fill="#01B574"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_201_2798"
+              >
+                <rect
+                  fill="white"
+                  height="24"
+                  width="24"
+                />
+              </clippath>
+            </defs>
+          </svg>
+          <span
+            class="text-primary dark:text-white text-small font-medium"
+          >
+            85 Mins
+          </span>
+        </div>
+        <div
+          class="flex gap-[6px] items-center"
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#clip0_201_2801)"
+            >
+              <path
+                d="M13.0498 9.78999L9.9998 7.49999V16.5L13.0498 14.21L15.9998 12L13.0498 9.78999ZM13.0498 9.78999L9.9998 7.49999V16.5L13.0498 14.21L15.9998 12L13.0498 9.78999ZM13.0498 9.78999L9.9998 7.49999V16.5L13.0498 14.21L15.9998 12L13.0498 9.78999ZM10.9998 4.06999V2.04999C8.9898 2.24999 7.1598 3.04999 5.6798 4.25999L7.0998 5.68999C8.20981 4.82999 9.5398 4.24999 10.9998 4.06999ZM5.6898 7.09999L4.2598 5.67999C3.0498 7.15999 2.2498 8.98999 2.0498 11H4.0698C4.2498 9.53999 4.8298 8.20999 5.6898 7.09999ZM4.0698 13H2.0498C2.2498 15.01 3.0498 16.84 4.2598 18.32L5.6898 16.89C4.8298 15.79 4.2498 14.46 4.0698 13ZM5.6798 19.74C7.1598 20.95 8.9998 21.75 10.9998 21.95V19.93C9.5398 19.75 8.20981 19.17 7.0998 18.31L5.6798 19.74ZM21.9998 12C21.9998 17.16 18.0798 21.42 13.0498 21.95V19.93C16.9698 19.41 19.9998 16.05 19.9998 12C19.9998 7.94999 16.9698 4.58999 13.0498 4.06999V2.04999C18.0798 2.57999 21.9998 6.83999 21.9998 12Z"
+                fill="#EE5D50"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_201_2801"
+              >
+                <rect
+                  fill="white"
+                  height="24"
+                  width="24"
+                />
+              </clippath>
+            </defs>
+          </svg>
+          <span
+            class="text-primary dark:text-white text-small font-medium"
+          >
+            Video format
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex justify-between pt-10"
+      >
+        <div
+          class="flex items-center justify-center h-auto w-max [&>span]:w-[30px] [&>span]:h-[30px]"
+          role="group"
+        >
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+            tabindex="-1"
+          >
+            <img
+              alt="avatar"
+              class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+              data-nimg="1"
+              decoding="async"
+              height="30"
+              loading="lazy"
+              src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
+              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+              style="color: transparent;"
+              width="30"
+            />
+          </span>
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+            tabindex="-1"
+          >
+            <img
+              alt="avatar"
+              class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+              data-nimg="1"
+              decoding="async"
+              height="30"
+              loading="lazy"
+              src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
+              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+              style="color: transparent;"
+              width="30"
+            />
+          </span>
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+            tabindex="-1"
+          >
+            <img
+              alt="avatar"
+              class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+              data-nimg="1"
+              decoding="async"
+              height="30"
+              loading="lazy"
+              src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
+              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+              style="color: transparent;"
+              width="30"
+            />
+          </span>
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+            tabindex="-1"
+          >
+            <span
+              aria-label="+1"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+              role="img"
+            >
+              +1
+            </span>
+          </span>
+        </div>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover text-sm font-bold disabled:opacity-70 disabled:cursor-not-allowed dark:bg-purple-750"
+          disabled=""
+          type="button"
+        >
+          Get started
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
