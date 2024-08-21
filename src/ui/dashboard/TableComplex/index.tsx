@@ -1,5 +1,8 @@
 // Components
 import { Text } from '@/components';
+import Check from '@/icons/Check';
+import Error from '@/icons/Error';
+import Info from '@/icons/Info';
 import {
   Table,
   TableHeader,
@@ -9,12 +12,13 @@ import {
   TableCell,
   getKeyValue,
 } from '@nextui-org/table';
+import { Progress } from '@nextui-org/progress';
 
 import { cn } from '@nextui-org/theme';
 
 // Types
-import { Check } from '@/types/check';
 import { TColumn } from '@/types/common';
+import { Complex, ComplexStatus } from '@/types/complex';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const columns: TColumn[] = [
@@ -23,47 +27,79 @@ const columns: TColumn[] = [
     label: 'NAME',
   },
   {
-    key: 'progress',
-    label: 'PROGRESS',
-  },
-  {
-    key: 'quantity',
-    label: 'QUANTITY',
+    key: 'status',
+    label: 'STATUS',
   },
   {
     key: 'createdAt',
     label: 'DATE',
   },
+  {
+    key: 'progress',
+    label: 'PROGRESS',
+  },
 ];
 
-interface TableCheckProps {
-  data: Check[];
+interface TableComplexProps {
+  data: Complex[];
 }
 
-const formatDataCheck = (row: Check, key: keyof Check) => {
+const formatDataCheck = (row: Complex, key: keyof Complex) => {
+  const value = getKeyValue(row, key);
+
+  const renderStatus = () => {
+    switch (value as ComplexStatus) {
+      case ComplexStatus.APPROVED:
+        return <Check />;
+
+      case ComplexStatus.ERROR:
+        return <Error />;
+
+      default:
+        return <Info />;
+    }
+  };
+
   switch (key) {
     case 'createdAt':
-      return (getKeyValue(row, key) as Date).toLocaleDateString('en-US', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-      });
+      return (
+        <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+          {(value as Date).toLocaleDateString('en-US', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+          })}
+        </Text>
+      );
 
     case 'progress':
-      return `${getKeyValue(row, key)}%`;
+      return (
+        <Progress aria-label="Loading..." value={value} className="max-w-md" />
+      );
 
-    case 'quantity':
-      return getKeyValue(row, key).toLocaleString('de-DE');
+    case 'status':
+      return (
+        <div className="flex items-center gap-[5px]">
+          {renderStatus()}
+          <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+            {value}
+          </Text>
+        </div>
+      );
 
     default:
-      return getKeyValue(row, key);
+      return (
+        <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+          {value}
+        </Text>
+      );
   }
 };
 
-const TableCheck = ({ data }: TableCheckProps) => (
+const TableComplex = ({ data }: TableComplexProps) => (
   <div className="flex-1 bg-white dark:bg-indigo pt-5 pl-[30px] pb-[28px] pr-[25px] rounded-md">
     <Text as="h2" size={TEXT_SIZE.extra}>
-      Check Table
+      Complex Table
     </Text>
     <Table
       aria-label="Rows actions table example with dynamic content"
@@ -90,9 +126,7 @@ const TableCheck = ({ data }: TableCheckProps) => (
                   'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
                 )}
               >
-                <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
-                  {formatDataCheck(item, columnKey as keyof Check)}
-                </Text>
+                {formatDataCheck(item, columnKey as keyof Complex)}
               </TableCell>
             )}
           </TableRow>
@@ -102,4 +136,4 @@ const TableCheck = ({ data }: TableCheckProps) => (
   </div>
 );
 
-export default TableCheck;
+export default TableComplex;
