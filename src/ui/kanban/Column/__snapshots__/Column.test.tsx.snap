@@ -30,14 +30,12 @@ exports[`Column tests Should match snapshot 1`] = `
         >
           <path
             d="M9.32703 3.71619V13.2787"
-            stroke="#4318FF"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
           />
           <path
             d="M14.3896 8.49744H4.26459"
-            stroke="#4318FF"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
@@ -101,14 +99,12 @@ exports[`Column tests Should match snapshot 2`] = `
         >
           <path
             d="M9.32703 3.71619V13.2787"
-            stroke="#4318FF"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
           />
           <path
             d="M14.3896 8.49744H4.26459"
-            stroke="#4318FF"
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
