@@ -16,7 +16,7 @@ import { MOCK_USERS } from '@/mocks/user';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const CourseCTA = () => (
-  <div className="w-full sm:w-[382px] rounded-md overflow-hidden">
+  <div className="w-full sm:w-card rounded-md overflow-hidden">
     <div className="bg-white dark:bg-indigo px-[26px] pt-[27px] pb-[30px]">
       <div className="flex gap-3 items-center">
         <Avatar
