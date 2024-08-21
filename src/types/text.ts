@@ -11,4 +11,6 @@ export const enum TEXT_SIZE {
 export const enum TEXT_VARIANT {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
+  TERTIARY = 'tertiary',
+  QUATERNARY = 'quaternary',
 }
