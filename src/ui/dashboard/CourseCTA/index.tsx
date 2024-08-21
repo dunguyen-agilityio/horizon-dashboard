@@ -1,13 +1,19 @@
-import Timer from '@/icons/Timer';
-import Video from '@/icons/Video';
-
+// Components
+import Image from 'next/image';
 import { CourseLabel } from './CourseLabel';
 import { Avatar, AvatarGroup } from '@nextui-org/avatar';
-import Image from 'next/image';
-import { MOCK_USERS } from '@/mocks/user';
 import { Button, Text } from '@/components';
-import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
+
+// Icons
+import Timer from '@/icons/Timer';
+import Video from '@/icons/Video';
 import FireIcon from '@/icons/Fire';
+
+// Mocks
+import { MOCK_USERS } from '@/mocks/user';
+
+// Types
+import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const CourseCTA = () => (
   <div className="w-full sm:w-[382px] rounded-md overflow-hidden">

@@ -1,4 +1,7 @@
+// Components
 import { Text } from '@/components';
+
+// Types
 import { TEXT_SIZE } from '@/types/text';
 
 interface CourseLabelProps {
