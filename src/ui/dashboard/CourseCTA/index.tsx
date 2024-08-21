@@ -67,7 +67,7 @@ const CourseCTA = () => (
         <Button
           color="primary"
           disabled
-          className="text-sm font-bold disabled:opacity-70 disabled:cursor-not-allowed"
+          className="text-sm font-bold disabled:opacity-70 disabled:cursor-not-allowed dark:bg-purple-750"
         >
           Get started
         </Button>
