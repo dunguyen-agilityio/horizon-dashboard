@@ -7,6 +7,7 @@ export const colors = {
   success: '#01b574',
   error: '#e31a1a',
   gray: '#f4f7fe',
+  grayest: '#fafcfe',
   'indigo-dark': '#0b1437',
   'indigo-light': '#1b254b',
   foreground: '#707eae',
@@ -22,6 +23,7 @@ export const colors = {
   green: {
     700: '#05cd99',
   },
+  red: { 50: '#feefee', 750: '#ee5d50' },
 };
 
 export const backgroundColor = {
