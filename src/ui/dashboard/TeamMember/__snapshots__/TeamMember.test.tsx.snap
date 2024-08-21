@@ -1,0 +1,366 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamMembers tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="bg-white dark:bg-indigo rounded-md p-7 w-full sm:w-[382px]"
+  >
+    <div
+      class="flex justify-between items-center"
+    >
+      <h2
+        class="text-primary dark:text-white leading-xl text-lg leading-xl font-bold"
+      >
+        Team Members
+      </h2>
+      <button
+        class="p-[10px] rounded-[10px] bg-gray dark:bg-indigo-light disabled:cursor-not-allowed disabled:opacity-80"
+        disabled=""
+      >
+        <div
+          class="bg-primary dark:bg-white rounded-full w-6 h-6 flex items-center justify-center"
+        >
+          <svg
+            class="[&>path]:stroke-white [&>path]:dark:stroke-primary"
+            fill="none"
+            height="17"
+            viewBox="0 0 19 17"
+            width="19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.32703 3.71619V13.2787"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M14.3896 8.49744H4.26459"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div
+      class="w-full relative flex flex-col gap-1 p-1 pt-5"
+      data-slot="base"
+    >
+      <ul
+        class="w-full flex flex-col outline-none gap-4"
+        data-slot="list"
+        id="react-aria-:r0:"
+        role="listbox"
+        tabindex="0"
+      >
+        <li
+          aria-labelledby="react-aria-:r4:"
+          class="flex group gap-2 items-center justify-between relative px-2 py-1.5 h-full box-border rounded-small subpixel-antialiased cursor-pointer tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[focus-visible=true]:dark:ring-offset-background-content1 data-[hover=true]:transition-colors data-[hover=true]:bg-default data-[hover=true]:text-default-foreground data-[selectable=true]:focus:bg-default data-[selectable=true]:focus:text-default-foreground w-full bg-white dark:bg-indigo-light shadow-light-card dark:shadow-none"
+          data-key="1"
+          id="react-aria-:r0:-option-1"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="flex-1 text-small font-normal truncate flex justify-between items-center px-4 py-3"
+            data-label="true"
+            id="react-aria-:r4:"
+          >
+            <div
+              class="inline-flex items-center justify-center gap-2 rounded-small outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              tabindex="-1"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[46px] h-[46px]"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  src="/default-avatar.webp"
+                />
+              </span>
+              <div
+                class="inline-flex flex-col items-start"
+              >
+                <span
+                  class="text-inherit text-medium font-bold"
+                >
+                  User 1
+                </span>
+                <span
+                  class="text-tiny font-medium text-secondary"
+                >
+                  Creative Director
+                </span>
+              </div>
+            </div>
+            <button
+              class="disabled:cursor-not-allowed disabled:opacity-80"
+              disabled=""
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_201_3969)"
+                >
+                  <path
+                    d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_201_3969"
+                  >
+                    <rect
+                      fill="white"
+                      height="24"
+                      width="24"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </span>
+        </li>
+        <li
+          aria-labelledby="react-aria-:r6:"
+          class="flex group gap-2 items-center justify-between relative px-2 py-1.5 h-full box-border rounded-small subpixel-antialiased cursor-pointer tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[focus-visible=true]:dark:ring-offset-background-content1 data-[hover=true]:transition-colors data-[hover=true]:bg-default data-[hover=true]:text-default-foreground data-[selectable=true]:focus:bg-default data-[selectable=true]:focus:text-default-foreground w-full bg-white dark:bg-indigo-light shadow-light-card dark:shadow-none"
+          data-key="2"
+          id="react-aria-:r0:-option-2"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="flex-1 text-small font-normal truncate flex justify-between items-center px-4 py-3"
+            data-label="true"
+            id="react-aria-:r6:"
+          >
+            <div
+              class="inline-flex items-center justify-center gap-2 rounded-small outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              tabindex="-1"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[46px] h-[46px]"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  src="/default-avatar.webp"
+                />
+              </span>
+              <div
+                class="inline-flex flex-col items-start"
+              >
+                <span
+                  class="text-inherit text-medium font-bold"
+                >
+                  User 2
+                </span>
+                <span
+                  class="text-tiny font-medium text-secondary"
+                >
+                  Product Designer
+                </span>
+              </div>
+            </div>
+            <button
+              class="disabled:cursor-not-allowed disabled:opacity-80"
+              disabled=""
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_201_3969)"
+                >
+                  <path
+                    d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_201_3969"
+                  >
+                    <rect
+                      fill="white"
+                      height="24"
+                      width="24"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </span>
+        </li>
+        <li
+          aria-labelledby="react-aria-:r8:"
+          class="flex group gap-2 items-center justify-between relative px-2 py-1.5 h-full box-border rounded-small subpixel-antialiased cursor-pointer tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[focus-visible=true]:dark:ring-offset-background-content1 data-[hover=true]:transition-colors data-[hover=true]:bg-default data-[hover=true]:text-default-foreground data-[selectable=true]:focus:bg-default data-[selectable=true]:focus:text-default-foreground w-full bg-white dark:bg-indigo-light shadow-light-card dark:shadow-none"
+          data-key="3"
+          id="react-aria-:r0:-option-3"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="flex-1 text-small font-normal truncate flex justify-between items-center px-4 py-3"
+            data-label="true"
+            id="react-aria-:r8:"
+          >
+            <div
+              class="inline-flex items-center justify-center gap-2 rounded-small outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              tabindex="-1"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[46px] h-[46px]"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  src="/default-avatar.webp"
+                />
+              </span>
+              <div
+                class="inline-flex flex-col items-start"
+              >
+                <span
+                  class="text-inherit text-medium font-bold"
+                >
+                  User 3
+                </span>
+                <span
+                  class="text-tiny font-medium text-secondary"
+                >
+                  Product Designer
+                </span>
+              </div>
+            </div>
+            <button
+              class="disabled:cursor-not-allowed disabled:opacity-80"
+              disabled=""
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_201_3969)"
+                >
+                  <path
+                    d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_201_3969"
+                  >
+                    <rect
+                      fill="white"
+                      height="24"
+                      width="24"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </span>
+        </li>
+        <li
+          aria-labelledby="react-aria-:ra:"
+          class="flex group gap-2 items-center justify-between relative px-2 py-1.5 h-full box-border rounded-small subpixel-antialiased cursor-pointer tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[focus-visible=true]:dark:ring-offset-background-content1 data-[hover=true]:transition-colors data-[hover=true]:bg-default data-[hover=true]:text-default-foreground data-[selectable=true]:focus:bg-default data-[selectable=true]:focus:text-default-foreground w-full bg-white dark:bg-indigo-light shadow-light-card dark:shadow-none"
+          data-key="4"
+          id="react-aria-:r0:-option-4"
+          role="option"
+          tabindex="-1"
+        >
+          <span
+            class="flex-1 text-small font-normal truncate flex justify-between items-center px-4 py-3"
+            data-label="true"
+            id="react-aria-:ra:"
+          >
+            <div
+              class="inline-flex items-center justify-center gap-2 rounded-small outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              tabindex="-1"
+            >
+              <span
+                class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[46px] h-[46px]"
+                tabindex="-1"
+              >
+                <img
+                  alt="avatar"
+                  class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                  src="/default-avatar.webp"
+                />
+              </span>
+              <div
+                class="inline-flex flex-col items-start"
+              >
+                <span
+                  class="text-inherit text-medium font-bold"
+                >
+                  User 4
+                </span>
+                <span
+                  class="text-tiny font-medium text-secondary"
+                >
+                  Junior Graphic Designer
+                </span>
+              </div>
+            </div>
+            <button
+              class="disabled:cursor-not-allowed disabled:opacity-80"
+              disabled=""
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-path="url(#clip0_201_3969)"
+                >
+                  <path
+                    d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+                    fill="#A3AED0"
+                  />
+                </g>
+                <defs>
+                  <clippath
+                    id="clip0_201_3969"
+                  >
+                    <rect
+                      fill="white"
+                      height="24"
+                      width="24"
+                    />
+                  </clippath>
+                </defs>
+              </svg>
+            </button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

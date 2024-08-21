@@ -5,6 +5,7 @@ export class User {
   email!: string;
   userName!: string;
   avatar?: string;
+  role!: string;
 
   constructor(user: TUser) {
     const { lastName = '' } = user;

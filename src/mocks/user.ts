@@ -7,6 +7,7 @@ export const MOCK_USERS = [
     avatar: '/default-avatar.webp',
     firstName: 'User 1',
     email: 'user1@gmail.com',
+    role: 'Creative Director',
   },
   {
     id: '2',
@@ -14,6 +15,7 @@ export const MOCK_USERS = [
     avatar: '/default-avatar.webp',
     firstName: 'User 2',
     email: 'user2@gmail.com',
+    role: 'Product Designer',
   },
   {
     id: '3',
@@ -21,6 +23,7 @@ export const MOCK_USERS = [
     avatar: '/default-avatar.webp',
     firstName: 'User 3',
     email: 'user3@gmail.com',
+    role: 'Product Designer',
   },
   {
     id: '4',
@@ -28,5 +31,6 @@ export const MOCK_USERS = [
     avatar: '/default-avatar.webp',
     firstName: 'User 4',
     email: 'user4@gmail.com',
+    role: 'Junior Graphic Designer',
   },
 ] as User[];
