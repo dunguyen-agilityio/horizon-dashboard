@@ -90,6 +90,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
               data-slot="input"
               data-testid="input-password"
               id="react-aria-:r5:"
+              name="password"
               placeholder="Min. 8 characters"
               type="password"
               value=""
