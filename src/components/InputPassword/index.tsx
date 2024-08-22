@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { ChangeEventHandler, useState } from 'react';
 
 // Components
 import BoxIcon from '@/components/BoxIcon';
@@ -14,14 +14,12 @@ interface IInputPasswordProps {
   isDisabled?: boolean;
   isInvalid?: boolean;
   value?: string;
-  defaultValue?: string;
   placeholder?: string;
   errorMessage?: string;
-  onChange: (value: string) => void;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
 const InputPassword = ({
-  defaultValue,
   errorMessage = '',
   isDisabled = false,
   isInvalid = false,
@@ -29,12 +27,11 @@ const InputPassword = ({
   placeholder = 'Min. 8 characters',
   value,
   onChange,
+  ...rest
 }: IInputPasswordProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
-
-  const handleOnChange = (value: string) => onChange(value);
 
   return (
     <Input
@@ -51,9 +48,9 @@ const InputPassword = ({
       labelPlacement="outside"
       placeholder={placeholder}
       value={value}
-      defaultValue={defaultValue}
       errorMessage={errorMessage}
-      onChange={(e) => handleOnChange(e.target.value)}
+      onChange={onChange}
+      {...rest}
       endContent={
         <button
           className="focus:outline-none"
