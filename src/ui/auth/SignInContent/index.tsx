@@ -8,21 +8,19 @@ import { Button, InputPassword, Text } from '@/components';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-import type { SignInForm } from '@/types/authentication';
+import type { SignInFormData } from '@/types/auth';
+
+const signinFormInitValues: SignInFormData = {
+  identifier: '',
+  password: '',
+};
 
 const SignInContent = () => {
-  const signinFormInitValues: SignInForm = {
-    identifier: '',
-    password: '',
-  };
-
   const {
-    register,
     control,
     formState: { isDirty, errors },
-  } = useForm<SignInForm>({
+  } = useForm<SignInFormData>({
     mode: 'onBlur',
-    reValidateMode: 'onBlur',
     values: signinFormInitValues,
   });
 
@@ -30,45 +28,32 @@ const SignInContent = () => {
     <form>
       <div className="pt-3 mb-8 flex flex-col gap-6">
         <Controller
+          name="identifier"
           control={control}
-          {...register('identifier', { required: 'Email is required' })}
-          render={({
-            field: { onChange, value, ...rest },
-            fieldState: { error },
-          }) => (
+          rules={{ required: 'This field is required' }}
+          render={({ field, fieldState: { error } }) => (
             <Input
               isRequired
               size="lg"
               key="email"
-              type="email"
               label="Email or username"
               labelPlacement="outside"
               placeholder="Your username or email"
-              value={value}
-              onChange={(value) => {
-                onChange(value);
-              }}
               isInvalid={!!errors.identifier}
               errorMessage={error?.message}
-              {...rest}
+              {...field}
             />
           )}
         />
         <Controller
+          name="password"
           control={control}
-          {...register('password', { required: 'Password is required' })}
-          render={({
-            field: { onChange, value, ...rest },
-            fieldState: { error },
-          }) => (
+          rules={{ required: 'Password is required' }}
+          render={({ field, fieldState: { error } }) => (
             <InputPassword
-              value={value}
-              onChange={(value) => {
-                onChange(value);
-              }}
               isInvalid={!!errors.password}
               errorMessage={error?.message}
-              {...rest}
+              {...field}
             />
           )}
         />
