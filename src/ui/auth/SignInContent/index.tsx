@@ -8,44 +8,30 @@ import { Button, InputPassword, Text } from '@/components';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-import type { UserSignin } from '@/types/authentication';
-
-// Utils
-import { isEnableSubmitButton } from '@/utils/validation';
-
-// Schema
-import { useMemo } from 'react';
-
-const REQUIRED_FIELDS = ['email', 'password'];
+import type { SignInForm } from '@/types/authentication';
 
 const SignInContent = () => {
-  const signinFormInitValues: UserSignin = {
-    email: '',
+  const signinFormInitValues: SignInForm = {
+    identifier: '',
     password: '',
   };
 
   const {
     register,
     control,
-    formState: { dirtyFields, errors },
-  } = useForm<UserSignin>({
+    formState: { isDirty, errors },
+  } = useForm<SignInForm>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     values: signinFormInitValues,
   });
 
-  const dirtyItems = Object.keys(dirtyFields);
-  const isDisabled = useMemo(
-    () => !isEnableSubmitButton(REQUIRED_FIELDS, dirtyItems, errors),
-    [dirtyItems, errors],
-  );
-
   return (
-    <>
+    <form>
       <div className="pt-3 mb-8 flex flex-col gap-6">
         <Controller
           control={control}
-          {...register('email', { required: 'Email is required' })}
+          {...register('identifier', { required: 'Email is required' })}
           render={({
             field: { onChange, value, ...rest },
             fieldState: { error },
@@ -55,14 +41,14 @@ const SignInContent = () => {
               size="lg"
               key="email"
               type="email"
-              label="Email"
+              label="Email or username"
               labelPlacement="outside"
-              placeholder="mail@simmmple.com"
+              placeholder="Your username or email"
               value={value}
               onChange={(value) => {
                 onChange(value);
               }}
-              isInvalid={!!errors.email}
+              isInvalid={!!errors.identifier}
               errorMessage={error?.message}
               {...rest}
             />
@@ -111,14 +97,14 @@ const SignInContent = () => {
       </div>
 
       <Button
-        isDisabled={isDisabled}
+        isDisabled={!isDirty}
         className="bg-blue-450 dark:bg-purple-750 w-full py-7 mb-6 mt-8"
       >
         <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
           Sign In
         </Text>
       </Button>
-    </>
+    </form>
   );
 };
 
