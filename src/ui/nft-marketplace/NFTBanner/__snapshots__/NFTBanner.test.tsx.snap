@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NFTBanner tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="relative flex-1 relative h-[350px] rounded-md bg-blue-450 dark:bg-purple-750"
+  >
+    <div
+      class="absolute right-0 h-[350px] w-full max-w-[1090px]"
+    >
+      <img
+        alt="NFT Cover"
+        class="object-cover"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        sizes="(max-width: 440px) 60vw, 100vw"
+        src="/_next/image?url=%2Fnft-cover.webp&w=3840&q=75"
+        srcset="/_next/image?url=%2Fnft-cover.webp&w=384&q=75 384w, /_next/image?url=%2Fnft-cover.webp&w=640&q=75 640w, /_next/image?url=%2Fnft-cover.webp&w=750&q=75 750w, /_next/image?url=%2Fnft-cover.webp&w=828&q=75 828w, /_next/image?url=%2Fnft-cover.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnft-cover.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnft-cover.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnft-cover.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnft-cover.webp&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+    </div>
+    <div
+      class="absolute inset-0 z-10 px-5 py-10 sm:p-10"
+    >
+      <h1
+        class="text-primary dark:text-white text-2xl font-bold leading-2xl text-white whitespace-break-spaces"
+      >
+        Discover, collect, and
+sell extraordinary NFTs
+      </h1>
+      <p
+        class="text-primary dark:text-white text-medium leading-xl text-purple-150 mt-[14px] leading-medium whitespace-break-spaces"
+      >
+        Enter in this creative world. Discover now the
+latest NFTs or start creating your own!
+      </p>
+      <a
+        class="text-purple-150 text-medium block w-fit mt-[41px] hover:underline font-medium"
+        href="#"
+      >
+        Watch video
+      </a>
+    </div>
+  </div>
+</div>
+`;
