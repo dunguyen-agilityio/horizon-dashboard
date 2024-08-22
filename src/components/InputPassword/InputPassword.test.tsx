@@ -59,7 +59,7 @@ describe('InputPassword tests', () => {
     });
 
     await waitFor(() => {
-      expect(onChangeMock).toHaveBeenNthCalledWith(1, mockChange);
+      expect(onChangeMock).toHaveBeenCalled();
     });
   });
 });

@@ -1,5 +1,4 @@
 import { Controller, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 
 // Components
 import { Link } from '@nextui-org/link';
@@ -15,7 +14,6 @@ import type { UserSignin } from '@/types/authentication';
 import { isEnableSubmitButton } from '@/utils/validation';
 
 // Schema
-import { UserSigninFormDataSchema } from '@/constants/schema';
 import { useMemo } from 'react';
 
 const REQUIRED_FIELDS = ['email', 'password'];
@@ -27,13 +25,13 @@ const SignInContent = () => {
   };
 
   const {
+    register,
     control,
     formState: { dirtyFields, errors },
   } = useForm<UserSignin>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     values: signinFormInitValues,
-    resolver: zodResolver(UserSigninFormDataSchema),
   });
 
   const dirtyItems = Object.keys(dirtyFields);
@@ -46,8 +44,8 @@ const SignInContent = () => {
     <>
       <div className="pt-3 mb-8 flex flex-col gap-6">
         <Controller
-          name="email"
           control={control}
+          {...register('email', { required: 'Email is required' })}
           render={({
             field: { onChange, value, ...rest },
             fieldState: { error },
@@ -71,8 +69,8 @@ const SignInContent = () => {
           )}
         />
         <Controller
-          name="password"
           control={control}
+          {...register('password', { required: 'Password is required' })}
           render={({
             field: { onChange, value, ...rest },
             fieldState: { error },
