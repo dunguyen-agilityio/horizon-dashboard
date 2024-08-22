@@ -6,8 +6,7 @@ import { Link } from '@nextui-org/link';
 import { TEXT_SIZE } from '@/types/text';
 
 // Constants
-import { FOOTER_ROUTES } from '@/constants/routes';
-import { FOOTER_CONTENT } from '@/constants/text';
+import { FOOTER_ROUTES, FOOTER_CONTENT } from '@/constants';
 
 const Footer = () => (
   <div className="flex flex-col justify-between items-center px-1 gap-2 lg:gap-0 lg:flex-row xl:px-7">
