@@ -71,9 +71,7 @@ const SignInContent = () => {
           radius="sm"
           className="fill-blue-450"
         >
-          <Text as="p" size={TEXT_SIZE['md']}>
-            Keep me logged in
-          </Text>
+          <Text size={TEXT_SIZE['md']}>Keep me logged in</Text>
         </Checkbox>
         <Link href={PUBLIC_ROUTES.FORGET_PASSWORD}>
           <Text
