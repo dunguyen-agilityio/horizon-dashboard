@@ -16,23 +16,24 @@ export const Default: Story = {
   args: { onChange: fn() },
 };
 
-export const InputPasswordWithDefaultValue: Story = {
+export const InputPasswordIsDisable: Story = {
   args: {
-    ...Default.args,
-    defaultValue: 'This is the default',
+    value: 'Password strong',
+    onChange: fn(),
+    isDisabled: true,
   },
 };
 
-export const InputPasswordIsDisable: Story = {
+export const InputPasswordWithPlaceholder: Story = {
   args: {
-    ...InputPasswordWithDefaultValue.args,
-    isDisabled: true,
+    onChange: fn(),
+    placeholder: 'Password is read only',
   },
 };
 
 export const InputPasswordWithErrorMessage: Story = {
   args: {
-    ...InputPasswordWithDefaultValue.args,
+    ...InputPasswordWithPlaceholder.args,
     errorMessage: 'Password is not correct',
     isInvalid: true,
   },
@@ -43,12 +44,5 @@ export const InputPasswordIsReadOnly: Story = {
     onChange: fn(),
     value: 'HandlePasswordWithLove@123',
     isReadOnly: true,
-  },
-};
-
-export const InputPasswordWithPlaceholder: Story = {
-  args: {
-    onChange: fn(),
-    placeholder: 'Password is read only',
   },
 };
