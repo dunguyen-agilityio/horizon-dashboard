@@ -1,5 +1,3 @@
-'use client';
-
 // Components
 import { Link } from '@nextui-org/link';
 import { Divider } from '@nextui-org/divider';
