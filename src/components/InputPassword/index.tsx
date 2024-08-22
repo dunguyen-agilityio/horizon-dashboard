@@ -16,7 +16,7 @@ interface IInputPasswordProps {
   value?: string;
   placeholder?: string;
   errorMessage?: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 const InputPassword = ({
