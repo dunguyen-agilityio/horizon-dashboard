@@ -45,7 +45,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
                 id="react-aria-:r0:"
                 name="identifier"
                 placeholder="Your username or email"
-                type="email"
+                type="text"
                 value=""
               />
             </div>
