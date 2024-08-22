@@ -26,14 +26,12 @@ exports[`NFTBanner tests Should match snapshot 1`] = `
       <h1
         class="text-primary dark:text-white text-2xl font-bold leading-2xl text-white whitespace-pre-line sm:whitespace-break-spaces"
       >
-        Discover, collect, and
-sell extraordinary NFTs
+        Discover, collect, and\\nsell extraordinary NFTs
       </h1>
       <p
         class="text-primary dark:text-white text-medium leading-xl text-purple-150 mt-[14px] whitespace-pre-line sm:whitespace-break-spaces"
       >
-        Enter in this creative world. Discover now the
-latest NFTs or start creating your own!
+        Enter in this creative world. Discover now the\\nlatest NFTs or start creating your own!
       </p>
       <a
         class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity text-purple-150 text-medium mt-[41px] hover:underline font-medium"
