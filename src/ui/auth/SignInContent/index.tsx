@@ -1,3 +1,5 @@
+'use client';
+
 import { Controller, useForm } from 'react-hook-form';
 
 // Components
@@ -9,6 +11,9 @@ import { Button, InputPassword, Text } from '@/components';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 import type { SignInFormData } from '@/types/auth';
+
+// Routes
+import { PUBLIC_ROUTES } from '@/constants/routes';
 
 const signinFormInitValues: SignInFormData = {
   identifier: '',
@@ -70,7 +75,7 @@ const SignInContent = () => {
             Keep me logged in
           </Text>
         </Checkbox>
-        <Link href="/forget-password">
+        <Link href={PUBLIC_ROUTES.FORGET_PASSWORD}>
           <Text
             size={TEXT_SIZE.sm}
             variant={TEXT_VARIANT.QUATERNARY}

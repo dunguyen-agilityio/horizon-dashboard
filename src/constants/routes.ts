@@ -21,3 +21,7 @@ export const FOOTER_ROUTES: Route[] = [
   { title: 'Terms of Use', href: '/terms-of-use' },
   { title: 'Blog', href: '/blog' },
 ];
+
+export const PUBLIC_ROUTES = {
+  FORGET_PASSWORD: '/forget-password',
+};
