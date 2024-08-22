@@ -1,7 +1,7 @@
 // Components
+import Link from 'next/link';
 import Image from 'next/image';
 import { Text } from '@/components';
-import { Link } from '@nextui-org/react';
 
 // Constants
 import { NFT_IMAGES } from '@/constants/images';
@@ -26,19 +26,20 @@ const NFTBanner = () => (
       <Text
         as="h1"
         size={TEXT_SIZE['2xl']}
-        className="text-white whitespace-pre-line sm:whitespace-break-spaces"
+        className="text-white whitespace-break-spaces"
       >
-        Discover, collect, and\nsell extraordinary NFTs
+        {'Discover, collect, and\nsell extraordinary NFTs'}
       </Text>
       <Text
-        className="text-purple-150 mt-[14px] whitespace-pre-line sm:whitespace-break-spaces"
+        className="text-purple-150 mt-[14px] leading-medium whitespace-break-spaces"
         size={TEXT_SIZE.md}
       >
-        Enter in this creative world. Discover now the\nlatest NFTs or start
-        creating your own!
+        {
+          'Enter in this creative world. Discover now the\nlatest NFTs or start creating your own!'
+        }
       </Text>
       <Link
-        className="text-purple-150 text-medium mt-[41px] hover:underline font-medium"
+        className="text-purple-150 text-medium block w-fit mt-[41px] hover:underline font-medium"
         href="#"
       >
         Watch video
