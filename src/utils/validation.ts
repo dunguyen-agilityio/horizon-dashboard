@@ -1,9 +1,3 @@
-export const isRequired = (value: string | null | undefined): boolean =>
-  !!value;
-
-export const isValidFormat = (value = '', pattern: RegExp): boolean =>
-  value == '' || pattern.test(value);
-
 export const isEnableSubmitButton = (
   requiredFields: string[],
   dirtyFields: string[],

@@ -3,8 +3,3 @@ export const MESSAGES = {
     MIN_LENGTH: 'Title is too short. Please enter at least 6 characters.',
   },
 };
-
-export const ERROR_MESSAGES = {
-  FIELD_REQUIRED: 'This field is required.',
-  FORMAT: (label: string) => `${label} does not follow the correct format.`,
-};
