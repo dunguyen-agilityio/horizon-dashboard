@@ -5,6 +5,7 @@ export const STARBUCKS_IMAGE = {
 
 export const NFT_IMAGES = {
   COVER: '/nft-cover.webp',
+  DEFAULT: '/nft-default.webp',
 };
 
 export const PROFILE_IMAGES = {

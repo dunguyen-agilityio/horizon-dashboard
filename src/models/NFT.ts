@@ -6,6 +6,7 @@ export class NFT {
   author!: User;
   members!: User[];
   price!: number;
+  image?: string;
 
   constructor(nft: NFT) {
     Object.assign(this, nft);
