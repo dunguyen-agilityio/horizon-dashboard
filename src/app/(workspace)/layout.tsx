@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 // Components
 import { Brand } from '@/components';
 import { Divider } from '@nextui-org/react';
-import { Header, Navbar } from '@/layouts';
+import { Header, Navbar, Footer } from '@/layouts';
 
 const RootLayout = ({ children }: React.PropsWithChildren) => (
   <div className="flex h-screen bg-secondary dark:bg-indigo">
@@ -21,6 +21,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => (
       <main className="mx-auto w-full h-full p-5 bg-secondary dark:bg-indigo">
         {children}
       </main>
+      <Footer />
     </div>
   </div>
 );
