@@ -19,14 +19,12 @@ export const Default: Story = {
 export const InputPasswordIsDisable: Story = {
   args: {
     value: 'Password strong',
-    onChange: fn(),
     isDisabled: true,
   },
 };
 
 export const InputPasswordWithPlaceholder: Story = {
   args: {
-    onChange: fn(),
     placeholder: 'Password is read only',
   },
 };

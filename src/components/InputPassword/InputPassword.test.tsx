@@ -1,4 +1,4 @@
-import { act, fireEvent, render, waitFor } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 
 // Components
 import InputPassword from '@/components/InputPassword';
@@ -13,17 +13,17 @@ describe('InputPassword tests', () => {
   });
 
   it('Should match snapshot', () => {
-    const { container } = render(<InputPassword onChange={onChangeMock} />);
+    const { container } = render(<InputPassword />);
     expect(container).toMatchSnapshot();
   });
 
   it('Should render EyeSlashFilled icon', () => {
-    const { getByTestId } = render(<InputPassword onChange={onChangeMock} />);
+    const { getByTestId } = render(<InputPassword />);
     expect(getByTestId('eye-slash-filled-icon')).toBeInTheDocument();
   });
 
   it('Should render EyeFilled icon when click EyeSlashFilled', () => {
-    const { getByTestId } = render(<InputPassword onChange={onChangeMock} />);
+    const { getByTestId } = render(<InputPassword />);
     const eyeSlashFilledIcon = getByTestId('eye-slash-filled-icon');
 
     fireEvent.click(eyeSlashFilledIcon);
@@ -31,15 +31,13 @@ describe('InputPassword tests', () => {
   });
 
   it('Should render Password label', () => {
-    const { getByLabelText } = render(
-      <InputPassword onChange={onChangeMock} />,
-    );
+    const { getByLabelText } = render(<InputPassword />);
     expect(getByLabelText('Password')).toBeInTheDocument();
   });
 
   it('Should render placeholder Password input', () => {
     const { getByPlaceholderText } = render(
-      <InputPassword placeholder={inputPlaceholder} onChange={onChangeMock} />,
+      <InputPassword placeholder={inputPlaceholder} />,
     );
     expect(getByPlaceholderText(inputPlaceholder)).toBeInTheDocument();
   });
@@ -52,14 +50,10 @@ describe('InputPassword tests', () => {
 
     expect(getByTestId('input-password')).toBeInTheDocument();
 
-    act(() => {
-      fireEvent.change(getByTestId('input-password'), {
-        target: { value: mockChange },
-      });
+    fireEvent.change(getByTestId('input-password'), {
+      target: { value: mockChange },
     });
 
-    await waitFor(() => {
-      expect(onChangeMock).toHaveBeenCalled();
-    });
+    expect(onChangeMock).toHaveBeenCalled();
   });
 });
