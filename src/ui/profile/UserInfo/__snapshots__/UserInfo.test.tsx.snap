@@ -27,7 +27,7 @@ exports[`UserInfo component UserInfo should render match snapshot 1`] = `
           tabindex="-1"
         >
           <img
-            alt="avatar"
+            alt="avatar-user"
             class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
             data-nimg="1"
             decoding="async"
