@@ -11,3 +11,7 @@ export const NFT_IMAGES = {
 export const PROFILE_IMAGES = {
   BACKGROUND: '/profile/background-profile.webp',
 };
+
+export const USER_IMAGE = {
+  DEFAULT: '/default-avatar.webp',
+};

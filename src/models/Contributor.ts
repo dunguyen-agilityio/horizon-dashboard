@@ -1,16 +1,15 @@
-export class Contributor {
-  id!: string;
-  name!: string;
+import { User } from './User';
+
+export class Contributor extends User {
   template!: string;
-  rating!: string;
-  createdAt!: string | Date;
+  rating!: number;
 
   constructor(contributor: Contributor) {
-    const { createdAt } = contributor;
-
+    const { template, rating, ...rest } = contributor;
+    super(rest);
     Object.assign(this, {
-      ...contributor,
-      createdAt: createdAt ? new Date(createdAt) : undefined,
+      template,
+      rating,
     });
   }
 }
