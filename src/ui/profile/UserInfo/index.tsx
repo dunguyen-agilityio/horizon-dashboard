@@ -6,17 +6,28 @@ import { Text } from '@/components';
 // Constants
 import { PROFILE_IMAGES } from '@/constants/images';
 
-// Mocks
-import { MOCK_USERS } from '@/mocks/user';
-
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const { BACKGROUND } = PROFILE_IMAGES;
-const { avatar, fullName, userName, role, posts, followers, following } =
-  MOCK_USERS[0];
 
-const UserInfo = () => (
+interface IUserInfoProps {
+  avatar?: string;
+  userName: string;
+  role: string;
+  postsTotal?: number;
+  followers?: number;
+  following?: number;
+}
+
+const UserInfo = ({
+  avatar,
+  userName,
+  role,
+  postsTotal,
+  followers,
+  following,
+}: IUserInfoProps) => (
   <div className="dark:bg-indigo bg-white w-[350px] lg:w-[430px] xl:w-[552px] p-[17px] rounded-md">
     <div className="w-[315px] lg:w-[396px] xl:w-[518px] h-[131px] relative">
       <Image
@@ -32,7 +43,7 @@ const UserInfo = () => (
         <Avatar
           src={avatar}
           ImgComponent={Image}
-          alt={fullName}
+          alt="avatar-user"
           imgProps={{ width: 87, height: 87 }}
           className="w-[87px] h-[87px] border-4 dark:border-indigo border-white"
         />
@@ -54,7 +65,7 @@ const UserInfo = () => (
       <div className="flex justify-center gap-11 mt-[26px] mb-5">
         <div className="w-14 text-center">
           <Text size={TEXT_SIZE.extra} className="font-extrabold leading-6">
-            {posts}
+            {postsTotal}
           </Text>
           <Text
             size={TEXT_SIZE.sm}
