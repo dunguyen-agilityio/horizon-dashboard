@@ -16,17 +16,17 @@ interface IUserInfoProps {
   userName: string;
   role: string;
   postsTotal?: number;
-  followers?: number;
-  following?: number;
+  followersCount?: number;
+  followingCount?: number;
 }
 
 const UserInfo = ({
   avatar,
   userName,
   role,
-  postsTotal,
-  followers,
-  following,
+  postsTotal = 0,
+  followersCount = 0,
+  followingCount = 0,
 }: IUserInfoProps) => (
   <div className="dark:bg-indigo bg-white w-[350px] lg:w-[430px] xl:w-[552px] p-[17px] rounded-md">
     <div className="w-[315px] lg:w-[396px] xl:w-[518px] h-[131px] relative">
@@ -77,7 +77,7 @@ const UserInfo = ({
         </div>
         <div className="w-14 text-center">
           <Text size={TEXT_SIZE.extra} className="font-extrabold leading-6">
-            {`${followers}k`}
+            {followersCount}
           </Text>
           <Text
             size={TEXT_SIZE.sm}
@@ -89,7 +89,7 @@ const UserInfo = ({
         </div>
         <div className="w-14 text-center">
           <Text size={TEXT_SIZE.extra} className="font-extrabold leading-6">
-            {following}
+            {followingCount}
           </Text>
           <Text
             size={TEXT_SIZE.sm}
