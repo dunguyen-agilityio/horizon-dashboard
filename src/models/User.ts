@@ -6,6 +6,9 @@ export class User {
   userName!: string;
   avatar?: string;
   role!: string;
+  posts?: number;
+  followers?: number;
+  following?: number;
 
   constructor(user: TUser) {
     const { lastName = '' } = user;
