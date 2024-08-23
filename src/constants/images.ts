@@ -15,3 +15,7 @@ export const PROFILE_IMAGES = {
 export const USER_IMAGE = {
   DEFAULT: '/default-avatar.webp',
 };
+
+export const USER_IMAGE = {
+  DEFAULT: '/default-avatar.webp',
+};
