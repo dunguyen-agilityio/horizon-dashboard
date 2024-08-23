@@ -1,6 +1,4 @@
-'use client';
-
-import { Progress } from '@nextui-org/react';
+import { Progress } from '@nextui-org/progress';
 
 const Loading = () => (
   <div className="flex w-full h-full items-center justify-center">
