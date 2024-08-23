@@ -6,7 +6,7 @@ export class User {
   userName!: string;
   avatar?: string;
   role!: string;
-  posts?: number;
+  postsTotal?: number;
   followers?: number;
   following?: number;
 
