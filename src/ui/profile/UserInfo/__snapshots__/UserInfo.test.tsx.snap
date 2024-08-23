@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfo component UserInfo should render match snapshot 1`] = `
+<div>
+  <div
+    class="dark:bg-indigo bg-white w-[350px] lg:w-[430px] xl:w-[552px] p-[17px] rounded-md"
+  >
+    <div
+      class="w-[315px] lg:w-[396px] xl:w-[518px] h-[131px] relative"
+    >
+      <img
+        alt="background-profile"
+        class="object-cover rounded-2xl"
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        sizes="(max-width: 768px) 315px, (min-width: 769px) and (max-width: 1024px) 396px, (min-width: 1025px) 518px"
+        src="/_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=3840&q=75"
+        srcset="/_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=16&q=75 16w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=32&q=75 32w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=48&q=75 48w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=64&q=75 64w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=96&q=75 96w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=128&q=75 128w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=256&q=75 256w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=384&q=75 384w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=640&q=75 640w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=750&q=75 750w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=828&q=75 828w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1080&q=75 1080w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1200&q=75 1200w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1920&q=75 1920w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=2048&q=75 2048w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=3840&q=75 3840w"
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+      />
+      <div
+        class="absolute top-[85px] left-[117px] lg:left-[154px] xl:left-[215px]"
+      >
+        <span
+          class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[87px] h-[87px] border-4 dark:border-indigo border-white"
+          tabindex="-1"
+        >
+          <img
+            alt="avatar"
+            class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+            data-nimg="1"
+            decoding="async"
+            height="87"
+            loading="lazy"
+            src="/_next/image?url=%2Fdefault-avatar.webp&w=256&q=75"
+            srcset="/_next/image?url=%2Fdefault-avatar.webp&w=96&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=256&q=75 2x"
+            style="color: transparent;"
+            width="87"
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center mt-14"
+    >
+      <div
+        class=""
+      >
+        <p
+          class="text-primary dark:text-white leading-xl text-[20px] text-center font-extrabold"
+        >
+          Adela Parkson
+        </p>
+        <p
+          class="text-secondary dark:text-secondary text-small font-medium text-center"
+        >
+          Creative Director
+        </p>
+      </div>
+      <div
+        class="flex justify-center gap-11 mt-[26px] mb-5"
+      >
+        <div
+          class="w-14 text-center"
+        >
+          <p
+            class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-6"
+          >
+            77
+          </p>
+          <p
+            class="text-secondary dark:text-secondary text-small font-medium leading-5"
+          >
+            Posts
+          </p>
+        </div>
+        <div
+          class="w-14 text-center"
+        >
+          <p
+            class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-6"
+          >
+            7.9k
+          </p>
+          <p
+            class="text-secondary dark:text-secondary text-small font-medium leading-5"
+          >
+            Followers
+          </p>
+        </div>
+        <div
+          class="w-14 text-center"
+        >
+          <p
+            class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-6"
+          >
+            365
+          </p>
+          <p
+            class="text-secondary dark:text-secondary text-small font-medium leading-5"
+          >
+            Following
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
