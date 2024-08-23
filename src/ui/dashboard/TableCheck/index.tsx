@@ -10,7 +10,9 @@ import {
   getKeyValue,
 } from '@nextui-org/table';
 
+// Libs
 import { cn } from '@nextui-org/theme';
+import { formatShortDate } from '@/utils/format';
 
 // Types
 import { Check } from '@/types/check';
@@ -41,22 +43,20 @@ interface TableCheckProps {
 }
 
 const formatDataCheck = (row: Check, key: keyof Check) => {
+  const value = getKeyValue(row, key);
+
   switch (key) {
     case 'createdAt':
-      return (getKeyValue(row, key) as Date).toLocaleDateString('en-US', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-      });
+      return formatShortDate(value as Date);
 
     case 'progress':
-      return `${getKeyValue(row, key)}%`;
+      return `${value}%`;
 
     case 'quantity':
-      return getKeyValue(row, key).toLocaleString('de-DE');
+      return value.toLocaleString('de-DE');
 
     default:
-      return getKeyValue(row, key);
+      return value;
   }
 };
 

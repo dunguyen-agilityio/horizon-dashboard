@@ -7,10 +7,12 @@ export const colors = {
   success: '#01b574',
   error: '#e31a1a',
   gray: '#f4f7fe',
+  grey: '#eff4fb',
   grayest: '#fafcfe',
   'indigo-dark': '#0b1437',
   'indigo-light': '#1b254b',
   foreground: '#707eae',
+  'army-green': '#273156',
   indigo: '#111C44',
   amber: {
     450: '#E0E5F2',
