@@ -8,7 +8,7 @@ export const MOCK_USERS = [
     firstName: 'User 1',
     email: 'user1@gmail.com',
     role: 'Creative Director',
-    posts: 77,
+    postsTotal: 77,
     followers: 7.9,
     following: 365,
   },
