@@ -76,7 +76,11 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
   switch (columnKey) {
     case 'createdAt':
       return (
-        <Text size={TEXT_SIZE.sm} className="font-bold">
+        <Text
+          size={TEXT_SIZE.sm}
+          className="font-bold"
+          data-testid="table-cell-createdAt"
+        >
           {formatShortDate(value as Date)}
         </Text>
       );
@@ -92,7 +96,12 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
             className="rounded-xl"
           />
           <div className="flex flex-col">
-            <Text size={TEXT_SIZE.sm} as="b" className="font-bold">
+            <Text
+              size={TEXT_SIZE.sm}
+              as="b"
+              className="font-bold"
+              data-testid="table-cell-fullName"
+            >
               {value}
             </Text>
             <Text
@@ -193,6 +202,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
               page={page}
               total={pageCount}
               onChange={handleChangePage}
+              data-testid="pagination"
               className="w-full max-w-[400px]"
             />
           </div>
@@ -206,6 +216,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
         {columns.map(({ key, label, allowsSorting, visibleOnMobile }) => (
           <TableColumn
             key={key}
+            data-testid={`table-header-${key}`}
             allowsSorting={allowsSorting}
             className={cn(
               'bg-transparent pb-2',
@@ -227,6 +238,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
         items={dataFormat}
         isLoading={isLoading}
         loadingContent={<Spinner label="Loading..." color="success" />}
+        emptyContent="No Contributors to display."
       >
         {(item) => (
           <TableRow key={item.id}>

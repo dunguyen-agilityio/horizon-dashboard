@@ -25,5 +25,6 @@ export const MOCK_CONTRIBUTORS = [
     rating: 52,
     template: '3D Cubes Art',
     createdAt: new Date('2024-08-18T07:25:04.188Z'),
+    avatar: undefined,
   },
 ] as Contributor[];
