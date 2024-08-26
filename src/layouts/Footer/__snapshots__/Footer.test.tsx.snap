@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Footer should render match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col justify-between items-center px-1 gap-2 lg:gap-0 lg:flex-row xl:px-7"
+  >
+    <p
+      class="text-primary dark:text-white text-small font-medium text-secondary text-center"
+    >
+      © 2022 Horizon UI. All Rights Reserved. Made with love by Simple!
+    </p>
+    <div
+      class="flex gap-7 lg:gap-11"
+    >
+      <a
+        class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+        href="/nft-marketplace"
+        role="link"
+        tabindex="0"
+      >
+        <p
+          class="text-primary dark:text-white text-small font-medium text-secondary leading-6"
+        >
+          Marketplace
+        </p>
+      </a>
+      <a
+        class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+        href="/license"
+        role="link"
+        tabindex="0"
+      >
+        <p
+          class="text-primary dark:text-white text-small font-medium text-secondary leading-6"
+        >
+          License
+        </p>
+      </a>
+      <a
+        class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+        href="/terms-of-use"
+        role="link"
+        tabindex="0"
+      >
+        <p
+          class="text-primary dark:text-white text-small font-medium text-secondary leading-6"
+        >
+          Terms of Use
+        </p>
+      </a>
+      <a
+        class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+        href="/blog"
+        role="link"
+        tabindex="0"
+      >
+        <p
+          class="text-primary dark:text-white text-small font-medium text-secondary leading-6"
+        >
+          Blog
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+`;
