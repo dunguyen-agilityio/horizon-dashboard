@@ -10,12 +10,12 @@ export class User {
   rating?: number;
 
   constructor(user: TUser) {
-    const { lastName = '', createdAt } = user;
+    const { lastName = '', rating = 0, createdAt } = user;
     Object.assign(this, {
       ...user,
       lastName,
       createdAt: new Date(createdAt),
-      rating: 0,
+      rating,
     });
   }
 

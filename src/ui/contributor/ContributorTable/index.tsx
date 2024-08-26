@@ -207,14 +207,13 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
               total={pageCount}
               onChange={handleChangePage}
               data-testid="pagination"
-              className="w-full max-w-[400px]"
               classNames={{ wrapper: 'max-w-full justify-center' }}
             />
           </div>
         ) : null
       }
       classNames={{
-        wrapper: 'bg-transparent px-0 py-4 rounded-none overflow-visible',
+        wrapper: 'bg-white dark:bg-indigo rounded-md overflow-hidden px-0 py-4',
       }}
     >
       <TableHeader>
@@ -249,7 +248,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
             {(columnKey) => (
               <TableCell
                 className={cn(
-                  'pt-[15px]',
+                  'pt-[15px] w-1/4',
                   visibleOnMobileByKey[columnKey] ? '' : 'hidden sm:table-cell',
                 )}
               >
