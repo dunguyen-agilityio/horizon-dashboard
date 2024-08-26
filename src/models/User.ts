@@ -7,10 +7,16 @@ export class User {
   avatar?: string;
   role!: string;
   createdAt!: Date;
+  rating?: number;
 
   constructor(user: TUser) {
     const { lastName = '', createdAt } = user;
-    Object.assign(this, { ...user, lastName, createdAt: new Date(createdAt) });
+    Object.assign(this, {
+      ...user,
+      lastName,
+      createdAt: new Date(createdAt),
+      rating: 0,
+    });
   }
 
   get fullName() {

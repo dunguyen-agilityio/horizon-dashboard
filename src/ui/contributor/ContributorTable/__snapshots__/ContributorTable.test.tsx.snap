@@ -223,8 +223,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 aria-label="Rating"
                 aria-valuemax="100"
                 aria-valuemin="0"
-                aria-valuenow="23"
-                aria-valuetext="23%"
+                aria-valuenow="0"
+                aria-valuetext="0%"
                 class="flex flex-col gap-2 w-full max-w-[200px]"
                 id="react-aria-:r2:"
                 role="progressbar"
@@ -235,7 +235,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   <span
                     class="text-medium"
                   >
-                    23%
+                    0%
                   </span>
                 </div>
                 <div
@@ -332,8 +332,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 aria-label="Rating"
                 aria-valuemax="100"
                 aria-valuemin="0"
-                aria-valuenow="80"
-                aria-valuetext="80%"
+                aria-valuenow="0"
+                aria-valuetext="0%"
                 class="flex flex-col gap-2 w-full max-w-[200px]"
                 id="react-aria-:r5:"
                 role="progressbar"
@@ -344,7 +344,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   <span
                     class="text-medium"
                   >
-                    80%
+                    0%
                   </span>
                 </div>
                 <div
@@ -440,8 +440,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 aria-label="Rating"
                 aria-valuemax="100"
                 aria-valuemin="0"
-                aria-valuenow="36"
-                aria-valuetext="36%"
+                aria-valuenow="0"
+                aria-valuetext="0%"
                 class="flex flex-col gap-2 w-full max-w-[200px]"
                 id="react-aria-:r8:"
                 role="progressbar"
@@ -452,7 +452,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   <span
                     class="text-medium"
                   >
-                    36%
+                    0%
                   </span>
                 </div>
                 <div
@@ -549,8 +549,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 aria-label="Rating"
                 aria-valuemax="100"
                 aria-valuemin="0"
-                aria-valuenow="52"
-                aria-valuetext="52%"
+                aria-valuenow="0"
+                aria-valuetext="0%"
                 class="flex flex-col gap-2 w-full max-w-[200px]"
                 id="react-aria-:rb:"
                 role="progressbar"
@@ -561,7 +561,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   <span
                     class="text-medium"
                   >
-                    52%
+                    0%
                   </span>
                 </div>
                 <div

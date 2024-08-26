@@ -1,15 +1,12 @@
 import { User } from './User';
 
 export class Contributor extends User {
-  template!: string;
-  rating!: number;
+  template: string;
 
   constructor(contributor: Contributor) {
-    const { template, rating, ...rest } = contributor;
+    const { template, ...rest } = contributor;
     super(rest);
-    Object.assign(this, {
-      template,
-      rating,
-    });
+
+    this.template = template;
   }
 }
