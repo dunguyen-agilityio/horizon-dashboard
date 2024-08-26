@@ -11,3 +11,17 @@ export const ROUTES: Route[] = [
   { title: 'Profile', href: '/profile' },
   { title: 'Sign In', href: '/sign-in' },
 ];
+
+export const FOOTER_ROUTES: Route[] = [
+  {
+    title: 'Marketplace',
+    href: '/nft-marketplace',
+  },
+  { title: 'License', href: '/license' },
+  { title: 'Terms of Use', href: '/terms-of-use' },
+  { title: 'Blog', href: '/blog' },
+];
+
+export const PUBLIC_ROUTES = {
+  FORGET_PASSWORD: '/forget-password',
+};
