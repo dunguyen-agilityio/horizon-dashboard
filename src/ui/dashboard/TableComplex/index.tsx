@@ -14,7 +14,9 @@ import {
 } from '@nextui-org/table';
 import { Progress } from '@nextui-org/progress';
 
+// Utils
 import { cn } from '@nextui-org/theme';
+import { formatShortDate } from '@/utils/format';
 
 // Types
 import { TColumn } from '@/types/common';
@@ -64,11 +66,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
     case 'createdAt':
       return (
         <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
-          {(value as Date).toLocaleDateString('en-US', {
-            day: '2-digit',
-            month: 'short',
-            year: 'numeric',
-          })}
+          {formatShortDate(value as Date)}
         </Text>
       );
 
