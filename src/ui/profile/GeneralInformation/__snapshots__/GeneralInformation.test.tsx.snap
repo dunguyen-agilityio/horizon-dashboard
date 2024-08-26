@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneralInformation component GeneralInformation should render match snapshot 1`] = `
+<div>
+  <div
+    class="dark:bg-indigo bg-white w-[350px] sm:w-full lg:w-[430px] xl:w-[617px] pt-[23px] p-[31px] rounded-md"
+  >
+    <div
+      class="text-center xl:text-start"
+    >
+      <p
+        class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-8 mb-4"
+      >
+        General Information
+      </p>
+      <p
+        class="text-secondary dark:text-secondary text-medium leading-xl leading-[26px] tracking-tight mb-8"
+      >
+        As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-2 gap-5"
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-medium group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[filled-within=true]:text-secondary"
+            data-slot="label"
+            for="react-aria-:r0:"
+            id="react-aria-:r1:"
+          >
+            Education
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Education"
+              aria-labelledby="react-aria-:r0: react-aria-:r1:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white"
+              data-slot="input"
+              id="react-aria-:r0:"
+              name="education"
+              placeholder="Update your education"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-medium group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[filled-within=true]:text-secondary"
+            data-slot="label"
+            for="react-aria-:r5:"
+            id="react-aria-:r6:"
+          >
+            Languages
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Languages"
+              aria-labelledby="react-aria-:r5: react-aria-:r6:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white"
+              data-slot="input"
+              id="react-aria-:r5:"
+              name="languages"
+              placeholder="Update your language"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-medium group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[filled-within=true]:text-secondary"
+            data-slot="label"
+            for="react-aria-:ra:"
+            id="react-aria-:rb:"
+          >
+            Department
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Department"
+              aria-labelledby="react-aria-:ra: react-aria-:rb:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white"
+              data-slot="input"
+              id="react-aria-:ra:"
+              name="department"
+              placeholder="Update your department"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-medium group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[filled-within=true]:text-secondary"
+            data-slot="label"
+            for="react-aria-:rf:"
+            id="react-aria-:rg:"
+          >
+            Work History
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Work History"
+              aria-labelledby="react-aria-:rf: react-aria-:rg:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white"
+              data-slot="input"
+              id="react-aria-:rf:"
+              name="work"
+              placeholder="Update your work"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-medium group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[filled-within=true]:text-secondary"
+            data-slot="label"
+            for="react-aria-:rk:"
+            id="react-aria-:rl:"
+          >
+            Organization
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Organization"
+              aria-labelledby="react-aria-:rk: react-aria-:rl:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white"
+              data-slot="input"
+              id="react-aria-:rk:"
+              name="organization"
+              placeholder="Update your organization"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md is-filled"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none is-filled"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-medium group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_8px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[filled-within=true]:text-secondary"
+            data-slot="label"
+            for="react-aria-:rp:"
+            id="react-aria-:rq:"
+          >
+            Birthday
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Birthday"
+              aria-labelledby="react-aria-:rp: react-aria-:rq:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white is-filled"
+              data-filled="true"
+              data-filled-within="true"
+              data-slot="input"
+              id="react-aria-:rp:"
+              name="birthday"
+              placeholder="Update your birthday"
+              type="date"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
