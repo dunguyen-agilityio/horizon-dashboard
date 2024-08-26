@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NFTCard tests Should match snapshot 1`] = `
+<div>
+  <a
+    class="relative"
+    data-testid="nft-card"
+    href="/nft-marketplace/1"
+  >
+    <div
+      class="bg-white dark:bg-indigo rounded-md p-5"
+    >
+      <div
+        class="relative w-[308px] h-[205px] rounded-[18px] overflow-hidden"
+      >
+        <img
+          alt="Mesh Gradients"
+          class="object-cover"
+          data-nimg="fill"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="/_next/image?url=%2Fnft-default.webp&w=3840&q=75"
+          srcset="/_next/image?url=%2Fnft-default.webp&w=640&q=75 640w, /_next/image?url=%2Fnft-default.webp&w=750&q=75 750w, /_next/image?url=%2Fnft-default.webp&w=828&q=75 828w, /_next/image?url=%2Fnft-default.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnft-default.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnft-default.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnft-default.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnft-default.webp&w=3840&q=75 3840w"
+          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+        />
+        <button
+          class="absolute top-[14px] right-[14px]"
+          data-testid="like-btn"
+        >
+          <svg
+            fill="none"
+            height="34"
+            viewBox="0 0 35 34"
+            width="35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="white"
+              height="34"
+              rx="17"
+              width="34.3736"
+            />
+            <path
+              d="M22.9437 11.4004C20.9594 9.99151 18.5091 10.649 17.1862 12.2614C15.8633 10.649 13.413 9.98369 11.4287 11.4004C10.3764 12.1518 9.71494 13.4198 9.66984 14.7582C9.56462 17.7952 12.1502 20.2294 16.0963 23.963L16.1715 24.0334C16.7427 24.5735 17.6221 24.5735 18.1934 24.0256L18.2761 23.9473C22.2221 20.2216 24.8002 17.7874 24.7025 14.7504C24.6574 13.4198 23.996 12.1518 22.9437 11.4004ZM17.2613 22.7967L17.1862 22.875L17.111 22.7967C13.5332 19.4232 11.1731 17.1925 11.1731 14.9304C11.1731 13.365 12.3006 12.1909 13.8038 12.1909C14.9613 12.1909 16.0888 12.9658 16.4872 14.0381H17.8927C18.2836 12.9658 19.411 12.1909 20.5685 12.1909C22.0718 12.1909 23.1993 13.365 23.1993 14.9304C23.1993 17.1925 20.8391 19.4232 17.2613 22.7967Z"
+              fill="#4318FF"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="flex justify-between pt-5"
+      >
+        <div>
+          <p
+            class="text-primary dark:text-white text-extra font-bold leading-large text-large"
+          >
+            Mesh Gradients
+          </p>
+          <p
+            class="text-secondary dark:text-secondary text-small font-medium"
+          >
+            By undefined
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-center h-auto w-max [&>span]:w-[27px] [&>span]:h-[27px] [&>span]:ring-offset-0"
+          role="group"
+        >
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default ms-0"
+            tabindex="-1"
+          >
+            <img
+              alt="avatar"
+              class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+              data-nimg="1"
+              decoding="async"
+              height="27"
+              loading="lazy"
+              src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
+              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+              style="color: transparent;"
+              width="27"
+            />
+          </span>
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+            tabindex="-1"
+          >
+            <img
+              alt="avatar"
+              class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+              data-nimg="1"
+              decoding="async"
+              height="27"
+              loading="lazy"
+              src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
+              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+              style="color: transparent;"
+              width="27"
+            />
+          </span>
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default -ms-2"
+            tabindex="-1"
+          >
+            <img
+              alt="avatar"
+              class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+              data-nimg="1"
+              decoding="async"
+              height="27"
+              loading="lazy"
+              src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
+              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+              style="color: transparent;"
+              width="27"
+            />
+          </span>
+          <span
+            class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full ring-2 ring-offset-2 ring-offset-background dark:ring-offset-background-dark -ms-2 data-[hover=true]:-translate-x-3 rtl:data-[hover=true]:translate-x-3 transition-transform data-[focus-visible=true]:-translate-x-3 rtl:data-[focus-visible=true]:translate-x-3 ring-default hover:-translate-x-0"
+            tabindex="-1"
+          >
+            <span
+              aria-label="+1"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal text-center text-inherit"
+              role="img"
+            >
+              +1
+            </span>
+          </span>
+        </div>
+      </div>
+      <p
+        class="text-primary dark:text-white text-small text-blue-450 font-bold pt-[25px]"
+      >
+        Current Bid: 1.23 USD
+      </p>
+    </div>
+  </a>
+</div>
+`;
