@@ -218,7 +218,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md is-filled"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -226,7 +226,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         data-slot="base"
       >
         <div
-          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none"
+          class="relative w-full inline-flex tap-highlight-transparent px-3 min-h-12 rounded-large flex-col items-start justify-center transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-16 py-2.5 gap-0 bg-white group-data-[focus=true]:bg-white data-[hover=true]:bg-white hover:bg-white dark:bg-indigo-light group-data-[focus=true]:dark:bg-indigo-light shadow-none is-filled"
           data-slot="input-wrapper"
           style="cursor: text;"
         >
@@ -245,12 +245,14 @@ exports[`GeneralInformation component GeneralInformation should render match sna
             <input
               aria-label="Birthday"
               aria-labelledby="react-aria-:rp: react-aria-:rq:"
-              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white is-filled"
+              data-filled="true"
+              data-filled-within="true"
               data-slot="input"
               id="react-aria-:rp:"
               name="birthday"
               placeholder="Update your birthday"
-              type=""
+              type="date"
               value=""
             />
           </div>
