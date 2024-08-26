@@ -7,6 +7,10 @@ export const ENDPOINTS = {
   KANBAN: '/kanban',
   PROFILE: '/profile',
   SIGN_IN: '/sign-in',
+  LICENSE: '/license',
+  BLOG: '/blog',
+  FORGET_PASSWORD: '/forget-password',
+  TERM_OF_USE: '/terms-of-use',
 };
 
 export const ROUTES: Route[] = [
@@ -24,13 +28,13 @@ export const ROUTES: Route[] = [
 export const FOOTER_ROUTES: Route[] = [
   {
     title: 'Marketplace',
-    href: '/nft-marketplace',
+    href: ENDPOINTS.NFT_MARKETPLACE,
   },
-  { title: 'License', href: '/license' },
-  { title: 'Terms of Use', href: '/terms-of-use' },
-  { title: 'Blog', href: '/blog' },
+  { title: 'License', href: ENDPOINTS.LICENSE },
+  { title: 'Terms of Use', href: ENDPOINTS.TERM_OF_USE },
+  { title: 'Blog', href: ENDPOINTS.BLOG },
 ];
 
 export const PUBLIC_ROUTES = {
-  FORGET_PASSWORD: '/forget-password',
+  FORGET_PASSWORD: ENDPOINTS.FORGET_PASSWORD,
 };
