@@ -157,7 +157,7 @@ const GeneralInformation = () => {
             <Input
               key="birthday-input"
               size="lg"
-              type=""
+              type="date"
               placeholder="Update your birthday"
               label="Birthday"
               className={customClass}
