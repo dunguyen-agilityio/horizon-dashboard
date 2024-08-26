@@ -47,6 +47,7 @@ const columns: TColumn[] = [
     key: 'template',
     label: 'Template',
     allowsSorting: true,
+    visibleOnMobile: true,
   },
   {
     key: 'rating',
@@ -119,8 +120,11 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
         <Progress
           aria-label="Rating"
           value={value}
+          showValueLabel
           classNames={{
-            track: 'bg-grey dark:bg-army-green [&>div]:dark:bg-purple-750',
+            track:
+              'hidden sm:block bg-grey dark:bg-army-green [&>div]:dark:bg-purple-750',
+            base: 'max-w-[200px]',
           }}
         />
       );
@@ -204,6 +208,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
               onChange={handleChangePage}
               data-testid="pagination"
               className="w-full max-w-[400px]"
+              classNames={{ wrapper: 'max-w-full justify-center' }}
             />
           </div>
         ) : null
@@ -221,7 +226,6 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
             className={cn(
               'bg-transparent pb-2',
               visibleOnMobile ? '' : 'hidden sm:table-cell',
-              key === 'fullName' ? 'w-1/2 sm:w-1/4' : '',
             )}
           >
             <Text
