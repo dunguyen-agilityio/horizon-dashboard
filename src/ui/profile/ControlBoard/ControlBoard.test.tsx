@@ -1,7 +1,10 @@
 import { render } from '@testing-library/react';
 
 // Components
-import ControlBoard, { listControllerNotifications } from '.';
+import ControlBoard from '.';
+
+// Constants
+import { CONTROL_NOTIFICATIONS } from '@/mocks/notify';
 
 describe('ControlBoard component', () => {
   it('ControlBoard should render match snapshot', () => {
@@ -19,7 +22,7 @@ describe('ControlBoard component', () => {
   it('ControlBoard should render correct label', () => {
     const { getByText } = render(<ControlBoard />);
 
-    const label = getByText(listControllerNotifications[1].label);
+    const label = getByText(CONTROL_NOTIFICATIONS[1].label);
     expect(label).toBeInTheDocument();
   });
 
