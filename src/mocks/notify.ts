@@ -1,5 +1,8 @@
 import { Notify } from '@/models/Notify';
 
+// Type
+import { INotification } from '@/types/notification';
+
 export const MOCK_NOTIFIES: Notify[] = [
   new Notify({
     id: '1',
@@ -51,4 +54,67 @@ export const MOCK_NOTIFIES: Notify[] = [
     createdAt: new Date('2024-08-08T08:25:04.188Z'),
     link: '/kanban/8',
   }),
+];
+
+export const CONTROL_NOTIFICATIONS: INotification[] = [
+  {
+    id: '1',
+    isSelected: true,
+    isDisabled: false,
+    label: 'Item update notifications',
+  },
+  {
+    id: '2',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Item comment notifications',
+  },
+  {
+    id: '3',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Buyer review notifications',
+  },
+  {
+    id: '4',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Rating reminders notifications',
+  },
+  {
+    id: '5',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Meetups near you notifications',
+  },
+  {
+    id: '6',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Company news notifications',
+  },
+  {
+    id: '7',
+    isSelected: false,
+    isDisabled: true,
+    label: 'New launches and projects',
+  },
+  {
+    id: '8',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Monthly product changes',
+  },
+  {
+    id: '9',
+    isSelected: false,
+    isDisabled: true,
+    label: 'Subscribe to newsletter',
+  },
+  {
+    id: '10',
+    isSelected: true,
+    isDisabled: true,
+    label: 'Email me when someone follows me',
+  },
 ];
