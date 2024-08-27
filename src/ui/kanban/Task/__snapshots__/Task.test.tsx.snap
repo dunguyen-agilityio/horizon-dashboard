@@ -19,6 +19,7 @@ exports[`Task tests Should match snapshot 1`] = `
         type="button"
       >
         <svg
+          data-testid="pencil-icon"
           fill="none"
           height="17"
           viewBox="0 0 17 17"
