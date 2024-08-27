@@ -13,7 +13,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         href="/dashboard"
       >
         <div
-          class="flex w-full items-center gap-3 pl-8"
+          class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
             class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
@@ -29,7 +29,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             </svg>
           </i>
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-medium text-secondary"
+            class="text-primary dark:text-white leading-xl font-medium text-lg xl:text-medium text-secondary"
           >
             Main Dashboard
           </p>
@@ -40,7 +40,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         href="/nft-marketplace"
       >
         <div
-          class="flex w-full items-center gap-3 pl-8"
+          class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
             class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
@@ -57,7 +57,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             </svg>
           </i>
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-medium text-secondary"
+            class="text-primary dark:text-white leading-xl font-medium text-lg xl:text-medium text-secondary"
           >
             NFT Marketplace
           </p>
@@ -68,7 +68,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         href="/contributor"
       >
         <div
-          class="flex w-full items-center gap-3 pl-8"
+          class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
             class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
@@ -84,7 +84,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             </svg>
           </i>
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-medium text-secondary"
+            class="text-primary dark:text-white leading-xl font-medium text-lg xl:text-medium text-secondary"
           >
             Contributor
           </p>
@@ -95,7 +95,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         href="/kanban"
       >
         <div
-          class="flex w-full items-center gap-3 pl-8"
+          class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
             class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
@@ -112,7 +112,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             </svg>
           </i>
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-medium text-secondary"
+            class="text-primary dark:text-white leading-xl font-medium text-lg xl:text-medium text-secondary"
           >
             Kanban
           </p>
@@ -123,7 +123,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         href="/profile"
       >
         <div
-          class="flex w-full items-center gap-3 pl-8"
+          class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
             class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
@@ -139,7 +139,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             </svg>
           </i>
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-medium text-secondary"
+            class="text-primary dark:text-white leading-xl font-medium text-lg xl:text-medium text-secondary"
           >
             Profile
           </p>
@@ -150,7 +150,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         href="/sign-in"
       >
         <div
-          class="flex w-full items-center gap-3 pl-8"
+          class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
             class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
@@ -166,7 +166,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
             </svg>
           </i>
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-medium text-secondary"
+            class="text-primary dark:text-white leading-xl font-medium text-lg xl:text-medium text-secondary"
           >
             Sign In
           </p>

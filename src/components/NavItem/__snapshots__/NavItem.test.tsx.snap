@@ -7,7 +7,7 @@ exports[`NavItem component NavItem should match snapshot 1`] = `
     href="marketplace"
   >
     <div
-      class="flex w-full items-center gap-3 pl-8"
+      class="flex w-full items-center gap-3 pl-0 xl:pl-8"
     >
       <i
         class="dark:fill-white fill-blue-450 w-6 h-6 flex justify-center items-center"
@@ -41,7 +41,7 @@ exports[`NavItem component NavItem should match snapshot 1`] = `
         </svg>
       </i>
       <p
-        class="text-primary dark:text-white text-medium leading-xl font-bold"
+        class="text-primary dark:text-white leading-xl text-lg xl:text-medium font-bold"
       >
         NFT Marketplace
       </p>

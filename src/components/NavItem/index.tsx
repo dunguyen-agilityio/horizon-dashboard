@@ -14,7 +14,7 @@ interface INavItemProps {
 
 const NavItem = ({ icon, label, isActive, href }: INavItemProps) => (
   <Link href={href} className="flex justify-between">
-    <div className="flex w-full items-center gap-3 pl-8">
+    <div className="flex w-full items-center gap-3 pl-0 xl:pl-8">
       <BoxIcon
         customClass={cn('dark:fill-white', {
           'fill-blue-450': isActive,
@@ -23,7 +23,10 @@ const NavItem = ({ icon, label, isActive, href }: INavItemProps) => (
         icon={icon}
       />
       <Text
-        className={cn('font-medium', isActive ? 'font-bold' : 'text-secondary')}
+        className={cn(
+          'font-medium text-lg xl:text-medium',
+          isActive ? 'font-bold' : 'text-secondary',
+        )}
       >
         {label}
       </Text>

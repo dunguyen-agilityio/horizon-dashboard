@@ -1,41 +1,24 @@
 'use client';
 
 // Libs
-import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 
 // Components
 import { Banner, NavItem } from '@/components';
 
 // Constants
-import { ROUTES } from '@/constants/routes';
-
-// Icons
-import { Home, Cart, User, Kanban, Chart, Lock } from '@/icons';
+import { ROUTES, LIST_NAV_ICON } from '@/constants/routes';
 
 // Types
 import { Navigate } from '@/types/navigate';
 
-const listNavIcon = [
-  <Home key="homeIcon" />,
-  <Cart key="cartIcon" />,
-  <Chart key="chartIcon" />,
-  <Kanban key="KanbanIcon" />,
-  <User key="userIcon" />,
-  <Lock key="lockIcon" />,
-];
-
 const Navbar = () => {
   const pathname = usePathname();
 
-  const listNavigate: Navigate[] = useMemo(
-    () =>
-      ROUTES.map((route, index) => ({
-        ...route,
-        icon: listNavIcon[index],
-      })),
-    [],
-  );
+  const listNavigate: Navigate[] = ROUTES.map((route, index) => ({
+    ...route,
+    icon: LIST_NAV_ICON[index],
+  }));
 
   return (
     <nav className="bg-white flex flex-col justify-between dark:bg-indigo w-[240px] lg:w-[290px] h-[1152px]">
