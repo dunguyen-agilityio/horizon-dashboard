@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopCreators tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col bg-white dark:bg-indigo-light rounded-md w-[484px] overflow-auto shadow-md"
+  >
+    <div
+      class="flex items-center justify-between p-[18px]"
+    >
+      <p
+        class="text-primary dark:text-white text-medium leading-xl leading-8 font-poppins font-bold text-blue-450"
+      >
+        Top Creators
+      </p>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
+        type="button"
+      >
+        See all
+      </button>
+    </div>
+    <div
+      class="flex flex-col relative gap-4 w-full mt-3 first:[&_*:is(th,td)]:pr-0 [&_*:is(th,td)]:bg-transparent [&_*:is(th,td)]:dark:transparent [&>div]:p-0 [&>div]:bg-transparent [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-4 [&>div]:overflow-visible"
+    >
+      <div
+        class="p-4 z-0 flex flex-col relative justify-between gap-4 bg-content1 overflow-auto rounded-large shadow-small w-full"
+      >
+        <table
+          aria-describedby=""
+          class="min-w-full h-auto table-auto w-full"
+          id="react-aria-:r0:"
+          role="grid"
+          tabindex="0"
+        >
+          <thead
+            class="[&>tr]:first:rounded-lg bg-transparent"
+            role="rowgroup"
+          >
+            <tr
+              class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              role="row"
+            >
+              <th
+                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-l-lg rtl:first:rounded-r-lg rtl:first:rounded-l-[unset] last:rounded-r-lg rtl:last:rounded-l-lg rtl:last:rounded-r-[unset] data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start pl-7"
+                data-key="userName"
+                id="react-aria-:r0:-userName"
+                role="columnheader"
+                tabindex="-1"
+              >
+                <p
+                  class="text-secondary dark:text-secondary text-small font-medium"
+                >
+                  Name
+                </p>
+              </th>
+              <th
+                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-l-lg rtl:first:rounded-r-lg rtl:first:rounded-l-[unset] last:rounded-r-lg rtl:last:rounded-l-lg rtl:last:rounded-r-[unset] data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+                data-key="artwork"
+                id="react-aria-:r0:-artwork"
+                role="columnheader"
+                tabindex="-1"
+              >
+                <p
+                  class="text-secondary dark:text-secondary text-small font-medium"
+                >
+                  Artworks
+                </p>
+              </th>
+              <th
+                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-l-lg rtl:first:rounded-r-lg rtl:first:rounded-l-[unset] last:rounded-r-lg rtl:last:rounded-l-lg rtl:last:rounded-r-[unset] data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+                data-key="rating"
+                id="react-aria-:r0:-rating"
+                role="columnheader"
+                tabindex="-1"
+              >
+                <p
+                  class="text-secondary dark:text-secondary text-small font-medium"
+                >
+                  Rating
+                </p>
+              </th>
+            </tr>
+            <tr
+              aria-hidden="true"
+              class="w-px h-px block"
+              style="margin-left: 0.25rem; margin-top: 0.25rem;"
+              tabindex="-1"
+            />
+          </thead>
+          <tbody
+            class="bg-gray dark:bg-indigo"
+            role="rowgroup"
+          >
+            <tr
+              aria-labelledby="react-aria-:r0:-1-userName"
+              class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              data-first="true"
+              data-key="1"
+              role="row"
+              tabindex="-1"
+            >
+              <td
+                class="py-2 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start px-0 group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="11userName"
+                id="react-aria-:r0:-1-userName"
+                role="rowheader"
+                tabindex="-1"
+              >
+                <div
+                  class="flex items-center pl-7"
+                >
+                  <span
+                    class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full mr-2"
+                    tabindex="-1"
+                  >
+                    <img
+                      alt="maddison_c21"
+                      class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                      src="/default-avatar.webp"
+                    />
+                  </span>
+                  <span
+                    class="text-primary dark:text-white text-small font-medium bg-transparent text-primary"
+                  >
+                    @maddison_c21
+                  </span>
+                </div>
+              </td>
+              <td
+                class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="11artwork"
+                role="gridcell"
+                tabindex="-1"
+              >
+                <span
+                  class="text-primary dark:text-white text-small font-medium bg-transparent text-secondary"
+                >
+                  9821
+                </span>
+              </td>
+              <td
+                class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="11rating"
+                role="gridcell"
+                tabindex="-1"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="90"
+                  aria-valuetext="90%"
+                  class="flex flex-col gap-2 w-full pr-3 h-2"
+                  id="react-aria-:r2:"
+                  role="progressbar"
+                >
+                  <div
+                    class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+                  >
+                    <div
+                      class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
+                      style="transform: translateX(-100%);"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              aria-labelledby="react-aria-:r0:-2-userName"
+              class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              data-key="2"
+              data-middle="true"
+              data-odd="true"
+              role="row"
+              tabindex="-1"
+            >
+              <td
+                class="py-2 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start px-0 group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="22userName"
+                id="react-aria-:r0:-2-userName"
+                role="rowheader"
+                tabindex="-1"
+              >
+                <div
+                  class="flex items-center pl-7"
+                >
+                  <span
+                    class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full mr-2"
+                    tabindex="-1"
+                  >
+                    <img
+                      alt="karl.willO2"
+                      class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                      src="/default-avatar.webp"
+                    />
+                  </span>
+                  <span
+                    class="text-primary dark:text-white text-small font-medium bg-transparent text-primary"
+                  >
+                    @karl.willO2
+                  </span>
+                </div>
+              </td>
+              <td
+                class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="22artwork"
+                role="gridcell"
+                tabindex="-1"
+              >
+                <span
+                  class="text-primary dark:text-white text-small font-medium bg-transparent text-secondary"
+                >
+                  7032
+                </span>
+              </td>
+              <td
+                class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="22rating"
+                role="gridcell"
+                tabindex="-1"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="80"
+                  aria-valuetext="80%"
+                  class="flex flex-col gap-2 w-full pr-3 h-2"
+                  id="react-aria-:r5:"
+                  role="progressbar"
+                >
+                  <div
+                    class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+                  >
+                    <div
+                      class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
+                      style="transform: translateX(-100%);"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              aria-labelledby="react-aria-:r0:-3-userName"
+              class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              data-key="3"
+              data-last="true"
+              role="row"
+              tabindex="-1"
+            >
+              <td
+                class="py-2 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start px-0 group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="33userName"
+                id="react-aria-:r0:-3-userName"
+                role="rowheader"
+                tabindex="-1"
+              >
+                <div
+                  class="flex items-center pl-7"
+                >
+                  <span
+                    class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full mr-2"
+                    tabindex="-1"
+                  >
+                    <img
+                      alt="andreea.1z"
+                      class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                      src="/default-avatar.webp"
+                    />
+                  </span>
+                  <span
+                    class="text-primary dark:text-white text-small font-medium bg-transparent text-primary"
+                  >
+                    @andreea.1z
+                  </span>
+                </div>
+              </td>
+              <td
+                class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="33artwork"
+                role="gridcell"
+                tabindex="-1"
+              >
+                <span
+                  class="text-primary dark:text-white text-small font-medium bg-transparent text-secondary"
+                >
+                  5204
+                </span>
+              </td>
+              <td
+                class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start group-aria-[selected=false]:group-data-[hover=true]:bg-transparent"
+                data-key="33rating"
+                role="gridcell"
+                tabindex="-1"
+              >
+                <div
+                  aria-valuemax="100"
+                  aria-valuemin="0"
+                  aria-valuenow="60"
+                  aria-valuetext="60%"
+                  class="flex flex-col gap-2 w-full pr-3 h-2"
+                  id="react-aria-:r8:"
+                  role="progressbar"
+                >
+                  <div
+                    class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+                  >
+                    <div
+                      class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
+                      style="transform: translateX(-100%);"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
