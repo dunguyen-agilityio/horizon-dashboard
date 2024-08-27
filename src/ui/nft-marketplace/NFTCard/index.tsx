@@ -11,7 +11,7 @@ import FavoriteIcon from '@/icons/Favorite';
 import { Avatar, AvatarGroup } from '@nextui-org/avatar';
 
 // Constants
-import { ENDPOINTS } from '@/constants/routes';
+import { PRIVATE_ROUTES } from '@/constants/routes';
 import { NFT_IMAGES } from '@/constants/images';
 
 // Models
@@ -43,7 +43,7 @@ const NFTCard = ({
 
   return (
     <Link
-      href={`${ENDPOINTS.NFT_MARKETPLACE}/${id}`}
+      href={`${PRIVATE_ROUTES.NFT_MARKETPLACE}/${id}`}
       prefetch
       className="relative"
       data-testid="nft-card"
