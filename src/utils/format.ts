@@ -34,6 +34,10 @@ export const formatDateRelativeToNow = (date: Date) => {
   }
 };
 
+export const formatUserName = (userName: string) => {
+  return `@${userName}`;
+};
+
 export const formatShortDate = (date: Date) =>
   date.toLocaleDateString('en-US', {
     day: '2-digit',
