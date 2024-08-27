@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonalProjects tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="dark:bg-indigo bg-white w-[350px] sm:w-full lg:w-[552px] py-6 px-8 rounded-md"
+  >
+    <div
+      class="text-center xl:text-start"
+    >
+      <p
+        class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-8 mb-4"
+      >
+        All Projects 
+        3
+      </p>
+      <p
+        class="text-secondary dark:text-secondary text-medium leading-xl leading-[26px] tracking-tight mb-8"
+      >
+        Here you can find more details about your projects. Keep you user engaged by providing meaningful information.
+      </p>
+    </div>
+    <div
+      class="flex flex-col gap-5 mb-2"
+    />
+  </div>
+</div>
+`;

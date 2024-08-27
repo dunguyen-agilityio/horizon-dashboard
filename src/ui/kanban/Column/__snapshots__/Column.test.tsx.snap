@@ -135,6 +135,7 @@ exports[`Column tests Should match snapshot 2`] = `
               type="button"
             >
               <svg
+                data-testid="pencil-icon"
                 fill="none"
                 height="17"
                 viewBox="0 0 17 17"
@@ -281,6 +282,7 @@ exports[`Column tests Should match snapshot 2`] = `
               type="button"
             >
               <svg
+                data-testid="pencil-icon"
                 fill="none"
                 height="17"
                 viewBox="0 0 17 17"
@@ -413,6 +415,7 @@ exports[`Column tests Should match snapshot 2`] = `
               type="button"
             >
               <svg
+                data-testid="pencil-icon"
                 fill="none"
                 height="17"
                 viewBox="0 0 17 17"
@@ -559,6 +562,7 @@ exports[`Column tests Should match snapshot 2`] = `
               type="button"
             >
               <svg
+                data-testid="pencil-icon"
                 fill="none"
                 height="17"
                 viewBox="0 0 17 17"
@@ -705,6 +709,7 @@ exports[`Column tests Should match snapshot 2`] = `
               type="button"
             >
               <svg
+                data-testid="pencil-icon"
                 fill="none"
                 height="17"
                 viewBox="0 0 17 17"
@@ -837,6 +842,7 @@ exports[`Column tests Should match snapshot 2`] = `
               type="button"
             >
               <svg
+                data-testid="pencil-icon"
                 fill="none"
                 height="17"
                 viewBox="0 0 17 17"

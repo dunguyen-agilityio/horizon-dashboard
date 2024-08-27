@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectCard tests Should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-none bg-white dark:bg-indigo-light"
+    tabindex="-1"
+  >
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
+    >
+      <div
+        class="flex flex-col items-center sm:flex-row justify-between relative"
+      >
+        <a
+          class="inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity absolute -right-1 -top-1 sm:hidden"
+          href="project/2"
+          role="link"
+          tabindex="0"
+        >
+          <i
+            class="fill-secondary dark:fill-white w-6 h-6 flex justify-center items-center"
+          >
+            <svg
+              data-testid="pencil-icon"
+              fill="none"
+              height="17"
+              viewBox="0 0 17 17"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#clip0_101_11790)"
+              >
+                <path
+                  d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                  fill="#A3AED0"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_101_11790"
+                >
+                  <rect
+                    fill="white"
+                    height="17"
+                    width="17"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
+        </a>
+        <div
+          class="relative w-20 h-20 my-2 sm:my-0 rounded-2xl overflow-hidden"
+        >
+          <img
+            alt="project-detail"
+            class="object-cover"
+            data-nimg="fill"
+            decoding="async"
+            loading="lazy"
+            sizes="100vw"
+            src="/_next/image?url=%2Fnft-default.webp&w=3840&q=75"
+            srcset="/_next/image?url=%2Fnft-default.webp&w=640&q=75 640w, /_next/image?url=%2Fnft-default.webp&w=750&q=75 750w, /_next/image?url=%2Fnft-default.webp&w=828&q=75 828w, /_next/image?url=%2Fnft-default.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnft-default.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnft-default.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnft-default.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnft-default.webp&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+        <div
+          class="xl:ml-5 xl:mr-16 mb-2 sm:mb-0 flex items-center"
+        >
+          <div
+            class="flex flex-col items-center sm:items-start"
+          >
+            <p
+              class="text-primary dark:text-white text-medium leading-xl font-medium"
+            >
+              Technology behind the Blockchain
+            </p>
+            <div
+              class="flex items-center gap-[5px]"
+            >
+              <p
+                class="text-secondary dark:text-secondary text-small font-medium"
+              >
+                project #2
+              </p>
+              <div
+                class="bg-secondary w-1 h-1 rounded-full"
+              />
+              <a
+                class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium underline hover:opacity-80 active:opacity-disabled transition-opacity underline-offset-4 text-blue-450 dark:text-white"
+                href="#"
+                role="link"
+                tabindex="0"
+              >
+                <p
+                  class="text-blue-450 dark:text-white text-small font-medium"
+                >
+                  See project details
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a
+          class="relative items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity hidden sm:block"
+          href="project/2"
+          role="link"
+          tabindex="0"
+        >
+          <i
+            class="mr-4 w-6 h-6 flex justify-center items-center"
+          >
+            <svg
+              data-testid="pencil-icon"
+              fill="none"
+              height="17"
+              viewBox="0 0 17 17"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-path="url(#clip0_101_11790)"
+              >
+                <path
+                  d="M2.125 12.3675V14.5208C2.125 14.7192 2.28083 14.875 2.47917 14.875H4.6325C4.72458 14.875 4.81667 14.8396 4.88042 14.7688L12.6154 7.04083L9.95917 4.38458L2.23125 12.1125C2.16042 12.1833 2.125 12.2683 2.125 12.3675ZM14.6696 4.98667C14.9458 4.71042 14.9458 4.26417 14.6696 3.98792L13.0121 2.33042C12.7358 2.05417 12.2896 2.05417 12.0133 2.33042L10.7171 3.62667L13.3733 6.28292L14.6696 4.98667Z"
+                  fill="#A3AED0"
+                />
+              </g>
+              <defs>
+                <clippath
+                  id="clip0_101_11790"
+                >
+                  <rect
+                    fill="white"
+                    height="17"
+                    width="17"
+                  />
+                </clippath>
+              </defs>
+            </svg>
+          </i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
