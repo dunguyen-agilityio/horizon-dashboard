@@ -1,16 +1,11 @@
-import { cn } from '@nextui-org/theme';
-
-const Search = ({ className }: { className?: string }) => (
+const Search = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="11"
     height="12"
     viewBox="0 0 11 12"
     fill="none"
-    className={cn(
-      '[&>line]:stroke-primary [&>line]:dark:stroke-white [&>circle]:stroke-primary [&>circle]:dark:stroke-white',
-      className,
-    )}
+    className="[&>line]:stroke-primary [&>line]:dark:stroke-white [&>circle]:stroke-primary [&>circle]:dark:stroke-white"
   >
     <circle cx="5" cy="5" r="4.3" stroke="#2B3674" strokeWidth="1.4" />
     <line

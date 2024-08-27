@@ -1,8 +1,5 @@
-import { cn } from '@nextui-org/theme';
-
 interface AddProps {
   color?: 'primary' | 'secondary';
-  className?: string;
 }
 
 const classes = {
@@ -10,14 +7,14 @@ const classes = {
   secondary: '[&>path]:stroke-white [&>path]:dark:stroke-primary',
 };
 
-const Add = ({ color = 'primary', className }: AddProps) => (
+const Add = ({ color = 'primary' }: AddProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="19"
     height="17"
     viewBox="0 0 19 17"
     fill="none"
-    className={cn(classes[color], className)}
+    className={classes[color]}
   >
     <path
       d="M9.32703 3.71619V13.2787"
