@@ -14,6 +14,8 @@ import { Task as TaskModel } from '@/models/Task';
 
 // Utils
 import { getColorByLabel } from '@/utils/task';
+import EditTaskModal from '../ModalEditTask';
+import { useDisclosure } from '@nextui-org/react';
 
 export const Task = ({
   title,
@@ -24,43 +26,61 @@ export const Task = ({
 }: Pick<
   TaskModel,
   'title' | 'description' | 'labels' | 'cover' | 'assignees'
->) => (
-  <div className="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]">
-    <div className="flex justify-between">
-      <Text size={TEXT_SIZE.lg} as="h3" className="max-w-[90%]">
-        {title}
-      </Text>
-      <Button size="fit" aria-label="edit-button" className="bg-transparent">
-        <Pen />
-      </Button>
-    </div>
-    {cover && (
-      <div className="relative min-h-[285px] min-w-[308px]">
-        <Image src={cover} alt="cover" fill />
+>) => {
+  const { isOpen: isOpenModalEdit, onOpen, onOpenChange } = useDisclosure();
+
+  return (
+    <>
+      <div className="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]">
+        <div className="flex justify-between">
+          <Text size={TEXT_SIZE.lg} as="h3" className="max-w-[90%]">
+            {title}
+          </Text>
+          <Button
+            size="fit"
+            aria-label="edit-button"
+            className="bg-transparent"
+            onClick={onOpen}
+          >
+            <Pen />
+          </Button>
+        </div>
+        {cover && (
+          <div className="relative min-h-[285px] min-w-[308px]">
+            <Image src={cover} alt="cover" fill />
+          </div>
+        )}
+        <Text as="p" variant={TEXT_VARIANT.SECONDARY}>
+          {description}
+        </Text>
+        <div className="flex justify-between mt-5 items-center">
+          <AvatarGroup isBordered max={3}>
+            {assignees?.map(({ id, avatar, fullName }) => (
+              <Avatar
+                key={id}
+                src={avatar}
+                ImgComponent={Image}
+                alt={fullName}
+                imgProps={{ width: 20, height: 20 }}
+                isBordered
+              />
+            ))}
+          </AvatarGroup>
+          <Chip
+            color={getColorByLabel(labels[0])}
+            className="text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+          >
+            {labels[0]}
+          </Chip>
+        </div>
       </div>
-    )}
-    <Text as="p" variant={TEXT_VARIANT.SECONDARY}>
-      {description}
-    </Text>
-    <div className="flex justify-between mt-5 items-center">
-      <AvatarGroup isBordered max={3}>
-        {assignees?.map(({ id, avatar, fullName }) => (
-          <Avatar
-            key={id}
-            src={avatar}
-            ImgComponent={Image}
-            alt={fullName}
-            imgProps={{ width: 20, height: 20 }}
-            isBordered
-          />
-        ))}
-      </AvatarGroup>
-      <Chip
-        color={getColorByLabel(labels[0])}
-        className="text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
-      >
-        {labels[0]}
-      </Chip>
-    </div>
-  </div>
-);
+      <EditTaskModal
+        isOpen={isOpenModalEdit}
+        title={title}
+        description={description}
+        labels={labels}
+        onOpenChange={onOpenChange}
+      />
+    </>
+  );
+};
