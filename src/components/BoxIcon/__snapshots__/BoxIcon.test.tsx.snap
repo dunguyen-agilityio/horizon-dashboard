@@ -3,7 +3,7 @@
 exports[`BoxIcon component Should render BoxIcon match snapshot 1`] = `
 <div>
   <i
-    class="fill-secondary dark:fill-white w-6 h-6 flex justify-center items-center"
+    class="w-6 h-6 flex justify-center items-center hover:cursor-pointer fill-secondary dark:fill-white"
   >
     <svg
       data-testid="kanban-icon"

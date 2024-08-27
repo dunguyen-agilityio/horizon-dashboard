@@ -12,7 +12,10 @@ const BoxIcon = ({
   onClick,
 }: IBoxIconProps) => (
   <i
-    className={cn(customClass, 'w-6 h-6 flex justify-center items-center')}
+    className={cn(
+      'w-6 h-6 flex justify-center items-center hover:cursor-pointer',
+      customClass,
+    )}
     onClick={onClick}
   >
     {icon}
