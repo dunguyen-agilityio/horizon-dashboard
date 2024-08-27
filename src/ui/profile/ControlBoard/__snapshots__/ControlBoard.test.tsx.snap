@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ControlBoard component ControlBoard should render match snapshot 1`] = `
+<div>
+  <div
+    class="dark:bg-indigo bg-white w-[350px] xl:w-[421px] pt-[23px] p-[31px] rounded-md"
+  >
+    <div
+      class="flex justify-between"
+    >
+      <p
+        class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-8 mb-4"
+      >
+        Notifications
+      </p>
+      <i
+        class="flex justify-center items-center hover:cursor-pointer rotate-90 w-9 h-9 bg-gray dark:bg-indigo-light rounded-lg fill-blue-450 dark:fill-white"
+      >
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            clip-path="url(#clip0_201_3969)"
+          >
+            <path
+              d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_201_3969"
+            >
+              <rect
+                fill="white"
+                height="24"
+                width="24"
+              />
+            </clippath>
+          </defs>
+        </svg>
+      </i>
+    </div>
+    <div
+      class="flex flex-col gap-[22px] ml-1"
+    >
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+        data-selected="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Item update notifications"
+            aria-labelledby=":r0:"
+            checked=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r0:"
+        >
+          Item update notifications
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Item comment notifications"
+            aria-labelledby=":r1:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r1:"
+        >
+          Item comment notifications
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Buyer review notifications"
+            aria-labelledby=":r2:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r2:"
+        >
+          Buyer review notifications
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Rating reminders notifications"
+            aria-labelledby=":r3:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r3:"
+        >
+          Rating reminders notifications
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Meetups near you notifications"
+            aria-labelledby=":r4:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r4:"
+        >
+          Meetups near you notifications
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Company news notifications"
+            aria-labelledby=":r5:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r5:"
+        >
+          Company news notifications
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="New launches and projects"
+            aria-labelledby=":r6:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r6:"
+        >
+          New launches and projects
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Monthly product changes"
+            aria-labelledby=":r7:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r7:"
+        >
+          Monthly product changes
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Subscribe to newsletter"
+            aria-labelledby=":r8:"
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r8:"
+        >
+          Subscribe to newsletter
+        </span>
+      </label>
+      <label
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        data-disabled="true"
+        data-selected="true"
+      >
+        <span
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Email me when someone follows me"
+            aria-labelledby=":r9:"
+            checked=""
+            disabled=""
+            role="switch"
+            type="checkbox"
+            value=""
+          />
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:text-primary-foreground w-10 h-6 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background group-data-[selected=true]:bg-blue-450 group-data-[selected=true]:dark:bg-purple-750"
+        >
+          <span
+            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-4 h-4 text-tiny group-data-[selected=true]:ml-4 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-4 transition-all group-data-[pressed=true]:w-5 group-data-[selected]:group-data-[pressed]:ml-3"
+          />
+        </span>
+        <span
+          class="relative select-none ml-2 text-primary dark:text-white text-sm"
+          id=":r9:"
+        >
+          Email me when someone follows me
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
