@@ -17,9 +17,15 @@ interface IProjectCardProps {
   id: string;
   title: string;
   baseProject: string;
+  imageProject?: string;
 }
 
-const ProjectCard = ({ id, title, baseProject }: IProjectCardProps) => (
+const ProjectCard = ({
+  id,
+  imageProject = NFT_IMAGES.DEFAULT,
+  title,
+  baseProject,
+}: IProjectCardProps) => (
   <Card className="border-none bg-white dark:bg-indigo-light">
     <CardBody>
       <div className="flex flex-col items-center sm:flex-row justify-between relative">
@@ -32,7 +38,7 @@ const ProjectCard = ({ id, title, baseProject }: IProjectCardProps) => (
         <div className="relative w-20 h-20 my-2 sm:my-0 rounded-2xl overflow-hidden">
           <Image
             fill
-            src={NFT_IMAGES.DEFAULT}
+            src={imageProject}
             alt="project-detail"
             className="object-cover"
           />
