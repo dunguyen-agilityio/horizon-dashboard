@@ -10,11 +10,11 @@ import { QUERY_KEY } from '@/constants/common';
 import { TEXT_SIZE } from '@/types/text';
 
 // Components
-import Menu from '@/icons/Menu';
 import Notification from './Notification';
 import ProfileDropDown from './ProfileDropDown';
 import { ToggleTheme, Text, InputSearch } from '@/components';
 import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/react';
+import MenuBar from '@/layouts/MenuBar';
 
 // Utils
 import { debounce } from '@/utils/debounce';
@@ -46,12 +46,9 @@ const Header = () => {
       <div className="flex flex-col gap-1 mr-2">
         {title && (
           <>
-            <button
-              aria-label="Menu Button"
-              className="cursor-pointer block xl:hidden pt-1"
-            >
-              <Menu />
-            </button>
+            <div className="flex justify-start w-1/2">
+              <MenuBar />
+            </div>
             <Breadcrumbs separator="/">
               <BreadcrumbItem className="dark:[&_span]:text-white" isCurrent>
                 Pages

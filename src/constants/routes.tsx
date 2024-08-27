@@ -1,5 +1,8 @@
 import { Route } from '@/types/route';
 
+// Icons
+import { Home, Cart, User, Kanban, Chart, Lock } from '@/icons';
+
 export const ENDPOINTS = {
   DASHBOARD: '/dashboard',
   NFT_MARKETPLACE: '/nft-marketplace',
@@ -38,3 +41,12 @@ export const FOOTER_ROUTES: Route[] = [
 export const PUBLIC_ROUTES = {
   FORGET_PASSWORD: ENDPOINTS.FORGET_PASSWORD,
 };
+
+export const LIST_NAV_ICON = [
+  <Home key="homeIcon" />,
+  <Cart key="cartIcon" />,
+  <Chart key="chartIcon" />,
+  <Kanban key="KanbanIcon" />,
+  <User key="userIcon" />,
+  <Lock key="lockIcon" />,
+];
