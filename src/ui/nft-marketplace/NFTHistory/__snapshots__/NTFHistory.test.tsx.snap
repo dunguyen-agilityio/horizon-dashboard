@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NTFHistory should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col bg-white dark:bg-indigo rounded-md w-[484px] overflow-auto shadow-md p-5"
+  >
+    <div
+      class="flex items-center justify-between p-[18px]"
+    >
+      <p
+        class="text-primary dark:text-white text-medium leading-xl leading-8 font-poppins font-bold text-blue-450"
+      >
+        History
+      </p>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
+        type="button"
+      >
+        See all
+      </button>
+    </div>
+    <div
+      class="flex justify-center flex-col"
+    >
+      <div
+        class="w-[448px] flex gap-8 justify-between p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
+      >
+        <div
+          class="flex items-center gap-4"
+        >
+          <div
+            class="w-[66px] h-[66px] flex items-center"
+          >
+            <img
+              alt="Colorful Heaven"
+              class="rounded-xl"
+              data-nimg="1"
+              decoding="async"
+              height="66"
+              loading="lazy"
+              src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
+              srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
+              style="color: transparent;"
+              width="66"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <p
+              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+            >
+              Colorful Heaven
+            </p>
+            <p
+              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+            >
+              By 
+              Mark Benjamin
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl font-bold"
+          >
+            1.33
+             $
+          </p>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+          >
+            2 hours ago
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-[448px] flex gap-8 justify-between p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
+      >
+        <div
+          class="flex items-center gap-4"
+        >
+          <div
+            class="w-[66px] h-[66px] flex items-center"
+          >
+            <img
+              alt="Abstract Colors"
+              class="rounded-xl"
+              data-nimg="1"
+              decoding="async"
+              height="66"
+              loading="lazy"
+              src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
+              srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
+              style="color: transparent;"
+              width="66"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <p
+              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+            >
+              Colorful Heaven
+            </p>
+            <p
+              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+            >
+              By 
+              Esthera Jackson
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl font-bold"
+          >
+            0.91
+             $
+          </p>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+          >
+            6 hours ago
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-[448px] flex gap-8 justify-between p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
+      >
+        <div
+          class="flex items-center gap-4"
+        >
+          <div
+            class="w-[66px] h-[66px] flex items-center"
+          >
+            <img
+              alt="ETH AI Brain"
+              class="rounded-xl"
+              data-nimg="1"
+              decoding="async"
+              height="66"
+              loading="lazy"
+              src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
+              srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
+              style="color: transparent;"
+              width="66"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <p
+              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+            >
+              Colorful Heaven
+            </p>
+            <p
+              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+            >
+              By 
+              Nick Wilson
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl font-bold"
+          >
+            2.82
+             $
+          </p>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+          >
+            5 hours ago
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-[448px] flex gap-8 justify-between p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
+      >
+        <div
+          class="flex items-center gap-4"
+        >
+          <div
+            class="w-[66px] h-[66px] flex items-center"
+          >
+            <img
+              alt="Swipe Circles"
+              class="rounded-xl"
+              data-nimg="1"
+              decoding="async"
+              height="66"
+              loading="lazy"
+              src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
+              srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
+              style="color: transparent;"
+              width="66"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <p
+              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+            >
+              Colorful Heaven
+            </p>
+            <p
+              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+            >
+              By 
+              Peter Will
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl font-bold"
+          >
+            2.32
+             $
+          </p>
+        </div>
+        <div
+          class="flex items-center"
+        >
+          <p
+            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+          >
+            1 day ago
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
