@@ -1,9 +1,12 @@
-import { Text } from '@/components';
+import { BoxIcon, Text } from '@/components';
 import { User } from '@nextui-org/user';
 import { Listbox, ListboxItem } from '@nextui-org/listbox';
+
+// Models
 import { User as UserModel } from '@/models/User';
-import { Add } from '@/icons';
-import More from '@/icons/More';
+
+// Icons
+import { Add, More } from '@/icons';
 
 interface TeamMemberProps {
   members: UserModel[];
@@ -52,7 +55,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
               disabled
               className="disabled:cursor-not-allowed disabled:opacity-80"
             >
-              <More />
+              <BoxIcon icon={<More />} customClass="fill-secondary" />
             </button>
           </ListboxItem>
         );

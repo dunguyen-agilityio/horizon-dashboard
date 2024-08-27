@@ -16,7 +16,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
-            class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-secondary"
           >
             <svg
               height="17"
@@ -43,7 +43,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
-            class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-secondary"
           >
             <svg
               data-testid="cart-icon"
@@ -71,7 +71,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
-            class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-secondary"
           >
             <svg
               height="18"
@@ -98,7 +98,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
-            class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-secondary"
           >
             <svg
               data-testid="kanban-icon"
@@ -126,7 +126,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
-            class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-secondary"
           >
             <svg
               height="16"
@@ -153,7 +153,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
           class="flex w-full items-center gap-3 pl-0 xl:pl-8"
         >
           <i
-            class="dark:fill-white fill-secondary w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-secondary"
           >
             <svg
               height="21"

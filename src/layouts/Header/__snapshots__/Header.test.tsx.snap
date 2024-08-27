@@ -79,7 +79,7 @@ exports[`Header tests Should match snapshot 1`] = `
           type="button"
         >
           <i
-            class="fill-secondary dark:fill-white w-6 h-6 flex justify-center items-center"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer fill-secondary dark:fill-white"
           >
             <svg
               height="20"

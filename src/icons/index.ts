@@ -8,6 +8,7 @@ export { default as Home } from './Home';
 export { default as Kanban } from './Kanban';
 export { default as Lock } from './Lock';
 export { default as Menu } from './Menu';
+export { default as More } from './More';
 export { default as Moon } from './Moon';
 export { default as Notify } from './Notify';
 export { default as Pen } from './Pen';
