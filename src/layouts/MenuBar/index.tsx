@@ -12,20 +12,12 @@ import { NavItem } from '@/components';
 import { usePathname } from 'next/navigation';
 
 // Constants
-import { ROUTES, LIST_NAV_ICON } from '@/constants/routes';
-
-// Types
-import { Navigate } from '@/types/navigate';
+import { ROUTES } from '@/constants/routes';
 
 const MenuBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
-
-  const listNavigate: Navigate[] = ROUTES.map((route, index) => ({
-    ...route,
-    icon: LIST_NAV_ICON[index],
-  }));
 
   const handleOpenMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -48,7 +40,7 @@ const MenuBar = () => {
       </NavbarContent>
 
       <NavbarMenu className="mt-8">
-        {listNavigate.map(({ title, href, icon }, index) => (
+        {ROUTES.map(({ title, href, icon }, index) => (
           <NavbarMenuItem key={`${title}-${index}`} onClick={handleOpenMenu}>
             <NavItem
               href={href}

@@ -25,7 +25,7 @@ const ToggleTheme = ({
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) return null;
+  if (!isMounted) return <div className="min-w-[34px] h-[34px]" />;
 
   const isDark = theme === 'dark';
 

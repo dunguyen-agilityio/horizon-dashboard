@@ -9,24 +9,18 @@ exports[`ProfileDropDown tests Should match snapshot 1`] = `
     data-testid="profile-trigger-btn"
     type="button"
   >
-    <div
-      class="shadow-black/5 shadow-none group relative overflow-hidden bg-content3 dark:bg-content2 before:opacity-100 before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:border-t before:border-content4/30 before:bg-gradient-to-r before:from-transparent before:via-content4 dark:before:via-default-700/10 before:to-transparent after:opacity-100 after:absolute after:inset-0 after:-z-10 after:bg-content3 dark:after:bg-content2 rounded-large"
-      style="max-width: 40px;"
-    >
-       
-      <img
-        alt="Adela Parkson"
-        class="relative z-10 shadow-black/5 data-[loaded=true]:opacity-100 shadow-none opacity-0 transition-transform-opacity motion-reduce:transition-none !duration-300 rounded-large min-w-10"
-        data-nimg="1"
-        decoding="async"
-        height="40"
-        loading="lazy"
-        src="/_next/image?url=%2Fdefault-avatar.webp&w=96&q=75"
-        srcset="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=96&q=75 2x"
-        style="color: transparent; height: 40px;"
-        width="40"
-      />
-    </div>
+    <img
+      alt="Adela Parkson"
+      class="min-w-10 rounded-full"
+      data-nimg="1"
+      decoding="async"
+      height="40"
+      loading="lazy"
+      src="/_next/image?url=%2Fdefault-avatar.webp&w=96&q=75"
+      srcset="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=96&q=75 2x"
+      style="color: transparent;"
+      width="40"
+    />
   </button>
 </div>
 `;

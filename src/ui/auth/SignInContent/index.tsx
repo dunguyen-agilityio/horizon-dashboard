@@ -13,7 +13,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 import type { SignInFormData } from '@/types/auth';
 
 // Routes
-import { AUTH_ROUTES, PRIVATE_ROUTES } from '@/constants/routes';
+import { AUTH_ROUTES, PUBLIC_ROUTES } from '@/constants/routes';
 
 // Actions
 import { handleSignIn } from '@/actions/auth';
@@ -46,7 +46,7 @@ const SignInContent = () => {
     if (result.error) {
       // Will handle show Toast message later
     } else {
-      replace(PRIVATE_ROUTES.DASHBOARD);
+      replace(PUBLIC_ROUTES.DASHBOARD);
     }
   };
 

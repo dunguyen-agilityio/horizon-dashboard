@@ -3,6 +3,10 @@ import Header from '.';
 
 const mockPush = jest.fn();
 
+jest.mock('@/auth.config', () => ({
+  signOut: jest.fn(),
+}));
+
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockImplementation(() => ({
     push: mockPush,
@@ -22,14 +26,14 @@ describe('Header tests', () => {
   });
 
   it('Should match snapshot', () => {
-    const { container } = render(<Header />);
+    const { container } = render(<Header isAuthenticated />);
     expect(container).toMatchSnapshot();
   });
 
   it('Should push search query correctly', async () => {
     const mockSearch = 'sea';
 
-    const { getByTestId } = render(<Header />);
+    const { getByTestId } = render(<Header isAuthenticated />);
 
     fireEvent.change(getByTestId('input-search'), {
       target: { value: mockSearch },
@@ -41,7 +45,7 @@ describe('Header tests', () => {
   it('Should push search query correctly', async () => {
     const mockSearch = 'sea';
 
-    const { getByTestId } = render(<Header />);
+    const { getByTestId } = render(<Header isAuthenticated />);
 
     fireEvent.change(getByTestId('input-search'), {
       target: { value: mockSearch },
