@@ -146,6 +146,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 tabindex="-1"
               >
                 <div
+                  aria-label="Rating"
                   aria-valuemax="100"
                   aria-valuemin="0"
                   aria-valuenow="90"
@@ -220,6 +221,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 tabindex="-1"
               >
                 <div
+                  aria-label="Rating"
                   aria-valuemax="100"
                   aria-valuemin="0"
                   aria-valuenow="80"
@@ -293,6 +295,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 tabindex="-1"
               >
                 <div
+                  aria-label="Rating"
                   aria-valuemax="100"
                   aria-valuemin="0"
                   aria-valuenow="60"
