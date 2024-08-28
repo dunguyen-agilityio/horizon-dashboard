@@ -132,6 +132,7 @@ export const EditTaskModal = ({
                       label: 'group-data-[filled=true]:text-secondary',
                       input:
                         'group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white',
+                      inputWrapper: '',
                     }}
                   />
                   <Input
@@ -149,9 +150,6 @@ export const EditTaskModal = ({
               </div>
             </ModalBody>
             <ModalFooter>
-              <Button color="danger" variant="light" onPress={onClose}>
-                Close
-              </Button>
               <Button color="primary" onPress={onClose}>
                 Update
               </Button>
