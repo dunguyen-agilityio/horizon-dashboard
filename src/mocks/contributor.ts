@@ -16,7 +16,6 @@ export const MOCK_CONTRIBUTORS = [
   },
   {
     ...MOCK_USERS[2],
-
     template: 'Colorful Heaven',
     createdAt: new Date('2024-08-11T07:25:04.188Z'),
   },

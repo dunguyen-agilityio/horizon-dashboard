@@ -1,7 +1,21 @@
-import { fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@testing-library/react';
 
 // Components
 import SignInContent from '@/ui/auth/SignInContent';
+import { signIn } from '@/auth.config';
+import { PRIVATE_ROUTES } from '@/constants';
+
+jest.mock('@/auth.config', () => ({
+  signIn: jest.fn(),
+}));
+
+const mockReplace = jest.fn();
+
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn().mockImplementation(() => ({
+    replace: mockReplace,
+  })),
+}));
 
 describe('SignInContent tests', () => {
   it('Should match snapshot', () => {
@@ -37,5 +51,34 @@ describe('SignInContent tests', () => {
 
     fireEvent.click(eyeSlashFilledIcon);
     expect(getByTestId('eye-filled-icon')).toBeInTheDocument();
+  });
+
+  it('handleSignIn will triggered correctly when click Login Button', async () => {
+    (signIn as jest.Mock).mockResolvedValue(true);
+    const { getByLabelText, getByTestId } = render(<SignInContent />);
+
+    const mockUserName = 'user';
+    const mockPassword = '123456';
+
+    act(() => {
+      fireEvent.change(getByLabelText('Email or username'), {
+        target: { value: mockUserName },
+      });
+
+      const inputPassword = getByLabelText('inputPassword');
+      fireEvent.change(inputPassword, { target: { value: mockPassword } });
+    });
+
+    fireEvent.submit(getByTestId('signin-btn'));
+
+    await waitFor(() => {
+      expect(signIn).toHaveBeenNthCalledWith(1, 'credentials', {
+        password: mockPassword,
+        identifier: mockUserName,
+        redirect: false,
+      });
+    });
+
+    expect(mockReplace).toHaveBeenNthCalledWith(1, PRIVATE_ROUTES.DASHBOARD);
   });
 });
