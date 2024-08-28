@@ -20,10 +20,6 @@ import { NFT } from '@/models/NFT';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
-interface NFTCardProps extends NFT {
-  onLike: (id: string) => Promise<void>;
-}
-
 const NFTCard = ({
   image = NFT_IMAGES.DEFAULT,
   name,
@@ -31,13 +27,12 @@ const NFTCard = ({
   members,
   id,
   price,
-  onLike,
-}: NFTCardProps) => {
+}: NFT) => {
   const [isPending, setIsPending] = useState(false);
 
   const handleLike = async () => {
     setIsPending(true);
-    await onLike(id);
+    // TODO: handle api for like card
     setIsPending(false);
   };
 

@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import NFTCard from '.';
 
-import { fn } from '@storybook/test';
 import { MOCK_NFTS } from '@/mocks/nft';
 
 const MOCK_NFT = MOCK_NFTS[0];
@@ -19,6 +18,5 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     ...MOCK_NFT,
-    onLike: fn(),
   },
 };
