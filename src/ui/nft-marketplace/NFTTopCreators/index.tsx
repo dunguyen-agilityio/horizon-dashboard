@@ -65,6 +65,7 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
       case 'rating':
         return (
           <Progress
+            aria-label="Rating"
             value={rating}
             classNames={{
               base: 'pr-3 h-2',
