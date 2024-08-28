@@ -1,26 +1,29 @@
+// Libs
 import NextAuth from 'next-auth';
 import { cookies } from 'next/headers';
 import credentials from 'next-auth/providers/credentials';
 
+// Services
 import { apiClient } from './services/api';
 
-import { SignResponse } from './types/auth';
+// Types
+import { SignInResponse } from './types/auth';
 
-import { API_TOKEN } from './constants/session';
-import { AUTH_ROUTES } from './constants';
+// Constants
+import { AUTH_ROUTES, API_TOKEN } from './constants';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     credentials({
       credentials: {
-        identifier: { label: 'Username/ Email', type: 'text' },
+        identifier: { label: 'Username/email', type: 'text' },
         password: { label: 'Password', type: 'password' },
       },
       type: 'credentials',
       authorize: async (credentials) => {
         const { identifier, password } = credentials;
 
-        const { data, error } = await apiClient.post<SignResponse>(
+        const { data, error } = await apiClient.post<SignInResponse>(
           'auth/local',
           {
             body: { identifier, password },

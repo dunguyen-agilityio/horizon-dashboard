@@ -5,7 +5,7 @@ export interface SignInFormData {
   password: string;
 }
 
-export type SignResponse = {
+export type SignInResponse = {
   jwt: string;
   user: User;
 };
