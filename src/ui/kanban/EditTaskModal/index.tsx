@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 // Components
 import {
   Modal,
@@ -58,8 +60,15 @@ export const EditTaskModal = ({
   assignMembers = [],
   onOpenChange,
 }: IEditTaskModalProps) => {
-  const defaultSelectedMemberKeys = assignMembers.map((user) => user.userName);
-  const defaultSelectedLabelKeys = labels.map((label) => label);
+  const defaultSelectedMemberKeys = useMemo(
+    () => assignMembers.map((user) => user.userName),
+    [assignMembers],
+  );
+
+  const defaultSelectedLabelKeys = useMemo(
+    () => labels.map((label) => label),
+    [labels],
+  );
 
   return (
     <Modal
