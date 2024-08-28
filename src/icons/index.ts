@@ -11,6 +11,7 @@ export { default as Lock } from './Lock';
 export { default as Menu } from './Menu';
 export { default as More } from './More';
 export { default as Moon } from './Moon';
+export { default as Note } from './Note';
 export { default as Notify } from './Notify';
 export { default as Pen } from './Pen';
 export { default as Search } from './Search';
