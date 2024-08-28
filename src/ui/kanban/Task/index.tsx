@@ -67,12 +67,14 @@ export const Task = ({
               />
             ))}
           </AvatarGroup>
-          <Chip
-            color={getColorByLabel(labels[0])}
-            className="text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
-          >
-            {labels[0]}
-          </Chip>
+          {labels && (
+            <Chip
+              color={getColorByLabel(labels[0])}
+              className="text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
+            >
+              {labels[0]}
+            </Chip>
+          )}
         </div>
       </div>
       <EditTaskModal
