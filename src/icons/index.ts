@@ -13,4 +13,5 @@ export { default as Moon } from './Moon';
 export { default as Notify } from './Notify';
 export { default as Pen } from './Pen';
 export { default as Search } from './Search';
+export { default as UploadFile } from './UploadFile';
 export { default as User } from './User';
