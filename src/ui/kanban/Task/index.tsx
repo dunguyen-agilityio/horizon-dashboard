@@ -1,3 +1,5 @@
+import { useDisclosure } from '@nextui-org/react';
+
 // Components
 import Image from 'next/image';
 import Pen from '@/icons/Pen';
@@ -5,6 +7,7 @@ import Text from '@/components/Text';
 import { Chip } from '@nextui-org/chip';
 import Button from '@/components/Button';
 import { Avatar, AvatarGroup } from '@nextui-org/avatar';
+import EditTaskModal from '@/ui/kanban/EditTaskModal';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
@@ -14,8 +17,6 @@ import { Task as TaskModel } from '@/models/Task';
 
 // Utils
 import { getColorByLabel } from '@/utils/task';
-import EditTaskModal from '../ModalEditTask';
-import { useDisclosure } from '@nextui-org/react';
 
 export const Task = ({
   title,
@@ -75,10 +76,11 @@ export const Task = ({
         </div>
       </div>
       <EditTaskModal
-        isOpen={isOpenModalEdit}
         title={title}
-        description={description}
         labels={labels}
+        isOpen={isOpenModalEdit}
+        assignMembers={assignees}
+        description={description}
         onOpenChange={onOpenChange}
       />
     </>
