@@ -1,48 +1,70 @@
 // Components
 import Image from 'next/image';
 import { Link } from '@nextui-org/link';
-import { ToggleTheme, Text } from '@/components';
+import { ToggleTheme, Text, BoxIcon } from '@/components';
 
 // Constants
 import { FOOTER_ROUTES } from '@/constants/routes';
 
 // Types
-import { TEXT_SIZE } from '@/types/text';
+import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
+import { ArrowRight } from '@/icons';
+import { Wallpaper } from '@/constants';
+import Logo from '@/components/Logo';
 
 const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
-  <main className="flex bg-white dark:bg-indigo-dark px-6 sm:p-0 relative">
-    {children}
+  <div className="flex bg-white dark:bg-indigo-dark px-6 sm:p-0 h-screen">
+    <main className="flex-1 flex justify-center py-10">
+      <div className="w-fit flex flex-col justify-between">
+        <div className="w-full flex justify-between">
+          <Link href="/dashboard" className="h-fit">
+            <BoxIcon icon={<ArrowRight />} customClass="fill-secondary" />
 
-    {/* Wallpaper */}
-    <div className="hidden 2xl:block">
-      <div className="w-[965px] h-[1152px] relative">
-        <Image
-          src="/wallpaper.webp"
-          alt="wall-paper"
-          fill
-          style={{
-            objectFit: 'contain',
-          }}
-        />
-        <div className="bottom-7 right-7 absolute">
-          <ToggleTheme variant="secondary" />
+            <Text variant={TEXT_VARIANT.SECONDARY} className="ml-1">
+              Back to dashboard
+            </Text>
+          </Link>
+          <ToggleTheme variant="primary" className="xl:hidden" />
         </div>
-        <div className="absolute bottom-12 left-72">
-          <footer className="flex justify-between">
-            <div className="flex gap-11">
-              {FOOTER_ROUTES.map((footer) => (
-                <Link href={footer.href} key={`${footer.title}`}>
-                  <Text as="span" className="text-white" size={TEXT_SIZE.sm}>
-                    {footer.title}
-                  </Text>
-                </Link>
-              ))}
-            </div>
-          </footer>
+        {children}
+        <div className="h-[60px] flex items-center">
+          <Text className="text-secondary text-center" size={TEXT_SIZE.sm}>
+            © 2022 Horizon UI. All Rights Reserved. Made with love by Simple!
+          </Text>
         </div>
       </div>
+    </main>
+
+    <div className="w-1/2 2xl:w-2/5 h-screen relative hidden xl:flex justify-center items-end pb-10">
+      <Image
+        src={Wallpaper}
+        alt="wall-paper"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'fill',
+        }}
+      />
+      <div className="absolute inset-0 flex justify-center items-center -translate-y-20">
+        <Logo />
+      </div>
+
+      <footer className="flex items-center h-[60px]">
+        <nav className="flex gap-11">
+          {FOOTER_ROUTES.map((footer) => (
+            <Link href={footer.href} key={`${footer.title}`}>
+              <Text as="span" className="text-white" size={TEXT_SIZE.sm}>
+                {footer.title}
+              </Text>
+            </Link>
+          ))}
+        </nav>
+      </footer>
     </div>
-  </main>
+    <div className="absolute hidden xl:block bottom-7 right-7">
+      <ToggleTheme variant="secondary" />
+    </div>
+  </div>
 );
 
 export default AuthenticateLayout;
