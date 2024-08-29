@@ -1,3 +1,5 @@
+import Wallpaper from '@/public/wallpaper.webp';
+
 export const STARBUCKS_IMAGE = {
   COVER: '/starbucks-cover.webp',
   LOGO: '/starbucks-logo.webp',
@@ -14,3 +16,5 @@ export const PROFILE_IMAGES = {
 export const USER_IMAGE = {
   DEFAULT: '/default-avatar.webp',
 };
+
+export { Wallpaper };
