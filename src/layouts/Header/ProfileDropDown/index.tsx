@@ -24,7 +24,11 @@ import { MOCK_USERS } from '@/mocks/user';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
+
+// Actions
 import { handleSignOut } from '@/actions/auth';
+
+// Constants
 import { USER_IMAGE } from '@/constants';
 
 const MOCK_PROFILE = MOCK_USERS[0];

@@ -1,12 +1,16 @@
 'use server';
 
+// Libs
+import { cookies } from 'next/headers';
+
 // Config
 import { signIn, signOut } from '@/auth.config';
+
+// Constants
 import { API_TOKEN, AUTH_ROUTES } from '@/constants';
 
 // Types
 import { SignInFormData } from '@/types/auth';
-import { cookies } from 'next/headers';
 
 /**
  *
