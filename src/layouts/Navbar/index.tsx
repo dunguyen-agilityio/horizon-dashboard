@@ -7,31 +7,31 @@ import { usePathname } from 'next/navigation';
 import { Banner, NavItem } from '@/components';
 
 // Constants
-import { ROUTES, LIST_NAV_ICON } from '@/constants/routes';
+import { ROUTES, AUTH_ROUTES } from '@/constants/routes';
 
-// Types
-import { Navigate } from '@/types/navigate';
+interface NavbarProps {
+  isAuthenticated: boolean;
+}
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated }: NavbarProps) => {
   const pathname = usePathname();
-
-  const listNavigate: Navigate[] = ROUTES.map((route, index) => ({
-    ...route,
-    icon: LIST_NAV_ICON[index],
-  }));
 
   return (
     <nav className="bg-white flex flex-col justify-between dark:bg-indigo w-[240px] lg:w-[290px] h-[1152px]">
-      <div className="flex flex-col justify-between pt-[38px]">
-        {listNavigate.map((navItem, index) => (
-          <NavItem
-            key={`${navItem.title}-${index}`}
-            href={navItem.href}
-            icon={navItem.icon}
-            label={navItem.title}
-            isActive={navItem.href === pathname}
-          />
-        ))}
+      <div className="flex flex-col justify-between pt-[38px] gap-5">
+        {ROUTES.map(({ href, icon, title }, index) => {
+          if (isAuthenticated && href === AUTH_ROUTES.SIGN_IN) return null;
+
+          return (
+            <NavItem
+              key={`${title}-${index}`}
+              href={href}
+              icon={icon}
+              label={title}
+              isActive={href === pathname}
+            />
+          );
+        })}
       </div>
       <div className="mb-6">
         <Banner />

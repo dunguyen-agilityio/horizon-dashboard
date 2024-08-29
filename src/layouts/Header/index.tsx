@@ -22,7 +22,10 @@ import { debounce } from '@/utils/debounce';
 // Mocks
 import { MOCK_NOTIFIES } from '@/mocks/notify';
 
-const Header = () => {
+interface HeaderProps {
+  isAuthenticated: boolean;
+}
+const Header = ({ isAuthenticated }: HeaderProps) => {
   const searchParams = useSearchParams();
   const { push } = useRouter();
   const pathname = usePathname();
@@ -66,9 +69,9 @@ const Header = () => {
       <div className="h-fit p-[10px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
         <InputSearch onSearch={debounce(handleSearch)} defaultValue={query} />
         <div className="absolute top-0 right-0 xl:static flex gap-2 sm:gap-6 items-center">
-          <Notification notifies={MOCK_NOTIFIES} />
+          {isAuthenticated && <Notification notifies={MOCK_NOTIFIES} />}
           <ToggleTheme />
-          <ProfileDropDown />
+          {isAuthenticated && <ProfileDropDown />}
         </div>
       </div>
     </header>

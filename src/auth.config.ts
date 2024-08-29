@@ -7,10 +7,10 @@ import credentials from 'next-auth/providers/credentials';
 import { apiClient } from './services/api';
 
 // Types
-import { SignInResponse } from './types/auth';
+import { SignInResponse } from '@/types/auth';
 
 // Constants
-import { AUTH_ROUTES, API_TOKEN } from './constants';
+import { AUTH_ROUTES, API_TOKEN, PUBLIC_ROUTES } from './constants';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -53,20 +53,27 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       const pathname = nextUrl.pathname;
 
-      const AUTH_ROUTES = ['/sign-in', '/sign-up', '/reset-password'];
+      const isOnAuthRoute = Object.values(AUTH_ROUTES).some((route) =>
+        pathname.includes(route),
+      );
 
-      const isOnAuthRoute = AUTH_ROUTES.some((route) =>
+      const isOnPublicRoute = Object.values(PUBLIC_ROUTES).some((route) =>
         pathname.includes(route),
       );
 
       switch (true) {
+        case pathname === '/':
+          return Response.redirect(new URL(PUBLIC_ROUTES.DASHBOARD, nextUrl));
+
+        case isOnPublicRoute:
+          return true;
+
         case !isAuthenticated:
           if (isOnAuthRoute) return true;
-          return Response.redirect(new URL('/sign-in', nextUrl));
+          return Response.redirect(new URL(AUTH_ROUTES.SIGN_IN, nextUrl));
 
         case isOnAuthRoute:
-        case pathname === '/':
-          return Response.redirect(new URL('/dashboard', nextUrl));
+          return Response.redirect(new URL(PUBLIC_ROUTES.DASHBOARD, nextUrl));
 
         default:
           return true;

@@ -6,7 +6,20 @@ import {
   getByText,
   waitFor,
 } from '@testing-library/react';
+
 import ProfileDropDown from '.';
+
+import { signOut } from '@/auth.config';
+
+jest.mock('@/auth.config', () => ({
+  signOut: jest.fn(),
+}));
+
+jest.mock('next/headers', () => ({
+  cookies: jest.fn().mockImplementation(() => ({
+    delete: jest.fn(),
+  })),
+}));
 
 describe('ProfileDropDown tests', () => {
   it('Should match snapshot', () => {
@@ -84,7 +97,30 @@ describe('ProfileDropDown tests', () => {
     fireEvent.click(getByText(modal!, 'Logout'));
 
     await waitFor(() => {
-      expect(modal).not.toBeInTheDocument();
+      expect(modal).toBeInTheDocument();
+    });
+  });
+
+  it('Should show Hidden ConfirmLogoutModal when click Logout button', async () => {
+    const { getByTestId } = render(<ProfileDropDown />);
+
+    act(() => {
+      fireEvent.click(getByTestId('profile-trigger-btn'));
+    });
+
+    act(() => {
+      fireEvent.click(getByText(document.documentElement, 'Logout'));
+    });
+
+    const modal = queryByTestId(
+      document.documentElement,
+      'confirm-logout-modal',
+    );
+
+    fireEvent.click(getByText(modal!, 'Logout'));
+    (signOut as jest.Mock).mockResolvedValue(true);
+    await waitFor(() => {
+      expect(signOut).toHaveBeenCalled();
     });
   });
 });

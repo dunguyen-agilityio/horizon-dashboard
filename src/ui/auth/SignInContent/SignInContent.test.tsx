@@ -2,8 +2,12 @@ import { act, fireEvent, render, waitFor } from '@testing-library/react';
 
 // Components
 import SignInContent from '@/ui/auth/SignInContent';
+
+// Config
 import { signIn } from '@/auth.config';
-import { PRIVATE_ROUTES } from '@/constants';
+
+// Constants
+import { PUBLIC_ROUTES } from '@/constants';
 
 jest.mock('@/auth.config', () => ({
   signIn: jest.fn(),
@@ -79,6 +83,6 @@ describe('SignInContent tests', () => {
       });
     });
 
-    expect(mockReplace).toHaveBeenNthCalledWith(1, PRIVATE_ROUTES.DASHBOARD);
+    expect(mockReplace).toHaveBeenNthCalledWith(1, PUBLIC_ROUTES.DASHBOARD);
   });
 });

@@ -5,7 +5,6 @@ import { useState } from 'react';
 
 // Components
 import {
-  Image,
   Modal,
   ModalBody,
   ModalContent,
@@ -16,7 +15,7 @@ import {
   PopoverTrigger,
   useDisclosure,
 } from '@nextui-org/react';
-import NextImage from 'next/image';
+import Image from 'next/image';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
 
@@ -26,10 +25,16 @@ import { MOCK_USERS } from '@/mocks/user';
 // Types
 import { TEXT_SIZE } from '@/types/text';
 
+// Actions
+import { handleSignOut } from '@/actions/auth';
+
+// Constants
+import { USER_IMAGE } from '@/constants';
+
 const MOCK_PROFILE = MOCK_USERS[0];
 
 const ProfileDropDown = () => {
-  const { avatar, userName } = MOCK_PROFILE;
+  const { avatar = USER_IMAGE.DEFAULT, userName } = MOCK_PROFILE;
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,9 +49,9 @@ const ProfileDropDown = () => {
     setIsVisible((prev) => !prev);
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    await handleSignOut();
     handleClose();
-    // TODO: handle logout will implement later
   };
 
   return (
@@ -63,12 +68,11 @@ const ProfileDropDown = () => {
           data-testid="profile-trigger-btn"
         >
           <Image
-            as={NextImage}
             width={40}
             height={40}
             src={avatar}
             alt={userName}
-            className="min-w-10"
+            className="min-w-10 rounded-full"
           />
         </button>
       </PopoverTrigger>
@@ -86,11 +90,11 @@ const ProfileDropDown = () => {
           {isOpen && (
             <Modal
               isOpen
-              // onOpenChange={handleOpenChange}
+              onOpenChange={onClose}
               isDismissable={false}
               data-testid="confirm-logout-modal"
             >
-              <ModalContent>
+              <ModalContent className="bg-white dark:bg-content1">
                 <ModalHeader className="flex flex-col gap-1">
                   Sign Out
                 </ModalHeader>

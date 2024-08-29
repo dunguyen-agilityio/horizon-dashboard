@@ -10,46 +10,58 @@ export const AUTH_ROUTES = {
 };
 
 export const PRIVATE_ROUTES = {
-  DASHBOARD: '/dashboard',
-  NFT_MARKETPLACE: '/nft-marketplace',
-  CONTRIBUTOR: '/contributor',
   KANBAN: '/kanban',
   PROFILE: '/profile',
 };
 
 export const PUBLIC_ROUTES = {
+  NFT_MARKETPLACE: '/nft-marketplace',
+  CONTRIBUTOR: '/contributor',
   LICENSE: '/license',
   BLOG: '/blog',
   TERM_OF_USE: '/terms-of-use',
+  DASHBOARD: '/dashboard',
 };
 
 export const ROUTES: Route[] = [
   {
     title: 'Main Dashboard',
-    href: PRIVATE_ROUTES.DASHBOARD,
+    href: PUBLIC_ROUTES.DASHBOARD,
+    icon: <Home key="homeIcon" />,
   },
-  { title: 'NFT Marketplace', href: PRIVATE_ROUTES.NFT_MARKETPLACE },
-  { title: 'Contributor', href: PRIVATE_ROUTES.CONTRIBUTOR },
-  { title: 'Kanban', href: PRIVATE_ROUTES.KANBAN },
-  { title: 'Profile', href: PRIVATE_ROUTES.PROFILE },
-  { title: 'Sign In', href: AUTH_ROUTES.SIGN_IN },
+  {
+    title: 'NFT Marketplace',
+    href: PUBLIC_ROUTES.NFT_MARKETPLACE,
+    icon: <Cart key="cartIcon" />,
+  },
+  {
+    title: 'Contributor',
+    href: PUBLIC_ROUTES.CONTRIBUTOR,
+    icon: <Chart key="chartIcon" />,
+  },
+  {
+    title: 'Kanban',
+    href: PRIVATE_ROUTES.KANBAN,
+    icon: <Kanban key="KanbanIcon" />,
+  },
+  {
+    title: 'Profile',
+    href: PRIVATE_ROUTES.PROFILE,
+    icon: <User key="userIcon" />,
+  },
+  {
+    title: 'Sign In',
+    href: AUTH_ROUTES.SIGN_IN,
+    icon: <Lock key="lockIcon" />,
+  },
 ];
 
-export const FOOTER_ROUTES: Route[] = [
+export const FOOTER_ROUTES: Omit<Route, 'icon'>[] = [
   {
     title: 'Marketplace',
-    href: PRIVATE_ROUTES.NFT_MARKETPLACE,
+    href: PUBLIC_ROUTES.NFT_MARKETPLACE,
   },
   { title: 'License', href: PUBLIC_ROUTES.LICENSE },
   { title: 'Terms of Use', href: PUBLIC_ROUTES.TERM_OF_USE },
   { title: 'Blog', href: PUBLIC_ROUTES.BLOG },
-];
-
-export const LIST_NAV_ICON = [
-  <Home key="homeIcon" />,
-  <Cart key="cartIcon" />,
-  <Chart key="chartIcon" />,
-  <Kanban key="KanbanIcon" />,
-  <User key="userIcon" />,
-  <Lock key="lockIcon" />,
 ];
