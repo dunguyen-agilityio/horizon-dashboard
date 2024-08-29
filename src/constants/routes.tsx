@@ -23,7 +23,7 @@ export const PUBLIC_ROUTES = {
   DASHBOARD: '/dashboard',
 };
 
-export const ROUTES: (Route & { icon: React.ReactElement })[] = [
+export const ROUTES: Route[] = [
   {
     title: 'Main Dashboard',
     href: PUBLIC_ROUTES.DASHBOARD,
@@ -56,7 +56,7 @@ export const ROUTES: (Route & { icon: React.ReactElement })[] = [
   },
 ];
 
-export const FOOTER_ROUTES: Route[] = [
+export const FOOTER_ROUTES: Omit<Route, 'icon'>[] = [
   {
     title: 'Marketplace',
     href: PUBLIC_ROUTES.NFT_MARKETPLACE,
