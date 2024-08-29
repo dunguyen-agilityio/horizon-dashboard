@@ -14,7 +14,7 @@ interface INavItemProps {
 
 const NavItem = ({ icon, label, isActive, href }: INavItemProps) => (
   <Link href={href} className="flex justify-between">
-    <div className="flex w-full items-center gap-3 pl-0 xl:pl-8">
+    <div className="flex w-full items-center gap-3 pl-0 xl:pl-8 py-2 hover:bg-gray hover:dark:bg-indigo-light">
       <BoxIcon
         customClass={cn('dark:fill-white', {
           'fill-blue-450': isActive,
