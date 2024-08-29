@@ -36,10 +36,15 @@ const config: Config = {
     nextui({
       themes: {
         light: {
-          colors: { default: { '100': colors.gray } },
+          colors: { default: { '100': colors.gray, '200': colors.grey } },
         },
         dark: {
-          colors: { default: { '100': colors['indigo-light'] } },
+          colors: {
+            default: {
+              '100': colors['indigo-light'],
+              '200': colors['army-green'],
+            },
+          },
         },
       },
     }),

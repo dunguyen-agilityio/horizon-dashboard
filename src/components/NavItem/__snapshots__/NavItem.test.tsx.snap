@@ -7,7 +7,7 @@ exports[`NavItem component NavItem should match snapshot 1`] = `
     href="marketplace"
   >
     <div
-      class="flex w-full items-center gap-3 pl-0 xl:pl-8"
+      class="flex w-full items-center gap-3 pl-0 xl:pl-8 py-2 hover:bg-gray hover:dark:bg-indigo-light"
     >
       <i
         class="w-6 h-6 flex justify-center items-center hover:cursor-pointer dark:fill-white fill-blue-450"
