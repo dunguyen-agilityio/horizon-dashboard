@@ -2,6 +2,7 @@ export { default as Add } from './Add';
 export { default as ArrowRight } from './ArrowRight';
 export { default as Cart } from './Cart';
 export { default as Chart } from './Chart';
+export { default as Close } from './Close';
 export { default as Cloud } from './Cloud';
 export { default as EyeFilled } from './EyeFilled';
 export { default as EyeSlashFilled } from './EyeSlashFilled';

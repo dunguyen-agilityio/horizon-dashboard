@@ -11,6 +11,8 @@ import {
   lineHeight,
   borderRadius,
   boxShadow,
+  animation,
+  keyframes,
 } from './src/themes';
 
 const config: Config = {
@@ -29,6 +31,8 @@ const config: Config = {
       backgroundImage: backgroundImages,
       boxShadow,
       borderRadius,
+      keyframes,
+      animation,
     },
   },
   darkMode: 'class',
