@@ -12,7 +12,7 @@ import { TEXT_SIZE } from '@/types/text';
 const { COVER } = NFT_IMAGES;
 
 const NFTBanner = () => (
-  <div className="relative flex-1 relative h-[350px] rounded-md bg-blue-450 dark:bg-purple-750">
+  <div className="relative h-[350px] rounded-md bg-blue-450 dark:bg-purple-750">
     <div className="absolute right-0 h-[350px] w-full max-w-[1090px]">
       <Image
         src={COVER}

@@ -19,10 +19,6 @@ interface NFTHistoryProps {
 }
 
 const NFTHistory = ({ historyList }: NFTHistoryProps) => {
-  const handleSeeAll = () => {
-    // TODO: Should handle it later
-  };
-
   return (
     <div className="flex flex-col bg-white dark:bg-indigo rounded-md w-[484px] overflow-auto shadow-md p-5">
       <div className="flex items-center justify-between p-[18px]">
@@ -30,10 +26,7 @@ const NFTHistory = ({ historyList }: NFTHistoryProps) => {
           History
         </Text>
 
-        <Button
-          className="text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
-          onClick={handleSeeAll}
-        >
+        <Button className="text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]">
           See all
         </Button>
       </div>
