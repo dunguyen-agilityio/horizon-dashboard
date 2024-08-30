@@ -1,7 +1,7 @@
 export const API_ENDPOINT = process.env.API_ENDPOINT!;
 
 // Firebase
-export const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+export const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY!;
 export const FIREBASE_AUTH_DOMAIN =
   process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN;
 export const FIREBASE_PROJECT_ID = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
@@ -12,3 +12,5 @@ export const FIREBASE_APP_ID = process.env.NEXT_PUBLIC_FIREBASE_APP_ID;
 export const FIREBASE_MEASUREMENT =
   process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT;
 export const FIREBASE_CLOUD_KEY = process.env.FIREBASE_CLOUD_KEY;
+export const FIREBASE_PRIVATE_KEY = process.env.FIREBASE_PRIVATE_KEY;
+export const FIREBASE_CLIENT_EMAIL = process.env.FIREBASE_CLIENT_EMAIL;

@@ -3,12 +3,20 @@
 // Firebase
 import admin from 'firebase-admin';
 import { getMessaging } from 'firebase-admin/messaging';
-import serviceAccount from '../../serviceAccountKey.json';
 
-const { clientEmail, projectId, privateKey } = serviceAccount;
+// Constants
+import {
+  FIREBASE_CLIENT_EMAIL,
+  FIREBASE_PRIVATE_KEY,
+  FIREBASE_PROJECT_ID,
+} from '@/constants';
 
 admin.initializeApp({
-  credential: admin.credential.cert({ clientEmail, projectId, privateKey }),
+  credential: admin.credential.cert({
+    clientEmail: FIREBASE_CLIENT_EMAIL,
+    projectId: FIREBASE_PROJECT_ID,
+    privateKey: FIREBASE_PRIVATE_KEY,
+  }),
 });
 
 export const sendMessage = async (
