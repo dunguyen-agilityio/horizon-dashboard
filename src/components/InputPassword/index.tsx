@@ -16,6 +16,7 @@ interface IInputPasswordProps {
   value?: string;
   placeholder?: string;
   errorMessage?: string;
+  label?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
@@ -26,6 +27,7 @@ const InputPassword = ({
   isReadOnly = false,
   placeholder = 'Min. 8 characters',
   value,
+  label = 'Password',
   onChange,
   ...rest
 }: IInputPasswordProps) => {
@@ -43,7 +45,7 @@ const InputPassword = ({
       isReadOnly={isReadOnly}
       size="lg"
       key="password"
-      label="Password"
+      label={label}
       type={isVisible ? 'text' : 'password'}
       labelPlacement="outside"
       placeholder={placeholder}

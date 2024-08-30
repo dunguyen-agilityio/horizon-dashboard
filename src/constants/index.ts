@@ -5,3 +5,4 @@ export * from './routes';
 export * from './text';
 export * from './endpoint';
 export * from './session';
+export * from './regex';
