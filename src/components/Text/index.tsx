@@ -6,7 +6,7 @@ const sizes: { [key in TEXT_SIZE]: string } = {
   [TEXT_SIZE['2xl']]: 'text-2xl font-bold leading-2xl',
   [TEXT_SIZE.lg]: 'text-extra font-bold leading-large',
   [TEXT_SIZE.extra]: 'text-1.5xl font-bold leading-xl',
-  [TEXT_SIZE.md]: 'text-medium leading-large',
+  [TEXT_SIZE.md]: 'text-medium leading-xl',
   [TEXT_SIZE.sm]: 'text-small font-medium',
   [TEXT_SIZE.xs]: 'text-xs uppercase',
 };
