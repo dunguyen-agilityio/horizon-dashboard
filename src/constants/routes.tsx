@@ -7,6 +7,7 @@ export const AUTH_ROUTES = {
   SIGN_IN: '/sign-in',
   SIGN_UP: '/sign-up',
   FORGET_PASSWORD: '/forget-password',
+  RESET_PASSWORD: '/reset-password',
 };
 
 export const PRIVATE_ROUTES = {
