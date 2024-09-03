@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
 // Components
@@ -10,6 +11,15 @@ import { Button, InputPassword, Text } from '@/components';
 import { TEXT_SIZE } from '@/types/text';
 import type { SignUpFormData } from '@/types/auth';
 
+// Regex
+import { REGEX_EMAIL, REGEX_PASSWORD } from '@/constants/regex';
+
+// Constants
+import { AUTH_ROUTES } from '@/constants';
+
+// Utils
+import { validateConfirmPassword } from '@/utils/validation';
+
 const signUpFormInitValues: SignUpFormData = {
   userName: '',
   email: '',
@@ -17,40 +27,28 @@ const signUpFormInitValues: SignUpFormData = {
   confirmPassword: '',
 };
 
-export const REGEX_EMAIL = new RegExp(
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-);
-
-const REGEX_PASSWORD = new RegExp(
-  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
-);
-
 const SignUpContent = () => {
   const {
     watch,
     control,
     formState: { isDirty },
+    handleSubmit,
   } = useForm<SignUpFormData>({
     mode: 'onBlur',
     values: signUpFormInitValues,
   });
 
   const isDisabled = !isDirty;
+  const passwordValue = watch('password');
 
-  //   const signIn = async (data: SignUpFormData) => {
-  //     if (isDisabled) return;
+  const { replace } = useRouter();
 
-  //     const result = await handleSignIn(data);
-
-  //     if (result.error) {
-  //       // Will handle show Toast message later
-  //     } else {
-  //       replace(PUBLIC_ROUTES.DASHBOARD);
-  //     }
-  //   };
+  const handleSignUp = async () => {
+    replace(AUTH_ROUTES.SIGN_IN);
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit(handleSignUp)}>
       <div className="pt-3 flex flex-col gap-6">
         <Controller
           name="email"
@@ -78,7 +76,13 @@ const SignUpContent = () => {
         <Controller
           name="userName"
           control={control}
-          rules={{ required: 'This field is required' }}
+          rules={{
+            required: 'This field is required',
+            minLength: {
+              value: 6,
+              message: 'Username must be at least 6 characters ',
+            },
+          }}
           render={({ field, fieldState: { error, invalid } }) => (
             <Input
               isRequired
@@ -114,15 +118,13 @@ const SignUpContent = () => {
           name="confirmPassword"
           control={control}
           rules={{
-            required: 'Password is required',
-            validate: (confirmPassword: string) => {
-              if (watch('password') != confirmPassword) {
-                return 'Your passwords do no match';
-              }
-            },
+            required: 'This field is required',
+            validate: (confirmPassword: string) =>
+              validateConfirmPassword(passwordValue, confirmPassword),
           }}
           render={({ field, fieldState: { error, invalid } }) => (
             <InputPassword
+              label="Confirm Password"
               isInvalid={invalid}
               errorMessage={error?.message}
               placeholder="Enter password confirm"
