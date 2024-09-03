@@ -1,16 +1,18 @@
 // Components
 import Image from 'next/image';
+import Logo from '@/components/Logo';
 import { Link } from '@nextui-org/link';
 import { ToggleTheme, Text, BoxIcon } from '@/components';
 
 // Constants
+import { Wallpaper } from '@/constants';
 import { FOOTER_ROUTES } from '@/constants/routes';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
+
+// Icons
 import { ArrowRight } from '@/icons';
-import { Wallpaper } from '@/constants';
-import Logo from '@/components/Logo';
 
 const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
   <div className="flex bg-white dark:bg-indigo-dark px-6 sm:p-0 h-screen">
