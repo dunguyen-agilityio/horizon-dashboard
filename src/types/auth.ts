@@ -5,10 +5,9 @@ export interface SignInFormData {
   password: string;
 }
 
-export interface SignUpFormData {
+export interface SignUpFormData extends Pick<SignInFormData, 'password'> {
   userName: string;
   email: string;
-  password: string;
   confirmPassword: string;
 }
 
