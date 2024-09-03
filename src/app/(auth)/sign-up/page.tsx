@@ -1,9 +1,9 @@
 // Components
 import { Text } from '@/components';
+import SignUpContent from '@/ui/auth/SignUpContent';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-import SignUpContent from '@/ui/auth/SignUpContent';
 
 const SignUpPage = () => (
   <div className="">
