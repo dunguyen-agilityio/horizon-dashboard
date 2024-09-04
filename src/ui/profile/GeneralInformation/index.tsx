@@ -34,7 +34,7 @@ export const GENERAL_CONTENT = {
 };
 
 const customClass =
-  'px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md';
+  'px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md';
 
 const customClassNames = {
   label: 'group-data-[filled-within=true]:text-secondary',
@@ -51,7 +51,7 @@ const GeneralInformation = () => {
   });
 
   return (
-    <div className="dark:bg-indigo bg-white w-[350px] sm:w-full lg:w-[430px] xl:w-[617px] pt-[23px] p-[31px] rounded-md">
+    <div className="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md">
       <div className="text-center xl:text-start">
         <Text size={TEXT_SIZE.extra} className="font-extrabold leading-8 mb-4">
           {GENERAL_CONTENT.title}
@@ -63,7 +63,7 @@ const GeneralInformation = () => {
           {GENERAL_CONTENT.description}
         </Text>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 gap-4">
         {/* Education field */}
         <Controller
           name="education"

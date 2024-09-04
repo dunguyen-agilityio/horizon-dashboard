@@ -40,7 +40,7 @@ const ControlBoard = () => {
   };
 
   return (
-    <div className="dark:bg-indigo bg-white w-[350px] xl:w-[421px] pt-[23px] p-[31px] rounded-md">
+    <div className="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md">
       <div className="flex justify-between">
         <Text size={TEXT_SIZE.extra} className="font-extrabold leading-8 mb-4">
           Notifications
@@ -50,7 +50,7 @@ const ControlBoard = () => {
           customClass="rotate-90 w-9 h-9 bg-gray dark:bg-indigo-light rounded-lg fill-blue-450 dark:fill-white"
         />
       </div>
-      <div className="flex flex-col gap-[22px] ml-1">
+      <div className="flex flex-col gap-6 ml-1">
         <Switch
           size="sm"
           defaultSelected={isTurnOnNotification}
