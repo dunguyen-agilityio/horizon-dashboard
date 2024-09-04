@@ -106,7 +106,7 @@ const SignInContent = () => {
 
       <Button
         isDisabled={isDisabled}
-        className="bg-blue-450 dark:bg-purple-750 w-full py-7 mb-6 mt-8"
+        className="bg-blue-450 dark:bg-purple-750 w-full py-7 mb-4 mt-8"
         type="submit"
         data-testid="signin-btn"
       >
@@ -114,6 +114,20 @@ const SignInContent = () => {
           Sign In
         </Text>
       </Button>
+      <Text
+        as="h2"
+        size={TEXT_SIZE['md']}
+        variant={TEXT_VARIANT.TERTIARY}
+        className="leading-6"
+      >
+        Don’t have an account yet?
+        <Link
+          href={AUTH_ROUTES.SIGN_UP}
+          className="text-sm ml-1 text-blue-450 dark:text-purple-750 hover:cursor-pointer"
+        >
+          Sign Up Now
+        </Link>
+      </Text>
     </form>
   );
 };

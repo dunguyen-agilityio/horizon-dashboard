@@ -188,7 +188,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
       </a>
     </div>
     <button
-      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover text-black dark:text-white opacity-50 cursor-not-allowed bg-blue-450 dark:bg-purple-750 w-full py-7 mb-6 mt-8"
+      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover text-black dark:text-white opacity-50 cursor-not-allowed bg-blue-450 dark:bg-purple-750 w-full py-7 mb-4 mt-8"
       data-disabled="true"
       data-testid="signin-btn"
       disabled=""
@@ -200,6 +200,19 @@ exports[`SignInContent tests Should match snapshot 1`] = `
         Sign In
       </p>
     </button>
+    <h2
+      class="text-foreground dark:text-secondary text-medium leading-xl leading-6"
+    >
+      Don’t have an account yet?
+      <a
+        class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity text-sm ml-1 text-blue-450 dark:text-purple-750 hover:cursor-pointer"
+        href="/sign-up"
+        role="link"
+        tabindex="0"
+      >
+        Sign Up Now
+      </a>
+    </h2>
   </form>
 </div>
 `;

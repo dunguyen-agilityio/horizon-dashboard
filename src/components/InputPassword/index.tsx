@@ -14,6 +14,7 @@ interface IInputPasswordProps {
   isDisabled?: boolean;
   isInvalid?: boolean;
   value?: string;
+  label?: string;
   placeholder?: string;
   errorMessage?: string;
   label?: string;

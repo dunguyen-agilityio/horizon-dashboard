@@ -3,6 +3,6 @@ export * from './images';
 export * from './messages';
 export * from './routes';
 export * from './text';
-export * from './endpoint';
+export * from './environment';
 export * from './session';
 export * from './regex';

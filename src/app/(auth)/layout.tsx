@@ -3,16 +3,14 @@ import Image from 'next/image';
 import Logo from '@/components/Logo';
 import { Link } from '@nextui-org/link';
 import { ToggleTheme, Text } from '@/components';
+import BackNavigation from '@/ui/auth/BackNavigation';
 
 // Constants
+import { Wallpaper } from '@/constants';
 import { FOOTER_ROUTES } from '@/constants/routes';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
-
-// Constants
-import { Wallpaper } from '@/constants';
-import BackNavigation from '@/ui/auth/BackNavigation';
 
 const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
   <div className="flex bg-white dark:bg-indigo-dark px-4 sm:p-0 h-screen">

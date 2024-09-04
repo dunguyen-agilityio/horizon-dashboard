@@ -3,6 +3,7 @@ export { default as BoxIcon } from './BoxIcon';
 export { default as Button } from './Button';
 export { default as Brand } from './Brand';
 export { default as Text } from './Text';
+export { default as Toast } from './Toast';
 export { default as NavItem } from './NavItem';
 export { default as InputPassword } from './InputPassword';
 export { default as InputSearch } from './InputSearch';
