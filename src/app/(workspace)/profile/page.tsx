@@ -1,3 +1,4 @@
+// Components
 import {
   GeneralInformation,
   PersonalProject,
@@ -6,6 +7,8 @@ import {
   UserInfo,
   ControlBoard,
 } from '@/ui/profile';
+
+// Constants
 import { MOCK_USERS } from '@/mocks/user';
 
 const ProfilePage = () => {
