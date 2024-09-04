@@ -5,6 +5,12 @@ export interface SignInFormData {
   password: string;
 }
 
+export interface SignUpFormData extends Pick<SignInFormData, 'password'> {
+  userName: string;
+  email: string;
+  confirmPassword: string;
+}
+
 export type SignInResponse = {
   jwt: string;
   user: User;
