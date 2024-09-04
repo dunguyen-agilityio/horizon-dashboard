@@ -6,7 +6,7 @@ import SignUpContent from '@/ui/auth/SignUpContent';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const SignUpPage = () => (
-  <div className="">
+  <div>
     <div className="mb-4">
       <Text as="h1" size={TEXT_SIZE['2xl']} className="leading-[56px]">
         Register your account
