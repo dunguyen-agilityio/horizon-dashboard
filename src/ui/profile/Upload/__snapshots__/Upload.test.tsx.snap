@@ -3,7 +3,7 @@
 exports[`UploadFile ui should match snapshot 1`] = `
 <div>
   <div
-    class="flex gap-9 p-7 bg-white rounded-md dark:bg-indigo-light w-[617px] h-[365px]"
+    class="flex flex-col sm:flex-row items-center gap-9 p-7 bg-white rounded-md dark:bg-indigo sm:h-[365px]"
   >
     <div
       class=""
@@ -41,7 +41,7 @@ exports[`UploadFile ui should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="flex flex-col justify-around"
+      class="flex flex-col justify-around text-center sm:text-start"
     >
       <div>
         <p
@@ -55,12 +55,16 @@ exports[`UploadFile ui should match snapshot 1`] = `
           Stay on the pulse of distributed projects with an anline whiteboard to plan, coordinate and discuss
         </p>
       </div>
-      <button
-        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover bg-blue-450 text-white w-1/2 dark:bg-purple-750"
-        type="button"
+      <div
+        class="flex justify-center sm:justify-start mt-4"
       >
-        Publish now
-      </button>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover bg-blue-450 text-white w-1/2 dark:bg-purple-750"
+          type="button"
+        >
+          Publish now
+        </button>
+      </div>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@ import { UploadFile } from '@/icons';
 import { BoxIcon, Button, Text } from '@/components';
 
 const UploadProfile = () => (
-  <div className="flex gap-9 p-7 bg-white rounded-md dark:bg-indigo-light w-[617px] h-[365px]">
+  <div className="flex flex-col sm:flex-row items-center gap-9 p-7 bg-white rounded-md dark:bg-indigo sm:h-[365px]">
     <div className="">
       <div className="flex flex-col gap-6 justify-center items-center bg-grayest dark:bg-indigo-light w-[268px] h-[311px] rounded-md border-dashed border-2 border-amber-450 dark:border-secondary">
         <BoxIcon
@@ -28,7 +28,7 @@ const UploadProfile = () => (
         </div>
       </div>
     </div>
-    <div className="flex flex-col justify-around">
+    <div className="flex flex-col justify-around text-center sm:text-start">
       <div>
         <Text className="font-bold text-[24px]">Complete your profile</Text>
         <Text className="font-normal text-secondary dark:!text-secondary">
@@ -36,10 +36,11 @@ const UploadProfile = () => (
           plan, coordinate and discuss
         </Text>
       </div>
-
-      <Button className="bg-blue-450 text-white w-1/2 dark:bg-purple-750">
-        Publish now
-      </Button>
+      <div className="flex justify-center sm:justify-start mt-4">
+        <Button className="bg-blue-450 text-white w-1/2 dark:bg-purple-750">
+          Publish now
+        </Button>
+      </div>
     </div>
   </div>
 );

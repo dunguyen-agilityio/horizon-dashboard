@@ -28,8 +28,8 @@ const UserInfo = ({
   followersCount = 0,
   followingCount = 0,
 }: IUserInfoProps) => (
-  <div className="dark:bg-indigo bg-white w-[350px] lg:w-[430px] xl:w-[552px] p-[17px] rounded-md">
-    <div className="w-[315px] lg:w-[396px] xl:w-[518px] h-[131px] relative">
+  <div className="dark:bg-indigo bg-white p-[17px] rounded-md">
+    <div className="w-full h-[131px] relative">
       <Image
         fill
         src={BACKGROUND}
@@ -39,7 +39,7 @@ const UserInfo = ({
               (min-width: 769px) and (max-width: 1024px) 396px,
               (min-width: 1025px) 518px"
       />
-      <div className="absolute top-[85px] left-[117px] lg:left-[154px] xl:left-[215px]">
+      <div className="absolute top-[85px] left-[130px] md:left-[300px] lg:left-[430px] xl:left-[490px] 2xl:left-[200px]">
         <Avatar
           src={avatar}
           ImgComponent={Image}
@@ -62,7 +62,7 @@ const UserInfo = ({
           {role}
         </Text>
       </div>
-      <div className="flex justify-center gap-11 mt-[26px] mb-5">
+      <div className="flex justify-center gap-11 my-5">
         <div className="w-14 text-center">
           <Text size={TEXT_SIZE.extra} className="font-extrabold leading-6">
             {postsTotal}
