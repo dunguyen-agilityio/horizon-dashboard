@@ -1,3 +1,4 @@
+'use client';
 // Components
 import { Text } from '@/components';
 import Check from '@/icons/Check';
@@ -12,7 +13,7 @@ import {
   TableCell,
   getKeyValue,
 } from '@nextui-org/table';
-import { Progress } from '@nextui-org/progress';
+import { Progress } from '@nextui-org/react';
 
 // Utils
 import { cn } from '@nextui-org/theme';
@@ -72,14 +73,25 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
 
     case 'progress':
       return (
-        <Progress aria-label="Loading..." value={value} className="max-w-md" />
+        <>
+          <Text className="block md:hidden">{value}%</Text>
+          <Progress
+            aria-label="Loading..."
+            value={value}
+            className="hidden md:block max-w-md"
+          />
+        </>
       );
 
     case 'status':
       return (
         <div className="flex items-center gap-[5px]">
           {renderStatus()}
-          <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+          <Text
+            as="span"
+            size={TEXT_SIZE.sm}
+            className="bg-transparent hidden md:block"
+          >
             {value}
           </Text>
         </div>
@@ -95,7 +107,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
 };
 
 const TableComplex = ({ data }: TableComplexProps) => (
-  <div className="flex-1 bg-white dark:bg-indigo pt-5 pl-[30px] pb-[28px] pr-[25px] rounded-md">
+  <div className="flex-1 bg-white dark:bg-indigo p-1 md:pt-5 md:pl-[30px] md:pb-[28px] md:pr-[25px] rounded-md">
     <Text as="h2" size={TEXT_SIZE.extra}>
       Complex Table
     </Text>

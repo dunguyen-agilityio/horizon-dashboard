@@ -16,8 +16,8 @@ import { MOCK_USERS } from '@/mocks/user';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const CourseCTA = () => (
-  <div className="w-full sm:w-card rounded-md overflow-hidden">
-    <div className="bg-white dark:bg-indigo px-[26px] pt-[27px] pb-[30px]">
+  <div className="w-full sm:w-card rounded-md overflow-hidden bg-white dark:bg-indigo">
+    <div className="px-[26px] pt-[27px] pb-[36px]">
       <div className="flex gap-3 items-center">
         <Avatar
           icon={<FireIcon />}
@@ -42,7 +42,7 @@ const CourseCTA = () => (
         What do you need to know to create better products?
       </Text>
     </div>
-    <div className="bg-grayest dark:bg-indigo-light px-[26px] pb-8 pt-4">
+    <div className="bg-grayest dark:bg-indigo-light px-[26px] pb-16 pt-4">
       <div className="flex gap-[26px]">
         <CourseLabel icon={<Timer />} label="85 Mins" />
         <CourseLabel icon={<Video />} label="Video format" />

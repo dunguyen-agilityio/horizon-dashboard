@@ -1,3 +1,4 @@
+'use client';
 // Components
 import { Text } from '@/components';
 import {
@@ -61,7 +62,7 @@ const formatDataCheck = (row: Check, key: keyof Check) => {
 };
 
 const TableCheck = ({ data }: TableCheckProps) => (
-  <div className="flex-1 bg-white dark:bg-indigo pt-5 pl-[30px] pb-[28px] pr-[25px] rounded-md">
+  <div className="flex-1 bg-white dark:bg-indigo md:pt-5 md:pl-[30px] md:pb-[28px] md:pr-[25px] p-1 rounded-md">
     <Text as="h2" size={TEXT_SIZE.extra}>
       Check Table
     </Text>
