@@ -7,17 +7,15 @@ import ConfirmEmailForm from './ConfirmEmailForm';
 import ResendEmailConfirm from './ResendEmailConfirm';
 
 const ForgetPasswordForm = () => {
-  const [step, setStep] = useState(1);
   const [email, setEmail] = useState('');
 
   const handleSendEmailConfirm = async (email: string) => {
-    setStep(2);
     setEmail(email);
   };
 
   const renderContent = () => {
-    switch (step) {
-      case 1:
+    switch (true) {
+      case !email:
         return <ConfirmEmailForm onSendEmailConfirm={handleSendEmailConfirm} />;
       default:
         return <ResendEmailConfirm email={email} />;

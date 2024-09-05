@@ -31,7 +31,7 @@ const ResendEmail = ({ email }: { email: string }) => {
         variant="ghost"
         className="w-full py-7 mt-6"
         type="submit"
-        data-testid="signin-btn"
+        data-testid="resend-btn"
       >
         <Text
           size={TEXT_SIZE.md}

@@ -100,7 +100,7 @@ const ResetPasswordForm = ({ code: _ }: ResetPasswordFormProps) => {
           isDisabled={isDisabled}
           className="w-full py-7 mt-6"
           type="submit"
-          data-testid="signin-btn"
+          data-testid="update-password-btn"
         >
           <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
             Update Password
