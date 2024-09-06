@@ -37,7 +37,7 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
           'placeholder-purple-50 dark:placeholder-white text-primary dark:text-white',
         ],
         inputWrapper: [
-          'w-96 xl:w-fit bg-gray group-data-[focus=true]:bg-gray dark:bg-indigo-dark dark:group-data-[focus=true]:bg-indigo-dark rounded-[30px]',
+          'md:w-96 xl:w-fit bg-gray group-data-[focus=true]:bg-gray dark:bg-indigo-dark dark:group-data-[focus=true]:bg-indigo-dark rounded-[30px]',
         ],
         innerWrapper: ['flex gap-[11px] pl-[8px]'],
       },

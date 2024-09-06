@@ -9,7 +9,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 type LayoutVariant = 'primary' | 'secondary';
 
-type TrendInfo =
+export type TrendInfo =
   | {
       trendValue: number;
       trendUnit?: string;
@@ -17,7 +17,7 @@ type TrendInfo =
     }
   | { trendValue?: undefined };
 
-interface SummaryCardProps {
+export interface SummaryCardProps {
   variant?: LayoutVariant;
   additionalContent?: React.ReactElement;
   additionalContentWrapper?: string;

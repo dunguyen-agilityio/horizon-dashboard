@@ -1,3 +1,4 @@
+'use client';
 import { BoxIcon, Text } from '@/components';
 import { User } from '@nextui-org/user';
 import { Listbox, ListboxItem } from '@nextui-org/listbox';
