@@ -12,7 +12,7 @@ import { TEXT_SIZE } from '@/types/text';
 const { COVER } = NFT_IMAGES;
 
 const NFTBanner = () => (
-  <div className="relative h-[350px] rounded-md bg-blue-450 dark:bg-purple-750">
+  <div className="relative h-[420px] rounded-md bg-blue-450 dark:bg-purple-750 hidden md:block">
     <div className="absolute right-0 h-[350px] w-full max-w-[1090px]">
       <Image
         src={COVER}
@@ -22,7 +22,7 @@ const NFTBanner = () => (
         sizes="(max-width: 440px) 60vw, 100vw"
       />
     </div>
-    <div className="absolute inset-0 z-10 px-5 py-10 sm:p-10">
+    <div className="absolute inset-0 z-10 px-5 p-5 md:p-10">
       <Text
         as="h1"
         size={TEXT_SIZE['2xl']}
