@@ -30,7 +30,8 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
   const { push } = useRouter();
   const pathname = usePathname();
 
-  const { title, href } = ROUTES.find(({ href }) => href === pathname) || {};
+  const { title, href } =
+    ROUTES.find(({ href }) => pathname.includes(href)) || {};
 
   const query = searchParams.get(QUERY_KEY) ?? '';
 
