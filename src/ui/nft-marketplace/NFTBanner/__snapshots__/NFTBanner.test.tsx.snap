@@ -3,7 +3,7 @@
 exports[`NFTBanner tests Should match snapshot 1`] = `
 <div>
   <div
-    class="relative h-[350px] rounded-md bg-blue-450 dark:bg-purple-750"
+    class="relative h-[420px] rounded-md bg-blue-450 dark:bg-purple-750 hidden md:block"
   >
     <div
       class="absolute right-0 h-[350px] w-full max-w-[1090px]"
@@ -21,7 +21,7 @@ exports[`NFTBanner tests Should match snapshot 1`] = `
       />
     </div>
     <div
-      class="absolute inset-0 z-10 px-5 py-10 sm:p-10"
+      class="absolute inset-0 z-10 px-5 p-5 md:p-10"
     >
       <h1
         class="text-primary dark:text-white text-2xl font-bold leading-2xl text-white whitespace-break-spaces"

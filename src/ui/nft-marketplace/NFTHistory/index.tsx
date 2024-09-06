@@ -20,7 +20,7 @@ interface NFTHistoryProps {
 
 const NFTHistory = ({ historyList }: NFTHistoryProps) => {
   return (
-    <div className="flex flex-col bg-white dark:bg-indigo rounded-md w-[484px] overflow-auto shadow-md p-5">
+    <div className="flex flex-col bg-white dark:bg-indigo rounded-md max-w-nftCard w-full overflow-auto shadow-md">
       <div className="flex items-center justify-between p-[18px]">
         <Text className="leading-8 font-poppins font-bold text-blue-450">
           History
@@ -35,10 +35,10 @@ const NFTHistory = ({ historyList }: NFTHistoryProps) => {
         {historyList.map(({ image, title, author, price, timeAgo }, index) => (
           <div
             key={index}
-            className="w-[448px] flex gap-8 justify-between p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
+            className="max-w-[448px] flex gap-8 justify-between p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
           >
             <div className="flex items-center gap-4">
-              <div className="w-[66px] h-[66px] flex items-center">
+              <div className="w-[66px] h-[66px] items-center hidden md:flex">
                 <Image
                   src={image}
                   alt={title}
