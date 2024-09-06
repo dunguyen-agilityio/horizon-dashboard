@@ -15,3 +15,7 @@ export type SignInResponse = {
   jwt: string;
   user: User;
 };
+
+export type ResetPasswordFormData = {
+  email: string;
+};

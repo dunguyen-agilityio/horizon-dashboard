@@ -17,6 +17,7 @@ interface IInputPasswordProps {
   label?: string;
   placeholder?: string;
   errorMessage?: string;
+  label?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 

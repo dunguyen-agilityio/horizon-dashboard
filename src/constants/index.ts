@@ -5,3 +5,4 @@ export * from './routes';
 export * from './text';
 export * from './environment';
 export * from './session';
+export * from './regex';

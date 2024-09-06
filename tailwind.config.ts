@@ -40,7 +40,10 @@ const config: Config = {
     nextui({
       themes: {
         light: {
-          colors: { default: { '100': colors.gray, '200': colors.grey } },
+          colors: {
+            default: { '100': colors.gray, '200': colors.grey },
+            foreground: { 500: colors.secondary },
+          },
         },
         dark: {
           colors: {

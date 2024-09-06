@@ -7,6 +7,7 @@ export const AUTH_ROUTES = {
   SIGN_IN: '/sign-in',
   SIGN_UP: '/sign-up',
   FORGET_PASSWORD: '/forget-password',
+  RESET_PASSWORD: '/reset-password',
 };
 
 export const PRIVATE_ROUTES = {
@@ -65,3 +66,9 @@ export const FOOTER_ROUTES: Omit<Route, 'icon'>[] = [
   { title: 'Terms of Use', href: PUBLIC_ROUTES.TERM_OF_USE },
   { title: 'Blog', href: PUBLIC_ROUTES.BLOG },
 ];
+
+export const AUTH_NAVIGATION_HEADER = {
+  [PUBLIC_ROUTES.DASHBOARD]: 'dashboard',
+  [AUTH_ROUTES.FORGET_PASSWORD]: 'step 1',
+  [AUTH_ROUTES.SIGN_IN]: 'sign in',
+};
