@@ -44,6 +44,9 @@ const config: Config = {
         },
         dark: {
           colors: {
+            background: {
+              DEFAULT: colors['indigo-light'],
+            },
             default: {
               '100': colors['indigo-light'],
               '200': colors['army-green'],
