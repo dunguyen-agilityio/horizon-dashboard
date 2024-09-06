@@ -18,7 +18,8 @@ exports[`Banner component Should match snapshot 1`] = `
           decoding="async"
           height="41"
           loading="lazy"
-          src="/vector.svg"
+          src="/_next/image?url=%2Fvector.webp&w=96&q=75"
+          srcset="/_next/image?url=%2Fvector.webp&w=48&q=75 1x, /_next/image?url=%2Fvector.webp&w=96&q=75 2x"
           style="color: transparent;"
           width="41"
         />
