@@ -3,10 +3,10 @@
 exports[`UserInfo component UserInfo should render match snapshot 1`] = `
 <div>
   <div
-    class="dark:bg-indigo bg-white w-[350px] lg:w-[430px] xl:w-[552px] p-[17px] rounded-md"
+    class="dark:bg-indigo bg-white p-[17px] rounded-md"
   >
     <div
-      class="w-[315px] lg:w-[396px] xl:w-[518px] h-[131px] relative"
+      class="w-full h-[131px] relative"
     >
       <img
         alt="background-profile"
@@ -14,13 +14,13 @@ exports[`UserInfo component UserInfo should render match snapshot 1`] = `
         data-nimg="fill"
         decoding="async"
         loading="lazy"
-        sizes="(max-width: 768px) 315px,   (min-width: 769px) and (max-width: 1024px) 396px,   (min-width: 1025px) 518px"
+        sizes="(max-width: 768px) 315px, (min-width: 769px) and (max-width: 1024px) 396px, (min-width: 1025px) 518px"
         src="/_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=3840&q=75"
         srcset="/_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=16&q=75 16w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=32&q=75 32w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=48&q=75 48w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=64&q=75 64w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=96&q=75 96w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=128&q=75 128w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=256&q=75 256w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=384&q=75 384w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=640&q=75 640w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=750&q=75 750w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=828&q=75 828w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1080&q=75 1080w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1200&q=75 1200w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1920&q=75 1920w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=2048&q=75 2048w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=3840&q=75 3840w"
         style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
       />
       <div
-        class="absolute top-[85px] left-[117px] lg:left-[154px] xl:left-[215px]"
+        class="absolute top-[85px] left-[130px] md:left-[300px] lg:left-[430px] xl:left-[490px] 2xl:left-[200px]"
       >
         <span
           class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[87px] h-[87px] border-4 dark:border-indigo border-white"
@@ -59,7 +59,7 @@ exports[`UserInfo component UserInfo should render match snapshot 1`] = `
         </p>
       </div>
       <div
-        class="flex justify-center gap-11 mt-[26px] mb-5"
+        class="flex justify-center gap-11 my-5"
       >
         <div
           class="w-14 text-center"
@@ -112,10 +112,10 @@ exports[`UserInfo component UserInfo should render match snapshot 1`] = `
 exports[`UserInfo component UserInfo should render without avatar props 1`] = `
 <div>
   <div
-    class="dark:bg-indigo bg-white w-[350px] lg:w-[430px] xl:w-[552px] p-[17px] rounded-md"
+    class="dark:bg-indigo bg-white p-[17px] rounded-md"
   >
     <div
-      class="w-[315px] lg:w-[396px] xl:w-[518px] h-[131px] relative"
+      class="w-full h-[131px] relative"
     >
       <img
         alt="background-profile"
@@ -123,13 +123,13 @@ exports[`UserInfo component UserInfo should render without avatar props 1`] = `
         data-nimg="fill"
         decoding="async"
         loading="lazy"
-        sizes="(max-width: 768px) 315px,   (min-width: 769px) and (max-width: 1024px) 396px,   (min-width: 1025px) 518px"
+        sizes="(max-width: 768px) 315px, (min-width: 769px) and (max-width: 1024px) 396px, (min-width: 1025px) 518px"
         src="/_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=3840&q=75"
         srcset="/_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=16&q=75 16w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=32&q=75 32w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=48&q=75 48w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=64&q=75 64w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=96&q=75 96w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=128&q=75 128w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=256&q=75 256w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=384&q=75 384w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=640&q=75 640w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=750&q=75 750w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=828&q=75 828w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1080&q=75 1080w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1200&q=75 1200w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=1920&q=75 1920w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=2048&q=75 2048w, /_next/image?url=%2Fprofile%2Fbackground-profile.webp&w=3840&q=75 3840w"
         style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
       />
       <div
-        class="absolute top-[85px] left-[117px] lg:left-[154px] xl:left-[215px]"
+        class="absolute top-[85px] left-[130px] md:left-[300px] lg:left-[430px] xl:left-[490px] 2xl:left-[200px]"
       >
         <span
           class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full w-[87px] h-[87px] border-4 dark:border-indigo border-white"
@@ -179,7 +179,7 @@ exports[`UserInfo component UserInfo should render without avatar props 1`] = `
         </p>
       </div>
       <div
-        class="flex justify-center gap-11 mt-[26px] mb-5"
+        class="flex justify-center gap-11 my-5"
       >
         <div
           class="w-14 text-center"

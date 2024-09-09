@@ -13,7 +13,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 // Constants
 import { NFT_IMAGES } from '@/constants';
 
-interface IProjectCardProps {
+export interface IProjectCardProps {
   id: string;
   title: string;
   baseProject: string;

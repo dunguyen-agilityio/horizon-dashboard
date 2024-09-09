@@ -1,3 +1,5 @@
+'use client';
+
 import { Progress } from '@nextui-org/react';
 
 // icons
@@ -13,7 +15,7 @@ interface StorageProps {
 }
 
 const Storage = ({ usedSize, totalSize, valueProgress }: StorageProps) => (
-  <div className="flex flex-col w-[381px] h-[365px] bg-white dark:bg-indigo p-5 rounded-md">
+  <div className="flex flex-col h-[365px] bg-white dark:bg-indigo p-5 rounded-md">
     <div className="flex justify-end">
       <BoxIcon
         icon={<More />}

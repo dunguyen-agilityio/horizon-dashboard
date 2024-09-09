@@ -3,7 +3,7 @@
 exports[`GeneralInformation component GeneralInformation should render match snapshot 1`] = `
 <div>
   <div
-    class="dark:bg-indigo bg-white w-[350px] sm:w-full lg:w-[430px] xl:w-[617px] pt-[23px] p-[31px] rounded-md"
+    class="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md"
   >
     <div
       class="text-center xl:text-start"
@@ -20,10 +20,10 @@ exports[`GeneralInformation component GeneralInformation should render match sna
       </p>
     </div>
     <div
-      class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-2 gap-5"
+      class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 gap-4"
     >
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -62,7 +62,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -101,7 +101,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -140,7 +140,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -179,7 +179,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -218,7 +218,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-4 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md is-filled"
+        class="group flex flex-col data-[hidden=true]:hidden w-full px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md is-filled"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"

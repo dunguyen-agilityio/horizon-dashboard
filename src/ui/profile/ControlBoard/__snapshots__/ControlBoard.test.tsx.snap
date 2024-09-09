@@ -3,7 +3,7 @@
 exports[`ControlBoard component ControlBoard should render match snapshot 1`] = `
 <div>
   <div
-    class="dark:bg-indigo bg-white w-[350px] xl:w-[421px] pt-[23px] p-[31px] rounded-md"
+    class="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md"
   >
     <div
       class="flex justify-between"
@@ -44,7 +44,7 @@ exports[`ControlBoard component ControlBoard should render match snapshot 1`] = 
       </i>
     </div>
     <div
-      class="flex flex-col gap-[22px] ml-1"
+      class="flex flex-col gap-6 ml-1"
     >
       <label
         class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
