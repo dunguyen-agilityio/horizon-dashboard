@@ -6,3 +6,4 @@ export * from './text';
 export * from './environment';
 export * from './session';
 export * from './regex';
+export * from './api';

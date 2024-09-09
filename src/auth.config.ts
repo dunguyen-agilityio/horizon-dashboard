@@ -10,7 +10,7 @@ import { apiClient } from './services/api';
 import { SignInResponse } from '@/types/auth';
 
 // Constants
-import { AUTH_ROUTES, API_TOKEN, PUBLIC_ROUTES } from './constants';
+import { AUTH_ROUTES, API_TOKEN, PUBLIC_ROUTES, API_ENTITY } from './constants';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -24,7 +24,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const { identifier, password } = credentials;
 
         const { data, error } = await apiClient.post<SignInResponse>(
-          'auth/local',
+          API_ENTITY.SIGN_IN,
           {
             body: { identifier, password },
           },
