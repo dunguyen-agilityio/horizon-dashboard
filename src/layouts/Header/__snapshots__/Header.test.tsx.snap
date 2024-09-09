@@ -92,6 +92,19 @@ exports[`Header tests Should match snapshot 1`] = `
             </svg>
           </i>
         </button>
+        <i
+          class="w-6 h-6 flex hover:cursor-pointer fill-secondary dark:fill-white rounded-full justify-center items-center pt-0.5 hover:bg-default-200"
+        >
+          <svg
+            height="15"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.944 1.4C11.959-.008 9.509.65 8.186 2.261 6.863.65 4.413-.016 2.43 1.401 1.376 2.15.715 3.42.669 4.757.566 7.795 3.15 10.23 7.097 13.963l.075.07c.572.54 1.451.54 2.022-.007l.083-.079c3.946-3.725 6.524-6.16 6.427-9.197-.046-1.33-.707-2.598-1.76-3.35ZM8.26 12.797l-.075.078-.075-.078C4.533 9.423 2.173 7.192 2.173 4.93c0-1.565 1.128-2.74 2.63-2.74 1.158 0 2.286.776 2.684 1.848h1.406c.39-1.072 1.518-1.847 2.675-1.847 1.504 0 2.631 1.174 2.631 2.74 0 2.261-2.36 4.492-5.938 7.866Z"
+            />
+          </svg>
+        </i>
         <button
           class="z-0 group relative box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover min-w-fit h-fit rounded-full flex justify-center items-center p-2 bg-transparent"
           type="button"
