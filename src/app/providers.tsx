@@ -4,6 +4,9 @@ import { useRouter } from 'next/navigation';
 import { NextUIProvider } from '@nextui-org/system';
 import { ThemeProvider } from 'next-themes';
 
+// provider
+import ToastProvider from '@/contexts/toast/ToastProvider';
+
 const Providers = ({ children }: React.PropsWithChildren) => {
   const { push } = useRouter();
 
@@ -15,7 +18,7 @@ const Providers = ({ children }: React.PropsWithChildren) => {
         attribute="class"
         themes={['light', 'dark']}
       >
-        {children}
+        <ToastProvider>{children}</ToastProvider>
       </ThemeProvider>
     </NextUIProvider>
   );
