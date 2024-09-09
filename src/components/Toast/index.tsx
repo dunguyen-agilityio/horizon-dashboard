@@ -1,4 +1,5 @@
 'use client';
+
 // types
 import { ToastStatus } from '@/types/toast';
 
@@ -10,31 +11,36 @@ import { Close } from '@/icons';
 interface ToastProps {
   title: string;
   message: string;
-  type: ToastStatus;
-  onClose: () => void;
+  type?: ToastStatus;
+  onClose?: () => void;
 }
 
 const typeStyles = {
   success: 'bg-success',
   error: 'bg-error',
+  info: 'bg-secondary',
+  warning: 'bg-warning',
 };
 
-const Toast = ({ title, message, type, onClose }: ToastProps) => (
+const Toast = ({ title, message, type = 'info', onClose }: ToastProps) => (
   <div
-    className={`fixed top-5 left-1/2 z-[1000] flex justify-between min-w-[300px] p-1
+    className={`fixed top-5 right-5 z-[1000] flex justify-between min-w-[300px] p-1
       rounded text-white text-lg transition-opacity duration-500 ease-in animate-slideDown ${typeStyles[type]}`}
   >
-    <div className="flex flex-col justify-between gap-2 p-3">
-      <Text className="font-bold leading-none text-white">{title}</Text>
-      <Text className="font-normal text-sm text-amber-450 leading-none opacity-9">
+    <div className="flex flex-col justify-between gap-0.5 px-3 py-1">
+      <Text className="font-bold leading-none text-white" as="h2">
+        {title}
+      </Text>
+      <Text className="font-normal text-sm !text-white leading-none opacity-9">
         {message}
       </Text>
     </div>
-    <BoxIcon
-      customClass="w-7 h-7 hover:bg-white hover:bg-opacity-20 hover:rounded-full"
-      icon={<Close />}
+    <button
       onClick={onClose}
-    />
+      className="w-5 h-5 hover:bg-white hover:bg-opacity-20 hover:rounded-full flex justify-center items-center"
+    >
+      <BoxIcon icon={<Close />} />
+    </button>
   </div>
 );
 

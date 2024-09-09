@@ -7,7 +7,7 @@ import './globals.css';
 import RootLayout from '@/layouts/RootLayout';
 
 // provider
-import ToastProvider from '@/contexts/toast/toastProvider';
+import ToastProvider from '@/contexts/toast/ToastProvider';
 
 export const metadata: Metadata = {
   title: 'Horizon',

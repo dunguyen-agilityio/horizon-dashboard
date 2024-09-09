@@ -1,11 +1,11 @@
 'use client';
+
 import { useState, ReactNode, useEffect } from 'react';
 
 // contexts
-import { ToastContext } from './toastContext';
+import { ToastContext } from '.';
 
 // types
-
 import { ToastType } from '@/types/toast';
 
 // components
@@ -24,16 +24,18 @@ const ToastProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (toast) {
+      const { timeOut = 1000 } = toast;
+
       const timer = setTimeout(() => {
         setToast(null);
-      }, toast.timeOut);
+      }, timeOut);
 
       return () => clearTimeout(timer);
     }
   }, [toast]);
 
   return (
-    <ToastContext.Provider value={{ showToast, hideToast }}>
+    <ToastContext.Provider value={{ showToast }}>
       {children}
       {toast && (
         <div className="toast-container">

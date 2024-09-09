@@ -1,13 +1,15 @@
-export type ToastStatus = 'success' | 'error';
+export type ToastStatus = 'success' | 'error' | 'info' | 'warning';
 
 export type ToastType = {
   title: string;
   message: string;
-  type: ToastStatus;
-  timeOut: number;
+  type?: ToastStatus;
+  timeOut?: number;
 };
 
 export enum TOAST {
   SUCCESS = 'success',
   ERROR = 'error',
+  WARNING = 'warning',
+  INFO = 'info',
 }
