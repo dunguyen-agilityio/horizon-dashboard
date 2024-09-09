@@ -13,6 +13,7 @@ export const AUTH_ROUTES = {
 export const PRIVATE_ROUTES = {
   KANBAN: '/kanban',
   PROFILE: '/profile',
+  NFT_FAVORITES: (id: string) => `/nft-favorites/${id}`,
 };
 
 export const PUBLIC_ROUTES = {
