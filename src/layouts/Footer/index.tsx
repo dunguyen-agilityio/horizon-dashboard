@@ -9,7 +9,7 @@ import { TEXT_SIZE } from '@/types/text';
 import { FOOTER_ROUTES, FOOTER_CONTENT } from '@/constants';
 
 const Footer = () => (
-  <div className="flex flex-col justify-between items-center px-1 gap-2 lg:gap-0 lg:flex-row xl:px-7">
+  <div className="flex flex-col justify-between items-center px-1 gap-2 lg:gap-0 lg:flex-row xl:px-7 mb-6">
     <Text className="text-secondary text-center" size={TEXT_SIZE.sm}>
       {FOOTER_CONTENT}
     </Text>
