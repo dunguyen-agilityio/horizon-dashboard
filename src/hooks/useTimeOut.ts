@@ -10,7 +10,7 @@ const useTimeOut = (seconds = 60): { time: number; isDisabled: boolean } => {
         return;
       }
 
-      setTime(0);
+      clearInterval(timerId);
     }, 1000);
 
     return () => {
