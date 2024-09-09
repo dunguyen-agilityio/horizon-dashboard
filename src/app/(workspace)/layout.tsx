@@ -1,9 +1,5 @@
 import { Suspense } from 'react';
 
-// Components
-import { Brand } from '@/components';
-import { Divider } from '@nextui-org/react';
-
 // Layouts
 import { Header, Navbar, Footer } from '@/layouts';
 
@@ -14,10 +10,8 @@ const RootLayout = async ({ children }: React.PropsWithChildren) => {
   const isAuthenticated = !!(await auth())?.user;
 
   return (
-    <div className="flex h-screen bg-secondary dark:bg-indigo">
+    <div className="flex h-screen">
       <div className="hidden xl:block">
-        <Brand />
-        <Divider className="bg-zinc-100 dark:bg-slate-700" />
         <Navbar isAuthenticated={isAuthenticated} />
       </div>
       <div className="flex-grow flex flex-col w-full">
