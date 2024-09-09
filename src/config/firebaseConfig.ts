@@ -1,7 +1,13 @@
 'use client';
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+  query,
+  where,
+} from 'firebase/firestore';
 
 import {
   FIREBASE_API_KEY,
@@ -25,4 +31,6 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+export const fireStore = getFirestore(app);
+
+export { collection, onSnapshot, query, where };

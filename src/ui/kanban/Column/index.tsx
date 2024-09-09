@@ -33,7 +33,7 @@ interface ColumnProps {
 
 const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
   const [isAdding, setIsAdding] = useState(false);
-  const { tasks, isLoading } = useTask();
+  const { tasks, isLoading } = useTask(status);
 
   const handleShowTaskForm = () => {
     setIsAdding(true);
