@@ -3,7 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Constants
-import { ROUTES } from '@/constants/routes';
+import { PRIVATE_ROUTES, ROUTES } from '@/constants/routes';
 import { QUERY_KEY } from '@/constants/common';
 
 // Types
@@ -12,9 +12,12 @@ import { TEXT_SIZE } from '@/types/text';
 // Components
 import Notification from './Notification';
 import ProfileDropDown from './ProfileDropDown';
-import { ToggleTheme, Text, InputSearch } from '@/components';
+import { ToggleTheme, Text, InputSearch, BoxIcon } from '@/components';
 import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/react';
 import MenuBar from '@/layouts/MenuBar';
+
+// Icons
+import { Heart } from '@/icons';
 
 // Utils
 import { debounce } from '@/utils/debounce';
@@ -45,6 +48,9 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
     push(`${pathname}?${params.toString()}`);
   };
 
+  const handleNavigateFavoritePage = () =>
+    push(PRIVATE_ROUTES.NFT_FAVORITES('2'));
+
   return (
     <header className="relative flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0">
       <div className="flex flex-col gap-1 mr-2">
@@ -71,6 +77,13 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
         <InputSearch onSearch={debounce(handleSearch)} defaultValue={query} />
         <div className="absolute top-0 right-0 xl:static flex gap-2 sm:gap-6 items-center">
           {isAuthenticated && <Notification notifies={MOCK_NOTIFIES} />}
+          {isAuthenticated && (
+            <BoxIcon
+              onClick={handleNavigateFavoritePage}
+              customClass="fill-secondary dark:fill-white rounded-full justify-center items-center pt-0.5 hover:bg-default-200"
+              icon={<Heart />}
+            />
+          )}
           <ToggleTheme />
           {isAuthenticated && <ProfileDropDown />}
         </div>

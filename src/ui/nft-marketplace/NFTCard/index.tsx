@@ -20,6 +20,10 @@ import { NFT } from '@/models/NFT';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
+interface INFTProps extends NFT {
+  isShowIcon?: boolean;
+}
+
 const NFTCard = ({
   image = NFT_IMAGES.DEFAULT,
   name,
@@ -27,7 +31,8 @@ const NFTCard = ({
   members,
   id,
   price,
-}: NFT) => {
+  isShowIcon = true,
+}: INFTProps) => {
   const [isPending, setIsPending] = useState(false);
 
   const handleLike = async () => {
@@ -46,13 +51,15 @@ const NFTCard = ({
       <div className="bg-white dark:bg-indigo rounded-md p-5">
         <div className="relative w-[308px] h-[205px] rounded-[18px] overflow-hidden">
           <Image src={image} alt={name} fill className="object-cover" />
-          <button
-            data-testid="like-btn"
-            className="absolute top-[14px] right-[14px]"
-            onClick={handleLike}
-          >
-            <FavoriteIcon />
-          </button>
+          {isShowIcon && (
+            <button
+              data-testid="like-btn"
+              className="absolute top-[14px] right-[14px]"
+              onClick={handleLike}
+            >
+              <FavoriteIcon />
+            </button>
+          )}
         </div>
         <div className="flex justify-between pt-5">
           <div>
