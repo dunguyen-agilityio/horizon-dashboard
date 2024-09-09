@@ -11,6 +11,8 @@ export interface SignUpFormData extends Pick<SignInFormData, 'password'> {
   confirmPassword: string;
 }
 
+export type ForgetResponse = { ok: boolean };
+
 export type SignInResponse = {
   jwt: string;
   user: User;

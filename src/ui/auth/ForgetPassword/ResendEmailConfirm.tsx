@@ -5,7 +5,12 @@ import useTimeOut from '@/hooks/useTimeOut';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
-const ResendEmail = ({ email }: { email: string }) => {
+interface ResendEmailProps {
+  email: string;
+  onResent: () => Promise<void>;
+}
+
+const ResendEmail = ({ email, onResent }: ResendEmailProps) => {
   const { isDisabled, time } = useTimeOut(10);
 
   return (
@@ -26,8 +31,7 @@ const ResendEmail = ({ email }: { email: string }) => {
       </div>
       <Button
         isDisabled={isDisabled}
-        // Will handle later
-        onClick={() => {}}
+        onClick={onResent}
         variant="ghost"
         className="w-full py-7 mt-6"
         type="submit"

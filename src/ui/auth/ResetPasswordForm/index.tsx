@@ -1,5 +1,7 @@
 'use client';
 
+// Libs
+import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
 // Components
@@ -9,7 +11,13 @@ import { Button, InputPassword, Text } from '@/components';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Constants
-import { MESSAGES, REGEX_PASSWORD } from '@/constants';
+import { AUTH_ROUTES, MESSAGES, REGEX_PASSWORD } from '@/constants';
+
+// Actions
+import { handleResetPassword } from '@/actions/auth';
+
+// Hooks
+import useToast from '@/contexts/toast';
 
 interface ResetPasswordFormData {
   password: string;
@@ -25,9 +33,9 @@ interface ResetPasswordFormProps {
   code: string;
 }
 
-const { PASSWORD } = MESSAGES;
+const { PASSWORD, RESET_PASSWORD } = MESSAGES;
 
-const ResetPasswordForm = ({ code: _ }: ResetPasswordFormProps) => {
+const ResetPasswordForm = ({ code }: ResetPasswordFormProps) => {
   const {
     control,
     getValues,
@@ -38,9 +46,27 @@ const ResetPasswordForm = ({ code: _ }: ResetPasswordFormProps) => {
     values: resetPasswordInitValues,
   });
 
+  const { showToast } = useToast();
+  const { push } = useRouter();
+
   const isDisabled = !isDirty;
 
-  const resetPassword = async (_: ResetPasswordFormData) => {};
+  const resetPassword = async (data: ResetPasswordFormData) => {
+    const { data: res } = await handleResetPassword({ code, ...data });
+    const { ERROR, SUCCESS } = RESET_PASSWORD;
+
+    const isSuccess = !!res?.user;
+
+    const { TITLE, DESCRIPTION } = isSuccess ? SUCCESS : ERROR;
+
+    showToast({
+      title: TITLE,
+      message: DESCRIPTION,
+      type: isSuccess ? 'success' : 'error',
+    });
+
+    isSuccess && push(AUTH_ROUTES.SIGN_IN);
+  };
 
   return (
     <form onSubmit={handleSubmit(resetPassword)} className="w-full sm:w-96">
