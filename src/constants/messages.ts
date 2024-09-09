@@ -12,4 +12,36 @@ export const MESSAGES = {
     REQUIRED: 'Email is required',
     REGEX_MISMATCH: 'This field is email',
   },
+  FORGET_PASSWORD: {
+    SUCCESS: {
+      TITLE: 'Success',
+      DESCRIPTION: 'Password reset link has been sent to your email.',
+    },
+    ERROR: {
+      TITLE: 'Error',
+      DESCRIPTION:
+        'An error occurred while sending the reset password link. Please try again.',
+    },
+  },
+  RESET_PASSWORD: {
+    SUCCESS: {
+      TITLE: 'Success',
+      DESCRIPTION: 'Password has been reset successfully.',
+    },
+    ERROR: {
+      TITLE: 'Error',
+      DESCRIPTION:
+        'An error occurred while resetting password. Please try again.',
+    },
+  },
+  SIGN_IN: {
+    SUCCESS: {
+      TITLE: 'Success',
+      DESCRIPTION: 'Sign in successfully.',
+    },
+    ERROR: {
+      TITLE: 'Error',
+      DESCRIPTION: 'An error occurred while Sign in. Please try again.',
+    },
+  },
 };

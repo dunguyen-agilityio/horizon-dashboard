@@ -1,5 +1,8 @@
 'use client';
 
+// Libs
+import { useTransition } from 'react';
+import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
 // Components
@@ -9,7 +12,13 @@ import { Button, InputPassword, Text } from '@/components';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Constants
-import { MESSAGES, REGEX_PASSWORD } from '@/constants';
+import { AUTH_ROUTES, MESSAGES, REGEX_PASSWORD } from '@/constants';
+
+// Actions
+import { handleResetPassword } from '@/actions/auth';
+
+// Hooks
+import useToast from '@/contexts/toast';
 
 interface ResetPasswordFormData {
   password: string;
@@ -25,9 +34,9 @@ interface ResetPasswordFormProps {
   code: string;
 }
 
-const { PASSWORD } = MESSAGES;
+const { PASSWORD, RESET_PASSWORD } = MESSAGES;
 
-const ResetPasswordForm = ({ code: _ }: ResetPasswordFormProps) => {
+const ResetPasswordForm = ({ code }: ResetPasswordFormProps) => {
   const {
     control,
     getValues,
@@ -38,12 +47,36 @@ const ResetPasswordForm = ({ code: _ }: ResetPasswordFormProps) => {
     values: resetPasswordInitValues,
   });
 
+  const { showToast } = useToast();
+  const { push } = useRouter();
+  const [isPending, startTransition] = useTransition();
+
   const isDisabled = !isDirty;
 
-  const resetPassword = async (_: ResetPasswordFormData) => {};
+  const resetPassword = (data: ResetPasswordFormData) => {
+    startTransition(async () => {
+      const { data: res } = await handleResetPassword({ code, ...data });
+      const { ERROR, SUCCESS } = RESET_PASSWORD;
+
+      const isSuccess = !!res?.user;
+
+      const { TITLE, DESCRIPTION } = isSuccess ? SUCCESS : ERROR;
+
+      showToast({
+        title: TITLE,
+        message: DESCRIPTION,
+        type: isSuccess ? 'success' : 'error',
+      });
+
+      isSuccess && push(AUTH_ROUTES.SIGN_IN);
+    });
+  };
 
   return (
-    <form onSubmit={handleSubmit(resetPassword)} className="w-full sm:w-96">
+    <form
+      onSubmit={handleSubmit(resetPassword)}
+      className="w-full sm:w-96 relative"
+    >
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2 pb-8">
           <Text as="h1" size={TEXT_SIZE['2xl']} className="leading-[56px]">
@@ -101,12 +134,17 @@ const ResetPasswordForm = ({ code: _ }: ResetPasswordFormProps) => {
           className="w-full py-7 mt-6"
           type="submit"
           data-testid="update-password-btn"
+          isLoading={isPending}
+          color="primary"
         >
-          <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
-            Update Password
-          </Text>
+          {!isPending && (
+            <Text size={TEXT_SIZE.sm} className="font-bold leading-4">
+              Update Password
+            </Text>
+          )}
         </Button>
       </div>
+      {isPending && <div className="absolute inset-0" />}
     </form>
   );
 };

@@ -1,11 +1,19 @@
 // Components
 import { Button, Text } from '@/components';
+
+// Hooks
 import useTimeOut from '@/hooks/useTimeOut';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
-const ResendEmail = ({ email }: { email: string }) => {
+interface ResendEmailProps {
+  email: string;
+  isLoading: boolean;
+  onResent: () => void;
+}
+
+const ResendEmail = ({ email, isLoading, onResent }: ResendEmailProps) => {
   const { isDisabled, time } = useTimeOut(10);
 
   return (
@@ -26,20 +34,22 @@ const ResendEmail = ({ email }: { email: string }) => {
       </div>
       <Button
         isDisabled={isDisabled}
-        // Will handle later
-        onClick={() => {}}
-        variant="ghost"
+        onClick={onResent}
+        color="primary"
         className="w-full py-7 mt-6"
         type="submit"
         data-testid="resend-btn"
+        isLoading={isLoading}
       >
-        <Text
-          size={TEXT_SIZE.md}
-          variant={TEXT_VARIANT.SECONDARY}
-          className="font-bold leading-4"
-        >
-          {time ? `${time}s` : 'Resend email'}
-        </Text>
+        {!isLoading && (
+          <Text
+            size={TEXT_SIZE.md}
+            variant={TEXT_VARIANT.SECONDARY}
+            className="font-bold leading-4"
+          >
+            {time ? `${time}s` : 'Resend email'}
+          </Text>
+        )}
       </Button>
     </div>
   );
