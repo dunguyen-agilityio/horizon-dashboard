@@ -32,7 +32,6 @@ const ProfilePage = () => {
           <Upload />
         </div>
       </div>
-      {/*  */}
       <div className="grid grid-cols-12 grid-rows-1 gap-5">
         <div className="col-span-12 lg:col-span-12 xl:col-span-12 2xl:col-span-4">
           <div className="flex h-full justify-center items-center">
