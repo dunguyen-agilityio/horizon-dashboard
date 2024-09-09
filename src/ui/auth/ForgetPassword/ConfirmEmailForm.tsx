@@ -19,10 +19,14 @@ const resetPasswordInitValues: ResetPasswordFormData = {
 const { EMAIL } = MESSAGES;
 
 interface ConfirmEmailFormProps {
-  onSendEmailConfirm: (email: string) => Promise<void>;
+  onSendEmailConfirm: (email: string) => void;
+  isLoading: boolean;
 }
 
-const ConfirmEmailForm = ({ onSendEmailConfirm }: ConfirmEmailFormProps) => {
+const ConfirmEmailForm = ({
+  isLoading,
+  onSendEmailConfirm,
+}: ConfirmEmailFormProps) => {
   const {
     control,
     handleSubmit,
@@ -34,8 +38,8 @@ const ConfirmEmailForm = ({ onSendEmailConfirm }: ConfirmEmailFormProps) => {
 
   const isDisabled = !isDirty;
 
-  const handleForgetPassword = async ({ email }: ResetPasswordFormData) => {
-    await onSendEmailConfirm(email);
+  const handleForgetPassword = ({ email }: ResetPasswordFormData) => {
+    onSendEmailConfirm(email);
   };
 
   return (
@@ -86,11 +90,15 @@ const ConfirmEmailForm = ({ onSendEmailConfirm }: ConfirmEmailFormProps) => {
         isDisabled={isDisabled}
         className="bg-blue-450 dark:bg-purple-750 w-full py-7 mt-6"
         type="submit"
+        color="primary"
         data-testid="continue-btn"
+        isLoading={isLoading}
       >
-        <Text size={TEXT_SIZE.md} className="text-white font-bold leading-4">
-          Continue
-        </Text>
+        {!isLoading && (
+          <Text size={TEXT_SIZE.md} className="font-bold leading-4">
+            Continue
+          </Text>
+        )}
       </Button>
     </form>
   );

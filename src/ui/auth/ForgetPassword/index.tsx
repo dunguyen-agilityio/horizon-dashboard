@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 
 // Components
 import ConfirmEmailForm from './ConfirmEmailForm';
@@ -19,38 +19,58 @@ const ForgetPasswordForm = () => {
   const [email, setEmail] = useState('');
   const { showToast } = useToast();
 
-  const handleSendEmailConfirm = async (email: string) => {
-    const { data } = await handleForgetPassword(email);
+  const [isPending, startTransition] = useTransition();
 
-    const { ERROR, SUCCESS } = MESSAGES.FORGET_PASSWORD;
+  const handleSendEmailConfirm = (email: string) => {
+    startTransition(async () => {
+      const { data } = await handleForgetPassword(email);
 
-    const isSuccess = !!data?.ok;
+      const { ERROR, SUCCESS } = MESSAGES.FORGET_PASSWORD;
 
-    const { TITLE, DESCRIPTION } = isSuccess ? SUCCESS : ERROR;
+      const isSuccess = !!data?.ok;
 
-    showToast({
-      type: isSuccess ? 'success' : 'error',
-      title: TITLE,
-      message: DESCRIPTION,
+      const { TITLE, DESCRIPTION } = isSuccess ? SUCCESS : ERROR;
+
+      showToast({
+        type: isSuccess ? 'success' : 'error',
+        title: TITLE,
+        message: DESCRIPTION,
+      });
+
+      isSuccess && setEmail(email);
     });
-
-    isSuccess && setEmail(email);
   };
 
-  const handleResent = async () => {
-    await handleSendEmailConfirm(email);
+  const handleResent = () => {
+    handleSendEmailConfirm(email);
   };
 
   const renderContent = () => {
     switch (true) {
       case !email:
-        return <ConfirmEmailForm onSendEmailConfirm={handleSendEmailConfirm} />;
+        return (
+          <ConfirmEmailForm
+            onSendEmailConfirm={handleSendEmailConfirm}
+            isLoading={isPending}
+          />
+        );
       default:
-        return <ResendEmailConfirm email={email} onResent={handleResent} />;
+        return (
+          <ResendEmailConfirm
+            email={email}
+            onResent={handleResent}
+            isLoading={isPending}
+          />
+        );
     }
   };
 
-  return <div className="w-full sm:w-96">{renderContent()}</div>;
+  return (
+    <div className="w-full sm:w-96 relative">
+      {renderContent()}
+      {isPending && <div className="absolute inset-0" />}
+    </div>
+  );
 };
 
 export default ForgetPasswordForm;

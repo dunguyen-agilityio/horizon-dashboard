@@ -1,6 +1,7 @@
 'use client';
 
 // Libs
+import { useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -48,28 +49,34 @@ const ResetPasswordForm = ({ code }: ResetPasswordFormProps) => {
 
   const { showToast } = useToast();
   const { push } = useRouter();
+  const [isPending, startTransition] = useTransition();
 
   const isDisabled = !isDirty;
 
-  const resetPassword = async (data: ResetPasswordFormData) => {
-    const { data: res } = await handleResetPassword({ code, ...data });
-    const { ERROR, SUCCESS } = RESET_PASSWORD;
+  const resetPassword = (data: ResetPasswordFormData) => {
+    startTransition(async () => {
+      const { data: res } = await handleResetPassword({ code, ...data });
+      const { ERROR, SUCCESS } = RESET_PASSWORD;
 
-    const isSuccess = !!res?.user;
+      const isSuccess = !!res?.user;
 
-    const { TITLE, DESCRIPTION } = isSuccess ? SUCCESS : ERROR;
+      const { TITLE, DESCRIPTION } = isSuccess ? SUCCESS : ERROR;
 
-    showToast({
-      title: TITLE,
-      message: DESCRIPTION,
-      type: isSuccess ? 'success' : 'error',
+      showToast({
+        title: TITLE,
+        message: DESCRIPTION,
+        type: isSuccess ? 'success' : 'error',
+      });
+
+      isSuccess && push(AUTH_ROUTES.SIGN_IN);
     });
-
-    isSuccess && push(AUTH_ROUTES.SIGN_IN);
   };
 
   return (
-    <form onSubmit={handleSubmit(resetPassword)} className="w-full sm:w-96">
+    <form
+      onSubmit={handleSubmit(resetPassword)}
+      className="w-full sm:w-96 relative"
+    >
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2 pb-8">
           <Text as="h1" size={TEXT_SIZE['2xl']} className="leading-[56px]">
@@ -127,12 +134,17 @@ const ResetPasswordForm = ({ code }: ResetPasswordFormProps) => {
           className="w-full py-7 mt-6"
           type="submit"
           data-testid="update-password-btn"
+          isLoading={isPending}
+          color="primary"
         >
-          <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
-            Update Password
-          </Text>
+          {!isPending && (
+            <Text size={TEXT_SIZE.sm} className="font-bold leading-4">
+              Update Password
+            </Text>
+          )}
         </Button>
       </div>
+      {isPending && <div className="absolute inset-0" />}
     </form>
   );
 };
