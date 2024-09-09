@@ -16,7 +16,7 @@ export const lineHeight = {
   small: '1.25rem', //  20px
   medium: '1.5rem', //  24px
   large: '1.75rem', //  28px
-  extra: '1.625px', //  26px
+  extra: '1.625rem', //  26px
   '2xl': '2.625rem', // 42px
   xl: '2rem', // 32px
 };
