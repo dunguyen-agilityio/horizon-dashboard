@@ -3,7 +3,7 @@
 exports[`TableCheck tests Should match snapshot 1`] = `
 <div>
   <div
-    class="w-full sm:w-card bg-white dark:bg-indigo p-5 pb-[33px] rounded-md"
+    class="w-full h-full sm:w-card md:w-auto bg-white dark:bg-indigo p-5 pb-[33px] rounded-md"
   >
     <div
       class="relative w-full h-[185px]"
