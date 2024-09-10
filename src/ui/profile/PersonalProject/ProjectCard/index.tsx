@@ -14,14 +14,13 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 import { NFT_IMAGES } from '@/constants';
 
 export interface IProjectCardProps {
-  id: string;
+  id?: string;
   title: string;
   baseProject: string;
   imageProject?: string;
 }
 
 const ProjectCard = ({
-  id,
   imageProject = NFT_IMAGES.DEFAULT,
   title,
   baseProject,
@@ -29,12 +28,9 @@ const ProjectCard = ({
   <Card className="border-none bg-white dark:bg-indigo-light">
     <CardBody>
       <div className="flex flex-col items-center sm:flex-row justify-between relative">
-        <Link
-          href={`project/${id}`}
-          className="absolute -right-1 -top-1 sm:hidden"
-        >
+        <div className="absolute -right-1 -top-1 sm:hidden">
           <BoxIcon icon={<Pen />} />
-        </Link>
+        </div>
         <div className="relative w-20 h-20 my-2 sm:my-0 rounded-2xl overflow-hidden">
           <Image
             fill
@@ -71,9 +67,9 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-        <Link href={`project/${id}`} className="hidden sm:block">
+        <div className="hidden sm:block">
           <BoxIcon icon={<Pen />} customClass="mr-4" />
-        </Link>
+        </div>
       </div>
     </CardBody>
   </Card>
