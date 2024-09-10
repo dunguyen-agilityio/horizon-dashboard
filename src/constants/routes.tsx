@@ -13,7 +13,7 @@ export const AUTH_ROUTES = {
 export const PRIVATE_ROUTES = {
   KANBAN: '/kanban',
   PROFILE: '/profile',
-  NFT_FAVORITES: (id: string) => `/nft-favorites/${id}`,
+  NFT_FAVORITES: '/nft-favorites',
 };
 
 export const PUBLIC_ROUTES = {
@@ -25,7 +25,7 @@ export const PUBLIC_ROUTES = {
   DASHBOARD: '/dashboard',
 };
 
-export const ROUTES: Route[] = [
+export const NAV_ROUTES: Route[] = [
   {
     title: 'Main Dashboard',
     href: PUBLIC_ROUTES.DASHBOARD,
@@ -55,6 +55,15 @@ export const ROUTES: Route[] = [
     title: 'Sign In',
     href: AUTH_ROUTES.SIGN_IN,
     icon: <Lock key="lockIcon" />,
+  },
+];
+
+export const ROUTES: Route[] = [
+  ...NAV_ROUTES,
+  {
+    title: 'NFT Favorites',
+    href: PRIVATE_ROUTES.NFT_FAVORITES,
+    icon: <Cart key="cartIcon" />,
   },
 ];
 

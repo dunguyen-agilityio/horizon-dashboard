@@ -14,7 +14,7 @@ import {
 } from '@nextui-org/react';
 
 // Constants
-import { ROUTES, AUTH_ROUTES } from '@/constants/routes';
+import { NAV_ROUTES, AUTH_ROUTES } from '@/constants/routes';
 
 interface NavbarProps {
   isAuthenticated: boolean;
@@ -37,7 +37,7 @@ const Navbar = ({ isAuthenticated }: NavbarProps) => {
         </div>
       </NavbarBrand>
       <NavbarContent className="flex flex-1 w-full flex-col items-center justify-between pt-[38px] gap-5">
-        {ROUTES.map(({ href, icon, title }, index) => {
+        {NAV_ROUTES.map(({ href, icon, title }, index) => {
           if (isAuthenticated && href === AUTH_ROUTES.SIGN_IN) return null;
           return (
             <NavbarItem key={`${title}-${index}`} className="w-full">
