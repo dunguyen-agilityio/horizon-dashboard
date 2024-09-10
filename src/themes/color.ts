@@ -43,4 +43,5 @@ export const backgroundImages = {
   'gradient-primary': `linear-gradient(135deg, ${colors.purple[650]}, ${colors.blue[450]})`,
   'gradient-gray':
     'linear-gradient(113deg, rgba(255, 255, 255, 0.47) 0%, rgba(255, 255, 255, 0) 110%)',
+  'gradient-blue': 'linear-gradient(90deg, #4481eb 0%, #04befe 100%)',
 };
