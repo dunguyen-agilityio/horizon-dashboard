@@ -106,6 +106,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
       return (
         <div className="flex flex-col items-end">
           <Text
+            as="span"
             className="block md:hidden text-success !bg-transparent"
             size={TEXT_SIZE.sm}
           >
