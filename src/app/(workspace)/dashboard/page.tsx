@@ -11,7 +11,6 @@ import CourseCTA from '@/ui/dashboard/CourseCTA';
 import TeamMember from '@/ui/dashboard/TeamMember';
 import SafetyCard from '@/ui/dashboard/SafetyCard';
 import CashBackCard from '@/ui/dashboard/CashbackCard';
-
 import SummaryCards from '@/ui/dashboard/SummaryCards';
 
 const Dashboard = () => (
