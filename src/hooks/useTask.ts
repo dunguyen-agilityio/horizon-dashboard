@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 
+// context
+import useToast from '@/contexts/toast/toastContext';
+
 // Models
 import { Task } from '@/models/Task';
+import { type TaskFormData } from '@/types/task';
+
+// Mocks
+import { ADD_TASK__SUCCESS, ADD_TASK_ERROR } from '@/mocks/toast';
 
 // Firebase
 import {
@@ -10,6 +17,7 @@ import {
   onSnapshot,
   query,
   where,
+  addDoc,
 } from '@/config/firebaseConfig';
 
 export const getTasksInRealTime = (
@@ -34,6 +42,7 @@ export const getTasksInRealTime = (
 export const useTask = (status: string) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { showToast } = useToast();
 
   useEffect(() => {
     setIsLoading(true);
@@ -45,5 +54,14 @@ export const useTask = (status: string) => {
     return () => unsubscribe();
   }, [status]);
 
-  return { tasks, isLoading };
+  const addTask = async (task: TaskFormData) => {
+    try {
+      await addDoc(collection(fireStore, 'tasks'), task);
+      showToast(ADD_TASK__SUCCESS);
+    } catch (error) {
+      showToast(ADD_TASK_ERROR);
+    }
+  };
+
+  return { tasks, isLoading, addTask };
 };
