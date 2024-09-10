@@ -1,11 +1,12 @@
+// Components
 import SummaryCard from '../SummaryCard';
-import { BoxIcon } from '@/components';
-import { Chart } from '@/icons';
-import USDMoney from '@/icons/Money';
-import AddCheck from '@/icons/AddCheck';
-import Copy from '@/icons/Copy';
+import { BoxIcon, SelectFlag } from '@/components';
+
+// Icons
+import { Chart, USDMoney, AddCheck, Copy } from '@/icons';
+
+// Types
 import { Earning } from '@/types/earning';
-import SelectFlag from '@/components/SelectFlag';
 
 const SummaryCards = ({
   balance,

@@ -6,12 +6,8 @@ import { Avatar } from '@nextui-org/avatar';
 import { SharedSelection } from '@nextui-org/system';
 import { Select, SelectItem } from '@nextui-org/select';
 
-const FLAG = {
-  'United States': '/usa.webp',
-  VietNam: '/vn.webp',
-};
-
-const FLAG_KEYS = Object.keys(FLAG) as (keyof typeof FLAG)[];
+// Constants
+import { FLAG, FLAG_KEYS } from '@/constants/flag';
 
 interface SelectFlagProps {
   defaultFlag?: keyof typeof FLAG;
