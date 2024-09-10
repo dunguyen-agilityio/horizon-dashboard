@@ -6,6 +6,7 @@ export { default as Close } from './Close';
 export { default as Cloud } from './Cloud';
 export { default as EyeFilled } from './EyeFilled';
 export { default as EyeSlashFilled } from './EyeSlashFilled';
+export { default as Heart } from './Heart';
 export { default as Home } from './Home';
 export { default as Kanban } from './Kanban';
 export { default as Lock } from './Lock';
