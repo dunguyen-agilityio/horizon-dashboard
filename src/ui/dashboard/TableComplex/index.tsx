@@ -104,7 +104,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
 
     case 'status':
       return (
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-end sm:items-start">
           <Text
             as="span"
             className="block md:hidden text-success !bg-transparent"

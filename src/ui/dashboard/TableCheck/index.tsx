@@ -60,7 +60,7 @@ const formatDataCheck = (row: Check, key: keyof Check) => {
 
     case 'quantity':
       return (
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-end sm:items-start">
           <Text
             as="span"
             className="bg-transparent"
