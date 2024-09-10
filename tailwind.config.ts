@@ -14,6 +14,7 @@ import {
   boxShadow,
   animation,
   keyframes,
+  screens,
 } from './src/themes';
 
 const config: Config = {
@@ -35,6 +36,7 @@ const config: Config = {
       borderRadius,
       keyframes,
       animation,
+      screens,
     },
   },
   darkMode: 'class',
