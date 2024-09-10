@@ -18,6 +18,7 @@ describe('Column tests', () => {
   it('Should match snapshot', () => {
     (useTask as jest.Mock).mockImplementation(() => ({
       tasks: [],
+      addTask: jest.fn(),
       isLoading: true,
     }));
     const { container } = setup();
@@ -27,6 +28,7 @@ describe('Column tests', () => {
   it('Should match snapshot', async () => {
     (useTask as jest.Mock).mockImplementation(() => ({
       tasks: MOCK_TASKS,
+      addTask: jest.fn(),
       isLoading: false,
     }));
     const { container } = setup();
@@ -36,6 +38,7 @@ describe('Column tests', () => {
   it('Should show TaskForm when click Create button', async () => {
     (useTask as jest.Mock).mockImplementation(() => ({
       tasks: MOCK_TASKS,
+      addTask: jest.fn(),
       isLoading: false,
     }));
     const { queryByTestId, getByTestId, getByText } = setup();
@@ -52,6 +55,7 @@ describe('Column tests', () => {
   it('Should show TaskForm when click Create button', async () => {
     (useTask as jest.Mock).mockImplementation(() => ({
       tasks: MOCK_TASKS,
+      addTask: jest.fn(),
       isLoading: false,
     }));
     const { queryByTestId, getByTestId, getByText } = setup();

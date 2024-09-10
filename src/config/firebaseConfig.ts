@@ -7,6 +7,7 @@ import {
   onSnapshot,
   query,
   where,
+  addDoc,
 } from 'firebase/firestore';
 
 import {
@@ -33,4 +34,4 @@ export const app = initializeApp(firebaseConfig);
 
 export const fireStore = getFirestore(app);
 
-export { collection, onSnapshot, query, where };
+export { collection, onSnapshot, query, where, addDoc };
