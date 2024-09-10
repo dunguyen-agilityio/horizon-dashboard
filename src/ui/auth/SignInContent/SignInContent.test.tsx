@@ -27,9 +27,9 @@ describe('SignInContent tests', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should render EyeSlashFilled icon', () => {
+  it('Should render EyeFilled icon', () => {
     const { getByTestId } = render(<SignInContent />);
-    expect(getByTestId('eye-slash-filled-icon')).toBeInTheDocument();
+    expect(getByTestId('eye-filled-icon')).toBeInTheDocument();
   });
 
   it('Should render Email and Password label', () => {
@@ -49,12 +49,12 @@ describe('SignInContent tests', () => {
     expect(getByText('Keep me logged in')).toBeInTheDocument();
   });
 
-  it('Should render EyeFilled icon when click EyeSlashFilled', () => {
+  it('Should render EyeSlashFilled icon when click EyeFilled', () => {
     const { getByTestId } = render(<SignInContent />);
-    const eyeSlashFilledIcon = getByTestId('eye-slash-filled-icon');
+    const eyeFilledIcon = getByTestId('eye-filled-icon');
 
-    fireEvent.click(eyeSlashFilledIcon);
-    expect(getByTestId('eye-filled-icon')).toBeInTheDocument();
+    fireEvent.click(eyeFilledIcon);
+    expect(getByTestId('eye-slash-filled-icon')).toBeInTheDocument();
   });
 
   it('handleSignIn will triggered correctly when click Login Button', async () => {

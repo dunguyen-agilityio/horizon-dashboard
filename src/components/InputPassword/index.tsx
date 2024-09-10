@@ -61,7 +61,7 @@ const InputPassword = ({
           aria-label="toggle password visibility"
         >
           <BoxIcon
-            icon={isVisible ? <EyeFilled /> : <EyeSlashFilled />}
+            icon={isVisible ? <EyeSlashFilled /> : <EyeFilled />}
             customClass="fill-secondary"
           />
         </button>
