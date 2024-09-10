@@ -12,11 +12,8 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
       <div
         class="flex flex-col items-center sm:flex-row justify-between relative"
       >
-        <a
-          class="inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity absolute -right-1 -top-1 sm:hidden"
-          href="project/2"
-          role="link"
-          tabindex="0"
+        <div
+          class="absolute -right-1 -top-1 sm:hidden"
         >
           <i
             class="w-6 h-6 flex justify-center items-center hover:cursor-pointer fill-secondary dark:fill-white"
@@ -50,7 +47,7 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
               </defs>
             </svg>
           </i>
-        </a>
+        </div>
         <div
           class="relative w-20 h-20 my-2 sm:my-0 rounded-2xl overflow-hidden"
         >
@@ -103,11 +100,8 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
             </div>
           </div>
         </div>
-        <a
-          class="relative items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity hidden sm:block"
-          href="project/2"
-          role="link"
-          tabindex="0"
+        <div
+          class="hidden sm:block"
         >
           <i
             class="w-6 h-6 flex justify-center items-center hover:cursor-pointer mr-4"
@@ -141,7 +135,7 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
               </defs>
             </svg>
           </i>
-        </a>
+        </div>
       </div>
     </div>
   </div>
