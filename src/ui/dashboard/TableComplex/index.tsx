@@ -24,24 +24,28 @@ import { TColumn } from '@/types/common';
 import { Complex, ComplexStatus } from '@/types/complex';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
-const columns: TColumn[] = [
-  {
+const columnsByKey: Record<string, TColumn> = {
+  name: {
     key: 'name',
     label: 'NAME',
   },
-  {
+  status: {
     key: 'status',
     label: 'STATUS',
   },
-  {
+  createdAt: {
     key: 'createdAt',
     label: 'DATE',
+    visibleOnMobile: false,
   },
-  {
+  progress: {
     key: 'progress',
     label: 'PROGRESS',
+    visibleOnMobile: false,
   },
-];
+};
+
+const columns = Object.values(columnsByKey);
 
 interface TableComplexProps {
   data: Complex[];
@@ -64,6 +68,21 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
   };
 
   switch (key) {
+    case 'name':
+      return (
+        <div className="flex flex-col">
+          <Text as="span" className="bg-transparent">
+            {value}
+          </Text>
+          <Text
+            as="span"
+            size={TEXT_SIZE.sm}
+            className="!text-secondary block sm:hidden bg-transparent"
+          >
+            {formatShortDate(getKeyValue(row, 'createdAt') as Date)}
+          </Text>
+        </div>
+      );
     case 'createdAt':
       return (
         <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
@@ -74,7 +93,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
     case 'progress':
       return (
         <>
-          <Text className="block md:hidden">{value}%</Text>
+          <Text className="block md:hidden bg-transparent">{value}%</Text>
           <Progress
             aria-label="Loading..."
             value={value}
@@ -85,15 +104,19 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
 
     case 'status':
       return (
-        <div className="flex items-center gap-[5px]">
-          {renderStatus()}
+        <div className="flex flex-col items-end">
           <Text
-            as="span"
+            className="block md:hidden text-success !bg-transparent"
             size={TEXT_SIZE.sm}
-            className="bg-transparent hidden md:block"
           >
-            {value}
+            {getKeyValue(row, 'progress')}%
           </Text>
+          <div className="flex items-center gap-[5px]">
+            {renderStatus()}
+            <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+              {value}
+            </Text>
+          </div>
         </div>
       );
 
@@ -107,7 +130,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
 };
 
 const TableComplex = ({ data }: TableComplexProps) => (
-  <div className="flex-1 bg-white dark:bg-indigo p-1 md:pt-5 md:pl-[30px] md:pb-[28px] md:pr-[25px] rounded-md">
+  <div className="flex-1 bg-white dark:bg-indigo p-2 pt-5 md:pl-[30px] md:pb-[28px] md:pr-[25px] rounded-md">
     <Text as="h2" size={TEXT_SIZE.extra}>
       Complex Table
     </Text>
@@ -118,8 +141,14 @@ const TableComplex = ({ data }: TableComplexProps) => (
       className="mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
     >
       <TableHeader columns={columns}>
-        {({ key, label }) => (
-          <TableColumn key={key} className={key === 'name' ? 'pl-0' : ''}>
+        {({ key, label, visibleOnMobile = true }) => (
+          <TableColumn
+            key={key}
+            className={cn(
+              key === 'name' ? 'pl-0' : '',
+              visibleOnMobile ? '' : 'hidden sm:table-cell',
+            )}
+          >
             <Text variant={TEXT_VARIANT.SECONDARY} size={TEXT_SIZE.sm}>
               {label}
             </Text>
@@ -129,16 +158,21 @@ const TableComplex = ({ data }: TableComplexProps) => (
       <TableBody items={data} emptyContent="No rows to display.">
         {(item) => (
           <TableRow key={item.id}>
-            {(columnKey) => (
-              <TableCell
-                className={cn(
-                  columnKey === 'name' ? 'pl-0' : '',
-                  'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
-                )}
-              >
-                {formatDataCheck(item, columnKey as keyof Complex)}
-              </TableCell>
-            )}
+            {(columnKey) => {
+              const { visibleOnMobile = true } = columnsByKey[columnKey];
+
+              return (
+                <TableCell
+                  className={cn(
+                    columnKey === 'name' ? 'pl-0' : '',
+                    visibleOnMobile ? '' : 'hidden sm:table-cell',
+                    'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
+                  )}
+                >
+                  {formatDataCheck(item, columnKey as keyof Complex)}
+                </TableCell>
+              );
+            }}
           </TableRow>
         )}
       </TableBody>

@@ -8,7 +8,7 @@ import Image from 'next/image';
 const { COVER, LOGO } = STARBUCKS_IMAGE;
 
 const CashBackCard = () => (
-  <div className="w-full sm:w-card bg-white dark:bg-indigo p-5 pb-[33px] rounded-md">
+  <div className="w-full h-full sm:w-card md:w-auto bg-white dark:bg-indigo p-5 pb-[33px] rounded-md">
     <div className="relative w-full h-[185px]">
       <Image src={COVER} fill alt="Starbucks Cover" />
       <Image
