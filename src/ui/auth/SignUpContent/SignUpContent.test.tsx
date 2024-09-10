@@ -17,10 +17,10 @@ describe('SignUpContent tests', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('Should render EyeSlashFilled icon', () => {
+  it('Should render EyeFilled icon', () => {
     const { getAllByTestId } = render(<SignUpContent />);
-    const listEyeSlashFilledIcon = getAllByTestId('eye-slash-filled-icon');
-    expect(listEyeSlashFilledIcon[0]).toBeInTheDocument();
+    const listEyeFilledIcon = getAllByTestId('eye-filled-icon');
+    expect(listEyeFilledIcon[0]).toBeInTheDocument();
   });
 
   it('Should render correct label', () => {
@@ -31,12 +31,12 @@ describe('SignUpContent tests', () => {
     expect(getByLabelText('Confirm Password')).toBeInTheDocument();
   });
 
-  it('Should render EyeFilled icon when click EyeSlashFilled', () => {
+  it('Should render EyeSlashFilled icon when click EyeFilled', () => {
     const { getAllByTestId, getByTestId } = render(<SignUpContent />);
-    const eyeSlashFilledIcon = getAllByTestId('eye-slash-filled-icon');
+    const eyeFilledIcon = getAllByTestId('eye-filled-icon');
 
-    fireEvent.click(eyeSlashFilledIcon[0]);
-    expect(getByTestId('eye-filled-icon')).toBeInTheDocument();
+    fireEvent.click(eyeFilledIcon[0]);
+    expect(getByTestId('eye-slash-filled-icon')).toBeInTheDocument();
   });
 
   it('Should render error message when give in valid password value', async () => {
