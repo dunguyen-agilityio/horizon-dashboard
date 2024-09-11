@@ -16,16 +16,16 @@ import SummaryCards from '@/ui/dashboard/SummaryCards';
 const Dashboard = () => (
   <div className="flex flex-col gap-5">
     <SummaryCards {...MOCK_EARNINGS_COUNTER_DATA} />
-    <div className="flex flex-col xl:flex-row gap-5">
+    <div className="flex flex-col 2xl:flex-row gap-5">
       <TableCheck data={MOCK_CHECKS} />
       <TableComplex data={MOCK_COMPLEXES} />
     </div>
-    <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 2xl:flex 2xl:flex-row gap-5">
+    <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 4xl:flex 4xl:flex-row gap-5">
       <div className="flex-1 h-[345px]">
         <CourseCTA />
       </div>
       <div className="flex-1 h-[345px]">
-        <TeamMember members={MOCK_USERS} />
+        <TeamMember members={MOCK_USERS.slice(0, 3)} />
       </div>
       <div className="flex-1 h-[345px]">
         <SafetyCard />

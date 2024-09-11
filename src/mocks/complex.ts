@@ -19,7 +19,7 @@ export const MOCK_COMPLEXES: Complex[] = [
     id: '3',
     name: 'Jane Fisher',
     progress: 55,
-    status: ComplexStatus.APPROVED,
+    status: ComplexStatus.ERROR,
     createdAt: new Date('2024-08-14T08:25:04.188Z'),
   },
   {
