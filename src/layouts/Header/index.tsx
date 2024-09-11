@@ -51,7 +51,7 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
   const handleNavigateFavoritePage = () => push(PRIVATE_ROUTES.NFT_FAVORITES);
 
   return (
-    <header className="relative flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0">
+    <header className="relative flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0 w-full xl:pl-2.5">
       <div className="flex flex-col gap-1 mr-2">
         {title && (
           <>

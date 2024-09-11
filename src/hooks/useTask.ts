@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 // context
-import useToast from '@/contexts/toast/toastContext';
+import useToast from '@/contexts/toast';
 
 // Models
 import { Task } from '@/models/Task';

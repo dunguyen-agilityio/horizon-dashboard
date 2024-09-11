@@ -8,3 +8,4 @@ export { default as NavItem } from './NavItem';
 export { default as InputPassword } from './InputPassword';
 export { default as InputSearch } from './InputSearch';
 export { default as ToggleTheme } from './ToggleTheme';
+export { default as SelectFlag } from './SelectFlag';

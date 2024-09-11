@@ -28,7 +28,7 @@ export interface SummaryCardProps {
 
 const classes = {
   primary: '',
-  secondary: 'flex-row-reverse justify-end',
+  secondary: 'flex-row-reverse justify-between',
 } as Record<LayoutVariant, string>;
 
 const SummaryCard = ({
@@ -67,7 +67,7 @@ const SummaryCard = ({
   return (
     <div
       className={cn(
-        'flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-md min-w-[248px]',
+        'flex gap-[18px] items-center bg-white dark:bg-indigo p-3 md:p-5 flex-1 rounded-md lg:min-w-[248px]',
         classes[variant],
       )}
     >

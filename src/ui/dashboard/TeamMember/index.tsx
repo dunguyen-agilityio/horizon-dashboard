@@ -14,8 +14,8 @@ interface TeamMemberProps {
 }
 
 const TeamMember = ({ members }: TeamMemberProps) => (
-  <div className="bg-white dark:bg-indigo rounded-md p-7 w-full sm:w-card">
-    <div className="flex justify-between items-center">
+  <div className="w-full h-full bg-white dark:bg-indigo rounded-md pt-5 px-6 pb-[26px] sm:w-card md:w-auto flex flex-col gap-5">
+    <div className="flex justify-between items-center h-8">
       <Text as="h2" className="text-lg leading-xl font-bold">
         Team Members
       </Text>
@@ -28,7 +28,10 @@ const TeamMember = ({ members }: TeamMemberProps) => (
         </div>
       </button>
     </div>
-    <Listbox items={members} classNames={{ list: 'gap-4', base: 'pt-5' }}>
+    <Listbox
+      items={members}
+      classNames={{ list: 'gap-4', base: 'flex-1 overflow-y-auto p-0' }}
+    >
       {(item) => {
         const { avatar, id, fullName, role } = new UserModel(item);
 
@@ -37,6 +40,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
             key={id}
             classNames={{
               title: 'flex justify-between items-center px-4 py-3',
+              base: 'py-0 ',
             }}
             className="w-full bg-white dark:bg-indigo-light shadow-light-card dark:shadow-none"
           >

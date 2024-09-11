@@ -3,7 +3,7 @@
 exports[`SummaryCard tests Should match snapshot 1`] = `
 <div>
   <div
-    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-5 rounded-md min-w-[248px]"
+    class="flex gap-[18px] items-center bg-white dark:bg-indigo p-3 md:p-5 flex-1 rounded-md lg:min-w-[248px]"
   >
     <div
       class="h-14 min-w-14 rounded-full bg-gray dark:bg-indigo-light flex justify-center items-center p-3"

@@ -19,3 +19,6 @@ export { default as Pen } from './Pen';
 export { default as Search } from './Search';
 export { default as UploadFile } from './UploadFile';
 export { default as User } from './User';
+export { default as USDMoney } from './Money';
+export { default as AddCheck } from './AddCheck';
+export { default as Copy } from './Copy';
