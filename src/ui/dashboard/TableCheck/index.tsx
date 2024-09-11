@@ -111,17 +111,18 @@ const TableCheck = ({ data }: TableCheckProps) => (
       aria-label="Rows actions table example with dynamic content"
       selectionMode="multiple"
       selectionBehavior="toggle"
-      className="mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
+      classNames={{
+        table:
+          '[&_*:is(td,th):first-child]:hidden sm:[&_*:is(td,th):first-child]:table-cell sm:[&_*:is(td,th):first-child_span:before]:dark:border-white sm:[&_*:is(td,th):first-child_span]:rounded-none sm:[&_*:is(td,th):first-child_span:before]:rounded-none sm:[&_*:is(td,th):first-child_span:after]:rounded-none',
+        thead: 'hidden sm:table-header-group',
+        tbody: '[&_span]:!font-bold',
+        td: 'data-[selected=true]:before:opacity-70',
+      }}
+      className="mt-4 sm:mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
     >
       <TableHeader columns={columns}>
-        {({ key, label, visibleOnMobile = true }) => (
-          <TableColumn
-            key={key}
-            className={cn(
-              key === 'name' ? 'pl-0' : '',
-              visibleOnMobile ? '' : 'hidden sm:table-cell',
-            )}
-          >
+        {({ key, label }) => (
+          <TableColumn key={key} className={key === 'name' ? 'pl-0' : ''}>
             <Text
               variant={TEXT_VARIANT.SECONDARY}
               size={TEXT_SIZE.sm}
