@@ -25,7 +25,7 @@ const ProjectCard = ({
   title,
   baseProject,
 }: IProjectCardProps) => (
-  <Card className="border-none bg-white dark:bg-indigo-light">
+  <Card className="border-none bg-white dark:bg-indigo-light min-w-[300px] sm:min-w-[420px] xl:min-w-[380px] xl:w-[390px]">
     <CardBody>
       <div className="flex flex-col items-center sm:flex-row justify-between relative">
         <div className="absolute -right-1 -top-1 sm:hidden">
@@ -39,9 +39,9 @@ const ProjectCard = ({
             className="object-cover"
           />
         </div>
-        <div className="xl:ml-5 xl:mr-16 mb-2 sm:mb-0 flex items-center">
-          <div className="flex flex-col items-center sm:items-start">
-            <Text className="font-medium">{title}</Text>
+        <div className="mb-2 sm:ml-6 sm:mb-0 flex items-center">
+          <div className="flex flex-col items-center text-center sm:text-start sm:items-start">
+            <Text className="font-medium leading-5">{title}</Text>
             <div className="flex items-center gap-[5px]">
               <Text
                 size={TEXT_SIZE.sm}
@@ -68,7 +68,7 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="hidden sm:block">
-          <BoxIcon icon={<Pen />} customClass="mr-4" />
+          <BoxIcon icon={<Pen />} />
         </div>
       </div>
     </CardBody>

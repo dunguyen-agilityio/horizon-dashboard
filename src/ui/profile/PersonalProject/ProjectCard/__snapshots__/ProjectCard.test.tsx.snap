@@ -3,7 +3,7 @@
 exports[`ProjectCard tests Should match snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-none bg-white dark:bg-indigo-light"
+    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-none bg-white dark:bg-indigo-light min-w-[300px] sm:min-w-[420px] xl:min-w-[380px] xl:w-[390px]"
     tabindex="-1"
   >
     <div
@@ -64,13 +64,13 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
           />
         </div>
         <div
-          class="xl:ml-5 xl:mr-16 mb-2 sm:mb-0 flex items-center"
+          class="mb-2 sm:ml-6 sm:mb-0 flex items-center"
         >
           <div
-            class="flex flex-col items-center sm:items-start"
+            class="flex flex-col items-center text-center sm:text-start sm:items-start"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl font-medium"
+              class="text-primary dark:text-white text-medium leading-xl font-medium leading-5"
             >
               Technology behind the Blockchain
             </p>
@@ -104,7 +104,7 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
           class="hidden sm:block"
         >
           <i
-            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer mr-4"
+            class="w-6 h-6 flex justify-center items-center hover:cursor-pointer fill-secondary dark:fill-white"
           >
             <svg
               data-testid="pencil-icon"
