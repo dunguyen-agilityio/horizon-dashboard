@@ -39,7 +39,7 @@ exports[`Storage component should match snapshot 1`] = `
       </i>
     </div>
     <div
-      class="flex flex-col items-center pb-12"
+      class="flex flex-col items-center pb-8"
     >
       <div
         class="w-[100px] h-[100px] rounded-full bg-gray dark:bg-indigo-light flex items-center justify-center mb-3"
@@ -55,7 +55,6 @@ exports[`Storage component should match snapshot 1`] = `
           >
             <path
               d="M37.0875 12.2434C35.7842 5.63085 29.9767 0.666687 23 0.666687C17.4608 0.666687 12.65 3.81002 10.2542 8.41002C4.485 9.02335 0 13.9109 0 19.8334C0 26.1775 5.15583 31.3334 11.5 31.3334H36.4167C41.7067 31.3334 46 27.04 46 21.75C46 16.69 42.0708 12.5884 37.0875 12.2434ZM36.4167 27.5H11.5C7.26417 27.5 3.83333 24.0692 3.83333 19.8334C3.83333 15.9042 6.76583 12.6267 10.6567 12.2242L12.7075 12.0134L13.6658 10.1925C15.4867 6.68502 19.0517 4.50002 23 4.50002C28.0217 4.50002 32.3533 8.06502 33.3308 12.9909L33.9058 15.8659L36.8383 16.0767C39.8283 16.2684 42.1667 18.7792 42.1667 21.75C42.1667 24.9125 39.5792 27.5 36.4167 27.5ZM19.1667 20.1784L15.1608 16.1725L12.4583 18.875L19.1667 25.5834L30.6858 14.0642L27.9833 11.3617L19.1667 20.1784Z"
-              fill="#4318ff"
             />
           </svg>
         </i>
@@ -71,41 +70,39 @@ exports[`Storage component should match snapshot 1`] = `
         Supervise your drive space in the easiest way
       </p>
     </div>
-    <div>
-      <div
-        class="flex justify-between gap-1"
+    <div
+      class="flex justify-between"
+    >
+      <p
+        class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary"
       >
-        <p
-          class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary"
-        >
-          25.6
-          Gb
-        </p>
-        <p
-          class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary"
-        >
-          50
-          Gb
-        </p>
-      </div>
+        25.6
+        Gb
+      </p>
+      <p
+        class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary"
+      >
+        50
+        Gb
+      </p>
+    </div>
+    <div
+      aria-label="Storage"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="60"
+      aria-valuetext="60%"
+      class="flex flex-col gap-2 w-full"
+      id="react-aria-:r0:"
+      role="progressbar"
+    >
       <div
-        aria-label="Storage"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="60"
-        aria-valuetext="60%"
-        class="flex flex-col gap-2 w-full"
-        id="react-aria-:r0:"
-        role="progressbar"
+        class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
       >
         <div
-          class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
-        >
-          <div
-            class="h-full bg-primary rounded-full transition-transform !duration-500"
-            style="transform: translateX(-100%);"
-          />
-        </div>
+          class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
+          style="transform: translateX(-100%);"
+        />
       </div>
     </div>
   </div>

@@ -22,7 +22,7 @@ const Storage = ({ usedSize, totalSize, valueProgress }: StorageProps) => (
         customClass="rotate-90 w-9 h-9 bg-gray dark:bg-indigo-light rounded-lg fill-blue-450 dark:fill-white"
       />
     </div>
-    <div className="flex flex-col items-center pb-12">
+    <div className="flex flex-col items-center pb-8">
       <div className="w-[100px] h-[100px] rounded-full bg-gray dark:bg-indigo-light flex items-center justify-center mb-3">
         <BoxIcon
           icon={<Cloud />}
@@ -35,13 +35,17 @@ const Storage = ({ usedSize, totalSize, valueProgress }: StorageProps) => (
       </Text>
     </div>
 
-    <div>
-      <div className="flex justify-between gap-1">
-        <Text className="font-normal text-secondary">{usedSize}Gb</Text>
-        <Text className="font-normal text-secondary">{totalSize}Gb</Text>
-      </div>
-      <Progress aria-label="Storage" value={valueProgress} />
+    <div className="flex justify-between">
+      <Text className="font-normal text-secondary">{usedSize}Gb</Text>
+      <Text className="font-normal text-secondary">{totalSize}Gb</Text>
     </div>
+    <Progress
+      aria-label="Storage"
+      value={valueProgress}
+      classNames={{
+        indicator: 'bg-blue-450 dark:bg-purple-750',
+      }}
+    />
   </div>
 );
 
