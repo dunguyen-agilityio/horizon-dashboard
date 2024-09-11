@@ -3,3 +3,5 @@ export type Route = {
   href: string;
   icon: React.ReactElement;
 };
+
+export type RouteWithoutIcon = Pick<Route, 'title' | 'href'>;
