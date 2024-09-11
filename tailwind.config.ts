@@ -45,7 +45,11 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            default: { '100': colors.gray, '200': colors.grey },
+            default: {
+              DEFAULT: colors['army-green'],
+              '100': colors.gray,
+              '200': colors.grey,
+            },
             foreground: { 500: colors.secondary },
           },
         },
@@ -55,6 +59,7 @@ const config: Config = {
               DEFAULT: colors['indigo-light'],
             },
             default: {
+              DEFAULT: colors['army-green'],
               '100': colors['indigo-light'],
               '200': colors['army-green'],
             },
