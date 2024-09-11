@@ -1,4 +1,4 @@
-import { Route } from '@/types/route';
+import { Route, RouteWithoutIcon } from '@/types/route';
 
 // Icons
 import { Home, Cart, User, Kanban, Chart, Lock } from '@/icons';
@@ -18,6 +18,7 @@ export const PRIVATE_ROUTES = {
 
 export const PUBLIC_ROUTES = {
   NFT_MARKETPLACE: '/nft-marketplace',
+  NFT_MARKETPLACE_DETAIL: '/nft-marketplace/:id',
   CONTRIBUTOR: '/contributor',
   LICENSE: '/license',
   BLOG: '/blog',
@@ -58,12 +59,15 @@ export const NAV_ROUTES: Route[] = [
   },
 ];
 
-export const ROUTES: Route[] = [
+export const ROUTES: RouteWithoutIcon[] = [
   ...NAV_ROUTES,
   {
     title: 'NFT Favorites',
     href: PRIVATE_ROUTES.NFT_FAVORITES,
-    icon: <Cart key="cartIcon" />,
+  },
+  {
+    title: 'NFT Marketplace',
+    href: PUBLIC_ROUTES.NFT_MARKETPLACE_DETAIL,
   },
 ];
 
@@ -79,6 +83,5 @@ export const FOOTER_ROUTES: Omit<Route, 'icon'>[] = [
 
 export const AUTH_NAVIGATION_HEADER = {
   [PUBLIC_ROUTES.DASHBOARD]: 'dashboard',
-  [AUTH_ROUTES.FORGET_PASSWORD]: 'step 1',
   [AUTH_ROUTES.SIGN_IN]: 'sign in',
 };

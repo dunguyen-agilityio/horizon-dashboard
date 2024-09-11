@@ -1,9 +1,11 @@
 'use client';
 
+// Libs
+import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/breadcrumbs';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Constants
-import { PRIVATE_ROUTES, ROUTES } from '@/constants/routes';
+import { PRIVATE_ROUTES } from '@/constants/routes';
 import { QUERY_KEY } from '@/constants/common';
 
 // Types
@@ -13,7 +15,8 @@ import { TEXT_SIZE } from '@/types/text';
 import Notification from './Notification';
 import ProfileDropDown from './ProfileDropDown';
 import { ToggleTheme, Text, InputSearch, BoxIcon } from '@/components';
-import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/react';
+
+// Layouts
 import MenuBar from '@/layouts/MenuBar';
 
 // Icons
@@ -21,6 +24,7 @@ import { Heart } from '@/icons';
 
 // Utils
 import { debounce } from '@/utils/debounce';
+import { getBreadcrumbs } from '@/utils/route';
 
 // Mocks
 import { MOCK_NOTIFIES } from '@/mocks/notify';
@@ -28,13 +32,17 @@ import { MOCK_NOTIFIES } from '@/mocks/notify';
 interface HeaderProps {
   isAuthenticated: boolean;
 }
+
+const breadcrumbStyle =
+  'dark:[&_:is(span,a)]:text-white [&_*:is(span,a)]:text-foreground';
+
 const Header = ({ isAuthenticated }: HeaderProps) => {
   const searchParams = useSearchParams();
   const { push } = useRouter();
+
   const pathname = usePathname();
 
-  const { title, href } =
-    ROUTES.find(({ href }) => pathname.includes(href)) || {};
+  const breadcrumbs = getBreadcrumbs(pathname);
 
   const query = searchParams.get(QUERY_KEY) ?? '';
 
@@ -53,21 +61,28 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
   return (
     <header className="relative flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0 w-full xl:pl-2.5">
       <div className="flex flex-col gap-1 mr-2">
-        {title && (
+        {breadcrumbs.length && (
           <>
             <div className="flex justify-start w-1/2">
               <MenuBar />
             </div>
             <Breadcrumbs separator="/">
-              <BreadcrumbItem className="dark:[&_span]:text-white" isCurrent>
+              <BreadcrumbItem className={breadcrumbStyle} isCurrent>
                 Pages
               </BreadcrumbItem>
-              <BreadcrumbItem href={href} className="dark:[&_span]:text-white">
-                {title}
-              </BreadcrumbItem>
+              {breadcrumbs.map(({ title, href }, index) => (
+                <BreadcrumbItem
+                  href={href}
+                  isCurrent={index === breadcrumbs.length - 1}
+                  className={breadcrumbStyle}
+                  key={index}
+                >
+                  {title}
+                </BreadcrumbItem>
+              ))}
             </Breadcrumbs>
             <Text size={TEXT_SIZE['2xl']} className="mt-1">
-              {title}
+              {breadcrumbs[0].title}
             </Text>
           </>
         )}
