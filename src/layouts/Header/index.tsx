@@ -1,6 +1,7 @@
 'use client';
 
 // Libs
+import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/breadcrumbs';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Constants
@@ -14,7 +15,6 @@ import { TEXT_SIZE } from '@/types/text';
 import Notification from './Notification';
 import ProfileDropDown from './ProfileDropDown';
 import { ToggleTheme, Text, InputSearch, BoxIcon } from '@/components';
-import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/breadcrumbs';
 
 // Layouts
 import MenuBar from '@/layouts/MenuBar';
