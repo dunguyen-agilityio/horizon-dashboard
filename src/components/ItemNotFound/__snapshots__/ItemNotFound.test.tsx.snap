@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemNotFound component Should match snapshot 1`] = `
+<div>
+  <div
+    class="h-full flex items-center flex-col justify-center text-center"
+  >
+    <h1
+      class="text-primary dark:text-white text-2xl font-bold leading-2xl mb-4 dark:text-white text-indigo-dark"
+    >
+      Start Find Your Favorite NFTs
+    </h1>
+    <p
+      class="text-lg text-gray-600 mb-8"
+    >
+      Browse our collection and click the heart icon to add NFTs to your favorites list!
+    </p>
+  </div>
+</div>
+`;
