@@ -18,6 +18,9 @@ import { AUTH_ROUTES, PUBLIC_ROUTES } from '@/constants/routes';
 // Actions
 import { handleSignIn } from '@/actions/auth';
 import { useRouter } from 'next/navigation';
+import useToast from '@/contexts/toast';
+import { useState } from 'react';
+import { MESSAGES } from '@/constants';
 
 const signinFormInitValues: SignInFormData = {
   identifier: '',
@@ -35,23 +38,39 @@ const SignInContent = () => {
   });
 
   const { replace } = useRouter();
+  const { showToast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
 
   const isDisabled = !isDirty;
 
   const signIn = async (data: SignInFormData) => {
     if (isDisabled) return;
 
+    setIsLoading(true);
     const result = await handleSignIn(data);
 
-    if (result.error) {
-      // Will handle show Toast message later
-    } else {
-      replace(PUBLIC_ROUTES.DASHBOARD);
+    const hasError = !!result.error;
+
+    const { ERROR, SUCCESS } = MESSAGES.SIGN_IN;
+    const { TITLE, DESCRIPTION } = hasError ? ERROR : SUCCESS;
+
+    showToast({
+      type: hasError ? 'error' : 'success',
+      title: TITLE,
+      message: DESCRIPTION,
+      timeOut: 3000,
+    });
+
+    if (hasError) {
+      setIsLoading(false);
+      return;
     }
+
+    replace(PUBLIC_ROUTES.DASHBOARD);
   };
 
   return (
-    <form onSubmit={handleSubmit(signIn)}>
+    <form onSubmit={handleSubmit(signIn)} className="relative">
       <div className="pt-3 mb-8 flex flex-col gap-6">
         <Controller
           name="identifier"
@@ -83,7 +102,6 @@ const SignInContent = () => {
           )}
         />
       </div>
-
       <div className="flex justify-between">
         <Checkbox
           aria-label="checkbox-keep-login"
@@ -103,16 +121,18 @@ const SignInContent = () => {
           </Text>
         </Link>
       </div>
-
       <Button
         isDisabled={isDisabled}
         className="bg-blue-450 dark:bg-purple-750 w-full py-7 mb-4 mt-8"
         type="submit"
         data-testid="signin-btn"
+        isLoading={isLoading}
       >
-        <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
-          Sign In
-        </Text>
+        {!isLoading && (
+          <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
+            Sign In
+          </Text>
+        )}
       </Button>
       <Text
         as="h2"
@@ -128,6 +148,7 @@ const SignInContent = () => {
           Sign Up Now
         </Link>
       </Text>
+      {isLoading && <div className="absolute inset-0" />}
     </form>
   );
 };

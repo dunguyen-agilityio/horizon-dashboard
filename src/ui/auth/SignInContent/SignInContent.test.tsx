@@ -1,4 +1,4 @@
-import { act, fireEvent, render, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@/utils/test-utils';
 
 // Components
 import SignInContent from '@/ui/auth/SignInContent';
