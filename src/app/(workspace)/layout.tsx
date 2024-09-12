@@ -18,7 +18,7 @@ const RootLayout = async ({ children }: React.PropsWithChildren) => {
         <Suspense>
           <Header isAuthenticated={isAuthenticated} />
         </Suspense>
-        <main className="flex-grow flex flex-col w-full max-w-[1920px] h-auto bg-gray dark:bg-indigo-dark gap-[30px] px-2">
+        <main className="flex-grow flex flex-col w-full max-w-screen-5xl h-auto bg-gray dark:bg-indigo-dark gap-[30px] px-2">
           {children}
         </main>
         <Footer />

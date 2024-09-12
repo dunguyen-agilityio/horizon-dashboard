@@ -16,5 +16,5 @@ export const screens = {
   '2.5xl': '1440px',
   '3xl': '1560px',
   '4xl': '1728px',
-  '5xl': '2560px',
+  '5xl': '1920px',
 };
