@@ -5,11 +5,13 @@ import { useState } from 'react';
 // Components
 import NFTCard from '../NFTCard';
 import { Pagination } from '@nextui-org/pagination';
+import { ItemNotFound } from '@/components';
+
+// Constants
+import { PUBLIC_ROUTES } from '@/constants';
 
 // Models
 import { NFT } from '@/models/NFT';
-import { ItemNotFound } from '@/components';
-import { PUBLIC_ROUTES } from '@/constants';
 
 interface INFTFavoriteProps {
   listFavorites: NFT[];

@@ -2,6 +2,8 @@ import { fireEvent, render } from '@testing-library/react';
 
 // Components
 import ItemNotFound from '.';
+
+// Constants
 import { PUBLIC_ROUTES } from '@/constants';
 
 const title = 'Start Find Your Favorite NFTs';
