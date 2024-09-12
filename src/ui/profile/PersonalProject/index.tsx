@@ -20,7 +20,7 @@ const PersonalProjects = () => (
         engaged by providing meaningful information.
       </Text>
     </div>
-    <div className="flex flex-col gap-5 mb-2">
+    <div className="flex flex-col items-center gap-5 mb-2">
       {PROJECTS_MOCK.map(({ baseProject, id, title, imageProject }) => (
         <ProjectCard
           key={id}

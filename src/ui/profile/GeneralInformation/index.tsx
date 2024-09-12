@@ -1,9 +1,9 @@
 'use client';
 
 import { Controller, useForm } from 'react-hook-form';
+import { DatePicker, DateValue, Input } from '@nextui-org/react';
 
 // Components
-import { Input } from '@nextui-org/input';
 import { Text } from '@/components';
 
 // Types
@@ -15,7 +15,7 @@ export interface IUserInformation {
   department: string;
   work: string;
   organization: string;
-  birthday: string;
+  birthday?: DateValue;
 }
 
 const infoFormInitValues: IUserInformation = {
@@ -24,7 +24,6 @@ const infoFormInitValues: IUserInformation = {
   department: '',
   work: '',
   organization: '',
-  birthday: '',
 };
 
 export const GENERAL_CONTENT = {
@@ -52,13 +51,16 @@ const GeneralInformation = () => {
 
   return (
     <div className="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md">
-      <div className="text-center xl:text-start">
-        <Text size={TEXT_SIZE.extra} className="font-extrabold leading-8 mb-4">
+      <div className="text-center xl:text-start mb-6">
+        <Text
+          size={TEXT_SIZE.extra}
+          className="font-extrabold leading-8 mb-6 xl:mb-8 2xl:mb-4"
+        >
           {GENERAL_CONTENT.title}
         </Text>
         <Text
           variant={TEXT_VARIANT.SECONDARY}
-          className="leading-[26px] tracking-tight mb-8"
+          className="leading-[26px] tracking-tight mb-8 2xl:mb-2"
         >
           {GENERAL_CONTENT.description}
         </Text>
@@ -154,14 +156,14 @@ const GeneralInformation = () => {
           name="birthday"
           control={control}
           render={({ field }) => (
-            <Input
-              key="birthday-input"
-              size="lg"
-              type="date"
-              placeholder="Update your birthday"
+            <DatePicker
               label="Birthday"
+              size="lg"
+              showMonthAndYearPickers
               className={customClass}
-              classNames={customClassNames}
+              classNames={{
+                base: '[&_span]:text-secondary [&_div]:bg-white [&_div]:dark:bg-indigo-light',
+              }}
               {...field}
             />
           )}

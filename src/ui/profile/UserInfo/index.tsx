@@ -39,7 +39,7 @@ const UserInfo = ({
               (min-width: 769px) and (max-width: 1024px) 396px,
               (min-width: 1025px) 518px"
       />
-      <div className="absolute top-[85px] left-[130px] md:left-[300px] lg:left-[430px] xl:left-[490px] 2xl:left-[200px]">
+      <div className="w-full flex justify-center top-[85px] absolute">
         <Avatar
           src={avatar}
           ImgComponent={Image}

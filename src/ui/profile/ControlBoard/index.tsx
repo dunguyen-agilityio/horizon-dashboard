@@ -42,7 +42,10 @@ const ControlBoard = () => {
   return (
     <div className="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md">
       <div className="flex justify-between">
-        <Text size={TEXT_SIZE.extra} className="font-extrabold leading-8 mb-4">
+        <Text
+          size={TEXT_SIZE.extra}
+          className="font-extrabold leading-8 mb-4 2xl:mb-2"
+        >
           Notifications
         </Text>
         <BoxIcon
