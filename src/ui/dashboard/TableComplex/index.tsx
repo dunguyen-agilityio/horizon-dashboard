@@ -107,7 +107,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
         <div className="flex flex-col items-end sm:items-start">
           <Text
             as="span"
-            className="block md:hidden text-success !bg-transparent"
+            className="block md:hidden !text-success !bg-transparent"
             size={TEXT_SIZE.sm}
           >
             {getKeyValue(row, 'progress')}%
@@ -137,19 +137,15 @@ const TableComplex = ({ data }: TableComplexProps) => (
     </Text>
     <Table
       aria-label="Rows actions table example with dynamic content"
-      selectionMode="multiple"
-      selectionBehavior="toggle"
-      className="mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
+      classNames={{
+        thead: 'hidden sm:table-header-group',
+        tbody: '[&_span]:!font-bold',
+      }}
+      className="mt-4 sm:mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
     >
       <TableHeader columns={columns}>
-        {({ key, label, visibleOnMobile = true }) => (
-          <TableColumn
-            key={key}
-            className={cn(
-              key === 'name' ? 'pl-0' : '',
-              visibleOnMobile ? '' : 'hidden sm:table-cell',
-            )}
-          >
+        {({ key, label }) => (
+          <TableColumn key={key} className={key === 'name' ? 'pl-0' : ''}>
             <Text variant={TEXT_VARIANT.SECONDARY} size={TEXT_SIZE.sm}>
               {label}
             </Text>

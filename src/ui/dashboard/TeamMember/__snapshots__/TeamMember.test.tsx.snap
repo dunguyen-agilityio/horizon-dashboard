@@ -45,7 +45,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
       </button>
     </div>
     <div
-      class="w-full relative flex flex-col gap-1 flex-1 overflow-y-auto p-0"
+      class="w-full relative flex flex-col gap-1 p-1 flex-1 px-4"
       data-slot="base"
     >
       <ul

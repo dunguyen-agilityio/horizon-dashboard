@@ -13,4 +13,8 @@ export const maxWidth = {
 
 export const screens = {
   xs: '420px',
+  '2.5xl': '1440px',
+  '3xl': '1560px',
+  '4xl': '1728px',
+  '5xl': '1920px',
 };

@@ -8,6 +8,8 @@ import { Chart, USDMoney, AddCheck, Copy } from '@/icons';
 // Types
 import { Earning } from '@/types/earning';
 
+const customIconClass = '[&_path]:fill-blue-450 [&_path]:dark:fill-white';
+
 const SummaryCards = ({
   balance,
   earning,
@@ -22,14 +24,14 @@ const SummaryCards = ({
       title="Earnings"
       counter={earning}
       additionalContent={
-        <BoxIcon icon={<Chart />} customClass="[&_path]:fill-blue-450" />
+        <BoxIcon icon={<Chart />} customClass={customIconClass} />
       }
     />
     <SummaryCard
       title="Spend this Month"
       counter={spend}
       additionalContent={
-        <BoxIcon icon={<USDMoney />} customClass="[&_path]:fill-blue-450" />
+        <BoxIcon icon={<USDMoney />} customClass={customIconClass} />
       }
     />
     <SummaryCard
@@ -55,9 +57,8 @@ const SummaryCards = ({
       title="Total Projects"
       counter={project}
       additionalContent={
-        <BoxIcon icon={<Copy />} customClass="[&_path]:fill-blue-450" />
+        <BoxIcon icon={<Copy />} customClass={customIconClass} />
       }
-      additionalContentWrapper=""
     />
   </div>
 );
