@@ -9,7 +9,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
         class="flex justify-center mt-1 sm:mt-4"
       >
         <div
-          class="flex flex-wrap justify-center sm:justify-start gap-5 max-w-[716px] xl:max-w-[1084px] 2xl:max-w-[1452px]"
+          class="flex flex-wrap justify-center gap-5 sm:justify-start max-w-[738px] xl:max-w-[1084px] 2xl:max-w-[1500px] w-full"
         >
           <a
             class="relative"
@@ -264,7 +264,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
       class="flex justify-center mt-1 sm:mt-4"
     >
       <div
-        class="flex flex-wrap justify-center sm:justify-start gap-5 max-w-[716px] xl:max-w-[1084px] 2xl:max-w-[1452px]"
+        class="flex flex-wrap justify-center gap-5 sm:justify-start max-w-[738px] xl:max-w-[1084px] 2xl:max-w-[1500px] w-full"
       >
         <a
           class="relative"
