@@ -1,14 +1,13 @@
 'use client';
 
 import { Controller, useForm } from 'react-hook-form';
+import { DatePicker, DateValue, Input } from '@nextui-org/react';
 
 // Components
-import { Input } from '@nextui-org/input';
 import { Text } from '@/components';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-import { DatePicker, DateValue } from '@nextui-org/react';
 
 export interface IUserInformation {
   education: string;
