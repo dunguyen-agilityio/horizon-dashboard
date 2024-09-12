@@ -21,8 +21,13 @@ import { apiClient } from '@/services/api';
  * @param formData SignInFormData
  * @returns hasError boolean
  */
-export const handleSignIn = async (formData: SignInFormData) =>
-  await signIn('credentials', { ...formData, redirect: false });
+export const handleSignIn = async (formData: SignInFormData) => {
+  try {
+    return await signIn('credentials', { ...formData, redirect: false });
+  } catch (error) {
+    return { error: `Failed to Sign In ${error}` };
+  }
+};
 
 export const handleSignOut = async () => {
   await signOut({ redirectTo: AUTH_ROUTES.SIGN_IN });
