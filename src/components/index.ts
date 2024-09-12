@@ -7,5 +7,6 @@ export { default as Toast } from './Toast';
 export { default as NavItem } from './NavItem';
 export { default as InputPassword } from './InputPassword';
 export { default as InputSearch } from './InputSearch';
+export { default as ItemNotFound } from './ItemNotFound';
 export { default as ToggleTheme } from './ToggleTheme';
 export { default as SelectFlag } from './SelectFlag';
