@@ -53,12 +53,15 @@ const GeneralInformation = () => {
   return (
     <div className="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md">
       <div className="text-center xl:text-start mb-6">
-        <Text size={TEXT_SIZE.extra} className="font-extrabold leading-8 mb-4">
+        <Text
+          size={TEXT_SIZE.extra}
+          className="font-extrabold leading-8 mb-6 xl:mb-8 2xl:mb-4"
+        >
           {GENERAL_CONTENT.title}
         </Text>
         <Text
           variant={TEXT_VARIANT.SECONDARY}
-          className="leading-[26px] tracking-tight mb-8"
+          className="leading-[26px] tracking-tight mb-8 2xl:mb-2"
         >
           {GENERAL_CONTENT.description}
         </Text>
@@ -160,8 +163,7 @@ const GeneralInformation = () => {
               showMonthAndYearPickers
               className={customClass}
               classNames={{
-                innerWrapper: 'bg-white hover:bg-red-400',
-                base: '[&_span]:text-secondary [&_div]:bg-white [&_div]::hover:bg-white [&_div]::focus:bg-white ',
+                base: '[&_span]:text-secondary [&_div]:bg-white [&_div]:dark:bg-indigo-light',
               }}
               {...field}
             />

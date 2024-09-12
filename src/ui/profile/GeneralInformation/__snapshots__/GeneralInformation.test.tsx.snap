@@ -9,12 +9,12 @@ exports[`GeneralInformation component GeneralInformation should render match sna
       class="text-center xl:text-start mb-6"
     >
       <p
-        class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-8 mb-4"
+        class="text-primary dark:text-white text-1.5xl leading-xl font-extrabold leading-8 mb-6 xl:mb-8 2xl:mb-4"
       >
         General Information
       </p>
       <p
-        class="text-secondary dark:text-secondary text-medium leading-xl leading-[26px] tracking-tight mb-8"
+        class="text-secondary dark:text-secondary text-medium leading-xl leading-[26px] tracking-tight mb-8 2xl:mb-2"
       >
         As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...
       </p>
@@ -218,7 +218,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
         </div>
       </div>
       <div
-        class="group flex flex-col group w-full [&_span]:text-secondary [&_div]:bg-white [&_div]::hover:bg-white [&_div]::focus:bg-white px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
+        class="group flex flex-col group w-full [&_span]:text-secondary [&_div]:bg-white [&_div]:dark:bg-indigo-light px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md"
         data-has-end-content="true"
         data-slot="base"
       >
@@ -283,7 +283,7 @@ exports[`GeneralInformation component GeneralInformation should render match sna
                 aria-labelledby="react-aria-:r1a: react-aria-:r12: react-aria-:rt:"
                 aria-valuemax="30"
                 aria-valuemin="1"
-                aria-valuenow="11"
+                aria-valuenow="12"
                 aria-valuetext="Empty"
                 autocorrect="off"
                 class="group first:-ml-0.5 [&:not(:first-child)]:-ml-1 px-0.5 my-auto box-content tabular-nums text-start inline-block outline-none focus:shadow-sm rounded-md text-foreground-500 data-[editable=true]:text-foreground data-[editable=true]:data-[placeholder=true]:text-foreground-500 data-[invalid=true]:text-danger-300 data-[invalid=true]:data-[editable=true]:text-danger data-[invalid=true]:focus:bg-danger-400/50 dark:data-[invalid=true]:focus:bg-danger-400/20 data-[invalid=true]:data-[editable=true]:focus:text-danger focus:bg-default-400/50 data-[editable=true]:focus:text-default-foreground transition-colors motion-reduce:transition-none"
