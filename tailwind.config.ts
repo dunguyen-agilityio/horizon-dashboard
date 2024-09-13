@@ -46,7 +46,6 @@ const config: Config = {
         light: {
           colors: {
             default: {
-              DEFAULT: colors['army-green'],
               '100': colors.gray,
               '200': colors.grey,
             },
