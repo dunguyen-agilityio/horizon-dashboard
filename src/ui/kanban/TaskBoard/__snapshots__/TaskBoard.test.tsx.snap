@@ -50,7 +50,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
         class="pl-4 pr-2 h-fit"
       >
         <div
-          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md"
+          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
         >
           <div
             aria-label="Loading"
@@ -115,7 +115,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
         class="pl-4 pr-2 h-fit"
       >
         <div
-          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md"
+          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
         >
           <div
             aria-label="Loading"
@@ -180,7 +180,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
         class="pl-4 pr-2 h-fit"
       >
         <div
-          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md"
+          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
         >
           <div
             aria-label="Loading"
@@ -253,7 +253,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
         class="pl-4 pr-2 h-[905px]"
       >
         <div
-          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md"
+          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
         >
           <div
             class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
@@ -1156,7 +1156,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
         class="pl-4 pr-2 h-[905px]"
       >
         <div
-          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md"
+          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
         >
           <div
             class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
@@ -2059,7 +2059,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
         class="pl-4 pr-2 h-[905px]"
       >
         <div
-          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md"
+          class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
         >
           <div
             class="flex flex-col gap-[10px] pt-[18px] pl-[23px] pb-[23px] pr-[21px] rounded-[15px] bg-white shadow-light-card dark:shadow-none dark:bg-indigo-light max-w-[466px]"
