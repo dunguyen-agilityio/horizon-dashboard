@@ -9,7 +9,7 @@ exports[`NTFHistory should match snapshot 1`] = `
       class="flex items-center justify-between p-[18px]"
     >
       <p
-        class="text-primary dark:text-white text-medium leading-xl leading-8 font-poppins font-bold text-blue-450"
+        class="text-primary dark:text-white text-medium leading-8 font-poppins font-bold text-blue-450"
       >
         History
       </p>
@@ -49,12 +49,12 @@ exports[`NTFHistory should match snapshot 1`] = `
             class="flex flex-col"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+              class="text-primary dark:text-white text-medium leading-tiny font-bold"
             >
               Colorful Heaven
             </p>
             <p
-              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+              class="text-primary dark:text-white leading-small text-small text-secondary"
             >
               By 
               Mark Benjamin
@@ -65,7 +65,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-bold"
+            class="text-primary dark:text-white text-medium font-bold"
           >
             1.33
              $
@@ -75,7 +75,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+            class="text-primary dark:text-white text-medium text-secondary"
           >
             2 hours ago
           </p>
@@ -107,12 +107,12 @@ exports[`NTFHistory should match snapshot 1`] = `
             class="flex flex-col"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+              class="text-primary dark:text-white text-medium leading-tiny font-bold"
             >
               Colorful Heaven
             </p>
             <p
-              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+              class="text-primary dark:text-white leading-small text-small text-secondary"
             >
               By 
               Esthera Jackson
@@ -123,7 +123,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-bold"
+            class="text-primary dark:text-white text-medium font-bold"
           >
             0.91
              $
@@ -133,7 +133,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+            class="text-primary dark:text-white text-medium text-secondary"
           >
             6 hours ago
           </p>
@@ -165,12 +165,12 @@ exports[`NTFHistory should match snapshot 1`] = `
             class="flex flex-col"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+              class="text-primary dark:text-white text-medium leading-tiny font-bold"
             >
               Colorful Heaven
             </p>
             <p
-              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+              class="text-primary dark:text-white leading-small text-small text-secondary"
             >
               By 
               Nick Wilson
@@ -181,7 +181,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-bold"
+            class="text-primary dark:text-white text-medium font-bold"
           >
             2.82
              $
@@ -191,7 +191,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+            class="text-primary dark:text-white text-medium text-secondary"
           >
             5 hours ago
           </p>
@@ -223,12 +223,12 @@ exports[`NTFHistory should match snapshot 1`] = `
             class="flex flex-col"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl leading-tiny font-bold"
+              class="text-primary dark:text-white text-medium leading-tiny font-bold"
             >
               Colorful Heaven
             </p>
             <p
-              class="text-primary dark:text-white leading-xl leading-small text-small text-secondary"
+              class="text-primary dark:text-white leading-small text-small text-secondary"
             >
               By 
               Peter Will
@@ -239,7 +239,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl font-bold"
+            class="text-primary dark:text-white text-medium font-bold"
           >
             2.32
              $
@@ -249,7 +249,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center"
         >
           <p
-            class="text-primary dark:text-white text-medium leading-xl text-secondary"
+            class="text-primary dark:text-white text-medium text-secondary"
           >
             1 day ago
           </p>

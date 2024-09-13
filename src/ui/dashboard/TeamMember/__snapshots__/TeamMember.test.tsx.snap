@@ -9,7 +9,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
       class="flex justify-between items-center h-8"
     >
       <h2
-        class="text-primary dark:text-white leading-xl text-lg leading-xl font-bold"
+        class="text-primary dark:text-white text-lg leading-xl font-bold"
       >
         Team Members
       </h2>

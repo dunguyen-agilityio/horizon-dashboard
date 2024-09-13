@@ -176,7 +176,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
             id=":ra:"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl"
+              class="text-primary dark:text-white text-medium"
             >
               Keep me logged in
             </p>
@@ -209,7 +209,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
         </p>
       </button>
       <h2
-        class="text-foreground dark:text-secondary text-medium leading-xl leading-6"
+        class="text-foreground dark:text-secondary text-medium leading-6"
       >
         Don’t have an account yet?
         <a

@@ -41,7 +41,7 @@ exports[`NavItem component NavItem should match snapshot 1`] = `
         </svg>
       </i>
       <p
-        class="text-primary dark:text-white leading-xl text-lg xl:text-medium font-bold"
+        class="text-primary dark:text-white text-lg xl:text-medium font-bold"
       >
         NFT Marketplace
       </p>

@@ -3,7 +3,7 @@
 exports[`Text tests Should match snapshot 1`] = `
 <div>
   <p
-    class="text-primary dark:text-white text-medium leading-xl"
+    class="text-primary dark:text-white text-medium"
   >
     Hello Wold!
   </p>

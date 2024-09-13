@@ -99,7 +99,7 @@ exports[`TableCheck tests Should match snapshot 1`] = `
         </defs>
       </svg>
       <span
-        class="text-secondary dark:text-secondary leading-xl text-lg font-bold"
+        class="text-secondary dark:text-secondary text-lg font-bold"
       >
         10% cashback & off
       </span>

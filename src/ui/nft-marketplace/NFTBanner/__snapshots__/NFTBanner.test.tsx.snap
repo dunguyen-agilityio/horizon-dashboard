@@ -30,7 +30,7 @@ exports[`NFTBanner tests Should match snapshot 1`] = `
 sell extraordinary NFTs
       </h1>
       <p
-        class="text-primary dark:text-white text-medium leading-xl text-purple-150 mt-[14px] leading-medium whitespace-break-spaces"
+        class="text-primary dark:text-white text-medium text-purple-150 mt-[14px] leading-medium whitespace-break-spaces"
       >
         Enter in this creative world. Discover now the
 latest NFTs or start creating your own!

@@ -60,12 +60,12 @@ exports[`Storage component should match snapshot 1`] = `
         </i>
       </div>
       <p
-        class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+        class="text-primary dark:text-white font-bold text-[24px]"
       >
         Your Storage
       </p>
       <p
-        class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary text-center w-2/3 leading-relaxed"
+        class="text-primary dark:text-white text-medium font-normal text-secondary text-center w-2/3 leading-relaxed"
       >
         Supervise your drive space in the easiest way
       </p>
@@ -74,13 +74,13 @@ exports[`Storage component should match snapshot 1`] = `
       class="flex justify-between"
     >
       <p
-        class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary"
+        class="text-primary dark:text-white text-medium font-normal text-secondary"
       >
         25.6
         Gb
       </p>
       <p
-        class="text-primary dark:text-white text-medium leading-xl font-normal text-secondary"
+        class="text-primary dark:text-white text-medium font-normal text-secondary"
       >
         50
         Gb

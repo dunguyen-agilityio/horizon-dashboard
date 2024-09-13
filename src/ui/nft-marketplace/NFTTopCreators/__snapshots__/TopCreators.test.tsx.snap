@@ -9,7 +9,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
       class="flex items-center justify-between p-[18px]"
     >
       <p
-        class="text-primary dark:text-white text-medium leading-xl leading-8 font-poppins font-bold text-blue-450"
+        class="text-primary dark:text-white text-medium leading-8 font-poppins font-bold text-blue-450"
       >
         Top Creators
       </p>
