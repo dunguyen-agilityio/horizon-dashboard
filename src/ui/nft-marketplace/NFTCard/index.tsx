@@ -19,6 +19,7 @@ import { NFT } from '@/models/NFT';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
+import { Button } from '@nextui-org/react';
 
 interface INFTProps extends NFT {
   isShowIcon?: boolean;
@@ -35,7 +36,8 @@ const NFTCard = ({
 }: INFTProps) => {
   const [isPending, setIsPending] = useState(false);
 
-  const handleLike = async () => {
+  const handleLike = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     setIsPending(true);
     // TODO: handle api for like card
     setIsPending(false);
@@ -52,13 +54,14 @@ const NFTCard = ({
         <div className="relative w-[308px] h-[205px] rounded-[18px] overflow-hidden">
           <Image src={image} alt={name} fill className="object-cover" />
           {isShowIcon && (
-            <button
+            <Button
+              isIconOnly
               data-testid="like-btn"
-              className="absolute top-[14px] right-[14px]"
+              className="absolute top-[14px] right-[14px] bg-transparent rounded-full"
               onClick={handleLike}
             >
               <FavoriteIcon />
-            </button>
+            </Button>
           )}
         </div>
         <div className="flex justify-between pt-5">
