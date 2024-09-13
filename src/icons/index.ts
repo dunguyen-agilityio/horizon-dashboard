@@ -1,5 +1,7 @@
 export { default as Add } from './Add';
+export { default as Back } from './Back';
 export { default as ArrowRight } from './ArrowRight';
+export { default as ArrowLeft } from './ArrowLeft';
 export { default as Cart } from './Cart';
 export { default as Chart } from './Chart';
 export { default as Close } from './Close';

@@ -4,8 +4,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+// Icons
+import { Back } from '@/icons';
+
 // Components
-import { ArrowRight } from '@/icons';
 import { BoxIcon, Text } from '@/components';
 
 // Constants
@@ -46,7 +48,7 @@ const BackNavigation = () => {
 
   return (
     <Link href={href} className="h-fit flex items-center gap-1">
-      <BoxIcon icon={<ArrowRight />} customClass="fill-secondary" />
+      <BoxIcon icon={<Back />} customClass="fill-secondary" />
       <Text variant={TEXT_VARIANT.SECONDARY} className="ml-1">
         {`Back to ${title}`}
       </Text>
