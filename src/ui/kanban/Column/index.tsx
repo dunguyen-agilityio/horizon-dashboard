@@ -66,7 +66,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
         </Button>
       </div>
       <div className={cn('pl-4 pr-2', tasks.length ? 'h-[905px]' : 'h-fit')}>
-        <div className="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 [&>:first-child]:mt-2 rounded-md">
+        <div className="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md">
           {isLoading ? (
             <Spinner />
           ) : (
