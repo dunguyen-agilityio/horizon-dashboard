@@ -52,11 +52,7 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
       case 'userName':
         return (
           <div className="flex items-center pl-7">
-            <Avatar
-              src={avatar}
-              alt={userName}
-              className="mr-2 hidden md:block"
-            />
+            <Avatar src={avatar} alt={userName} size="sm" className="mr-2" />
             <Text
               as="span"
               size={TEXT_SIZE.sm}
@@ -93,7 +89,7 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
   };
 
   return (
-    <div className="flex flex-col bg-white dark:bg-indigo-light rounded-md max-w-nftCard w-full overflow-auto shadow-md">
+    <div className="flex flex-col bg-white dark:bg-indigo-light rounded-md w-full 4xl:max-w-nftCard overflow-auto shadow-md pt-[19px]">
       <div className="flex items-center justify-between p-[18px]">
         <Text className="leading-8 font-poppins font-bold text-blue-450">
           Top Creators

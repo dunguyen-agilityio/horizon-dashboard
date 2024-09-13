@@ -1,4 +1,4 @@
-const ArrowRight = () => (
+const ArrowLeft = () => (
   <svg
     width="24"
     height="24"
@@ -7,8 +7,7 @@ const ArrowRight = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3.5 12H20M20 12L13 5M20 12L13 19"
-      stroke="black"
+      d="M11 5L4 12L11 19M4 12H20"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -16,4 +15,4 @@ const ArrowRight = () => (
   </svg>
 );
 
-export default ArrowRight;
+export default ArrowLeft;
