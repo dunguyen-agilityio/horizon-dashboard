@@ -179,7 +179,7 @@ exports[`Column tests Should match snapshot 2`] = `
             />
           </div>
           <p
-            class="text-secondary dark:text-secondary text-medium leading-xl"
+            class="text-secondary dark:text-secondary text-medium"
           >
             It usually displays this message when you close an unsaved page when you do it on purpose, and it's getting frustrated to see this every time.
           </p>
@@ -312,7 +312,7 @@ exports[`Column tests Should match snapshot 2`] = `
             </button>
           </div>
           <p
-            class="text-secondary dark:text-secondary text-medium leading-xl"
+            class="text-secondary dark:text-secondary text-medium"
           >
             Website Design: The ability to add/modify your own CSS-Selectors like it's done in Venus.
           </p>
@@ -459,7 +459,7 @@ exports[`Column tests Should match snapshot 2`] = `
             />
           </div>
           <p
-            class="text-secondary dark:text-secondary text-medium leading-xl"
+            class="text-secondary dark:text-secondary text-medium"
           >
             When you save some sections as a template and then paste a shortcode to a new page, the layout is broken, some styles are missing - in the editor.
           </p>
@@ -606,7 +606,7 @@ exports[`Column tests Should match snapshot 2`] = `
             />
           </div>
           <p
-            class="text-secondary dark:text-secondary text-medium leading-xl"
+            class="text-secondary dark:text-secondary text-medium"
           >
             Create your Dashboard with Drag & Drop technique.
           </p>
@@ -739,7 +739,7 @@ exports[`Column tests Should match snapshot 2`] = `
             </button>
           </div>
           <p
-            class="text-secondary dark:text-secondary text-medium leading-xl"
+            class="text-secondary dark:text-secondary text-medium"
           >
             Create your Dashboard with Drag & Drop technique.
           </p>
@@ -886,7 +886,7 @@ exports[`Column tests Should match snapshot 2`] = `
             />
           </div>
           <p
-            class="text-secondary dark:text-secondary text-medium leading-xl"
+            class="text-secondary dark:text-secondary text-medium"
           >
             Create your Dashboard with Drag & Drop technique.
           </p>

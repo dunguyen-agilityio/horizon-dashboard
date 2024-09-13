@@ -14,7 +14,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
         All Projects
       </p>
       <p
-        class="text-secondary dark:text-secondary text-medium leading-xl leading-[26px] tracking-tight mb-7"
+        class="text-secondary dark:text-secondary text-medium leading-[26px] tracking-tight mb-7"
       >
         Here you can find more details about your projects. Keep you user engaged by providing meaningful information.
       </p>
@@ -90,7 +90,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
                 class="flex flex-col items-center text-center sm:text-start sm:items-start"
               >
                 <p
-                  class="text-primary dark:text-white text-medium leading-xl font-medium leading-5"
+                  class="text-primary dark:text-white text-medium font-medium leading-5"
                 >
                   Technology behind the Blockchain
                 </p>
@@ -227,7 +227,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
                 class="flex flex-col items-center text-center sm:text-start sm:items-start"
               >
                 <p
-                  class="text-primary dark:text-white text-medium leading-xl font-medium leading-5"
+                  class="text-primary dark:text-white text-medium font-medium leading-5"
                 >
                   Greatest way to a good Economy
                 </p>
@@ -364,7 +364,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
                 class="flex flex-col items-center text-center sm:text-start sm:items-start"
               >
                 <p
-                  class="text-primary dark:text-white text-medium leading-xl font-medium leading-5"
+                  class="text-primary dark:text-white text-medium font-medium leading-5"
                 >
                   Most essential tips for Burnout
                 </p>

@@ -10,7 +10,7 @@ exports[`NFTTrending should match snapshot 1`] = `
           class="flex justify-between pb-5"
         >
           <p
-            class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+            class="text-primary dark:text-white font-bold text-[24px]"
           >
             Trending NFTs
           </p>
@@ -165,7 +165,7 @@ exports[`NFTTrending should match snapshot 1`] = `
         class="flex justify-between pb-5"
       >
         <p
-          class="text-primary dark:text-white leading-xl font-bold text-[24px]"
+          class="text-primary dark:text-white font-bold text-[24px]"
         >
           Trending NFTs
         </p>

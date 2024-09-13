@@ -70,7 +70,7 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
             class="flex flex-col items-center text-center sm:text-start sm:items-start"
           >
             <p
-              class="text-primary dark:text-white text-medium leading-xl font-medium leading-5"
+              class="text-primary dark:text-white text-medium font-medium leading-5"
             >
               Technology behind the Blockchain
             </p>

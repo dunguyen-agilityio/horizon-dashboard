@@ -63,7 +63,7 @@ exports[`Task tests Should match snapshot 1`] = `
       />
     </div>
     <p
-      class="text-secondary dark:text-secondary text-medium leading-xl"
+      class="text-secondary dark:text-secondary text-medium"
     >
       It usually displays this message when you close an unsaved page when you do it on purpose, and it's getting frustrated to see this every time.
     </p>

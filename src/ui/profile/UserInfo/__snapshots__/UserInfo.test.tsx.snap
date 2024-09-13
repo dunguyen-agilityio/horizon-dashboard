@@ -48,7 +48,7 @@ exports[`UserInfo component UserInfo should render match snapshot 1`] = `
         class=""
       >
         <p
-          class="text-primary dark:text-white leading-xl text-[20px] text-center font-extrabold"
+          class="text-primary dark:text-white text-[20px] text-center font-extrabold"
         >
           Adela Parkson
         </p>
@@ -168,7 +168,7 @@ exports[`UserInfo component UserInfo should render without avatar props 1`] = `
         class=""
       >
         <p
-          class="text-primary dark:text-white leading-xl text-[20px] text-center font-extrabold"
+          class="text-primary dark:text-white text-[20px] text-center font-extrabold"
         >
           Adela Parkson
         </p>
