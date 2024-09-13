@@ -8,25 +8,16 @@ export const formatDateRelativeToNow = (date: Date) => {
 
   switch (true) {
     case timeDifferenceInSeconds < 60:
-      return timeDifferenceInSeconds === 1
-        ? `${timeDifferenceInSeconds} second ago`
-        : `${timeDifferenceInSeconds} seconds ago`;
+      return `${timeDifferenceInSeconds}s ago`;
     case timeDifferenceInSeconds < 3600:
-      return minutesElapsed === 1
-        ? `${minutesElapsed} minute ago`
-        : `${minutesElapsed} minutes ago`;
+      return `${minutesElapsed}m ago`;
     case timeDifferenceInSeconds < 86400:
-      return hoursElapsed === 1
-        ? `${hoursElapsed} hour ago`
-        : `${hoursElapsed} hours ago`;
+      return `${hoursElapsed}h ago`;
 
     case timeDifferenceInSeconds < 172800:
-      // Less than 2 days ago
-      return daysElapsed === 1
-        ? `${daysElapsed} day ago`
-        : `${daysElapsed} days ago`;
+      return `${daysElapsed}d ago`;
+
     default:
-      // If more than 2 days, return the date in "DD MMM" format
       return date.toLocaleDateString('en-GB', {
         day: '2-digit',
         month: 'short',
