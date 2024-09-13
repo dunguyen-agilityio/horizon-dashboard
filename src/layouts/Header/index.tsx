@@ -64,7 +64,7 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
         {breadcrumbs.length && (
           <>
             <div className="flex justify-start w-1/2">
-              <MenuBar />
+              <MenuBar isAuthenticated={isAuthenticated} />
             </div>
             <Breadcrumbs separator="/">
               <BreadcrumbItem className={breadcrumbStyle} isCurrent>

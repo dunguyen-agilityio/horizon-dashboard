@@ -12,9 +12,13 @@ import { NavItem } from '@/components';
 import { usePathname } from 'next/navigation';
 
 // Constants
-import { NAV_ROUTES } from '@/constants/routes';
+import { NAV_ROUTES, AUTH_ROUTES } from '@/constants/routes';
 
-const MenuBar = () => {
+interface MenubarProp {
+  isAuthenticated: boolean;
+}
+
+const MenuBar = ({ isAuthenticated }: MenubarProp) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
@@ -39,17 +43,21 @@ const MenuBar = () => {
         />
       </NavbarContent>
 
-      <NavbarMenu className="mt-8">
-        {NAV_ROUTES.map(({ title, href, icon }, index) => (
-          <NavbarMenuItem key={`${title}-${index}`} onClick={handleOpenMenu}>
-            <NavItem
-              href={href}
-              icon={icon}
-              label={title}
-              isActive={href === pathname}
-            />
-          </NavbarMenuItem>
-        ))}
+      <NavbarMenu className="mt-8 bg-gray dark:bg-indigo-dark">
+        {NAV_ROUTES.map(({ title, href, icon }, index) => {
+          if (isAuthenticated && href === AUTH_ROUTES.SIGN_IN) return null;
+
+          return (
+            <NavbarMenuItem key={`${title}-${index}`} onClick={handleOpenMenu}>
+              <NavItem
+                href={href}
+                icon={icon}
+                label={title}
+                isActive={href === pathname}
+              />
+            </NavbarMenuItem>
+          );
+        })}
       </NavbarMenu>
     </Navbar>
   );
