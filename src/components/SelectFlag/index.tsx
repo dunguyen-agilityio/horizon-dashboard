@@ -31,6 +31,9 @@ const SelectFlag = ({ defaultFlag = FLAG_KEYS[0] }: SelectFlagProps) => {
           popoverContent: 'w-fit bg-white dark:bg-indigo-light',
           innerWrapper: 'hidden',
         }}
+        popoverProps={{
+          classNames: { base: 'w-[200px] -left-[150px] sm:left-0' },
+        }}
       >
         {FLAG_KEYS.map((key) => (
           <SelectItem
