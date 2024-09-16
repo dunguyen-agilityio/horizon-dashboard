@@ -15,13 +15,13 @@ import { PUBLIC_ROUTES } from '@/constants/routes';
 import { NFT_IMAGES } from '@/constants/images';
 
 // Models
-import { NFT } from '@/models/NFT';
+import { NFTData } from '@/models/NFT';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 import { Button } from '@nextui-org/react';
 
-interface INFTProps extends NFT {
+interface INFTProps extends NFTData {
   isShowIcon?: boolean;
 }
 

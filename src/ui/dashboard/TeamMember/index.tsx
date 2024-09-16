@@ -32,9 +32,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
       items={members}
       classNames={{ list: 'gap-4', base: 'flex-1 px-4' }}
     >
-      {(item) => {
-        const { avatar, id, fullName, role } = new UserModel(item);
-
+      {({ avatar, id, fullName, role }) => {
         return (
           <ListboxItem
             key={id}

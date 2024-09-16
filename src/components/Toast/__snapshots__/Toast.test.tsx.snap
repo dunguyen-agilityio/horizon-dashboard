@@ -7,7 +7,7 @@ exports[`Toast should match snapshot 1`] = `
       rounded text-white text-lg transition-opacity duration-500 ease-in animate-slideDown bg-success"
   >
     <div
-      class="flex flex-col justify-between gap-0.5 px-3 py-1"
+      class="flex flex-col justify-between min-h-12 px-3 py-1"
     >
       <h2
         class="text-primary dark:text-white text-medium font-bold leading-none text-white"

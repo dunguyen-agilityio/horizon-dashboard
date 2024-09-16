@@ -3,8 +3,8 @@ import { User } from './User';
 export class NFT {
   id!: string;
   name!: string;
-  author!: User;
-  members!: User[];
+  author!: string;
+  members!: string[];
   price!: number;
   image?: string;
 
@@ -12,3 +12,8 @@ export class NFT {
     Object.assign(this, nft);
   }
 }
+
+export type NFTData = Omit<NFT, 'author' | 'members'> & {
+  author: User;
+  members: User[];
+};

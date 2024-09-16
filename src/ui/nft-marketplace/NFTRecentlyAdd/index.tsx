@@ -1,7 +1,7 @@
 'use client';
 
 // Models
-import { NFT } from '@/models/NFT';
+import { NFTData } from '@/models/NFT';
 
 import NFTCard from '../NFTCard';
 import { Button, Text } from '@/components';
@@ -13,7 +13,7 @@ import useScroll from '@/hooks/useScroll';
 import { ArrowLeft, ArrowRight } from '@/icons';
 
 interface NTFRecentlyAddProps {
-  recentlyList: NFT[];
+  recentlyList: NFTData[];
 }
 
 const NTFRecentlyAdd = ({ recentlyList }: NTFRecentlyAddProps) => {

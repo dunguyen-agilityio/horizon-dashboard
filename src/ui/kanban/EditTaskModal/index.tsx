@@ -99,7 +99,7 @@ export const EditTaskModal = ({
       startDate: startDateTask ? parseAbsoluteToLocal(startDateTask) : null,
       dueDate: dueDateTask ? parseAbsoluteToLocal(dueDateTask) : null,
       selectedLabels: labels.map((label) => label),
-      selectedMembers: assignMembers.map((user) => user.userName),
+      selectedMembers: assignMembers.map(({ username }) => username),
     }),
     [title, description, startDateTask, dueDateTask, labels, assignMembers],
   );
@@ -249,8 +249,8 @@ export const EditTaskModal = ({
                       }
                       classNames={selectStyle}
                     >
-                      {MOCK_USERS.map(({ userName }) => (
-                        <SelectItem key={userName}>{userName}</SelectItem>
+                      {MOCK_USERS.map(({ username }) => (
+                        <SelectItem key={username}>{username}</SelectItem>
                       ))}
                     </Select>
                   )}
