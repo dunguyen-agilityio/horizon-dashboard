@@ -73,6 +73,6 @@ describe('Contributor Table Tests', () => {
     fireEvent.click(getByLabelText('pagination item 2'));
     expect(mockPush).toHaveBeenNthCalledWith(1, `${mockPathname}?page=2`);
     fireEvent.click(getByLabelText('pagination item 1'));
-    expect(mockPush).toHaveBeenNthCalledWith(2, `${mockPathname}?`);
+    expect(mockPush).toHaveBeenNthCalledWith(2, `${mockPathname}?page=1`);
   });
 });
