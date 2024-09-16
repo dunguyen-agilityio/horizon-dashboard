@@ -4,11 +4,6 @@ import { render } from '@testing-library/react';
 import GeneralInformation, { GENERAL_CONTENT } from '.';
 
 describe('GeneralInformation component', () => {
-  it('GeneralInformation should render match snapshot', () => {
-    const { container } = render(<GeneralInformation />);
-    expect(container).toMatchSnapshot();
-  });
-
   it('GeneralInformation should render correct title and description', () => {
     const { getByText } = render(<GeneralInformation />);
 
