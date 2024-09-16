@@ -4,11 +4,17 @@ import { useEffect, useState } from 'react';
 import useToast from '@/contexts/toast';
 
 // Models
-import { Task } from '@/models/Task';
+import { LABEL, Task } from '@/models/Task';
 import { type TaskFormData } from '@/types/task';
+import { User } from '@/models/User';
 
 // Mocks
-import { ADD_TASK__SUCCESS, ADD_TASK_ERROR } from '@/mocks/toast';
+import {
+  ADD_TASK_SUCCESS,
+  ADD_TASK_ERROR,
+  UPDATE_TASK_SUCCESS,
+  UPDATE_TASK_ERROR,
+} from '@/mocks/toast';
 
 // Firebase
 import {
@@ -18,6 +24,8 @@ import {
   query,
   where,
   addDoc,
+  doc,
+  updateDoc,
 } from '@/config/firebaseConfig';
 
 export const getTasksInRealTime = (
@@ -57,11 +65,36 @@ export const useTask = (status: string) => {
   const addTask = async (task: TaskFormData) => {
     try {
       await addDoc(collection(fireStore, 'tasks'), task);
-      showToast(ADD_TASK__SUCCESS);
+      showToast(ADD_TASK_SUCCESS);
     } catch (error) {
       showToast(ADD_TASK_ERROR);
     }
   };
 
-  return { tasks, isLoading, addTask };
+  const updateTask = async (
+    taskId: string,
+    title: string,
+    description: string,
+    labels: LABEL[],
+    assignMembers: User[],
+    startedDate?: string | null,
+    dueDate?: string | null,
+  ) => {
+    try {
+      const taskDocRef = doc(fireStore, 'tasks', taskId);
+      await updateDoc(taskDocRef, {
+        title,
+        description,
+        labels,
+        assignees: assignMembers,
+        startedDate,
+        dueDate,
+      });
+      showToast(UPDATE_TASK_SUCCESS);
+    } catch (error) {
+      showToast(UPDATE_TASK_ERROR);
+    }
+  };
+
+  return { tasks, isLoading, addTask, updateTask };
 };

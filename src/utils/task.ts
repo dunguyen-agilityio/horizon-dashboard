@@ -1,3 +1,4 @@
+import { MOCK_USERS } from '@/mocks/user';
 import { LABEL } from '@/models/Task';
 import { CHIP_COLOR } from '@/types/chip';
 
@@ -21,4 +22,10 @@ export const getColorByLabel = (label: LABEL): CHIP_COLOR => {
     default:
       return 'default';
   }
+};
+
+export const getUpdatedAssignMembers = (selected: string[]) => {
+  return selected
+    .map((userName) => MOCK_USERS.find((user) => user.userName === userName))
+    .filter((member) => member !== undefined);
 };

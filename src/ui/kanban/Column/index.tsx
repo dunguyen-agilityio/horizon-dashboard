@@ -79,7 +79,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
                 />
               )}
               {tasks.map(({ id, ...rest }) => (
-                <Task key={id} {...rest} />
+                <Task key={id} id={id} {...rest} />
               ))}
             </>
           )}

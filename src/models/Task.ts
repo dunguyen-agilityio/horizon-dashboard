@@ -19,8 +19,8 @@ export class Task {
   description!: string;
   createdAt!: Date | string;
   updatedAt!: Date | string;
-  dueDate?: Date | string;
-  startedDate?: Date | string;
+  dueDate?: string;
+  startedDate?: string;
   status!: STATUS;
   labels!: LABEL[];
   assignees?: User[];
@@ -44,10 +44,10 @@ export class Task {
       description,
       assignees,
       labels: labels.length ? labels : [LABEL.PENDING],
-      dueDate: dueDate ? new Date(dueDate) : undefined,
+      dueDate: dueDate ?? '',
       createdAt: createdAt ? new Date(createdAt) : undefined,
       updatedAt: updatedAt ? new Date(updatedAt) : undefined,
-      startedDate: startedDate ? new Date(startedDate) : undefined,
+      startedDate: startedDate ?? '',
     });
   }
 }
