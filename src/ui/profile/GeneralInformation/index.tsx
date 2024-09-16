@@ -52,15 +52,12 @@ const GeneralInformation = () => {
   return (
     <div className="dark:bg-indigo bg-white pt-[23px] p-[31px] rounded-md">
       <div className="text-center xl:text-start mb-6">
-        <Text
-          size={TEXT_SIZE.extra}
-          className="font-extrabold leading-8 mb-6 xl:mb-8 2xl:mb-4"
-        >
+        <Text size={TEXT_SIZE.extra} className="font-extrabold leading-8">
           {GENERAL_CONTENT.title}
         </Text>
         <Text
           variant={TEXT_VARIANT.SECONDARY}
-          className="leading-[26px] tracking-tight mb-8 2xl:mb-2"
+          className="leading-[26px] tracking-tight mb-8 mt-6 xl:mt-8 2xl:my-6"
         >
           {GENERAL_CONTENT.description}
         </Text>
