@@ -5,7 +5,7 @@ import { User } from '@/models/User';
 export const MOCK_USERS = [
   {
     id: '1',
-    userName: 'Adela Parkson',
+    username: 'Adela Parkson',
     avatar: USER_IMAGE.DEFAULT,
     firstName: 'User 1',
     email: 'user1@gmail.com',
@@ -15,7 +15,7 @@ export const MOCK_USERS = [
   },
   {
     id: '2',
-    userName: 'user2',
+    username: 'user2',
     avatar: USER_IMAGE.DEFAULT,
     firstName: 'User 2',
     email: 'user2@gmail.com',
@@ -25,7 +25,7 @@ export const MOCK_USERS = [
   },
   {
     id: '3',
-    userName: 'user3',
+    username: 'user3',
     avatar: USER_IMAGE.DEFAULT,
     firstName: 'User 3',
     email: 'user3@gmail.com',
@@ -35,7 +35,7 @@ export const MOCK_USERS = [
   },
   {
     id: '4',
-    userName: 'user4',
+    username: 'user4',
     avatar: USER_IMAGE.DEFAULT,
     firstName: 'User 4',
     email: 'user4@gmail.com',

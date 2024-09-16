@@ -34,7 +34,7 @@ import { USER_IMAGE } from '@/constants';
 const MOCK_PROFILE = MOCK_USERS[0];
 
 const ProfileDropDown = () => {
-  const { avatar = USER_IMAGE.DEFAULT, userName } = MOCK_PROFILE;
+  const { avatar = USER_IMAGE.DEFAULT, username } = MOCK_PROFILE;
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -71,7 +71,7 @@ const ProfileDropDown = () => {
             width={40}
             height={40}
             src={avatar}
-            alt={userName}
+            alt={username}
             className="min-w-10 rounded-full"
           />
         </button>
@@ -82,7 +82,7 @@ const ProfileDropDown = () => {
       >
         <div className="flex flex-col gap-4 px-1 py-2 min-w-[150px]">
           <Text size={TEXT_SIZE.md} className="font-bold">
-            {userName}
+            {username}
           </Text>
           <Button className="justify-start" variant="flat" onClick={onOpen}>
             Logout

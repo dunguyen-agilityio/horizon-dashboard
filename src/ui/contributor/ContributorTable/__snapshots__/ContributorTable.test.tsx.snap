@@ -210,7 +210,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               <p
                 class="text-primary dark:text-white text-small font-bold"
               >
-                Abstract Colors
+                Mesh Gradients
               </p>
             </td>
             <td
@@ -258,7 +258,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 class="text-primary dark:text-white text-small font-bold"
                 data-testid="table-cell-createdAt"
               >
-                Jan 13, 2024
+                Aug 17, 2024
               </p>
             </td>
           </tr>
@@ -319,7 +319,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               <p
                 class="text-primary dark:text-white text-small font-bold"
               >
-                Swipe Circles
+                Mesh Gradients
               </p>
             </td>
             <td
@@ -427,7 +427,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               <p
                 class="text-primary dark:text-white text-small font-bold"
               >
-                Colorful Heaven
+                Mesh Gradients
               </p>
             </td>
             <td
@@ -475,7 +475,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 class="text-primary dark:text-white text-small font-bold"
                 data-testid="table-cell-createdAt"
               >
-                Aug 11, 2024
+                Jan 13, 2024
               </p>
             </td>
           </tr>
@@ -536,7 +536,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               <p
                 class="text-primary dark:text-white text-small font-bold"
               >
-                3D Cubes Art
+                Mesh Gradients
               </p>
             </td>
             <td

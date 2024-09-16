@@ -1,3 +1,4 @@
+import { NFTData } from './NFT';
 import { User } from './User';
 
 export class Contributor extends User {
@@ -10,3 +11,7 @@ export class Contributor extends User {
     this.template = template;
   }
 }
+
+export type ContributorData = Omit<Contributor, 'nfts'> & {
+  nfts?: NFTData[];
+};

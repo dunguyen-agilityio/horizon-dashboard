@@ -11,10 +11,10 @@ import { ItemNotFound } from '@/components';
 import { PUBLIC_ROUTES } from '@/constants';
 
 // Models
-import { NFT } from '@/models/NFT';
+import { NFTData } from '@/models/NFT';
 
 interface INFTFavoriteProps {
-  listFavorites: NFT[];
+  listFavorites: NFTData[];
   pageSize: number;
   activePage: number;
 }

@@ -26,7 +26,7 @@ import { Pagination } from '@nextui-org/pagination';
 import { USER_IMAGE } from '@/constants/images';
 
 // Models
-import { Contributor } from '@/models/Contributor';
+import { Contributor, ContributorData } from '@/models/Contributor';
 
 // Types
 import { TColumn } from '@/types/common';
@@ -35,6 +35,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 // Utils
 import { formatShortDate } from '@/utils/format';
 import { compareDate, compareString } from '@/utils/compare';
+import { formatContributorData } from '@/utils/contributor';
 
 const columns: TColumn[] = [
   {
@@ -66,13 +67,15 @@ const visibleOnMobileByKey: Record<string, boolean> = columns.reduce(
 );
 
 interface ContributorTableProps {
-  data: Contributor[];
+  data: ContributorData[];
   pageCount: number;
   page: number;
 }
 
 const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
   const value = getKeyValue(item, columnKey);
+
+  if (value === undefined) return null;
 
   switch (columnKey) {
     case 'createdAt':
@@ -110,7 +113,7 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
               variant={TEXT_VARIANT.SECONDARY}
               className="lowercase"
               as="span"
-            >{`@${getKeyValue(item, 'userName')}`}</Text>
+            >{`@${getKeyValue(item, 'username')}`}</Text>
           </div>
         </div>
       );
@@ -148,10 +151,15 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
 
   const params = new URLSearchParams(searchParams);
 
-  const dataFormat = useMemo(
-    () => data.map((item) => new Contributor(item)),
-    [data],
-  );
+  const dataFormat = useMemo(() => {
+    let format: Contributor[] = [];
+
+    data.forEach((item) => {
+      format = [...format, ...formatContributorData(item)];
+    });
+
+    return format;
+  }, [data]);
 
   const handleSort = (descriptor: SortDescriptor) => {
     setDescriptor(descriptor);
@@ -159,8 +167,8 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
     const { column, direction } = descriptor;
 
     switch (column) {
-      case 'fullName':
       case 'template':
+      case 'fullName':
         if (direction === 'ascending') {
           return dataFormat.sort((a, b) => compareString(a[column], b[column]));
         }
@@ -252,10 +260,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
                   visibleOnMobileByKey[columnKey] ? '' : 'hidden sm:table-cell',
                 )}
               >
-                {formatContributor(
-                  new Contributor(item),
-                  columnKey as keyof Contributor,
-                )}
+                {formatContributor(item, columnKey as keyof Contributor)}
               </TableCell>
             )}
           </TableRow>

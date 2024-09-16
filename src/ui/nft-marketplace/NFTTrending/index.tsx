@@ -1,7 +1,7 @@
 'use client';
 
 // Models
-import { NFT } from '@/models/NFT';
+import { NFTData } from '@/models/NFT';
 
 // Components
 import NFTCard from '../NFTCard';
@@ -14,7 +14,7 @@ import useScroll from '@/hooks/useScroll';
 import { ArrowRight, ArrowLeft } from '@/icons';
 
 interface NFTTrendingProps {
-  trends: NFT[];
+  trends: NFTData[];
 }
 
 const NFTTrending = ({ trends }: NFTTrendingProps) => {

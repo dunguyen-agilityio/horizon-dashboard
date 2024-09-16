@@ -13,7 +13,7 @@ const { BACKGROUND } = PROFILE_IMAGES;
 
 interface IUserInfoProps {
   avatar?: string;
-  userName: string;
+  username: string;
   role: string;
   postsTotal?: number;
   followersCount?: number;
@@ -22,7 +22,7 @@ interface IUserInfoProps {
 
 const UserInfo = ({
   avatar,
-  userName,
+  username,
   role,
   postsTotal = 0,
   followersCount = 0,
@@ -52,7 +52,7 @@ const UserInfo = ({
     <div className="flex flex-col justify-center mt-14">
       <div className="">
         <Text className="text-[20px] text-center font-extrabold">
-          {userName}
+          {username}
         </Text>
         <Text
           size={TEXT_SIZE.sm}
