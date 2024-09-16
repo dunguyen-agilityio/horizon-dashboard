@@ -26,6 +26,6 @@ export const getColorByLabel = (label: LABEL): CHIP_COLOR => {
 
 export const getUpdatedAssignMembers = (selected: string[]) => {
   return selected
-    .map((userName) => MOCK_USERS.find((user) => user.userName === userName))
+    .map((username) => MOCK_USERS.find((user) => user.username === username))
     .filter((member) => member !== undefined);
 };
