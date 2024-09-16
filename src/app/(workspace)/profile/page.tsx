@@ -17,7 +17,7 @@ const ProfilePage = () => (
       <div className="col-span-12 2xl:col-span-4">
         <UserInfo
           role="Design NFT"
-          userName={MOCK_USERS[0].username}
+          userName={MOCK_USERS[0].userName}
           avatar={MOCK_USERS[1].avatar}
           followersCount={33}
           followingCount={90}
