@@ -17,7 +17,7 @@ const ProfilePage = () => (
       <div className="col-span-12 2xl:col-span-4">
         <UserInfo
           role="Design NFT"
-          userName={MOCK_USERS[0].userName}
+          userName={MOCK_USERS[0].username}
           avatar={MOCK_USERS[1].avatar}
           followersCount={33}
           followingCount={90}
@@ -33,7 +33,7 @@ const ProfilePage = () => (
     </div>
     <div className="grid grid-cols-12 grid-rows-1 gap-5">
       <div className="col-span-12 lg:col-span-12 xl:col-span-12 2xl:col-span-4">
-        <div className="flex h-full justify-center items-center">
+        <div className="flex h-full justify-center items-center xl:items-start">
           <PersonalProject />
         </div>
       </div>
