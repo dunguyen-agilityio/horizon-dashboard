@@ -7,7 +7,7 @@ import credentials from 'next-auth/providers/credentials';
 import { apiClient } from './services/api';
 
 // Types
-import { SignInResponse } from '@/types/auth';
+import { AuthResponse } from '@/types/auth';
 
 // Constants
 import { AUTH_ROUTES, API_TOKEN, PUBLIC_ROUTES, API_ENTITY } from './constants';
@@ -23,7 +23,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       authorize: async (credentials) => {
         const { identifier, password } = credentials;
 
-        const { data, error } = await apiClient.post<SignInResponse>(
+        const { data, error } = await apiClient.post<AuthResponse>(
           API_ENTITY.SIGN_IN,
           {
             body: { identifier, password },

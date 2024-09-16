@@ -3,7 +3,7 @@ export class User {
   firstName!: string;
   lastName?: string;
   email!: string;
-  userName!: string;
+  username!: string;
   avatar?: string;
   role!: string;
   createdAt!: Date;

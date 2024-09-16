@@ -11,7 +11,14 @@ import { API_ENTITY } from '@/constants/api';
 import { API_TOKEN, AUTH_ROUTES } from '@/constants';
 
 // Types
-import { ForgetResponse, SignInFormData, SignInResponse } from '@/types/auth';
+import {
+  ForgetResponse,
+  ResetPasswordPayload,
+  SignInFormData,
+  AuthResponse,
+  SignUpPayload,
+  SignUpResponse,
+} from '@/types/auth';
 
 // Services
 import { apiClient } from '@/services/api';
@@ -39,13 +46,15 @@ export const handleForgetPassword = async (email: string) =>
     body: { email },
   });
 
-export type ResetPasswordPayload = {
-  code: string;
-  password: string;
-  passwordConfirmation: string;
-};
-
 export const handleResetPassword = async (payload: ResetPasswordPayload) =>
-  await apiClient.post<SignInResponse>(API_ENTITY.RESET_PASSWORD, {
+  await apiClient.post<AuthResponse>(API_ENTITY.RESET_PASSWORD, {
     body: payload,
   });
+
+export const handleSignUp = async (payload: SignUpPayload) => {
+  const { data } = await apiClient.post<SignUpResponse>(API_ENTITY.SIGN_UP, {
+    body: payload,
+  });
+
+  return data!;
+};

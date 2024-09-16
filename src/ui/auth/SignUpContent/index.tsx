@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -9,7 +10,7 @@ import { Button, InputPassword, Text } from '@/components';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
-import type { SignUpFormData } from '@/types/auth';
+import type { SignUpFormData, SignUpPayload } from '@/types/auth';
 
 // Regex
 import { REGEX_EMAIL, REGEX_PASSWORD } from '@/constants/regex';
@@ -20,8 +21,14 @@ import { AUTH_ROUTES } from '@/constants';
 // Utils
 import { validateConfirmPassword } from '@/utils/validation';
 
+// Actions
+import { handleSignUp } from '@/actions/auth';
+
+// Hooks
+import useToast from '@/contexts/toast';
+
 const signUpFormInitValues: SignUpFormData = {
-  userName: '',
+  username: '',
   email: '',
   password: '',
   confirmPassword: '',
@@ -38,17 +45,33 @@ const SignUpContent = () => {
     values: signUpFormInitValues,
   });
 
+  const [isLoading, setIsLoading] = useState(false);
   const isDisabled = !isDirty;
   const passwordValue = watch('password');
 
   const { replace } = useRouter();
+  const { showToast } = useToast();
 
-  const handleSignUp = async () => {
+  const signUp = async ({ email, password, username }: SignUpPayload) => {
+    setIsLoading(true);
+    const { error } = await handleSignUp({ email, password, username });
+
+    if (error) {
+      showToast({
+        title: 'Failed',
+        message: error.message,
+        type: 'error',
+        timeOut: 3000,
+      });
+      setIsLoading(false);
+      return;
+    }
+
     replace(AUTH_ROUTES.SIGN_IN);
   };
 
   return (
-    <form onSubmit={handleSubmit(handleSignUp)}>
+    <form onSubmit={handleSubmit(signUp)} className="relative">
       <div className="pt-3 flex flex-col gap-6">
         <Controller
           name="email"
@@ -74,7 +97,7 @@ const SignUpContent = () => {
           )}
         />
         <Controller
-          name="userName"
+          name="username"
           control={control}
           rules={{
             required: 'This field is required',
@@ -135,14 +158,18 @@ const SignUpContent = () => {
       </div>
       <Button
         isDisabled={isDisabled}
+        isLoading={isLoading}
         className="bg-blue-450 dark:bg-purple-750 w-full py-7 mt-10"
         type="submit"
         data-testid="signup-btn"
       >
-        <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
-          Sign Up
-        </Text>
+        {!isLoading && (
+          <Text size={TEXT_SIZE.sm} className="text-white font-bold leading-4">
+            Sign Up
+          </Text>
+        )}
       </Button>
+      {isLoading && <div className="absolute inset-0" />}
     </form>
   );
 };
