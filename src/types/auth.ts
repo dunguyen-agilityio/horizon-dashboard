@@ -5,15 +5,16 @@ export interface SignInFormData {
   password: string;
 }
 
-export interface SignUpFormData extends Pick<SignInFormData, 'password'> {
-  userName: string;
-  email: string;
+export type SignUpFormData = SignUpPayload & {
   confirmPassword: string;
-}
+};
+
+export type SignUpPayload = Pick<SignInFormData, 'password'> &
+  Pick<User, 'username' | 'email'>;
 
 export type ForgetResponse = { ok: boolean };
 
-export type SignInResponse = {
+export type AuthResponse = {
   jwt: string;
   user: User;
 };
@@ -21,3 +22,21 @@ export type SignInResponse = {
 export type ResetPasswordFormData = {
   email: string;
 };
+
+export type ResetPasswordPayload = {
+  code: string;
+  password: string;
+  passwordConfirmation: string;
+};
+
+type SignUpErrorResponse = {
+  data: null;
+  error: { status: number; message: string };
+};
+
+type SignUpSuccessResponse = {
+  data: AuthResponse;
+  error: null;
+};
+
+export type SignUpResponse = SignUpSuccessResponse | SignUpErrorResponse;

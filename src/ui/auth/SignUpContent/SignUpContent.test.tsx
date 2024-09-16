@@ -1,17 +1,26 @@
-import { act, fireEvent, render, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@/utils/test-utils';
 
 // Components
 import SignUpContent from '@/ui/auth/SignUpContent';
+import { handleSignUp } from '@/actions/auth';
+import { useRouter } from 'next/navigation';
+import { AUTH_ROUTES } from '@/constants';
 
-const mockReplace = jest.fn();
+let mockReplace: jest.Mock;
 
-jest.mock('next/navigation', () => ({
-  useRouter: jest.fn().mockImplementation(() => ({
-    replace: mockReplace,
-  })),
+jest.mock('@/actions/auth', () => ({
+  handleSignUp: jest.fn(),
 }));
 
 describe('SignUpContent tests', () => {
+  beforeEach(() => {
+    mockReplace = jest.fn();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Should match snapshot', () => {
     const { container } = render(<SignUpContent />);
     expect(container).toMatchSnapshot();
@@ -97,11 +106,17 @@ describe('SignUpContent tests', () => {
     });
   });
 
-  it('signUp will triggered correctly when click Login Button', async () => {
+  it('signUp will triggered correctly when click Sign Up Button', async () => {
+    (handleSignUp as jest.Mock).mockResolvedValue({
+      error: null,
+    });
+    (useRouter as jest.Mock).mockImplementation(() => ({
+      replace: mockReplace,
+    }));
     const { getByLabelText, getByTestId } = render(<SignUpContent />);
 
     const mockEmail = 'goodemail@gmai.com';
-    const mockUserName = 'gooduser';
+    const mockUsername = 'gooduser';
     const mockPassword = 'goodPassw@rd123';
 
     act(() => {
@@ -110,7 +125,7 @@ describe('SignUpContent tests', () => {
       });
 
       fireEvent.change(getByLabelText('User name'), {
-        target: { value: mockUserName },
+        target: { value: mockUsername },
       });
 
       fireEvent.change(getByLabelText('Password'), {
@@ -124,6 +139,62 @@ describe('SignUpContent tests', () => {
 
     fireEvent.submit(getByTestId('signup-btn'));
 
-    // TODO: Will expect trigger signUp event when implement featute signUp
+    await waitFor(() => {
+      expect(handleSignUp).toHaveBeenNthCalledWith(
+        1,
+        expect.objectContaining({
+          email: mockEmail,
+          username: mockUsername,
+          password: mockPassword,
+        }),
+      );
+      expect(mockReplace).toHaveBeenNthCalledWith(1, AUTH_ROUTES.SIGN_IN);
+    });
+  });
+
+  it('signUp will triggered correctly when click Sign Up Button', async () => {
+    (handleSignUp as jest.Mock).mockResolvedValue({
+      error: new Error('Login Failed!'),
+    });
+    (useRouter as jest.Mock).mockImplementation(() => ({
+      replace: mockReplace,
+    }));
+    const { getByLabelText, getByTestId } = render(<SignUpContent />);
+
+    const mockEmail = 'goodemail@gmai.com';
+    const mockUsername = 'gooduser';
+    const mockPassword = 'goodPassw@rd123';
+
+    act(() => {
+      fireEvent.change(getByLabelText('Email'), {
+        target: { value: mockEmail },
+      });
+
+      fireEvent.change(getByLabelText('User name'), {
+        target: { value: mockUsername },
+      });
+
+      fireEvent.change(getByLabelText('Password'), {
+        target: { value: mockPassword },
+      });
+      fireEvent.change(getByLabelText('Confirm Password'), {
+        target: { value: mockPassword },
+      });
+      fireEvent.blur(getByLabelText('Confirm Password'));
+    });
+
+    fireEvent.submit(getByTestId('signup-btn'));
+
+    await waitFor(() => {
+      expect(handleSignUp).toHaveBeenNthCalledWith(
+        1,
+        expect.objectContaining({
+          email: mockEmail,
+          username: mockUsername,
+          password: mockPassword,
+        }),
+      );
+      expect(mockReplace).not.toHaveBeenCalled();
+    });
   });
 });

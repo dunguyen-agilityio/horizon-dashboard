@@ -27,7 +27,7 @@ const Toast = ({ title, message, type = 'info', onClose }: ToastProps) => (
     className={`fixed top-5 right-5 z-[1000] flex justify-between min-w-[300px] p-1
       rounded text-white text-lg transition-opacity duration-500 ease-in animate-slideDown ${typeStyles[type]}`}
   >
-    <div className="flex flex-col justify-between gap-0.5 px-3 py-1">
+    <div className="flex flex-col justify-between min-h-12 px-3 py-1">
       <Text className="font-bold leading-none text-white" as="h2">
         {title}
       </Text>
