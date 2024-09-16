@@ -67,7 +67,7 @@ const SummaryCard = ({
   return (
     <div
       className={cn(
-        'flex gap-[18px] items-center bg-white dark:bg-indigo p-3 md:p-5 flex-1 rounded-md lg:min-w-[248px] 2xl:min-w-40',
+        'flex gap-[18px] items-center bg-white dark:bg-indigo p-3 4xl:p-5 flex-1 rounded-md lg:min-w-[248px] 2xl:min-w-40',
         classes[variant],
       )}
     >
