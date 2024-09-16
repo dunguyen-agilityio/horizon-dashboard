@@ -1,3 +1,5 @@
+import { DateTimeParts } from '@/types/date';
+
 export const formatDateRelativeToNow = (date: Date) => {
   const currentDate = new Date();
 
@@ -35,3 +37,18 @@ export const formatShortDate = (date: Date) =>
     month: 'short',
     year: 'numeric',
   });
+
+export const convertToUTCString = (date: DateTimeParts | null) => {
+  if (!date) return null;
+  const localDate = new Date(
+    date.year,
+    date.month - 1,
+    date.day,
+    date.hour,
+    date.minute,
+    date.second,
+    date.millisecond,
+  );
+
+  return localDate.toISOString();
+};

@@ -19,16 +19,25 @@ import { Task as TaskModel } from '@/models/Task';
 import { getColorByLabel } from '@/utils/task';
 
 export const Task = ({
+  id,
+  status,
   title,
   description,
   labels,
   cover,
   assignees,
-}: Pick<
-  TaskModel,
-  'title' | 'description' | 'labels' | 'cover' | 'assignees'
->) => {
-  const { isOpen: isOpenModalEdit, onOpen, onOpenChange } = useDisclosure();
+  startedDate,
+  dueDate,
+}: TaskModel) => {
+  const {
+    isOpen: isOpenModalEdit,
+    onOpen,
+    onOpenChange,
+    onClose,
+  } = useDisclosure();
+
+  const validStartDate = startedDate ?? '';
+  const validDueDate = dueDate ?? '';
 
   return (
     <>
@@ -84,6 +93,11 @@ export const Task = ({
         assignMembers={assignees}
         description={description}
         onOpenChange={onOpenChange}
+        onClose={onClose}
+        id={id}
+        status={status}
+        startDateTask={validStartDate}
+        dueDateTask={validDueDate}
       />
     </>
   );

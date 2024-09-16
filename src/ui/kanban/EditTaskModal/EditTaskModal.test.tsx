@@ -1,17 +1,11 @@
-import { render } from '@testing-library/react';
+import { render } from '@/utils/test-utils';
 
 // Components
 import EditTaskModal from '.';
 
-// Models
-import { LABEL } from '@/models/Task';
-
 // Mocks
 import { MOCK_USERS } from '@/mocks/user';
-
-const titleModal = 'Option to use local/server version feature';
-const descriptionModal =
-  "It usually displays this message when you close an unsaved page when you do it on purpose, and it's getting frustrated to see this every time.";
+import { MOCK_TASKS } from '@/mocks/task';
 
 const onOpenChangeMock = jest.fn();
 
@@ -20,11 +14,16 @@ describe('EditTaskModal tests', () => {
     const { container } = render(
       <EditTaskModal
         isOpen={true}
-        title={titleModal}
-        labels={[LABEL.DONE]}
-        description={descriptionModal}
+        title={MOCK_TASKS[0].title}
+        labels={MOCK_TASKS[0].labels}
+        description={MOCK_TASKS[0].description}
         onOpenChange={onOpenChangeMock}
         assignMembers={MOCK_USERS}
+        id={MOCK_TASKS[0].id}
+        status={MOCK_TASKS[0].status}
+        startDateTask={''}
+        dueDateTask={''}
+        onClose={() => {}}
       />,
     );
     expect(container).toMatchSnapshot();
@@ -34,14 +33,18 @@ describe('EditTaskModal tests', () => {
     const { getByText } = render(
       <EditTaskModal
         isOpen
-        title={titleModal}
-        labels={[LABEL.DONE]}
-        description={descriptionModal}
+        title={MOCK_TASKS[0].title}
+        labels={MOCK_TASKS[0].labels}
+        description={MOCK_TASKS[0].description}
         onOpenChange={onOpenChangeMock}
         assignMembers={MOCK_USERS}
+        id={MOCK_TASKS[0].id}
+        status={MOCK_TASKS[0].status}
+        startDateTask={''}
+        dueDateTask={''}
+        onClose={() => {}}
       />,
     );
-    expect(getByText(titleModal)).toBeInTheDocument();
-    expect(getByText(descriptionModal)).toBeInTheDocument();
+    expect(getByText(MOCK_TASKS[0].description)).toBeInTheDocument();
   });
 });
