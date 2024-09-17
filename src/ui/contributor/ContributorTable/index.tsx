@@ -2,7 +2,7 @@
 
 // Libs
 import { cn } from '@nextui-org/theme';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Components
@@ -16,9 +16,8 @@ import {
   getKeyValue,
   SortDescriptor,
 } from '@nextui-org/table';
-import { Avatar } from '@nextui-org/avatar';
 import { Text } from '@/components';
-import { Spinner } from '@nextui-org/spinner';
+import { Avatar } from '@nextui-org/avatar';
 import { Progress } from '@nextui-org/progress';
 import { Pagination } from '@nextui-org/pagination';
 
@@ -26,37 +25,17 @@ import { Pagination } from '@nextui-org/pagination';
 import { Contributor, ContributorData } from '@/models/Contributor';
 
 // Types
-import { TColumn } from '@/types/common';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
+
+// Constants
+import { CONTRIBUTOR_COLUMN } from '@/constants/tableColumns';
 
 // Utils
 import { formatShortDate } from '@/utils/format';
 import { formatContributorData } from '@/utils/contributor';
 import { compareDate, compareString, compareNumber } from '@/utils/compare';
 
-const columns: TColumn[] = [
-  {
-    key: 'fullName',
-    label: 'Name',
-    allowsSorting: true,
-    visibleOnMobile: true,
-  },
-  {
-    key: 'template',
-    label: 'Template',
-    allowsSorting: true,
-    visibleOnMobile: true,
-  },
-  { key: 'createdAt', label: 'Date', allowsSorting: true },
-  {
-    key: 'rating',
-    label: 'Rating',
-    visibleOnMobile: true,
-    allowsSorting: true,
-  },
-];
-
-const visibleOnMobileByKey: Record<string, boolean> = columns.reduce(
+const visibleOnMobileByKey: Record<string, boolean> = CONTRIBUTOR_COLUMN.reduce(
   (prev, { key, visibleOnMobile = false }) => ({
     ...prev,
     [key]: visibleOnMobile,
@@ -138,7 +117,6 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
 
 const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
   const [descriptor, setDescriptor] = useState<SortDescriptor>();
-  const [isLoading, setIsLoading] = useState(false);
 
   const { push } = useRouter();
   const searchParams = useSearchParams();
@@ -169,6 +147,13 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
           );
         return dataFormat.sort((a, b) => compareString(b.fullName, a.fullName));
 
+      case 'template':
+        if (direction === 'ascending')
+          return dataFormat.sort((a, b) =>
+            compareString(a.template, b.template),
+          );
+        return dataFormat.sort((a, b) => compareString(b.template, a.template));
+
       case 'rating':
         if (direction === 'ascending')
           return dataFormat.sort((a, b) => compareNumber(a.rating, b.rating));
@@ -187,14 +172,9 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
   };
 
   const handleChangePage = (page: number) => {
-    setIsLoading(true);
     params.set('page', String(page));
     push(`${pathname}?${params.toString()}`);
   };
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, [page]);
 
   return (
     <Table
@@ -223,32 +203,29 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
       }}
     >
       <TableHeader>
-        {columns.map(({ key, label, allowsSorting, visibleOnMobile }) => (
-          <TableColumn
-            key={key}
-            data-testid={`table-header-${key}`}
-            allowsSorting={allowsSorting}
-            className={cn(
-              'bg-transparent pb-2 pl-4',
-              visibleOnMobile ? '' : 'hidden sm:table-cell',
-            )}
-          >
-            <Text
-              variant={TEXT_VARIANT.SECONDARY}
-              as="span"
-              size={TEXT_SIZE.sm}
+        {CONTRIBUTOR_COLUMN.map(
+          ({ key, label, allowsSorting, visibleOnMobile }) => (
+            <TableColumn
+              key={key}
+              data-testid={`table-header-${key}`}
+              allowsSorting={allowsSorting}
+              className={cn(
+                'bg-transparent pb-2 pl-4',
+                visibleOnMobile ? '' : 'hidden sm:table-cell',
+              )}
             >
-              {label}
-            </Text>
-          </TableColumn>
-        ))}
+              <Text
+                variant={TEXT_VARIANT.SECONDARY}
+                as="span"
+                size={TEXT_SIZE.sm}
+              >
+                {label}
+              </Text>
+            </TableColumn>
+          ),
+        )}
       </TableHeader>
-      <TableBody
-        items={dataFormat}
-        isLoading={isLoading}
-        loadingContent={<Spinner label="Loading..." color="primary" />}
-        emptyContent="No Contributors to display."
-      >
+      <TableBody items={dataFormat} emptyContent="No Contributors to display.">
         {(item) => (
           <TableRow key={item.id}>
             {(columnKey) => (
