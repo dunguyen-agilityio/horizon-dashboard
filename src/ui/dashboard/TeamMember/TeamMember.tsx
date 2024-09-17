@@ -19,7 +19,7 @@ interface TeamMemberProps {
 }
 
 const TeamMember = ({ members }: TeamMemberProps) => (
-  <div className="w-full h-full bg-white dark:bg-indigo rounded-md pt-5 px-6 pb-[26px] sm:w-card md:w-auto flex flex-col gap-5">
+  <div className="w-full h-full bg-white dark:bg-indigo rounded-md pt-5 px-2 sm:px-6 pb-[26px] sm:w-card md:w-auto flex flex-col gap-5">
     <div className="flex justify-between items-center h-8">
       <Text as="h2" className="text-lg leading-xl font-bold">
         Team Members
@@ -35,7 +35,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
     </div>
     <Listbox
       items={members}
-      classNames={{ list: 'gap-4', base: 'flex-1 px-4' }}
+      classNames={{ list: 'gap-4', base: 'flex-1 px-0 sm:px-4' }}
     >
       {(item) => {
         const { id, fullName, avatar, role } = formatUser(item);

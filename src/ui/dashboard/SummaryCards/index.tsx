@@ -72,8 +72,6 @@ const SummaryCardContainer = async () => {
     API_ENTITY.FINANCIAL_REPORT,
   );
 
-  await new Promise((res) => setTimeout(res, 3000));
-
   if (error !== null)
     return (
       <ErrorFallback

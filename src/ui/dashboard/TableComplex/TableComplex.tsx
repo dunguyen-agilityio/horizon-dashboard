@@ -33,6 +33,7 @@ const columnsByKey: Record<string, TColumn> = {
   status: {
     key: 'status',
     label: 'STATUS',
+    visibleOnMobile: false,
   },
   createdAt: {
     key: 'createdAt',
@@ -42,7 +43,6 @@ const columnsByKey: Record<string, TColumn> = {
   progress: {
     key: 'progress',
     label: 'PROGRESS',
-    visibleOnMobile: false,
   },
 };
 
@@ -56,7 +56,7 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
   const value = getKeyValue(row, key);
 
   const renderStatus = () => {
-    switch (value as ComplexStatus) {
+    switch (getKeyValue(row, 'status') as ComplexStatus) {
       case ComplexStatus.APPROVED:
         return <Check />;
 
@@ -93,32 +93,38 @@ const formatDataCheck = (row: Complex, key: keyof Complex) => {
 
     case 'progress':
       return (
-        <>
-          <Text className="block md:hidden bg-transparent">{value}%</Text>
-          <Progress
-            aria-label="Loading..."
-            value={value}
-            className="hidden md:block max-w-md"
-          />
-        </>
+        <div className="flex flex-col items-end sm:items-start">
+          <div className="w-full">
+            <Text
+              as="span"
+              className="text-end sm:text-center block md:hidden !text-success !bg-transparent"
+              size={TEXT_SIZE.sm}
+            >
+              {value}%
+            </Text>
+            <Progress
+              aria-label="Loading..."
+              value={value}
+              className="hidden md:block max-w-md"
+            />
+          </div>
+
+          <div className="flex md:hidden items-center gap-[5px]">
+            {renderStatus()}
+            <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+              {getKeyValue(row, 'status')}
+            </Text>
+          </div>
+        </div>
       );
 
     case 'status':
       return (
-        <div className="flex flex-col items-end sm:items-start">
-          <Text
-            as="span"
-            className="block md:hidden !text-success !bg-transparent"
-            size={TEXT_SIZE.sm}
-          >
-            {getKeyValue(row, 'progress')}%
+        <div className="flex items-center gap-[5px]">
+          {renderStatus()}
+          <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
+            {value}
           </Text>
-          <div className="flex items-center gap-[5px]">
-            {renderStatus()}
-            <Text as="span" size={TEXT_SIZE.sm} className="bg-transparent">
-              {value}
-            </Text>
-          </div>
         </div>
       );
 
@@ -139,14 +145,15 @@ const TableComplex = ({ data }: TableComplexProps) => (
     <Table
       aria-label="Rows actions table example with dynamic content"
       classNames={{
+        table: 'first:[&_*:is(th,td)]:pl-0 last:[&_*:is(th,td)]:pr-0',
         thead: 'hidden sm:table-header-group',
         tbody: '[&_span]:!font-bold',
       }}
-      className="mt-4 sm:mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo first:[&_*:is(th,td)]:pr-0 [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
+      className="mt-4 sm:mt-6 [&_*:not(div,span,svg,label)]:bg-white [&_*:not(div,span,svg,label)]:dark:bg-indigo [&>div]:p-0 [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-2 [&>div]:overflow-visible"
     >
       <TableHeader columns={columns}>
         {({ key, label }) => (
-          <TableColumn key={key} className={key === 'name' ? 'pl-0' : ''}>
+          <TableColumn key={key}>
             <Text variant={TEXT_VARIANT.SECONDARY} size={TEXT_SIZE.sm}>
               {label}
             </Text>
@@ -162,7 +169,6 @@ const TableComplex = ({ data }: TableComplexProps) => (
               return (
                 <TableCell
                   className={cn(
-                    columnKey === 'name' ? 'pl-0' : '',
                     visibleOnMobile ? '' : 'hidden sm:table-cell',
                     'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
                   )}
