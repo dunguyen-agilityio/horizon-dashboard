@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import TableComplex from '.';
+import TableComplex from './TableComplex';
 
 import { MOCK_COMPLEXES } from '@/mocks/complex';
 

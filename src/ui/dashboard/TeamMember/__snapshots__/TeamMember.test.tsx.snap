@@ -87,7 +87,9 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               >
                 <span
                   class="text-inherit text-medium font-bold"
-                />
+                >
+                  User 1
+                </span>
                 <span
                   class="text-tiny font-medium text-secondary"
                 >
@@ -163,7 +165,9 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               >
                 <span
                   class="text-inherit text-medium font-bold"
-                />
+                >
+                  User 2
+                </span>
                 <span
                   class="text-tiny font-medium text-secondary"
                 >
@@ -239,7 +243,9 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               >
                 <span
                   class="text-inherit text-medium font-bold"
-                />
+                >
+                  User 3
+                </span>
                 <span
                   class="text-tiny font-medium text-secondary"
                 >
@@ -315,7 +321,9 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               >
                 <span
                   class="text-inherit text-medium font-bold"
-                />
+                >
+                  User 4
+                </span>
                 <span
                   class="text-tiny font-medium text-secondary"
                 >

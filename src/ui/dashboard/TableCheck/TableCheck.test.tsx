@@ -1,5 +1,7 @@
 import { render } from '@testing-library/react';
-import TableCheck from '.';
+
+import TableCheck from './TableCheck';
+
 import { MOCK_CHECKS } from '@/mocks/check';
 
 describe('TableCheck tests', () => {
