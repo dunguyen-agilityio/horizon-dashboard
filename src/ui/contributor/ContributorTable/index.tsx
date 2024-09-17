@@ -227,7 +227,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
       </TableHeader>
       <TableBody items={dataFormat} emptyContent="No Contributors to display.">
         {(item) => (
-          <TableRow key={item.id}>
+          <TableRow key={item.id} className="hover:bg-default-200">
             {(columnKey) => (
               <TableCell
                 className={cn(
