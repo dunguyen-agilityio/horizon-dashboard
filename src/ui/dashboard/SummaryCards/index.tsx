@@ -78,7 +78,7 @@ const SummaryCardContainer = async () => {
     return (
       <ErrorFallback
         message={error}
-        className="h-[600px] xs:h-[343px] sm:h-[222px] 2xl:h-[77px]"
+        className="h-[600px] xs:h-[343px] sm:h-[222px] 2xl:h-[117px]"
       />
     );
 

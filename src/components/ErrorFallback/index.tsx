@@ -30,7 +30,9 @@ const ErrorFallback = ({
     >
       {title}
     </Text>
-    <Text className="text-sm dark:text-white text-indigo-dark">{message}</Text>
+    <Text className="text-medium dark:text-white text-indigo-dark">
+      {message}
+    </Text>
   </div>
 );
 
