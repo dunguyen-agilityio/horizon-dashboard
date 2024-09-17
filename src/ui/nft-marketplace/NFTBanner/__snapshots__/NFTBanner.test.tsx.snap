@@ -3,7 +3,7 @@
 exports[`NFTBanner tests Should match snapshot 1`] = `
 <div>
   <div
-    class="relative h-[420px] rounded-md bg-blue-450 dark:bg-purple-750"
+    class="relative h-[420px] rounded-md bg-blue-450 dark:bg-purple-750 overflow-hidden"
   >
     <div
       class="absolute right-0 h-[350px] w-full max-w-[1090px]"
