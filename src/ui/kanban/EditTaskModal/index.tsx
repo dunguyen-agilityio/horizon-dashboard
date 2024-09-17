@@ -26,6 +26,7 @@ import { useTask } from '@/hooks/useTask';
 
 // Types
 import { DateTimeParts } from '@/types/date';
+import { TEXT_SIZE } from '@/types/text';
 
 // Models
 import { LABEL, STATUS } from '@/models/Task';
@@ -60,18 +61,26 @@ const labelValues = [
   { value: 'Updates' },
 ];
 
+const statusValues = [
+  { value: 'backlog' },
+  { value: 'in-progress' },
+  { value: 'done' },
+];
+
 const selectStyle = {
   base: 'bg-white dark:bg-indigo',
-  label: 'group-data-[filled=true]:text-secondary',
+  label:
+    'group-data-[filled=true]:dark:text-white group-data-[filled=true]:text-primary',
   listbox: 'text-primary dark:text-secondary',
   value:
-    'group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white',
+    'group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white capitalize',
   listboxWrapper: 'bg-white dark:bg-indigo',
   popoverContent: 'bg-white dark:bg-indigo',
 };
 
 interface IEditTaskProps {
   title: string;
+  status: STATUS[];
   description: string;
   selectedMembers: string[];
   selectedLabels: LABEL[];
@@ -95,13 +104,22 @@ export const EditTaskModal = ({
   const initialValue = useMemo(
     () => ({
       title: title || '',
+      status: [status],
       description: description || '',
       startDate: startDateTask ? parseAbsoluteToLocal(startDateTask) : null,
       dueDate: dueDateTask ? parseAbsoluteToLocal(dueDateTask) : null,
       selectedLabels: labels.map((label) => label),
       selectedMembers: assignMembers.map(({ username }) => username),
     }),
-    [title, description, startDateTask, dueDateTask, labels, assignMembers],
+    [
+      title,
+      description,
+      startDateTask,
+      dueDateTask,
+      labels,
+      assignMembers,
+      status,
+    ],
   );
 
   const { control, handleSubmit, reset, formState } = useForm({
@@ -122,6 +140,14 @@ export const EditTaskModal = ({
     onChange(selected);
   };
 
+  const handleStatusChange = (
+    keys: SharedSelection,
+    onChange: (value: STATUS[]) => void,
+  ) => {
+    const selected = Array.from(keys).map((key) => key as STATUS);
+    onChange(selected);
+  };
+
   const handleMembersChange = (
     keys: SharedSelection,
     onChange: (value: string[]) => void,
@@ -130,11 +156,12 @@ export const EditTaskModal = ({
     onChange(selected);
   };
 
-  const { updateTask } = useTask(status);
+  const { updateTask, removeTask } = useTask(status);
 
   const onSubmit = async (editTask: IEditTaskProps) => {
     const {
       title,
+      status,
       description,
       selectedLabels,
       startDate,
@@ -148,12 +175,18 @@ export const EditTaskModal = ({
     await updateTask(
       id,
       title,
+      status[0],
       description,
       selectedLabels,
       updatedAssignMembers,
       convertToUTCString(startDate),
       convertToUTCString(dueDate),
     );
+    onClose();
+  };
+
+  const handleDelete = () => {
+    removeTask(id);
     onClose();
   };
 
@@ -164,7 +197,7 @@ export const EditTaskModal = ({
       onOpenChange={onOpenChange}
       placement="center"
       classNames={{
-        base: 'bg-white dark:bg-indigo p-4 min-h-[480px] m-2',
+        base: 'bg-white dark:bg-indigo pt-4 pb-4 min-h-[480px] m-2',
         closeButton: 'm-3 p-3',
       }}
     >
@@ -190,7 +223,7 @@ export const EditTaskModal = ({
             />
           </ModalHeader>
           <ModalBody>
-            <div className="flex flex-col justify-between lg:flex-row gap-4">
+            <div className="flex flex-col justify-between lg:flex-row gap-4 px-3">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-2">
                   <Text className="font-bold">Description</Text>
@@ -215,75 +248,115 @@ export const EditTaskModal = ({
                   )}
                 />
               </div>
-              <div className="flex flex-row flex-wrap md:flex-nowrap md:flex-col lg:flex-col gap-2 items-center justify-center min-w-[250px]">
-                <Controller
-                  name="selectedLabels"
-                  control={control}
-                  render={({ field }) => (
-                    <Select
-                      aria-label="select-label"
-                      label="Label"
-                      selectedKeys={field.value}
-                      onSelectionChange={(key: SharedSelection) =>
-                        handleLabelChange(key, field.onChange)
-                      }
-                      classNames={selectStyle}
-                    >
-                      {labelValues.map((label) => (
-                        <SelectItem key={label.value}>{label.value}</SelectItem>
-                      ))}
-                    </Select>
-                  )}
-                />
-                <Controller
-                  name="selectedMembers"
-                  control={control}
-                  render={({ field }) => (
-                    <Select
-                      aria-label="select-members"
-                      label="Assign members"
-                      selectionMode="multiple"
-                      selectedKeys={field.value}
-                      onSelectionChange={(key: SharedSelection) =>
-                        handleMembersChange(key, field.onChange)
-                      }
-                      classNames={selectStyle}
-                    >
-                      {MOCK_USERS.map(({ username }) => (
-                        <SelectItem key={username}>{username}</SelectItem>
-                      ))}
-                    </Select>
-                  )}
-                />
-                <Controller
-                  name="startDate"
-                  control={control}
-                  render={({ field }) => (
-                    <DatePicker
-                      aria-label="start-date-picker"
-                      label="Start date"
-                      hideTimeZone
-                      granularity="second"
-                      showMonthAndYearPickers
-                      value={field.value}
-                      onChange={field.onChange}
-                    />
-                  )}
-                />
-                <Controller
-                  name="dueDate"
-                  control={control}
-                  render={({ field }) => (
-                    <DatePicker
-                      aria-label="due-date-picker"
-                      label="Due date"
-                      granularity="second"
-                      showMonthAndYearPickers
-                      value={field.value}
-                      onChange={field.onChange}
-                    />
-                  )}
-                />
+              <div>
+                <div className="flex flex-row flex-wrap md:flex-nowrap md:flex-col lg:flex-col gap-2 md:justify-center min-w-[250px]">
+                  <Text size={TEXT_SIZE.md} className="font-bold pb-1">
+                    Add to card
+                  </Text>
+                  <Controller
+                    name="status"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        aria-label="select-status"
+                        label="Status"
+                        defaultSelectedKeys={field.value}
+                        selectedKeys={field.value}
+                        onSelectionChange={(key: SharedSelection) =>
+                          handleStatusChange(key, field.onChange)
+                        }
+                        classNames={selectStyle}
+                      >
+                        {statusValues.map((status) => (
+                          <SelectItem key={status.value} className="capitalize">
+                            {status.value}
+                          </SelectItem>
+                        ))}
+                      </Select>
+                    )}
+                  />
+                  <Controller
+                    name="selectedLabels"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        aria-label="select-label"
+                        label="Label"
+                        selectedKeys={field.value}
+                        onSelectionChange={(key: SharedSelection) =>
+                          handleLabelChange(key, field.onChange)
+                        }
+                        classNames={selectStyle}
+                      >
+                        {labelValues.map((label) => (
+                          <SelectItem key={label.value}>
+                            {label.value}
+                          </SelectItem>
+                        ))}
+                      </Select>
+                    )}
+                  />
+                  <Controller
+                    name="selectedMembers"
+                    control={control}
+                    render={({ field }) => (
+                      <Select
+                        aria-label="select-members"
+                        label="Assign members"
+                        selectionMode="multiple"
+                        selectedKeys={field.value}
+                        onSelectionChange={(key: SharedSelection) =>
+                          handleMembersChange(key, field.onChange)
+                        }
+                        classNames={selectStyle}
+                      >
+                        {MOCK_USERS.map(({ username }) => (
+                          <SelectItem key={username}>{username}</SelectItem>
+                        ))}
+                      </Select>
+                    )}
+                  />
+                  <Controller
+                    name="startDate"
+                    control={control}
+                    render={({ field }) => (
+                      <DatePicker
+                        aria-label="start-date-picker"
+                        label="Start date"
+                        hideTimeZone
+                        showMonthAndYearPickers
+                        value={field.value}
+                        onChange={field.onChange}
+                      />
+                    )}
+                  />
+                  <Controller
+                    name="dueDate"
+                    control={control}
+                    render={({ field }) => (
+                      <DatePicker
+                        aria-label="due-date-picker"
+                        label="Due date"
+                        showMonthAndYearPickers
+                        hideTimeZone
+                        value={field.value}
+                        onChange={field.onChange}
+                      />
+                    )}
+                  />
+                </div>
+
+                <div className="flex flex-col mt-4">
+                  <Text size={TEXT_SIZE.md} className="font-bold pb-2">
+                    Actions
+                  </Text>
+                  <Button
+                    onClick={handleDelete}
+                    className="w-full justify-start bg-red-750 text-white pl-3 pr-3"
+                  >
+                    Remove task
+                  </Button>
+                </div>
               </div>
             </div>
           </ModalBody>
@@ -291,7 +364,7 @@ export const EditTaskModal = ({
             <Button
               color="primary"
               type="submit"
-              isDisabled={!formState.isValid}
+              isDisabled={!formState.isDirty}
             >
               Update
             </Button>

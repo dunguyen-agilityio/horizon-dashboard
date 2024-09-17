@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import useToast from '@/contexts/toast';
 
 // Models
-import { LABEL, Task } from '@/models/Task';
+import { LABEL, STATUS, Task } from '@/models/Task';
 import { type TaskFormData } from '@/types/task';
 import { User } from '@/models/User';
 
@@ -14,6 +14,8 @@ import {
   ADD_TASK_ERROR,
   UPDATE_TASK_SUCCESS,
   UPDATE_TASK_ERROR,
+  REMOVE_TASK_SUCCESS,
+  REMOVE_TASK_ERROR,
 } from '@/mocks/toast';
 
 // Firebase
@@ -26,6 +28,7 @@ import {
   addDoc,
   doc,
   updateDoc,
+  deleteDoc,
 } from '@/config/firebaseConfig';
 
 export const getTasksInRealTime = (
@@ -74,6 +77,7 @@ export const useTask = (status: string) => {
   const updateTask = async (
     taskId: string,
     title: string,
+    status: STATUS,
     description: string,
     labels: LABEL[],
     assignMembers: User[],
@@ -84,6 +88,7 @@ export const useTask = (status: string) => {
       const taskDocRef = doc(fireStore, 'tasks', taskId);
       await updateDoc(taskDocRef, {
         title,
+        status,
         description,
         labels,
         assignees: assignMembers,
@@ -96,5 +101,15 @@ export const useTask = (status: string) => {
     }
   };
 
-  return { tasks, isLoading, addTask, updateTask };
+  const removeTask = async (taskId: string) => {
+    try {
+      const taskRef = doc(fireStore, 'tasks', taskId);
+      await deleteDoc(taskRef);
+      showToast(REMOVE_TASK_SUCCESS);
+    } catch (error) {
+      showToast(REMOVE_TASK_ERROR);
+    }
+  };
+
+  return { tasks, isLoading, addTask, updateTask, removeTask };
 };

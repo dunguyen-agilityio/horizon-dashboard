@@ -27,3 +27,17 @@ export const UPDATE_TASK_ERROR = {
   type: TOAST.ERROR,
   timeOut: 3000,
 };
+
+export const REMOVE_TASK_SUCCESS = {
+  title: 'Success',
+  message: 'The task has been successfully removed.',
+  type: TOAST.SUCCESS,
+  timeOut: 3000,
+};
+
+export const REMOVE_TASK_ERROR = {
+  title: 'Error',
+  message: 'The task has failed to remove.',
+  type: TOAST.ERROR,
+  timeOut: 3000,
+};
