@@ -24,3 +24,6 @@ export { default as User } from './User';
 export { default as USDMoney } from './Money';
 export { default as AddCheck } from './AddCheck';
 export { default as Copy } from './Copy';
+export { default as Info } from './Info';
+export { default as Error } from './Error';
+export { default as Check } from './Check';

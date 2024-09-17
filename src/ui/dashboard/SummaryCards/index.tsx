@@ -1,9 +1,13 @@
 // Components
+import { API_ENTITY } from '@/constants';
 import SummaryCard from '../SummaryCard';
-import { BoxIcon, SelectFlag } from '@/components';
+import { BoxIcon, SelectFlag, ErrorFallback } from '@/components';
 
 // Icons
 import { Chart, USDMoney, AddCheck, Copy } from '@/icons';
+
+// Services
+import { apiClient } from '@/services/api';
 
 // Types
 import { Earning } from '@/types/earning';
@@ -63,4 +67,24 @@ const SummaryCards = ({
   </div>
 );
 
-export default SummaryCards;
+const SummaryCardContainer = async () => {
+  const { data, error } = await apiClient.get<Earning>(
+    API_ENTITY.FINANCIAL_REPORT,
+  );
+
+  await new Promise((res) => setTimeout(res, 3000));
+
+  if (error !== null)
+    return (
+      <ErrorFallback
+        message={error}
+        className="h-[600px] xs:h-[343px] sm:h-[222px] 2xl:h-[77px]"
+      />
+    );
+
+  return <SummaryCards {...data} />;
+};
+
+export default SummaryCardContainer;
+
+export { default as SummaryCardSkeleton } from './SummaryCardSkeleton';

@@ -20,8 +20,13 @@ export class User {
   }
 
   get fullName() {
-    return `${this.firstName} ${this.lastName}`.trim();
+    return `${this.firstName} ${this.lastName ?? ''}`.trim();
   }
 }
 
 export type TUser = Omit<User, 'fullName'>;
+
+export type UserResponse = Omit<TUser, 'avatar' | 'role'> & {
+  avatar: { url: string };
+  role: { name: string };
+};
