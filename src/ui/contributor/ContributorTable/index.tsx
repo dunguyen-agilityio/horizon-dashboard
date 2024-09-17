@@ -16,14 +16,11 @@ import {
   getKeyValue,
   SortDescriptor,
 } from '@nextui-org/table';
-import Image from 'next/image';
+import { Avatar } from '@nextui-org/avatar';
 import { Text } from '@/components';
 import { Spinner } from '@nextui-org/spinner';
 import { Progress } from '@nextui-org/progress';
 import { Pagination } from '@nextui-org/pagination';
-
-// Constants
-import { USER_IMAGE } from '@/constants/images';
 
 // Models
 import { Contributor, ContributorData } from '@/models/Contributor';
@@ -34,8 +31,8 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Utils
 import { formatShortDate } from '@/utils/format';
-import { compareDate, compareString } from '@/utils/compare';
 import { formatContributorData } from '@/utils/contributor';
+import { compareDate, compareString, compareNumber } from '@/utils/compare';
 
 const columns: TColumn[] = [
   {
@@ -50,12 +47,13 @@ const columns: TColumn[] = [
     allowsSorting: true,
     visibleOnMobile: true,
   },
+  { key: 'createdAt', label: 'Date', allowsSorting: true },
   {
     key: 'rating',
     label: 'Rating',
     visibleOnMobile: true,
+    allowsSorting: true,
   },
-  { key: 'createdAt', label: 'Date', allowsSorting: true },
 ];
 
 const visibleOnMobileByKey: Record<string, boolean> = columns.reduce(
@@ -78,6 +76,39 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
   if (value === undefined) return null;
 
   switch (columnKey) {
+    case 'template':
+      return (
+        <Text size={TEXT_SIZE.sm} className="font-bold">
+          {value}
+        </Text>
+      );
+
+    case 'fullName':
+      return (
+        <div className="flex items-center gap-2">
+          <Avatar
+            src={getKeyValue(item, 'avatar')}
+            alt={value}
+            size="sm"
+            className="rounded-full hidden xs:block"
+          />
+          <div className="flex flex-col">
+            <Text
+              as="b"
+              className="font-bold text-sm min-w-[100px] xs:min-w-full"
+              data-testid="table-cell-fullName"
+            >
+              {value}
+            </Text>
+            <Text
+              variant={TEXT_VARIANT.SECONDARY}
+              className="lowercase text-sm hidden xs:inline-block"
+              as="span"
+            >{`@${getKeyValue(item, 'username')}`}</Text>
+          </div>
+        </div>
+      );
+
     case 'createdAt':
       return (
         <Text
@@ -89,36 +120,7 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
         </Text>
       );
 
-    case 'fullName':
-      return (
-        <div className="flex items-center gap-2">
-          <Image
-            src={getKeyValue(item, 'avatar') || USER_IMAGE.DEFAULT}
-            alt={value}
-            width={30}
-            height={30}
-            className="rounded-xl"
-          />
-          <div className="flex flex-col">
-            <Text
-              size={TEXT_SIZE.sm}
-              as="b"
-              className="font-bold"
-              data-testid="table-cell-fullName"
-            >
-              {value}
-            </Text>
-            <Text
-              size={TEXT_SIZE.xs}
-              variant={TEXT_VARIANT.SECONDARY}
-              className="lowercase"
-              as="span"
-            >{`@${getKeyValue(item, 'username')}`}</Text>
-          </div>
-        </div>
-      );
-
-    case 'rating':
+    default:
       return (
         <Progress
           aria-label="Rating"
@@ -130,13 +132,6 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
             base: 'max-w-[200px]',
           }}
         />
-      );
-
-    default:
-      return (
-        <Text size={TEXT_SIZE.sm} className="font-bold">
-          {value}
-        </Text>
       );
   }
 };
@@ -167,13 +162,17 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
     const { column, direction } = descriptor;
 
     switch (column) {
-      case 'template':
       case 'fullName':
-        if (direction === 'ascending') {
-          return dataFormat.sort((a, b) => compareString(a[column], b[column]));
-        }
+        if (direction === 'ascending')
+          return dataFormat.sort((a, b) =>
+            compareString(a.fullName, b.fullName),
+          );
+        return dataFormat.sort((a, b) => compareString(b.fullName, a.fullName));
 
-        return dataFormat.sort((a, b) => compareString(b[column], a[column]));
+      case 'rating':
+        if (direction === 'ascending')
+          return dataFormat.sort((a, b) => compareNumber(a.rating, b.rating));
+        return dataFormat.sort((a, b) => compareNumber(b.rating, a.rating));
 
       case 'createdAt':
         if (direction === 'ascending')
@@ -187,24 +186,23 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
     }
   };
 
+  const handleChangePage = (page: number) => {
+    setIsLoading(true);
+    params.set('page', String(page));
+    push(`${pathname}?${params.toString()}`);
+  };
+
   useEffect(() => {
     setIsLoading(false);
   }, [page]);
 
-  const handleChangePage = (page: number) => {
-    setIsLoading(true);
-    if (page === 1) params.delete('page');
-    else params.set('page', String(page));
-    push(`${pathname}?${params.toString()}`);
-  };
-
   return (
     <Table
-      aria-label="Example table with client side sorting"
+      aria-label="contributors table"
       sortDescriptor={descriptor}
       onSortChange={handleSort}
       bottomContent={
-        pageCount > 0 ? (
+        pageCount > 0 && (
           <div className="flex w-full justify-center">
             <Pagination
               isCompact
@@ -218,7 +216,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
               classNames={{ wrapper: 'max-w-full justify-center' }}
             />
           </div>
-        ) : null
+        )
       }
       classNames={{
         wrapper: 'bg-white dark:bg-indigo rounded-md overflow-hidden px-0 py-4',
@@ -231,7 +229,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
             data-testid={`table-header-${key}`}
             allowsSorting={allowsSorting}
             className={cn(
-              'bg-transparent pb-2',
+              'bg-transparent pb-2 pl-4',
               visibleOnMobile ? '' : 'hidden sm:table-cell',
             )}
           >
@@ -248,7 +246,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
       <TableBody
         items={dataFormat}
         isLoading={isLoading}
-        loadingContent={<Spinner label="Loading..." color="success" />}
+        loadingContent={<Spinner label="Loading..." color="primary" />}
         emptyContent="No Contributors to display."
       >
         {(item) => (
@@ -256,7 +254,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
             {(columnKey) => (
               <TableCell
                 className={cn(
-                  'pt-[15px] w-1/4',
+                  'pt-[15px] w-1/4 pl-4',
                   visibleOnMobileByKey[columnKey] ? '' : 'hidden sm:table-cell',
                 )}
               >

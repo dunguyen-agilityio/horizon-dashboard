@@ -7,7 +7,7 @@ export class User {
   avatar?: string;
   role!: string;
   createdAt!: Date;
-  rating?: number;
+  rating!: number;
 
   constructor(user: TUser) {
     const { lastName = '', rating = 0, createdAt } = user;

@@ -8,9 +8,10 @@ export const formatContributorData = (data: ContributorData) => {
   }
 
   return nfts.map(
-    ({ name }) =>
+    ({ name, id: nftId }) =>
       new Contributor({
         ...rest,
+        id: `${rest.id}-${nftId}`,
         template: name,
       }),
   );
