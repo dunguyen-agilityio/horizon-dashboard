@@ -1,8 +1,16 @@
-import { MOCK_CONTRIBUTORS } from '@/mocks/contributor';
-import { ContributorTable } from '@/ui/contributor';
+import { Suspense } from 'react';
 
-const ContributorPage = () => {
-  return <ContributorTable data={MOCK_CONTRIBUTORS} page={1} pageCount={1} />;
-};
+// Types
+import { ISearchParams } from '@/types/query-params';
+
+// Components
+import ContributorTable from '@/ui/contributor/ContributorContainer';
+import { ContributorTableSkeleton } from '@/components/Skeleton/ContributorTableSkeleton';
+
+const ContributorPage = ({ searchParams }: { searchParams: ISearchParams }) => (
+  <Suspense fallback={<ContributorTableSkeleton />}>
+    <ContributorTable searchParams={searchParams} />
+  </Suspense>
+);
 
 export default ContributorPage;

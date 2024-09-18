@@ -177,7 +177,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
         >
           <tr
             aria-labelledby="react-aria-:r0:-1-1-fullName"
-            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
             data-first="true"
             data-key="1-1"
             role="row"
@@ -283,7 +283,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           </tr>
           <tr
             aria-labelledby="react-aria-:r0:-2-1-fullName"
-            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
             data-key="2-1"
             data-middle="true"
             data-odd="true"
@@ -390,7 +390,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           </tr>
           <tr
             aria-labelledby="react-aria-:r0:-3-1-fullName"
-            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
             data-key="3-1"
             data-middle="true"
             role="row"
@@ -496,7 +496,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           </tr>
           <tr
             aria-labelledby="react-aria-:r0:-4-1-fullName"
-            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
             data-key="4-1"
             data-last="true"
             data-odd="true"
