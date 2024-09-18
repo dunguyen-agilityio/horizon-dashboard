@@ -51,10 +51,7 @@ export const handleResetPassword = async (payload: ResetPasswordPayload) =>
     body: payload,
   });
 
-export const handleSignUp = async (payload: SignUpPayload) => {
-  const { data } = await apiClient.post<SignUpResponse>(API_ENTITY.SIGN_UP, {
+export const handleSignUp = async (payload: SignUpPayload) =>
+  await apiClient.post<SignUpResponse>(API_ENTITY.SIGN_UP, {
     body: payload,
   });
-
-  return data!;
-};

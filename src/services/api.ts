@@ -3,7 +3,7 @@ import { API_ENDPOINT } from '@/constants/environment';
 type RequestOption = Omit<RequestInit, 'body'> & { body?: object };
 
 type SuccessResponse<T> = { data: T; error: null };
-type FailedResponse = { data: null; error: string };
+type FailedResponse = { data: null; error: { message: string } };
 
 class APIClient {
   private static _apiClient: APIClient;
@@ -34,16 +34,18 @@ class APIClient {
     try {
       const res = await fetch(`${API_ENDPOINT}/${url}`, options);
 
+      if (!res.ok) return (await res.json()) as FailedResponse;
+
       return {
         data: (await res.json()) as T,
         error: null,
       };
     } catch (error) {
       if (error instanceof Error) {
-        return { error: `Error : ${error.message}`, data: null };
+        return { error: { message: `Error : ${error.message}` }, data: null };
       }
 
-      return { error: 'Error to fetch API', data: null };
+      return { error: { message: 'Error to fetch API' }, data: null };
     }
   };
 

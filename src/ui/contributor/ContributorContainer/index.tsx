@@ -22,10 +22,10 @@ const ContributorContainer = async ({
     page,
   });
 
-  if (error !== null)
+  if (error)
     return (
       <ErrorFallback
-        message={error}
+        message={error.message}
         className="h-[860px] bg-gray dark:bg-indigo-dark"
       />
     );

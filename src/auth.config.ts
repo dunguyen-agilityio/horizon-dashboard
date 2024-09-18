@@ -30,8 +30,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           },
         );
 
-        if (error !== null) {
-          throw new Error(error);
+        if (error) {
+          throw new Error(error.message);
         }
 
         const { jwt, user } = data;

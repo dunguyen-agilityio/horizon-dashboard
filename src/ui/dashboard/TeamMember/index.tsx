@@ -16,8 +16,10 @@ const TeamMemberContainer = async () => {
     `${API_ENTITY.USERS}?limit=3&populate[0]=avatar&populate[1]=role`,
   );
 
-  if (error !== null) {
-    return <ErrorFallback message={error} className="h-[345px] flex-1" />;
+  if (error) {
+    return (
+      <ErrorFallback message={error.message} className="h-[345px] flex-1" />
+    );
   }
 
   return <TeamMember members={data} />;
