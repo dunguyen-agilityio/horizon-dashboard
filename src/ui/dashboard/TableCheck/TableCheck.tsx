@@ -125,7 +125,13 @@ const TableCheck = ({ data }: TableCheckProps) => (
     >
       <TableHeader columns={columns}>
         {({ key, label }) => (
-          <TableColumn key={key} className={key === 'name' ? 'pl-0' : ''}>
+          <TableColumn
+            key={key}
+            className={cn(
+              key === 'name' ? 'pl-0' : '',
+              key === 'quantity' ? 'pr-0' : '',
+            )}
+          >
             <Text
               variant={TEXT_VARIANT.SECONDARY}
               size={TEXT_SIZE.sm}
@@ -145,6 +151,7 @@ const TableCheck = ({ data }: TableCheckProps) => (
                 <TableCell
                   className={cn(
                     columnKey === 'name' ? 'pl-0' : '',
+                    columnKey === 'quantity' ? 'pr-0' : '',
                     visibleOnMobile ? '' : 'hidden sm:table-cell',
                     'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
                   )}

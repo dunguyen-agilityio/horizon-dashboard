@@ -6,7 +6,7 @@ import { BoxIcon, Button, Text } from '@/components';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 const SafetyCard = () => (
-  <div className="w-full h-full sm:w-card md:w-auto bg-white dark:bg-indigo-light rounded-md pt-[30px] pr-[30px] pb-[23px] pl-5">
+  <div className="w-full h-full sm:w-card md:w-auto bg-white dark:bg-indigo-light rounded-md pt-[30px] px-2 sm:pr-[30px] pb-[23px] sm:pl-5">
     <div className="flex flex-col gap-[17px]">
       <BoxIcon icon={<SafetyIcon />} customClass="w-fit h-auto" />
       <Text size={TEXT_SIZE.extra}>
