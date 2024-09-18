@@ -28,7 +28,11 @@ import { Contributor, ContributorData } from '@/models/Contributor';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Constants
-import { CONTRIBUTOR_COLUMN } from '@/constants/tableColumns';
+import { SORT_TYPES } from '@/constants/sort';
+import {
+  CONTRIBUTOR_COLUMN,
+  CONTRIBUTOR_HEADER,
+} from '@/constants/tableColumns';
 
 // Utils
 import { formatShortDate } from '@/utils/format';
@@ -140,27 +144,27 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
     const { column, direction } = descriptor;
 
     switch (column) {
-      case 'fullName':
-        if (direction === 'ascending')
+      case CONTRIBUTOR_HEADER.FULL_NAME:
+        if (direction === SORT_TYPES.ASCENDING)
           return dataFormat.sort((a, b) =>
             compareString(a.fullName, b.fullName),
           );
         return dataFormat.sort((a, b) => compareString(b.fullName, a.fullName));
 
-      case 'template':
-        if (direction === 'ascending')
+      case CONTRIBUTOR_HEADER.TEMPLATE:
+        if (direction === SORT_TYPES.ASCENDING)
           return dataFormat.sort((a, b) =>
             compareString(a.template, b.template),
           );
         return dataFormat.sort((a, b) => compareString(b.template, a.template));
 
-      case 'rating':
-        if (direction === 'ascending')
+      case CONTRIBUTOR_HEADER.RATING:
+        if (direction === SORT_TYPES.ASCENDING)
           return dataFormat.sort((a, b) => compareNumber(a.rating, b.rating));
         return dataFormat.sort((a, b) => compareNumber(b.rating, a.rating));
 
-      case 'createdAt':
-        if (direction === 'ascending')
+      case CONTRIBUTOR_HEADER.CREATE_AT:
+        if (direction === SORT_TYPES.ASCENDING)
           return dataFormat.sort((a, b) =>
             compareDate(a.createdAt, b.createdAt),
           );
