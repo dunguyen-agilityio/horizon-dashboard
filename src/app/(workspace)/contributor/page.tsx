@@ -5,7 +5,7 @@ import { ISearchParams } from '@/types/query-params';
 
 // Components
 import ContributorTable from '@/ui/contributor/ContributorContainer';
-import { ContributorTableSkeleton } from '@/ui/contributor/ContributorTableSkeleton';
+import { ContributorTableSkeleton } from '@/components/Skeleton/ContributorTableSkeleton';
 
 const ContributorPage = ({ searchParams }: { searchParams: ISearchParams }) => (
   <Suspense fallback={<ContributorTableSkeleton />}>
