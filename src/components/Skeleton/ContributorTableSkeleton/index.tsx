@@ -1,3 +1,7 @@
+// Constants
+import { PAGE_SIZE } from '@/constants/query';
+
+// Components
 import { Skeleton } from '@nextui-org/skeleton';
 
 const SkeletonRow = ({
@@ -15,21 +19,23 @@ const SkeletonRow = ({
 );
 
 export const ContributorTableSkeleton = () => (
-  <div className="space-y-5 p-4 rounded-xl bg-white dark:bg-indigo-light">
-    <div className="flex gap-4 h-14 lg:h-20 mb-4 lg:mb-8">
-      <Skeleton className="hidden sm:block w-full rounded-lg bg-white dark:bg-indigo-dark" />
-      <SkeletonRow
-        count={3}
-        className="w-full rounded-lg bg-white dark:bg-indigo-dark"
-      />
+  <>
+    <div className="flex justify-center xs:justify-end mb-4 mt-2">
+      <Skeleton className="w-96 h-10 rounded-lg bg-white dark:bg-indigo-dark" />
     </div>
 
-    <div className="space-y-3">
-      <SkeletonRow
-        count={10}
-        className="h-14 rounded-lg bg-white dark:bg-indigo-dark"
-      />
-      <Skeleton className="h-12 w-2/5 rounded-xl bg-white dark:bg-indigo-dark mx-auto" />
+    <div className="space-y-5 p-4 rounded-xl bg-white dark:bg-indigo-light">
+      <div className="flex gap-4 h-10 lg:h-20 mb-4 lg:mb-8">
+        <Skeleton className="w-full rounded-lg bg-white dark:bg-indigo-dark" />
+      </div>
+
+      <div className="space-y-3">
+        <SkeletonRow
+          count={parseInt(PAGE_SIZE.HIGH)}
+          className="h-10 rounded-lg bg-white dark:bg-indigo-dark"
+        />
+        <Skeleton className="h-10 w-2/5 rounded-xl bg-white dark:bg-indigo-dark mx-auto" />
+      </div>
     </div>
-  </div>
+  </>
 );
