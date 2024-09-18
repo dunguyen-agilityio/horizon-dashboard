@@ -9,6 +9,8 @@ import { IContributorsResponse } from '@/types/contributor';
 
 interface IContributorParams {
   page: string;
+  startDate?: string;
+  endDate?: string;
   pageSize?: string;
   cacheOptions?: RequestCache;
 }
@@ -16,6 +18,8 @@ interface IContributorParams {
 export const getContributor = ({
   page,
   pageSize = '10',
+  startDate = '',
+  endDate = '',
   cacheOptions,
 }: IContributorParams) => {
   const queryParams = new URLSearchParams({
@@ -23,6 +27,8 @@ export const getContributor = ({
     'pagination[pageSize]': pageSize,
     'populate[users_permissions_user][populate][0]': 'avatar',
     'populate[nfts][populate][0]': 'name',
+    'filters[createdAt][$gte]': startDate,
+    'filters[createdAt][$lte]': endDate,
   });
 
   return apiClient.get<IContributorsResponse>(
