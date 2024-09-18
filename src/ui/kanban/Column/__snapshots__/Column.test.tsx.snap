@@ -44,7 +44,7 @@ exports[`Column tests Should match snapshot 1`] = `
       </button>
     </div>
     <div
-      class="pl-4 pr-2 h-fit"
+      class="pl-4 pr-2 h-[905px]"
     >
       <div
         class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
