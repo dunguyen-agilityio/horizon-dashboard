@@ -34,14 +34,7 @@ class APIClient {
     try {
       const res = await fetch(`${API_ENDPOINT}/${url}`, options);
 
-      if (!res.ok) {
-        type A = {
-          data: null;
-          error: { message: string };
-        };
-        const { data, error }: A = await res.json();
-        return { data, error };
-      }
+      if (!res.ok) return (await res.json()) as FailedResponse;
 
       return {
         data: (await res.json()) as T,
