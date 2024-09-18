@@ -72,10 +72,10 @@ const SummaryCardContainer = async () => {
     API_ENTITY.FINANCIAL_REPORT,
   );
 
-  if (error !== null)
+  if (error)
     return (
       <ErrorFallback
-        message={error}
+        message={error.message}
         className="h-[600px] xs:h-[343px] sm:h-[222px] 2xl:h-[117px]"
       />
     );

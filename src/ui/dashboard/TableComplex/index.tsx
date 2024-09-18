@@ -16,8 +16,10 @@ const TableComplexContainer = async () => {
     API_ENTITY.COMPLEX_REPORT,
   );
 
-  if (error !== null) {
-    return <ErrorFallback message={error} className="h-[350px] 2xl:flex-1" />;
+  if (error) {
+    return (
+      <ErrorFallback message={error.message} className="h-[350px] 2xl:flex-1" />
+    );
   }
 
   return <TableComplex data={data} />;
