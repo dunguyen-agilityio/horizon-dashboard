@@ -86,19 +86,21 @@ export const Task = ({
           )}
         </div>
       </div>
-      <EditTaskModal
-        title={title}
-        labels={labels}
-        isOpen={isOpenModalEdit}
-        assignMembers={assignees}
-        description={description}
-        onOpenChange={onOpenChange}
-        onClose={onClose}
-        id={id}
-        status={status}
-        startDateTask={validStartDate}
-        dueDateTask={validDueDate}
-      />
+      {isOpenModalEdit && (
+        <EditTaskModal
+          title={title}
+          labels={labels}
+          isOpen
+          assignMembers={assignees}
+          description={description}
+          onOpenChange={onOpenChange}
+          onClose={onClose}
+          id={id}
+          status={status}
+          startDateTask={validStartDate}
+          dueDateTask={validDueDate}
+        />
+      )}
     </>
   );
 };

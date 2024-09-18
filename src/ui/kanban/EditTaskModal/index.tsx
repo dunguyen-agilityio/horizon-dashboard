@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 
 // Components
@@ -122,15 +122,9 @@ export const EditTaskModal = ({
     ],
   );
 
-  const { control, handleSubmit, reset, formState } = useForm({
+  const { control, handleSubmit, formState } = useForm({
     defaultValues: initialValue,
   });
-
-  useEffect(() => {
-    if (isOpen) {
-      reset(initialValue);
-    }
-  }, [initialValue, isOpen, reset]);
 
   const handleLabelChange = (
     keys: SharedSelection,
@@ -196,6 +190,7 @@ export const EditTaskModal = ({
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       placement="center"
+      scrollBehavior="outside"
       classNames={{
         base: 'bg-white dark:bg-indigo pt-4 pb-4 min-h-[480px] m-2',
         closeButton: 'm-3 p-3',
