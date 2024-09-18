@@ -63,8 +63,8 @@ export const mapUserNFTsToContributorData = (
 
 export const mapContributorsData = (
   dataContributor: IContributorData[],
-): ContributorData[] => {
-  return dataContributor.flatMap(({ attributes }) => {
+): ContributorData[] =>
+  dataContributor.flatMap(({ attributes }) => {
     const {
       nfts: { data: nfts = [] },
       users_permissions_user: { data: users },
@@ -72,4 +72,3 @@ export const mapContributorsData = (
 
     return mapUserNFTsToContributorData(nfts, users);
   });
-};

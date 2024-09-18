@@ -213,10 +213,9 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
               key={key}
               data-testid={`table-header-${key}`}
               allowsSorting={allowsSorting}
-              className={cn(
-                'bg-transparent pb-2 pl-4',
-                visibleOnMobile ? '' : 'hidden sm:table-cell',
-              )}
+              className={cn('bg-transparent pb-2 pl-4', {
+                'hidden sm:table-cell': !visibleOnMobile,
+              })}
             >
               <Text
                 variant={TEXT_VARIANT.SECONDARY}
