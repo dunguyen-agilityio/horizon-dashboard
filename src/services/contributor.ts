@@ -26,7 +26,7 @@ export const getContributor = ({
   });
 
   return apiClient.get<IContributorsResponse>(
-    `${API_ENTITY.CONTRIBUTOR}?${queryParams}`,
+    `${API_ENTITY.CONTRIBUTORS}?${queryParams}`,
     {
       cache: cacheOptions,
     },

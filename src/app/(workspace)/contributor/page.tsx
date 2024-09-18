@@ -8,11 +8,9 @@ import ContributorTable from '@/ui/contributor/ContributorContainer';
 import { ContributorTableSkeleton } from '@/ui/contributor/ContributorTableSkeleton';
 
 const ContributorPage = ({ searchParams }: { searchParams: ISearchParams }) => (
-  <>
-    <Suspense fallback={<ContributorTableSkeleton />}>
-      <ContributorTable searchParams={searchParams} />
-    </Suspense>
-  </>
+  <Suspense fallback={<ContributorTableSkeleton />}>
+    <ContributorTable searchParams={searchParams} />
+  </Suspense>
 );
 
 export default ContributorPage;

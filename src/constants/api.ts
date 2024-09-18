@@ -7,5 +7,5 @@ export const API_ENTITY = {
   SIGN_UP: 'auth/local/register',
   FORGET_PASSWORD: 'auth/forgot-password',
   RESET_PASSWORD: 'auth/reset-password',
-  CONTRIBUTOR: 'contributors',
+  CONTRIBUTORS: 'contributors',
 };
