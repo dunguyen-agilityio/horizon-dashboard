@@ -8,7 +8,8 @@ import { IContributorData } from '@/types/contributor';
 export const formatContributorData = (data: ContributorData) => {
   const { join_nfts, ...rest } = data;
 
-  if (join_nfts.data.length === 0) {
+  if (!join_nfts || !join_nfts.data || join_nfts.data.length === 0) {
+    // Check if user haven't NFT
     return [new Contributor(rest)];
   }
 

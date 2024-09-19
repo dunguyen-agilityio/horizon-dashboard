@@ -176,17 +176,17 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           role="rowgroup"
         >
           <tr
-            aria-labelledby="react-aria-:r0:-1-1-fullName"
+            aria-labelledby="react-aria-:r0:-1-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
             data-first="true"
-            data-key="1-1"
+            data-key="1"
             role="row"
             tabindex="-1"
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="1-11-1fullName"
-              id="react-aria-:r0:-1-1-fullName"
+              data-key="11fullName"
+              id="react-aria-:r0:-1-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -222,19 +222,13 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="1-11-1template"
+              data-key="11template"
               role="gridcell"
               tabindex="-1"
-            >
-              <p
-                class="text-primary dark:text-white text-small font-bold"
-              >
-                Mesh Gradients
-              </p>
-            </td>
+            />
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="1-11-1createdAt"
+              data-key="11createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -247,7 +241,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="1-11-1rating"
+              data-key="11rating"
               role="gridcell"
               tabindex="-1"
             >
@@ -282,9 +276,9 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
           </tr>
           <tr
-            aria-labelledby="react-aria-:r0:-2-1-fullName"
+            aria-labelledby="react-aria-:r0:-2-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
-            data-key="2-1"
+            data-key="2"
             data-middle="true"
             data-odd="true"
             role="row"
@@ -292,8 +286,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="2-12-1fullName"
-              id="react-aria-:r0:-2-1-fullName"
+              data-key="22fullName"
+              id="react-aria-:r0:-2-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -329,19 +323,13 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="2-12-1template"
+              data-key="22template"
               role="gridcell"
               tabindex="-1"
-            >
-              <p
-                class="text-primary dark:text-white text-small font-bold"
-              >
-                Mesh Gradients
-              </p>
-            </td>
+            />
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="2-12-1createdAt"
+              data-key="22createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -354,7 +342,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="2-12-1rating"
+              data-key="22rating"
               role="gridcell"
               tabindex="-1"
             >
@@ -389,17 +377,17 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
           </tr>
           <tr
-            aria-labelledby="react-aria-:r0:-3-1-fullName"
+            aria-labelledby="react-aria-:r0:-3-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
-            data-key="3-1"
+            data-key="3"
             data-middle="true"
             role="row"
             tabindex="-1"
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="3-13-1fullName"
-              id="react-aria-:r0:-3-1-fullName"
+              data-key="33fullName"
+              id="react-aria-:r0:-3-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -435,19 +423,13 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="3-13-1template"
+              data-key="33template"
               role="gridcell"
               tabindex="-1"
-            >
-              <p
-                class="text-primary dark:text-white text-small font-bold"
-              >
-                Mesh Gradients
-              </p>
-            </td>
+            />
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="3-13-1createdAt"
+              data-key="33createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -460,7 +442,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="3-13-1rating"
+              data-key="33rating"
               role="gridcell"
               tabindex="-1"
             >
@@ -495,9 +477,9 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
           </tr>
           <tr
-            aria-labelledby="react-aria-:r0:-4-1-fullName"
+            aria-labelledby="react-aria-:r0:-4-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
-            data-key="4-1"
+            data-key="4"
             data-last="true"
             data-odd="true"
             role="row"
@@ -505,8 +487,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="4-14-1fullName"
-              id="react-aria-:r0:-4-1-fullName"
+              data-key="44fullName"
+              id="react-aria-:r0:-4-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -560,19 +542,13 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="4-14-1template"
+              data-key="44template"
               role="gridcell"
               tabindex="-1"
-            >
-              <p
-                class="text-primary dark:text-white text-small font-bold"
-              >
-                Mesh Gradients
-              </p>
-            </td>
+            />
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="4-14-1createdAt"
+              data-key="44createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -585,7 +561,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="4-14-1rating"
+              data-key="44rating"
               role="gridcell"
               tabindex="-1"
             >
