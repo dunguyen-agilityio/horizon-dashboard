@@ -2,23 +2,22 @@
 import { Contributor, ContributorData } from '@/models/Contributor';
 
 // Types
-import { INFTResponse } from '@/types/nft';
 import { IUserResponse } from '@/types/user';
 import { IContributorData } from '@/types/contributor';
 
 export const formatContributorData = (data: ContributorData) => {
-  const { nfts = [], ...rest } = data;
+  const { join_nfts, ...rest } = data;
 
-  if (nfts.length === 0) {
+  if (join_nfts.data.length === 0) {
     return [new Contributor(rest)];
   }
 
-  return nfts.map(
-    ({ name, id: nftId }) =>
+  return join_nfts.data.map(
+    (nft) =>
       new Contributor({
         ...rest,
-        id: `${rest.id}-${nftId}`,
-        template: name,
+        id: `${rest.id}-${nft.id}`,
+        template: nft?.attributes?.name,
       }),
   );
 };
@@ -33,7 +32,6 @@ export const formatContributorData = (data: ContributorData) => {
  */
 
 export const mapUserNFTsToContributorData = (
-  nftsData: INFTResponse[],
   user: IUserResponse,
   createdAtContributor?: Date,
 ): ContributorData[] => {
@@ -43,13 +41,14 @@ export const mapUserNFTsToContributorData = (
 
   const { id, attributes } = user;
 
-  return nftsData.length
-    ? nftsData.map((nft) => ({
+  return attributes.join_nfts?.data?.length
+    ? attributes.join_nfts?.data.map((nft) => ({
         id: `${nft.id}${id}`, // Unique ID by combining nft ID and user ID
         ...attributes,
-        template: nft?.attributes.name ?? '',
+        template: '',
         createdAt: createdAtContributor || attributes.createdAt,
         avatar: attributes.avatar.data?.attributes.url ?? '',
+        join_nfts: { data: [nft] },
       }))
     : [
         {
@@ -75,9 +74,7 @@ export const mapContributorsData = (
   dataContributor.flatMap(({ attributes }) => {
     const {
       createdAt,
-      nfts: { data: nfts = [] },
-      users_permissions_user: { data: users },
+      users_permissions_user: { data: user },
     } = attributes;
-
-    return mapUserNFTsToContributorData(nfts, users, createdAt);
+    return mapUserNFTsToContributorData(user, createdAt);
   });
