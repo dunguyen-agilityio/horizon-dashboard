@@ -31,8 +31,8 @@ export const getContributor = ({
   const queryParams = new URLSearchParams({
     'pagination[page]': page,
     'pagination[pageSize]': pageSize,
-    'populate[users_permissions_user][populate][0]': 'avatar',
-    'populate[nfts][populate][0]': 'name',
+    'populate[users_permissions_user][populate][join_nfts]': '*',
+    'populate[users_permissions_user][populate][avatar]': '*',
   });
 
   return apiClient.get<IContributorsResponse>(
