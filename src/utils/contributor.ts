@@ -6,7 +6,7 @@ import { StrapiResponse } from '@/types/strapi';
 
 // Utils
 import { formatUser } from './user';
-import { formatStrapiModel } from './nft';
+import { formatStrapiModel } from './strapi';
 
 /**
  * Maps multiple contributors data, including users and NFTs.
