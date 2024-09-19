@@ -30,7 +30,7 @@ import { TEXT_SIZE } from '@/types/text';
 
 // Models
 import { LABEL, STATUS } from '@/models/Task';
-import { User } from '@/models/User';
+import { TUser, User } from '@/models/User';
 
 // Mocks
 import { Note } from '@/icons';
@@ -47,7 +47,7 @@ interface IEditTaskModalProps {
   description: string;
   status: STATUS;
   labels?: LABEL[];
-  assignMembers?: User[];
+  assignMembers?: TUser[];
   startDateTask: string;
   dueDateTask: string;
   onOpenChange: () => void;

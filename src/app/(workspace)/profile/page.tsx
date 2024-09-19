@@ -12,16 +12,16 @@ import {
 import { MOCK_USERS } from '@/mocks/user';
 
 const ProfilePage = () => {
-  const { username, avatar } = MOCK_USERS[0];
+  const { username, avatar, role } = MOCK_USERS[0];
 
   return (
     <>
       <div className="grid grid-cols-12 grid-rows-2 2xl:grid-rows-1 gap-[30px]">
         <div className="col-span-12 2xl:col-span-4">
           <UserInfo
-            role="Design NFT"
+            role={role}
             username={username}
-            avatar={avatar}
+            avatar={avatar?.url}
             followersCount={33}
             followingCount={90}
             postsTotal={20}

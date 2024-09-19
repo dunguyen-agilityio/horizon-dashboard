@@ -9,12 +9,15 @@ import { PROFILE_IMAGES } from '@/constants/images';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
+//Models
+import { Role } from '@/models/User';
+
 const { BACKGROUND } = PROFILE_IMAGES;
 
 interface IUserInfoProps {
   avatar?: string;
   username: string;
-  role: string;
+  role: Role;
   postsTotal?: number;
   followersCount?: number;
   followingCount?: number;
@@ -59,7 +62,7 @@ const UserInfo = ({
           variant={TEXT_VARIANT.SECONDARY}
           className="text-center"
         >
-          {role}
+          {role.name}
         </Text>
       </div>
       <div className="flex justify-center gap-11 my-5">

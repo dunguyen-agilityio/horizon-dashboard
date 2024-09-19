@@ -11,7 +11,7 @@ const { avatar, username, role } = MOCK_USERS[0];
 describe('UserInfo component', () => {
   it('UserInfo should render match snapshot', () => {
     const { container } = render(
-      <UserInfo avatar={avatar} username={username} role={role} />,
+      <UserInfo avatar={avatar?.url} username={username} role={role} />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -23,7 +23,7 @@ describe('UserInfo component', () => {
 
   it('UserInfo should render correct alt and avatar user', () => {
     const { getByAltText } = render(
-      <UserInfo avatar={avatar} username={username} role={role} />,
+      <UserInfo avatar={avatar?.url} username={username} role={role} />,
     );
 
     const avatarUser = getByAltText('avatar-user');

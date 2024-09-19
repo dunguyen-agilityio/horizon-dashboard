@@ -85,14 +85,14 @@ exports[`Task tests Should match snapshot 1`] = `
             tabindex="-1"
           >
             <img
-              alt="avatar"
+              alt="User 1"
               class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
               data-nimg="1"
               decoding="async"
               height="20"
               loading="lazy"
-              src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
-              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+              src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75 2x"
               style="color: transparent;"
               width="20"
             />
@@ -102,14 +102,14 @@ exports[`Task tests Should match snapshot 1`] = `
             tabindex="-1"
           >
             <img
-              alt="avatar"
+              alt="User 2"
               class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
               data-nimg="1"
               decoding="async"
               height="20"
               loading="lazy"
-              src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
-              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+              src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75 2x"
               style="color: transparent;"
               width="20"
             />
@@ -119,14 +119,14 @@ exports[`Task tests Should match snapshot 1`] = `
             tabindex="-1"
           >
             <img
-              alt="avatar"
+              alt="User 3"
               class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
               data-nimg="1"
               decoding="async"
               height="20"
               loading="lazy"
-              src="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75"
-              srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 2x"
+              src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75 2x"
               style="color: transparent;"
               width="20"
             />

@@ -34,7 +34,7 @@ import { USER_IMAGE } from '@/constants';
 const MOCK_PROFILE = MOCK_USERS[0];
 
 const ProfileDropDown = () => {
-  const { avatar = USER_IMAGE.DEFAULT, username } = MOCK_PROFILE;
+  const { avatar = { url: USER_IMAGE.DEFAULT }, username } = MOCK_PROFILE;
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -70,7 +70,7 @@ const ProfileDropDown = () => {
           <Image
             width={40}
             height={40}
-            src={avatar}
+            src={avatar.url}
             alt={username}
             className="min-w-10 rounded-full"
           />

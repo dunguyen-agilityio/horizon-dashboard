@@ -1,8 +1,28 @@
-import { User, UserResponse } from '@/models/User';
+import { TUser, User } from '@/models/User';
+import { UserResponse } from '@/types/contributor';
+import { StrapiResponse } from '@/types/strapi';
+import { formatStrapiModel } from './strapi';
 
-export const formatUser = ({ avatar, role, ...rest }: UserResponse) =>
-  new User({
+export const formatUser = (data: TUser) => {
+  const user = new User(data);
+
+  return { ...user, fullName: user.fullName };
+};
+
+export const formatUserResponse = (
+  data: StrapiResponse<UserResponse>,
+): User => {
+  const { avatar, role, ...rest } = formatStrapiModel(data);
+
+  const { attributes: avatarData, id } = avatar?.data ?? {};
+
+  const hasAvatar = avatarData && id;
+
+  return new User({
     ...rest,
-    role: role?.name,
-    avatar: avatar?.url,
+    role: { name: role?.attributes.name ?? '' },
+    ...(hasAvatar && {
+      avatar: { hash: avatarData.hash, url: avatarData.url },
+    }),
   });
+};

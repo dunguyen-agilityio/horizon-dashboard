@@ -5,17 +5,17 @@ import { User } from '@nextui-org/user';
 import { Listbox, ListboxItem } from '@nextui-org/listbox';
 import { BoxIcon, Text } from '@/components';
 
-// Models
-import { UserResponse } from '@/models/User';
-
 // Icons
 import { Add, More } from '@/icons';
 
 // Utils
 import { formatUser } from '@/utils/user';
 
+// Types
+import { TUser } from '@/models/User';
+
 interface TeamMemberProps {
-  members: UserResponse[];
+  members: TUser[];
 }
 
 const TeamMember = ({ members }: TeamMemberProps) => (
@@ -51,13 +51,13 @@ const TeamMember = ({ members }: TeamMemberProps) => (
           >
             <User
               name={fullName}
-              description={role}
+              description={role.name}
               classNames={{
                 name: 'text-medium font-bold',
                 description: 'text-tiny font-medium text-secondary',
               }}
               avatarProps={{
-                src: avatar,
+                src: avatar?.url,
                 classNames: { base: 'w-[46px] h-[46px]' },
               }}
             />

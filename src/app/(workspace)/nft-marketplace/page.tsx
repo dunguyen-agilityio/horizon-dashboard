@@ -7,7 +7,7 @@ import {
 } from '@/ui/nft-marketplace';
 
 // Mocks
-import { MOCK_NFTS } from '@/mocks/nft';
+import { MOCK_NFTS_RESPONSE } from '@/mocks/nft';
 import { MOCK_CREATORS } from '@/mocks/creators';
 import { histories } from '@/mocks/histories';
 
@@ -20,8 +20,8 @@ const NFTMarketPage = () => (
       <NFTBanner />
     </div>
     <div className="row-start-2 row-end-2 col-span-1 flex flex-col gap-10 pb-10">
-      <NFTTrending trends={MOCK_NFTS} />
-      <NFTRecentlyAdd recentlyList={MOCK_NFTS} />
+      <NFTTrending trends={MOCK_NFTS_RESPONSE} />
+      <NFTRecentlyAdd recentlyList={MOCK_NFTS_RESPONSE} />
     </div>
     <div className="col-start-2 col-span-2 flex flex-col gap-10 pb-10">
       <div className="flex-1">

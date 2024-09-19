@@ -17,6 +17,7 @@ import { Task as TaskModel } from '@/models/Task';
 
 // Utils
 import { getColorByLabel } from '@/utils/task';
+import { formatUser } from '@/utils/user';
 
 export const Task = ({
   id,
@@ -65,16 +66,20 @@ export const Task = ({
         </Text>
         <div className="flex justify-between mt-5 items-center">
           <AvatarGroup isBordered max={3}>
-            {assignees?.map(({ id, avatar, fullName }) => (
-              <Avatar
-                key={id}
-                src={avatar}
-                ImgComponent={Image}
-                alt={fullName}
-                imgProps={{ width: 20, height: 20 }}
-                isBordered
-              />
-            ))}
+            {assignees?.map((item) => {
+              const { avatar, fullName } = formatUser(item);
+
+              return (
+                <Avatar
+                  key={id}
+                  src={avatar?.url}
+                  ImgComponent={Image}
+                  alt={fullName}
+                  imgProps={{ width: 20, height: 20 }}
+                  isBordered
+                />
+              );
+            })}
           </AvatarGroup>
           {labels && (
             <Chip

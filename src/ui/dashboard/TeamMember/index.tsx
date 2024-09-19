@@ -1,20 +1,12 @@
-// Constants
-import { API_ENTITY } from '@/constants';
-
 // Services
-import { apiClient } from '@/services/api';
-
-// Models
-import { UserResponse } from '@/models/User';
+import { getTeamMember } from '@/services/user';
 
 // Components
 import TeamMember from './TeamMember';
 import { ErrorFallback } from '@/components';
 
 const TeamMemberContainer = async () => {
-  const { data, error } = await apiClient.get<UserResponse[]>(
-    `${API_ENTITY.USERS}?limit=3&populate[0]=avatar&populate[1]=role`,
-  );
+  const { data, error } = await getTeamMember();
 
   if (error) {
     return (

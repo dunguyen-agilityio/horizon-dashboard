@@ -1,7 +1,7 @@
 'use client';
 
 // Models
-import { NFTData } from '@/models/NFT';
+import { NFTResponse } from '@/models/NFT';
 
 // Components
 import NFTCard from '../NFTCard';
@@ -13,8 +13,14 @@ import useScroll from '@/hooks/useScroll';
 // Icons
 import { ArrowRight, ArrowLeft } from '@/icons';
 
+// Types
+import { StrapiResponse } from '@/types/strapi';
+
+// Utils
+import { formatNFTResponse } from '@/utils/nft';
+
 interface NFTTrendingProps {
-  trends: NFTData[];
+  trends: StrapiResponse<NFTResponse>[];
 }
 
 const NFTTrending = ({ trends }: NFTTrendingProps) => {
@@ -48,13 +54,17 @@ const NFTTrending = ({ trends }: NFTTrendingProps) => {
         className="flex gap-5 overflow-x-auto scroll-smooth hide-scrollbar"
         ref={ref}
       >
-        {trends.map((trend) => (
-          <NFTCard
-            key={trend.id}
-            {...trend}
-            data-testid={`nft-card-${trend.id}`}
-          />
-        ))}
+        {trends.map((trend) => {
+          const formatter = formatNFTResponse(trend);
+
+          return (
+            <NFTCard
+              key={trend.id}
+              {...formatter}
+              data-testid={`nft-card-${trend.id}`}
+            />
+          );
+        })}
       </div>
     </div>
   );

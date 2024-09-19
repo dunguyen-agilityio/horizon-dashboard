@@ -1,22 +1,38 @@
-export class User {
-  id!: string;
-  firstName!: string;
-  lastName?: string;
-  email!: string;
-  username!: string;
-  avatar?: string;
-  role!: string;
-  createdAt!: Date;
-  rating!: number;
+import { TImage } from './Image';
 
-  constructor(user: TUser) {
-    const { lastName = '', rating = 0, createdAt } = user;
-    Object.assign(this, {
-      ...user,
-      lastName,
-      createdAt: new Date(createdAt),
-      rating,
-    });
+export type Role = { name: string };
+
+export class User {
+  id: string;
+  firstName: string;
+  lastName?: string;
+  email: string;
+  username: string;
+  avatar?: TImage;
+  role: Role;
+  createdAt: Date;
+  rating: number;
+
+  constructor({
+    lastName = '',
+    rating = 0,
+    createdAt,
+    email,
+    firstName,
+    id,
+    role,
+    username,
+    avatar,
+  }: TUser) {
+    this.id = id;
+    this.rating = rating;
+    this.avatar = avatar;
+    this.role = role;
+    this.username = username;
+    this.email = email;
+    this.lastName = lastName;
+    this.firstName = firstName;
+    this.createdAt = new Date(createdAt);
   }
 
   get fullName() {
@@ -25,8 +41,3 @@ export class User {
 }
 
 export type TUser = Omit<User, 'fullName'>;
-
-export type UserResponse = Omit<TUser, 'avatar' | 'role'> & {
-  avatar: { url: string };
-  role: { name: string };
-};

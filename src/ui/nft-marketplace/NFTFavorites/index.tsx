@@ -11,10 +11,16 @@ import { ItemNotFound } from '@/components';
 import { PUBLIC_ROUTES } from '@/constants';
 
 // Models
-import { NFTData } from '@/models/NFT';
+import { NFTResponse } from '@/models/NFT';
+
+// Types
+import { StrapiResponse } from '@/types/strapi';
+
+// Utils
+import { formatNFTResponse } from '@/utils/nft';
 
 interface INFTFavoriteProps {
-  listFavorites: NFTData[];
+  listFavorites: StrapiResponse<NFTResponse>[];
   pageSize: number;
   activePage: number;
 }
@@ -39,14 +45,19 @@ const NFTFavorites = ({
   return (
     <div className="flex justify-center mt-1 sm:mt-4">
       <div className="flex flex-wrap justify-center gap-5 sm:justify-start max-w-[738px] xl:max-w-[1084px] 2xl:max-w-[1500px] w-full">
-        {listFavorites.map((favorite) => (
-          <NFTCard
-            key={favorite.id}
-            data-testid={`nft-card-${favorite.id}`}
-            isShowIcon={false}
-            {...favorite}
-          />
-        ))}
+        {listFavorites.map((nft) => {
+          const { members, author, ...favorite } = formatNFTResponse(nft);
+          return (
+            <NFTCard
+              key={favorite.id}
+              data-testid={`nft-card-${favorite.id}`}
+              isShowIcon={false}
+              author={author}
+              members={members}
+              {...favorite}
+            />
+          );
+        })}
         {!!listFavorites.length && (
           <div className="w-full flex justify-center lg:justify-end my-8">
             <Pagination
