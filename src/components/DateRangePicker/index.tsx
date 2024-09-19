@@ -8,24 +8,27 @@ import { useDateFormatter } from '@react-aria/i18n';
 // Components
 import { DateRangePicker } from '@nextui-org/date-picker';
 
+// Constants
+import { PARAMS } from '@/constants/params';
+
 // Types
 import { ITimeRangePicker } from '@/types/date';
 
 // Utils
-import { parseDate, getLocalTimeZone } from '@internationalized/date';
+import { getLocalTimeZone, CalendarDate } from '@internationalized/date';
 import { parseDateRange } from '@/utils/format';
 
 const DateRangePickerComponent = () => {
-  const [value, setValue] = useState<ITimeRangePicker>({
-    start: parseDate('2024-09-13'),
-    end: parseDate('2024-09-18'),
-  });
+  const [value, setValue] = useState<{
+    start: CalendarDate;
+    end: CalendarDate;
+  } | null>();
 
   const formatter = useDateFormatter();
 
   const { push } = useRouter();
-  const searchParams = useSearchParams();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const params = new URLSearchParams(searchParams);
 
@@ -36,12 +39,10 @@ const DateRangePickerComponent = () => {
       value.end.toDate(getLocalTimeZone()),
     );
 
-    console.log(formatDateRange);
-
     const dateRange = parseDateRange(formatDateRange);
 
-    params.set('startDate', dateRange.startDate);
-    params.set('endDate', dateRange.endDate);
+    params.set(PARAMS.START_DATE, dateRange.startDate);
+    params.set(PARAMS.END_DATE, dateRange.endDate);
     push(`${pathname}?${params.toString()}`);
   };
 
