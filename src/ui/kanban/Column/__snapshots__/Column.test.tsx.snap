@@ -3,7 +3,7 @@
 exports[`Column tests Should match snapshot 1`] = `
 <div>
   <div
-    class="w-[514px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+    class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
   >
     <div
       class="flex justify-between pl-6 pr-4"
@@ -44,7 +44,7 @@ exports[`Column tests Should match snapshot 1`] = `
       </button>
     </div>
     <div
-      class="pl-4 pr-2 h-fit"
+      class="pl-4 pr-2 h-[905px]"
     >
       <div
         class="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md"
@@ -73,7 +73,7 @@ exports[`Column tests Should match snapshot 1`] = `
 exports[`Column tests Should match snapshot 2`] = `
 <div>
   <div
-    class="w-[514px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+    class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
   >
     <div
       class="flex justify-between pl-6 pr-4"

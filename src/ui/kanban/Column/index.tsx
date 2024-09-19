@@ -49,7 +49,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
   };
 
   return (
-    <div className="w-[514px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo">
+    <div className="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo">
       <div className="flex justify-between pl-6 pr-4">
         <Text size={TEXT_SIZE.lg} as="h2" className="max-w-[90%]">
           {formatStatus(status)}
@@ -65,7 +65,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
           <Add />
         </Button>
       </div>
-      <div className={cn('pl-4 pr-2', tasks.length ? 'h-[905px]' : 'h-fit')}>
+      <div className={cn('pl-4 pr-2 h-[905px]')}>
         <div className="flex flex-col gap-5 mt-6 h-full overflow-y-auto scrollbar px-2 [&>:last-child]:mb-2 rounded-md">
           {isLoading ? (
             <Spinner />
