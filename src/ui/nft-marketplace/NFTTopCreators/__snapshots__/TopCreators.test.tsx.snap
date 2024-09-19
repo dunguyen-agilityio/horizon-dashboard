@@ -136,7 +136,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 <span
                   class="text-primary dark:text-white text-small font-medium bg-transparent text-secondary"
                 >
-                  9821
+                  9,821
                 </span>
               </td>
               <td
@@ -211,7 +211,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 <span
                   class="text-primary dark:text-white text-small font-medium bg-transparent text-secondary"
                 >
-                  7032
+                  7,032
                 </span>
               </td>
               <td
@@ -285,7 +285,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 <span
                   class="text-primary dark:text-white text-small font-medium bg-transparent text-secondary"
                 >
-                  5204
+                  5,204
                 </span>
               </td>
               <td

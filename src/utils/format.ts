@@ -52,3 +52,13 @@ export const convertToUTCString = (date: DateTimeParts | null) => {
 
   return localDate.toISOString();
 };
+
+export const formatNumber = (number: number) => {
+  const numberFormat = number.toString();
+
+  const [integer, decimal] = numberFormat.split('.');
+
+  const formattedNumber = integer.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  return decimal ? `${formattedNumber}.${decimal}` : formattedNumber;
+};
