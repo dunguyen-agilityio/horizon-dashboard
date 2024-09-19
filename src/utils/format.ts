@@ -62,3 +62,22 @@ export const formatNumber = (number: number) => {
 
   return decimal ? `${formattedNumber}.${decimal}` : formattedNumber;
 };
+
+export const parseDateRange = (dateRange: string) => {
+  // Split the string by the '–' character to separate the start and end dates
+  const [startDate, endDate] = dateRange.split('–').map((date) => {
+    // Convert the string to a Date object
+    const parsedDate = new Date(date.trim());
+    // Format the date as 'YYYY-MM-DD'
+    const year = parsedDate.getFullYear();
+    const month = String(parsedDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const day = String(parsedDate.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  });
+
+  // Return an object with formatted startDate and endDate
+  return {
+    startDate,
+    endDate,
+  };
+};
