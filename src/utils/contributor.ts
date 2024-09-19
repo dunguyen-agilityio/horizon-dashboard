@@ -1,12 +1,16 @@
 // Models
-import { Contributor, ContributorData } from '@/models/Contributor';
+import {
+  Contributor,
+  ContributorData,
+  ContributorResponse,
+} from '@/models/Contributor';
 
 // Types
-import { IUserResponse } from '@/types/user';
 import { IContributorData } from '@/types/contributor';
+import { StrapiResponse } from '@/types/strapi';
 
 export const formatContributorData = (data: ContributorData) => {
-  const { join_nfts, ...rest } = data;
+  const { join_nfts, avatar, ...rest } = data;
 
   if (!join_nfts || !join_nfts.data || join_nfts.data.length === 0) {
     // Check if user haven't NFT
@@ -17,6 +21,7 @@ export const formatContributorData = (data: ContributorData) => {
     (nft) =>
       new Contributor({
         ...rest,
+        avatar,
         id: `${rest.id}-${nft.id}`,
         template: nft?.attributes?.name,
       }),
@@ -33,7 +38,7 @@ export const formatContributorData = (data: ContributorData) => {
  */
 
 export const mapUserNFTsToContributorData = (
-  user: IUserResponse,
+  user: StrapiResponse<ContributorResponse>,
   createdAtContributor?: Date,
 ): ContributorData[] => {
   if (!user) {
