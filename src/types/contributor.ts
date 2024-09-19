@@ -1,5 +1,4 @@
 // Types
-import { INFTResponse } from '@/types/nft';
 import { IUserResponse } from '@/types/user';
 import { IMeta } from '@/types/meta';
 
@@ -12,9 +11,6 @@ export interface IContributorData {
   id: number;
   attributes: {
     createdAt: Date;
-    nfts: {
-      data: INFTResponse[];
-    };
     users_permissions_user: {
       data: IUserResponse;
     };

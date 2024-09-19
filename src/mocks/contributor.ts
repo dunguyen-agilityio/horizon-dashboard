@@ -1,4 +1,3 @@
-import { ContributorData } from '@/models/Contributor';
 import { MOCK_USERS } from './user';
 import { MOCK_NFTS } from './nft';
 
@@ -22,4 +21,4 @@ export const MOCK_CONTRIBUTORS = [
     avatar: undefined,
     nfts: MOCK_NFTS,
   },
-] as ContributorData[];
+];

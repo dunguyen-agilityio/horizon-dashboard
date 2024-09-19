@@ -2,11 +2,15 @@
 import { User } from '@/models/User';
 
 // Types
-import { IAvatarData } from '@/types/avatar';
+import { IAvatarResponse } from '@/types/avatar';
+import { INFTResponse } from '@/types/nft';
 
 export interface IUserResponse {
   id: string;
   attributes: Omit<User, 'id'> & {
-    avatar: IAvatarData;
+    avatar: IAvatarResponse;
+    join_nfts: {
+      data: INFTResponse[];
+    };
   };
 }

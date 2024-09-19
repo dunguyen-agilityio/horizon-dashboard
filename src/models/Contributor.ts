@@ -1,4 +1,4 @@
-import { NFTData } from './NFT';
+import { INFTResponse } from '@/types/nft';
 import { User } from './User';
 
 export class Contributor extends User {
@@ -13,5 +13,7 @@ export class Contributor extends User {
 }
 
 export type ContributorData = Omit<Contributor, 'nfts'> & {
-  nfts?: NFTData[];
+  join_nfts: {
+    data: INFTResponse[];
+  };
 };
