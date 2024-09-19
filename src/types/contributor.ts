@@ -11,6 +11,7 @@ export interface IContributorsResponse {
 export interface IContributorData {
   id: number;
   attributes: {
+    createdAt: Date;
     nfts: {
       data: INFTResponse[];
     };
