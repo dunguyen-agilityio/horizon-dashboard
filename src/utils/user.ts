@@ -1,8 +1,4 @@
-import { User, UserResponse } from '@/models/User';
+import { User } from '@/models/User';
+import { UserExtend } from '@/types/user';
 
-export const formatUser = ({ avatar, role, ...rest }: UserResponse) =>
-  new User({
-    ...rest,
-    role: role?.name,
-    avatar: avatar?.url,
-  });
+export const formatUser = (data: UserExtend) => new User(data);

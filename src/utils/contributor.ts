@@ -42,22 +42,24 @@ export const mapUserNFTsToContributorData = (
 
   const { id, attributes } = user;
 
+  const { attributes: avatar } = attributes.avatar?.data || {};
+
   return attributes.join_nfts?.data?.length
     ? attributes.join_nfts?.data.map((nft) => ({
-        id: `${nft.id}${id}`, // Unique ID by combining nft ID and user ID
         ...attributes,
-        template: '',
+        id: `${nft.id}${id}`, // Unique ID by combining nft ID and user ID
+        template: nft?.attributes.name ?? '',
         createdAt: createdAtContributor || attributes.createdAt,
-        avatar: attributes.avatar.data?.attributes.url ?? '',
+        avatar: avatar,
         join_nfts: { data: [nft] },
       }))
     : [
         {
-          id,
           ...attributes,
+          id,
           template: '',
           createdAt: createdAtContributor || attributes.createdAt,
-          avatar: attributes.avatar.data?.attributes.url ?? '',
+          avatar,
         },
       ];
 };

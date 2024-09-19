@@ -1,16 +1,21 @@
 // Model
-import { User } from '@/models/User';
+import { TImage } from '@/models/Image';
+import { TUser, User } from '@/models/User';
 
 // Types
-import { IAvatarResponse } from '@/types/avatar';
-import { INFTResponse } from '@/types/nft';
+import { StrapiModel, StrapiResponse } from './strapi';
+import { NFT } from '@/models/NFT';
 
 export interface IUserResponse {
   id: string;
-  attributes: Omit<User, 'id'> & {
-    avatar: IAvatarResponse;
-    join_nfts: {
-      data: INFTResponse[];
-    };
+  attributes: Omit<User, 'avatar'> & {
+    avatar?: StrapiModel<StrapiResponse<TImage>>;
+    join_nfts: StrapiModel<StrapiResponse<NFT>[]>;
   };
 }
+
+export type Role = { name: string };
+
+export type UserExtend = Omit<TUser, 'avatar' | 'fullName'> & {
+  avatar?: TImage;
+};

@@ -1,7 +1,7 @@
 'use client';
 
 // Models
-import { NFTData } from '@/models/NFT';
+import { NFTResponse } from '@/models/NFT';
 
 import NFTCard from '../NFTCard';
 import { Button, Text } from '@/components';
@@ -11,9 +11,11 @@ import useScroll from '@/hooks/useScroll';
 
 // Icons
 import { ArrowLeft, ArrowRight } from '@/icons';
+import { StrapiResponse } from '@/types/strapi';
+import { formatNFTResponse } from '@/utils/nft';
 
 interface NTFRecentlyAddProps {
-  recentlyList: NFTData[];
+  recentlyList: StrapiResponse<NFTResponse>[];
 }
 
 const NTFRecentlyAdd = ({ recentlyList }: NTFRecentlyAddProps) => {
@@ -46,13 +48,16 @@ const NTFRecentlyAdd = ({ recentlyList }: NTFRecentlyAddProps) => {
         className="flex gap-5 overflow-x-auto scroll-smooth hide-scrollbar"
         ref={ref}
       >
-        {recentlyList.map((item) => (
-          <NFTCard
-            key={item.id}
-            {...item}
-            data-testid={`nft-card-${item.id}`}
-          />
-        ))}
+        {recentlyList.map((item) => {
+          const formatter = formatNFTResponse(item);
+          return (
+            <NFTCard
+              key={item.id}
+              {...formatter}
+              data-testid={`nft-card-${item.id}`}
+            />
+          );
+        })}
       </div>
     </div>
   );

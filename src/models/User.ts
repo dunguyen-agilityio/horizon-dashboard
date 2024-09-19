@@ -1,11 +1,14 @@
+import { Role } from '@/types/user';
+import { TImage } from './Image';
+
 export class User {
   id!: string;
   firstName!: string;
   lastName?: string;
   email!: string;
   username!: string;
-  avatar?: string;
-  role!: string;
+  avatar?: TImage;
+  role!: Role;
   createdAt!: Date;
   rating!: number;
 
@@ -25,8 +28,3 @@ export class User {
 }
 
 export type TUser = Omit<User, 'fullName'>;
-
-export type UserResponse = Omit<TUser, 'avatar' | 'role'> & {
-  avatar: { url: string };
-  role: { name: string };
-};

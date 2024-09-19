@@ -29,8 +29,8 @@ exports[`NTFFavorites should match snapshot 1`] = `
                   decoding="async"
                   loading="lazy"
                   sizes="100vw"
-                  src="/_next/image?url=%2Fnft-default.webp&w=3840&q=75"
-                  srcset="/_next/image?url=%2Fnft-default.webp&w=640&q=75 640w, /_next/image?url=%2Fnft-default.webp&w=750&q=75 750w, /_next/image?url=%2Fnft-default.webp&w=828&q=75 828w, /_next/image?url=%2Fnft-default.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnft-default.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnft-default.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnft-default.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnft-default.webp&w=3840&q=75 3840w"
+                  src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=3840&q=75"
+                  srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=3840&q=75 3840w"
                   style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
                 />
               </div>
@@ -46,7 +46,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
                   <p
                     class="text-secondary dark:text-secondary text-small font-medium"
                   >
-                    By Adela Parkson
+                    By User 1
                   </p>
                 </div>
                 <div
@@ -58,14 +58,14 @@ exports[`NTFFavorites should match snapshot 1`] = `
                     tabindex="-1"
                   >
                     <img
-                      alt="avatar"
+                      alt="Adela Parkson"
                       class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                       data-nimg="1"
                       decoding="async"
                       height="27"
                       loading="lazy"
-                      src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
-                      srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+                      src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75 2x"
                       style="color: transparent;"
                       width="27"
                     />
@@ -75,14 +75,14 @@ exports[`NTFFavorites should match snapshot 1`] = `
                     tabindex="-1"
                   >
                     <img
-                      alt="avatar"
+                      alt="user2"
                       class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                       data-nimg="1"
                       decoding="async"
                       height="27"
                       loading="lazy"
-                      src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
-                      srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+                      src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75 2x"
                       style="color: transparent;"
                       width="27"
                     />
@@ -92,14 +92,14 @@ exports[`NTFFavorites should match snapshot 1`] = `
                     tabindex="-1"
                   >
                     <img
-                      alt="avatar"
+                      alt="user3"
                       class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                       data-nimg="1"
                       decoding="async"
                       height="27"
                       loading="lazy"
-                      src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
-                      srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+                      src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75"
+                      srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75 2x"
                       style="color: transparent;"
                       width="27"
                     />
@@ -284,8 +284,8 @@ exports[`NTFFavorites should match snapshot 1`] = `
                 decoding="async"
                 loading="lazy"
                 sizes="100vw"
-                src="/_next/image?url=%2Fnft-default.webp&w=3840&q=75"
-                srcset="/_next/image?url=%2Fnft-default.webp&w=640&q=75 640w, /_next/image?url=%2Fnft-default.webp&w=750&q=75 750w, /_next/image?url=%2Fnft-default.webp&w=828&q=75 828w, /_next/image?url=%2Fnft-default.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnft-default.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnft-default.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnft-default.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnft-default.webp&w=3840&q=75 3840w"
+                src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=3840&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=3840&q=75 3840w"
                 style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
               />
             </div>
@@ -301,7 +301,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
                 <p
                   class="text-secondary dark:text-secondary text-small font-medium"
                 >
-                  By Adela Parkson
+                  By User 1
                 </p>
               </div>
               <div
@@ -313,14 +313,14 @@ exports[`NTFFavorites should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="avatar"
+                    alt="Adela Parkson"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     data-nimg="1"
                     decoding="async"
                     height="27"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+                    src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75 2x"
                     style="color: transparent;"
                     width="27"
                   />
@@ -330,14 +330,14 @@ exports[`NTFFavorites should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="avatar"
+                    alt="user2"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     data-nimg="1"
                     decoding="async"
                     height="27"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+                    src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75 2x"
                     style="color: transparent;"
                     width="27"
                   />
@@ -347,14 +347,14 @@ exports[`NTFFavorites should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="avatar"
+                    alt="user3"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     data-nimg="1"
                     decoding="async"
                     height="27"
                     loading="lazy"
-                    src="/_next/image?url=%2Fdefault-avatar.webp&w=64&q=75"
-                    srcset="/_next/image?url=%2Fdefault-avatar.webp&w=32&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=64&q=75 2x"
+                    src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75"
+                    srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=32&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=64&q=75 2x"
                     style="color: transparent;"
                     width="27"
                   />

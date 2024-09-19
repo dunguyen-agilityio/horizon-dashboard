@@ -79,7 +79,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                 <img
                   alt="avatar"
                   class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-                  src="/default-avatar.webp"
+                  src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                 />
               </span>
               <div
@@ -157,7 +157,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                 <img
                   alt="avatar"
                   class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-                  src="/default-avatar.webp"
+                  src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                 />
               </span>
               <div
@@ -235,7 +235,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                 <img
                   alt="avatar"
                   class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-                  src="/default-avatar.webp"
+                  src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                 />
               </span>
               <div
@@ -313,7 +313,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                 <img
                   alt="avatar"
                   class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-                  src="/default-avatar.webp"
+                  src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                 />
               </span>
               <div

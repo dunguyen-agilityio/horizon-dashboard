@@ -40,6 +40,9 @@ import { formatShortDate } from '@/utils/format';
 import { formatContributorData } from '@/utils/contributor';
 import { compareDate, compareString, compareNumber } from '@/utils/compare';
 
+// Models
+import { TImage } from '@/models/Image';
+
 const visibleOnMobileByKey: Record<string, boolean> = CONTRIBUTOR_COLUMN.reduce(
   (prev, { key, visibleOnMobile = false }) => ({
     ...prev,
@@ -71,7 +74,7 @@ const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
       return (
         <div className="flex items-center gap-2">
           <Avatar
-            src={getKeyValue(item, 'avatar')}
+            src={(getKeyValue(item, 'avatar') as TImage)?.url}
             alt={value}
             size="sm"
             className="rounded-full hidden xs:block"
@@ -230,20 +233,24 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
         )}
       </TableHeader>
       <TableBody items={dataFormat} emptyContent="No Contributors to display.">
-        {(item) => (
-          <TableRow key={item.id} className="hover:bg-default-200">
-            {(columnKey) => (
-              <TableCell
-                className={cn(
-                  'pt-[15px] w-1/4 pl-4',
-                  visibleOnMobileByKey[columnKey] ? '' : 'hidden sm:table-cell',
-                )}
-              >
-                {formatContributor(item, columnKey as keyof Contributor)}
-              </TableCell>
-            )}
-          </TableRow>
-        )}
+        {(item) => {
+          return (
+            <TableRow key={item.id} className="hover:bg-default-200">
+              {(columnKey) => (
+                <TableCell
+                  className={cn(
+                    'pt-[15px] w-1/4 pl-4',
+                    visibleOnMobileByKey[columnKey]
+                      ? ''
+                      : 'hidden sm:table-cell',
+                  )}
+                >
+                  {formatContributor(item, columnKey as keyof Contributor)}
+                </TableCell>
+              )}
+            </TableRow>
+          );
+        }}
       </TableBody>
     </Table>
   );

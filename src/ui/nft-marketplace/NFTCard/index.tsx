@@ -8,25 +8,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Text } from '@/components';
 import FavoriteIcon from '@/icons/Favorite';
+import { Button } from '@nextui-org/button';
 import { Avatar, AvatarGroup } from '@nextui-org/avatar';
 
 // Constants
 import { PUBLIC_ROUTES } from '@/constants/routes';
-import { NFT_IMAGES } from '@/constants/images';
 
 // Models
-import { NFTData } from '@/models/NFT';
+import { NFTDataExtend } from '@/models/NFT';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-import { Button } from '@nextui-org/react';
+import { NFT_IMAGES } from '@/constants';
 
-interface INFTProps extends NFTData {
+interface INFTProps extends NFTDataExtend {
   isShowIcon?: boolean;
 }
 
 const NFTCard = ({
-  image = NFT_IMAGES.DEFAULT,
+  image,
   name,
   author,
   members,
@@ -52,7 +52,12 @@ const NFTCard = ({
     >
       <div className="bg-white dark:bg-indigo rounded-md p-5">
         <div className="relative w-[308px] h-[205px] rounded-[18px] overflow-hidden">
-          <Image src={image} alt={name} fill className="object-cover" />
+          <Image
+            src={image?.url || NFT_IMAGES.DEFAULT}
+            alt={name}
+            fill
+            className="object-cover"
+          />
           {isShowIcon && (
             <Button
               isIconOnly
@@ -79,12 +84,12 @@ const NFTCard = ({
             max={3}
             className="[&>span]:w-[27px] [&>span]:h-[27px] [&>span]:ring-offset-0"
           >
-            {members.map(({ id, avatar, fullName }) => (
+            {members.map(({ id, avatar, username }) => (
               <Avatar
                 key={id}
-                src={avatar}
+                src={avatar?.url}
                 ImgComponent={Image}
-                alt={fullName}
+                alt={username}
                 imgProps={{ width: 27, height: 27 }}
               />
             ))}

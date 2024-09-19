@@ -153,8 +153,8 @@ exports[`Header tests Should match snapshot 1`] = `
             decoding="async"
             height="40"
             loading="lazy"
-            src="/_next/image?url=%2Fdefault-avatar.webp&w=96&q=75"
-            srcset="/_next/image?url=%2Fdefault-avatar.webp&w=48&q=75 1x, /_next/image?url=%2Fdefault-avatar.webp&w=96&q=75 2x"
+            src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=96&q=75 2x"
             style="color: transparent;"
             width="40"
           />

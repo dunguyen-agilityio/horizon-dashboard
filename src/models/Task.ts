@@ -1,4 +1,4 @@
-import { User } from './User';
+import { TUser } from './User';
 
 export const enum LABEL {
   PENDING = 'Pending',
@@ -23,7 +23,7 @@ export class Task {
   startedDate?: string;
   status!: STATUS;
   labels!: LABEL[];
-  assignees?: User[];
+  assignees?: TUser[];
   cover?: string;
 
   constructor(task?: Task) {
