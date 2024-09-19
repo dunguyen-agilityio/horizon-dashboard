@@ -29,6 +29,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Constants
 import { SORT_TYPES } from '@/constants/sort';
+import { PARAMS } from '@/constants/params';
 import {
   CONTRIBUTOR_COLUMN,
   CONTRIBUTOR_HEADER,
@@ -176,7 +177,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
   };
 
   const handleChangePage = (page: number) => {
-    params.set('page', String(page));
+    params.set(PARAMS.PAGE, String(page));
     push(`${pathname}?${params.toString()}`);
   };
 
