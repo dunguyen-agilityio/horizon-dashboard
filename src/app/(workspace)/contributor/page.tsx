@@ -24,8 +24,8 @@ const ContributorPage = async ({
 
   const { data, error } = await getContributor({
     page,
-    startDate: startDate || '2024-09-13',
-    endDate: `${endDate}T23:59:59.999Z` || '2024-09-18T23:59:59.999Z',
+    startDate: startDate,
+    endDate: `${endDate}T23:59:59.999Z`, // To get all time of end date
     pageSize: PAGE_SIZE.MEDIUM,
     cacheOptions: 'no-store',
   });
