@@ -28,12 +28,14 @@ export const formatContributorData = (data: ContributorData) => {
  *
  * @param {INFTResponse[]} nftsData - Array of NFT data associated with the user.
  * @param {IUserResponse} user - User information that includes attributes like name, avatar, and other data.
+ * @param {Date} createdAtContributor - Data create at contributor.
  * @returns {ContributorData[]} - Array of ContributorData objects, one for each NFT, or a single object if the user has no NFTs.
  */
 
 export const mapUserNFTsToContributorData = (
   nftsData: INFTResponse[],
   user: IUserResponse,
+  createdAtContributor?: Date,
 ): ContributorData[] => {
   const { id, attributes } = user;
 
@@ -42,6 +44,7 @@ export const mapUserNFTsToContributorData = (
         id: `${nft.id}${id}`, // Unique ID by combining nft ID and user ID
         ...attributes,
         template: nft?.attributes.name ?? '',
+        createdAt: createdAtContributor || attributes.createdAt,
         avatar: attributes.avatar.data?.attributes.url ?? '',
       }))
     : [
@@ -49,6 +52,7 @@ export const mapUserNFTsToContributorData = (
           id,
           ...attributes,
           template: '',
+          createdAt: createdAtContributor || attributes.createdAt,
           avatar: attributes.avatar.data?.attributes.url ?? '',
         },
       ];
@@ -66,9 +70,10 @@ export const mapContributorsData = (
 ): ContributorData[] =>
   dataContributor.flatMap(({ attributes }) => {
     const {
+      createdAt,
       nfts: { data: nfts = [] },
       users_permissions_user: { data: users },
     } = attributes;
 
-    return mapUserNFTsToContributorData(nfts, users);
+    return mapUserNFTsToContributorData(nfts, users, createdAt);
   });
