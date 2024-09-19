@@ -6,7 +6,7 @@ export interface IAvatar {
   updatedAt: string;
 }
 
-export interface IAvatarData {
+export interface IAvatarResponse {
   data: {
     attributes: IAvatar;
   };
