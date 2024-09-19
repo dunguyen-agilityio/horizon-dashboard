@@ -62,20 +62,25 @@ export const formatNumber = (number: number) => {
 
   return decimal ? `${formattedNumber}.${decimal}` : formattedNumber;
 };
+/**
+ * Parses a date range string (e.g., "2024-09-01 – 2024-09-15") and returns
+ * an object with formatted start and end dates in 'YYYY-MM-DD' format.
+ *
+ * @param {string} dateRange - The date range string to be parsed, separated by '–'.
+ * @returns {Object} - An object containing `startDate` and `endDate` in 'YYYY-MM-DD' format.
+ */
 
 export const parseDateRange = (dateRange: string) => {
   // Split the string by the '–' character to separate the start and end dates
   const [startDate, endDate] = dateRange.split('–').map((date) => {
-    // Convert the string to a Date object
     const parsedDate = new Date(date.trim());
-    // Format the date as 'YYYY-MM-DD'
+
     const year = parsedDate.getFullYear();
-    const month = String(parsedDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const month = String(parsedDate.getMonth() + 1).padStart(2, '0'); // First month is 01
     const day = String(parsedDate.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   });
 
-  // Return an object with formatted startDate and endDate
   return {
     startDate,
     endDate,
