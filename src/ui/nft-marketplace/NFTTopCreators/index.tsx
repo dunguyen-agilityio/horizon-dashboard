@@ -20,7 +20,7 @@ import { Creator } from '@/types/creator';
 
 // Utils
 import { cn } from '@nextui-org/theme';
-import { formatUserName } from '@/utils/format';
+import { formatNumber, formatUserName } from '@/utils/format';
 
 const columns: TColumn[] = [
   {
@@ -47,7 +47,7 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
   };
 
   const formatDataCreator = (row: Creator, key: keyof Creator) => {
-    const { avatar, userName, rating } = row;
+    const { avatar, userName, rating, artwork } = row;
     switch (key) {
       case 'userName':
         return (
@@ -61,6 +61,17 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
               {formatUserName(userName)}
             </Text>
           </div>
+        );
+
+      case 'artwork':
+        return (
+          <Text
+            as="span"
+            size={TEXT_SIZE.sm}
+            className="bg-transparent text-secondary"
+          >
+            {formatNumber(artwork)}
+          </Text>
         );
 
       case 'rating':

@@ -7,6 +7,9 @@ import Text from '@/components/Text';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
+// Utils
+import { formatNumber } from '@/utils/format';
+
 type LayoutVariant = 'primary' | 'secondary';
 
 export type TrendInfo =
@@ -89,7 +92,7 @@ const SummaryCard = ({
         </Text>
         <Text size={TEXT_SIZE.extra} as="b">
           &nbsp;
-          {`${unit}${counter}`}
+          {`${unit}${formatNumber(counter)}`}
         </Text>
         {renderTrendContent()}
       </div>
