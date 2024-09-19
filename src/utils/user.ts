@@ -1,4 +1,7 @@
-import { User } from '@/models/User';
-import { UserExtend } from '@/types/user';
+import { TUser, User } from '@/models/User';
 
-export const formatUser = (data: UserExtend) => new User(data);
+export const formatUser = (data: TUser) => {
+  const user = new User(data);
+
+  return { ...user, fullName: user.fullName };
+};

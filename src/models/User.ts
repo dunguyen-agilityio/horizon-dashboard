@@ -1,25 +1,38 @@
-import { Role } from '@/types/user';
 import { TImage } from './Image';
 
-export class User {
-  id!: string;
-  firstName!: string;
-  lastName?: string;
-  email!: string;
-  username!: string;
-  avatar?: TImage;
-  role!: Role;
-  createdAt!: Date;
-  rating!: number;
+export type Role = { name: string };
 
-  constructor(user: TUser) {
-    const { lastName = '', rating = 0, createdAt } = user;
-    Object.assign(this, {
-      ...user,
-      lastName,
-      createdAt: new Date(createdAt),
-      rating,
-    });
+export class User {
+  id: string;
+  firstName: string;
+  lastName?: string;
+  email: string;
+  username: string;
+  avatar?: TImage;
+  role: Role;
+  createdAt: Date;
+  rating: number;
+
+  constructor({
+    lastName = '',
+    rating = 0,
+    createdAt,
+    email,
+    firstName,
+    id,
+    role,
+    username,
+    avatar,
+  }: TUser) {
+    this.id = id;
+    this.rating = rating;
+    this.avatar = avatar;
+    this.role = role;
+    this.username = username;
+    this.email = email;
+    this.lastName = lastName;
+    this.firstName = firstName;
+    this.createdAt = new Date(createdAt);
   }
 
   get fullName() {

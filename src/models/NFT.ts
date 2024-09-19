@@ -1,7 +1,7 @@
 import { StrapiModel, StrapiResponse } from '@/types/strapi';
 import { TImage } from './Image';
 import { TUser, User } from './User';
-import { UserResponse1 } from '@/utils/nft';
+import { UserResponse } from '@/types/contributor';
 
 export class NFT {
   id!: string;
@@ -25,7 +25,7 @@ export type NFTData = Omit<NFT, 'author' | 'members' | 'image'> & {
 export type NFTDataExtend = Omit<NFTData, 'author'> & { author: User };
 
 export type NFTResponse = Omit<NFT, 'author' | 'members' | 'image'> & {
-  author: StrapiModel<StrapiResponse<UserResponse1>>;
-  members: StrapiModel<StrapiResponse<UserResponse1>[]>;
+  author: StrapiModel<StrapiResponse<UserResponse>>;
+  members: StrapiModel<StrapiResponse<UserResponse>[]>;
   image: StrapiModel<StrapiResponse<TImage> | null>;
 };

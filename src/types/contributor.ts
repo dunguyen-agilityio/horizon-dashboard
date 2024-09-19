@@ -1,25 +1,22 @@
 // Types
-import { IMeta } from '@/types/meta';
-import { StrapiResponse } from './strapi';
-import { ContributorResponse } from '@/models/Contributor';
+import { StrapiModel, StrapiResponse } from './strapi';
 
-export interface IContributorsResponse {
-  data: StrapiResponse<{
-    id: string;
-    createdAt: Date;
-    users_permissions_user: {
-      data: StrapiResponse<ContributorResponse>;
-    };
-  }>[];
-  meta: IMeta;
-}
+// Models
+import { Role, User } from '@/models/User';
+import { NFTResponse } from '@/models/NFT';
+import { TImage } from '@/models/Image';
 
-export interface IContributorData {
-  id: string;
-  attributes: {
-    createdAt: Date;
-    users_permissions_user: {
-      data: StrapiResponse<ContributorResponse>;
-    };
-  };
-}
+export type UserResponse = Omit<User, 'avatar' | 'role'> & {
+  join_nfts: StrapiModel<StrapiResponse<NFTResponse>[]>;
+  avatar?: StrapiModel<StrapiResponse<TImage>>;
+  role: StrapiResponse<Role>;
+};
+
+export type ContributorResponse = { id: string } & {
+  users_permissions_user: StrapiModel<StrapiResponse<UserResponse>>;
+};
+
+export type ContributorData = Omit<User, 'avatar'> & {
+  avatar?: TImage;
+  template: string;
+};

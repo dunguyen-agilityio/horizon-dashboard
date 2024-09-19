@@ -22,7 +22,7 @@ import { Progress } from '@nextui-org/progress';
 import { Pagination } from '@nextui-org/pagination';
 
 // Models
-import { Contributor, ContributorData } from '@/models/Contributor';
+import { ContributorData, ContributorResponse } from '@/types/contributor';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
@@ -37,11 +37,12 @@ import {
 
 // Utils
 import { formatShortDate } from '@/utils/format';
-import { formatContributorData } from '@/utils/contributor';
+import { mapContributorsData } from '@/utils/contributor';
 import { compareDate, compareString, compareNumber } from '@/utils/compare';
 
 // Models
 import { TImage } from '@/models/Image';
+import { StrapiResponse } from '@/types/strapi';
 
 const visibleOnMobileByKey: Record<string, boolean> = CONTRIBUTOR_COLUMN.reduce(
   (prev, { key, visibleOnMobile = false }) => ({
@@ -52,12 +53,15 @@ const visibleOnMobileByKey: Record<string, boolean> = CONTRIBUTOR_COLUMN.reduce(
 );
 
 interface ContributorTableProps {
-  data: ContributorData[];
+  data: StrapiResponse<ContributorResponse>[];
   pageCount: number;
   page: number;
 }
 
-const formatContributor = (item: Contributor, columnKey: keyof Contributor) => {
+const formatContributor = (
+  item: ContributorData,
+  columnKey: keyof ContributorData,
+) => {
   const value = getKeyValue(item, columnKey);
 
   if (value === undefined) return null;
@@ -133,10 +137,10 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
   const params = new URLSearchParams(searchParams);
 
   const dataFormat = useMemo(() => {
-    let format: Contributor[] = [];
+    let format: ContributorData[] = [];
 
     data.forEach((item) => {
-      format = [...format, ...formatContributorData(item)];
+      format = [...format, ...mapContributorsData(item)];
     });
 
     return format;
@@ -245,7 +249,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
                       : 'hidden sm:table-cell',
                   )}
                 >
-                  {formatContributor(item, columnKey as keyof Contributor)}
+                  {formatContributor(item, columnKey as keyof ContributorData)}
                 </TableCell>
               )}
             </TableRow>

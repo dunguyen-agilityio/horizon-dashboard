@@ -14,10 +14,12 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Services
 import { formatUser } from '@/utils/user';
-import { UserExtend } from '@/types/user';
+
+// Models
+import { TUser } from '@/models/User';
 
 interface CourseCTAProps {
-  members: UserExtend[];
+  members: TUser[];
 }
 
 const CourseCTA = ({ members }: CourseCTAProps) => (

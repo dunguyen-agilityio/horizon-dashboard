@@ -12,9 +12,6 @@ import { getContributor } from '@/services/contributor';
 // Types
 import { ISearchParams } from '@/types/query-params';
 
-// Utils
-import { mapContributorsData } from '@/utils/contributor';
-
 const ContributorPage = async ({
   searchParams,
 }: {
@@ -40,15 +37,13 @@ const ContributorPage = async ({
   const { data: dataContributor, meta } = data;
   const { pageCount = 0 } = meta?.pagination || {};
 
-  const dataFormatted = mapContributorsData(dataContributor);
-
   return (
     <>
       <div className="flex w-full justify-center mt-4 xs:justify-end">
         <DateRangePicker />
       </div>
       <ContributorTable
-        data={dataFormatted}
+        data={dataContributor}
         page={parseInt(page, 10)}
         pageCount={pageCount}
       />

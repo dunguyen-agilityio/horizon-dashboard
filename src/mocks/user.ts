@@ -1,7 +1,10 @@
 import { TImage } from '@/models/Image';
 import { TUser } from '@/models/User';
+
+import { UserResponse } from '@/types/contributor';
 import { StrapiResponse } from '@/types/strapi';
-import { UserResponse1 } from '@/utils/nft';
+
+import { formatUser } from '@/utils/user';
 
 export const MOCK_AVATAR: TImage = {
   hash: 'image_de1e29b0b7',
@@ -65,12 +68,13 @@ export const MOCK_IMAGE_RESPONSE: StrapiResponse<TImage> = {
   },
 };
 
-export const MOCK_USERS_RESPONSE: StrapiResponse<UserResponse1>[] =
+export const MOCK_USERS_RESPONSE: StrapiResponse<UserResponse>[] =
   MOCK_USERS.map(({ id, ...attributes }) => ({
     attributes: {
-      ...attributes,
+      ...formatUser({ ...attributes, id }),
       avatar: { data: MOCK_IMAGE_RESPONSE },
       role: MOCK_ROLE_RESPONSE,
+      join_nfts: { data: [] },
     },
     id,
   }));

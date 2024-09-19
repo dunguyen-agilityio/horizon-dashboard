@@ -6,7 +6,8 @@ import { API_ENTITY } from '@/constants/api';
 import { PAGE_SIZE } from '@/constants/query';
 
 // Types
-import { IContributorsResponse } from '@/types/contributor';
+import { ContributorResponse } from '@/types/contributor';
+import { StrapiModelWithPagination, StrapiResponse } from '@/types/strapi';
 
 interface IContributorParams {
   page: string;
@@ -35,10 +36,9 @@ export const getContributor = ({
     'populate[users_permissions_user][populate][avatar]': '*',
   });
 
-  return apiClient.get<IContributorsResponse>(
-    `${API_ENTITY.CONTRIBUTORS}?${queryParams}&${FILTERS}`,
-    {
-      cache: cacheOptions,
-    },
-  );
+  return apiClient.get<
+    StrapiModelWithPagination<StrapiResponse<ContributorResponse>[]>
+  >(`${API_ENTITY.CONTRIBUTORS}?${queryParams}&${FILTERS}`, {
+    cache: cacheOptions,
+  });
 };

@@ -5,17 +5,17 @@ import { User } from '@nextui-org/user';
 import { Listbox, ListboxItem } from '@nextui-org/listbox';
 import { BoxIcon, Text } from '@/components';
 
-// Models
-import { UserExtend } from '@/types/user';
-
 // Icons
 import { Add, More } from '@/icons';
 
 // Utils
 import { formatUser } from '@/utils/user';
 
+// Types
+import { TUser } from '@/models/User';
+
 interface TeamMemberProps {
-  members: UserExtend[];
+  members: TUser[];
 }
 
 const TeamMember = ({ members }: TeamMemberProps) => (

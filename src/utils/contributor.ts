@@ -1,73 +1,12 @@
 // Models
-import {
-  Contributor,
-  ContributorData,
-  ContributorResponse,
-} from '@/models/Contributor';
+import { ContributorData, ContributorResponse } from '@/types/contributor';
 
 // Types
-import { IContributorData } from '@/types/contributor';
 import { StrapiResponse } from '@/types/strapi';
 
-export const formatContributorData = (data: ContributorData) => {
-  const { join_nfts, avatar, ...rest } = data;
-
-  if (!join_nfts || !join_nfts.data || join_nfts.data.length === 0) {
-    // Check if user haven't NFT
-    return [new Contributor(rest)];
-  }
-
-  return join_nfts.data.map(
-    (nft) =>
-      new Contributor({
-        ...rest,
-        avatar,
-        id: `${rest.id}-${nft.id}`,
-        template: nft?.attributes?.name,
-      }),
-  );
-};
-
-/**
- * Maps the user's NFT data to the ContributorData format.
- *
- * @param {INFTResponse[]} nftsData - Array of NFT data associated with the user.
- * @param {IUserResponse} user - User information that includes attributes like name, avatar, and other data.
- * @param {Date} createdAtContributor - Data create at contributor.
- * @returns {ContributorData[]} - Array of ContributorData objects, one for each NFT, or a single object if the user has no NFTs.
- */
-
-export const mapUserNFTsToContributorData = (
-  user: StrapiResponse<ContributorResponse>,
-  createdAtContributor?: Date,
-): ContributorData[] => {
-  if (!user) {
-    return [];
-  }
-
-  const { id, attributes } = user;
-
-  const { attributes: avatar } = attributes.avatar?.data || {};
-
-  return attributes.join_nfts?.data?.length
-    ? attributes.join_nfts?.data.map((nft) => ({
-        ...attributes,
-        id: `${nft.id}${id}`, // Unique ID by combining nft ID and user ID
-        template: nft?.attributes.name ?? '',
-        createdAt: createdAtContributor || attributes.createdAt,
-        avatar: avatar,
-        join_nfts: { data: [nft] },
-      }))
-    : [
-        {
-          ...attributes,
-          id,
-          template: '',
-          createdAt: createdAtContributor || attributes.createdAt,
-          avatar,
-        },
-      ];
-};
+// Utils
+import { formatUser } from './user';
+import { formatStrapiModel } from './nft';
 
 /**
  * Maps multiple contributors data, including users and NFTs.
@@ -76,13 +15,31 @@ export const mapUserNFTsToContributorData = (
  * @returns {ContributorData[]} - Array of formatted ContributorData objects for all contributors.
  */
 
-export const mapContributorsData = (
-  dataContributor: IContributorData[],
-): ContributorData[] =>
-  dataContributor.flatMap(({ attributes }) => {
-    const {
-      createdAt,
-      users_permissions_user: { data: user },
-    } = attributes;
-    return mapUserNFTsToContributorData(user, createdAt);
+export const mapContributorsData = ({
+  attributes,
+}: StrapiResponse<ContributorResponse>): ContributorData[] => {
+  const {
+    users_permissions_user: { data: user },
+  } = attributes;
+
+  const join_nfts = user.attributes.join_nfts?.data || [];
+
+  const { avatar, role, ...contributor } = formatStrapiModel(user);
+  const contributorData = formatUser({
+    ...contributor,
+    avatar: avatar?.data?.attributes,
+    role: { name: role?.attributes?.name },
   });
+
+  if (!join_nfts.length) {
+    return [{ ...contributorData, template: '' }];
+  }
+
+  return join_nfts.map(({ id, attributes }) => {
+    return {
+      ...contributorData,
+      id: `${user.id}-${id}`,
+      template: attributes.name,
+    };
+  });
+};

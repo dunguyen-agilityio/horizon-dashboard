@@ -1,7 +1,7 @@
 import { NFTDataExtend, NFTResponse } from '@/models/NFT';
-import { StrapiModel, StrapiResponse } from '@/types/strapi';
-import { TUser, User } from '@/models/User';
-import { TImage } from '@/models/Image';
+import { StrapiResponse } from '@/types/strapi';
+import { User } from '@/models/User';
+import { UserResponse } from '@/types/contributor';
 
 export const formatStrapiModel = <T extends { id: string }>({
   attributes,
@@ -12,12 +12,7 @@ export const formatStrapiModel = <T extends { id: string }>({
     id,
   }) as T;
 
-export type UserResponse1 = Omit<TUser, 'avatar' | 'role'> & {
-  avatar: StrapiModel<StrapiResponse<TImage>> | null;
-  role: StrapiResponse<{ name: string; id: string }> | null;
-};
-
-const formatUserResponse = (data: StrapiResponse<UserResponse1>): User => {
+const formatUserResponse = (data: StrapiResponse<UserResponse>): User => {
   const { avatar, role, ...rest } = formatStrapiModel(data);
 
   const { attributes: avatarData, id } = avatar?.data ?? {};
@@ -35,7 +30,12 @@ const formatUserResponse = (data: StrapiResponse<UserResponse1>): User => {
 
 export const formatNFTResponse = ({
   id,
-  attributes: { author, image, members, ...rest },
+  attributes: {
+    author,
+    image,
+    members: { data: members = [] },
+    ...rest
+  },
 }: StrapiResponse<NFTResponse>): NFTDataExtend => {
   const { hash = '', url = '' } = image?.data?.attributes || {};
 
@@ -43,7 +43,7 @@ export const formatNFTResponse = ({
     id,
     ...rest,
     author: formatUserResponse(author.data),
-    members: members.data?.map?.((member) => formatUserResponse(member)) || [],
+    members: members.map(formatUserResponse),
     image: { hash, url },
   };
 };

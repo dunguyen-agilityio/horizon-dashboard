@@ -176,17 +176,17 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           role="rowgroup"
         >
           <tr
-            aria-labelledby="react-aria-:r0:-1-fullName"
+            aria-labelledby="react-aria-:r0:-1-1-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
             data-first="true"
-            data-key="1"
+            data-key="1-1"
             role="row"
             tabindex="-1"
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="11fullName"
-              id="react-aria-:r0:-1-fullName"
+              data-key="1-11-1fullName"
+              id="react-aria-:r0:-1-1-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -197,29 +197,11 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   class="relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-8 h-8 text-tiny bg-default text-default-foreground rounded-full hidden xs:block"
                   tabindex="-1"
                 >
-                  <span
-                    aria-label="User 1"
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
-                    role="img"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      fill="none"
-                      height="80%"
-                      role="presentation"
-                      viewBox="0 0 24 24"
-                      width="80%"
-                    >
-                      <path
-                        d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
+                  <img
+                    alt="User 1"
+                    class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                    src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
+                  />
                 </span>
                 <div
                   class="flex flex-col"
@@ -240,17 +222,19 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="11template"
+              data-key="1-11-1template"
               role="gridcell"
               tabindex="-1"
             >
               <p
                 class="text-primary dark:text-white text-small font-bold"
-              />
+              >
+                Mesh Gradients
+              </p>
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="11createdAt"
+              data-key="1-11-1createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -263,7 +247,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="11rating"
+              data-key="1-11-1rating"
               role="gridcell"
               tabindex="-1"
             >
@@ -271,8 +255,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 aria-label="Rating"
                 aria-valuemax="100"
                 aria-valuemin="0"
-                aria-valuenow="23"
-                aria-valuetext="23%"
+                aria-valuenow="29"
+                aria-valuetext="29%"
                 class="flex flex-col gap-2 w-full max-w-[200px]"
                 id="react-aria-:r2:"
                 role="progressbar"
@@ -283,7 +267,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   <span
                     class="text-medium"
                   >
-                    23%
+                    29%
                   </span>
                 </div>
                 <div
@@ -298,9 +282,9 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
           </tr>
           <tr
-            aria-labelledby="react-aria-:r0:-2-fullName"
+            aria-labelledby="react-aria-:r0:-2-1-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
-            data-key="2"
+            data-key="2-1"
             data-middle="true"
             data-odd="true"
             role="row"
@@ -308,8 +292,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="22fullName"
-              id="react-aria-:r0:-2-fullName"
+              data-key="2-12-1fullName"
+              id="react-aria-:r0:-2-1-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -320,29 +304,11 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   class="relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-8 h-8 text-tiny bg-default text-default-foreground rounded-full hidden xs:block"
                   tabindex="-1"
                 >
-                  <span
-                    aria-label="User 2"
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
-                    role="img"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      fill="none"
-                      height="80%"
-                      role="presentation"
-                      viewBox="0 0 24 24"
-                      width="80%"
-                    >
-                      <path
-                        d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
+                  <img
+                    alt="User 2"
+                    class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                    src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
+                  />
                 </span>
                 <div
                   class="flex flex-col"
@@ -363,17 +329,19 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="22template"
+              data-key="2-12-1template"
               role="gridcell"
               tabindex="-1"
             >
               <p
                 class="text-primary dark:text-white text-small font-bold"
-              />
+              >
+                Mesh Gradients
+              </p>
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="22createdAt"
+              data-key="2-12-1createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -386,7 +354,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="22rating"
+              data-key="2-12-1rating"
               role="gridcell"
               tabindex="-1"
             >
@@ -394,8 +362,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                 aria-label="Rating"
                 aria-valuemax="100"
                 aria-valuemin="0"
-                aria-valuenow="80"
-                aria-valuetext="80%"
+                aria-valuenow="72"
+                aria-valuetext="72%"
                 class="flex flex-col gap-2 w-full max-w-[200px]"
                 id="react-aria-:r5:"
                 role="progressbar"
@@ -406,7 +374,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   <span
                     class="text-medium"
                   >
-                    80%
+                    72%
                   </span>
                 </div>
                 <div
@@ -421,17 +389,17 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
           </tr>
           <tr
-            aria-labelledby="react-aria-:r0:-3-fullName"
+            aria-labelledby="react-aria-:r0:-3-1-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
-            data-key="3"
+            data-key="3-1"
             data-middle="true"
             role="row"
             tabindex="-1"
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="33fullName"
-              id="react-aria-:r0:-3-fullName"
+              data-key="3-13-1fullName"
+              id="react-aria-:r0:-3-1-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -442,29 +410,11 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   class="relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-8 h-8 text-tiny bg-default text-default-foreground rounded-full hidden xs:block"
                   tabindex="-1"
                 >
-                  <span
-                    aria-label="User 3"
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
-                    role="img"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      fill="none"
-                      height="80%"
-                      role="presentation"
-                      viewBox="0 0 24 24"
-                      width="80%"
-                    >
-                      <path
-                        d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
+                  <img
+                    alt="User 3"
+                    class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                    src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
+                  />
                 </span>
                 <div
                   class="flex flex-col"
@@ -485,17 +435,19 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="33template"
+              data-key="3-13-1template"
               role="gridcell"
               tabindex="-1"
             >
               <p
                 class="text-primary dark:text-white text-small font-bold"
-              />
+              >
+                Mesh Gradients
+              </p>
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="33createdAt"
+              data-key="3-13-1createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -508,7 +460,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="33rating"
+              data-key="3-13-1rating"
               role="gridcell"
               tabindex="-1"
             >
@@ -543,9 +495,9 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
           </tr>
           <tr
-            aria-labelledby="react-aria-:r0:-4-fullName"
+            aria-labelledby="react-aria-:r0:-4-1-fullName"
             class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 hover:bg-default-200"
-            data-key="4"
+            data-key="4-1"
             data-last="true"
             data-odd="true"
             role="row"
@@ -553,8 +505,8 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
           >
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="44fullName"
-              id="react-aria-:r0:-4-fullName"
+              data-key="4-14-1fullName"
+              id="react-aria-:r0:-4-1-fullName"
               role="rowheader"
               tabindex="-1"
             >
@@ -565,29 +517,11 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   class="relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-8 h-8 text-tiny bg-default text-default-foreground rounded-full hidden xs:block"
                   tabindex="-1"
                 >
-                  <span
-                    aria-label="User 4"
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
-                    role="img"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      fill="none"
-                      height="80%"
-                      role="presentation"
-                      viewBox="0 0 24 24"
-                      width="80%"
-                    >
-                      <path
-                        d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
+                  <img
+                    alt="User 4"
+                    class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                    src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
+                  />
                 </span>
                 <div
                   class="flex flex-col"
@@ -608,17 +542,19 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="44template"
+              data-key="4-14-1template"
               role="gridcell"
               tabindex="-1"
             >
               <p
                 class="text-primary dark:text-white text-small font-bold"
-              />
+              >
+                Mesh Gradients
+              </p>
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4 hidden sm:table-cell"
-              data-key="44createdAt"
+              data-key="4-14-1createdAt"
               role="gridcell"
               tabindex="-1"
             >
@@ -631,7 +567,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
             </td>
             <td
               class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-l-lg rtl:first:before:rounded-r-lg rtl:first:before:rounded-l-[unset] last:before:rounded-r-lg rtl:last:before:rounded-l-lg rtl:last:before:rounded-r-[unset] text-start pt-[15px] w-1/4 pl-4"
-              data-key="44rating"
+              data-key="4-14-1rating"
               role="gridcell"
               tabindex="-1"
             >

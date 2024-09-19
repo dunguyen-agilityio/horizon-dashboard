@@ -8,7 +8,9 @@ import { PROFILE_IMAGES } from '@/constants/images';
 
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
-import { Role } from '@/types/user';
+
+//Models
+import { Role } from '@/models/User';
 
 const { BACKGROUND } = PROFILE_IMAGES;
 
