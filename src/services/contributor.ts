@@ -23,7 +23,7 @@ export const getContributor = ({
   endDate,
   cacheOptions,
 }: IContributorParams) => {
-  const filters =
+  const FILTERS =
     startDate &&
     endDate &&
     `filters[createdAt][$gte]=${startDate}&filters[createdAt][$lte]=${endDate}`;
@@ -36,7 +36,7 @@ export const getContributor = ({
   });
 
   return apiClient.get<IContributorsResponse>(
-    `${API_ENTITY.CONTRIBUTORS}?${queryParams}&${filters}`,
+    `${API_ENTITY.CONTRIBUTORS}?${queryParams}&${FILTERS}`,
     {
       cache: cacheOptions,
     },

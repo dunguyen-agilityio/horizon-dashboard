@@ -37,6 +37,10 @@ export const mapUserNFTsToContributorData = (
   user: IUserResponse,
   createdAtContributor?: Date,
 ): ContributorData[] => {
+  if (!user) {
+    return [];
+  }
+
   const { id, attributes } = user;
 
   return nftsData.length
