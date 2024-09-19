@@ -3,6 +3,7 @@ import { apiClient } from '@/services/api';
 
 // Constants
 import { API_ENTITY } from '@/constants/api';
+import { PAGE_SIZE } from '@/constants/query';
 
 // Types
 import { IContributorsResponse } from '@/types/contributor';
@@ -17,22 +18,25 @@ interface IContributorParams {
 
 export const getContributor = ({
   page,
-  pageSize = '10',
-  startDate = '',
-  endDate = '',
+  pageSize = PAGE_SIZE.HIGH,
+  startDate,
+  endDate,
   cacheOptions,
 }: IContributorParams) => {
+  const filters =
+    startDate &&
+    endDate &&
+    `filters[createdAt][$gte]=${startDate}&filters[createdAt][$lte]=${endDate}`;
+
   const queryParams = new URLSearchParams({
     'pagination[page]': page,
     'pagination[pageSize]': pageSize,
     'populate[users_permissions_user][populate][0]': 'avatar',
     'populate[nfts][populate][0]': 'name',
-    'filters[createdAt][$gte]': startDate,
-    'filters[createdAt][$lte]': endDate,
   });
 
   return apiClient.get<IContributorsResponse>(
-    `${API_ENTITY.CONTRIBUTORS}?${queryParams}`,
+    `${API_ENTITY.CONTRIBUTORS}?${queryParams}&${filters}`,
     {
       cache: cacheOptions,
     },
