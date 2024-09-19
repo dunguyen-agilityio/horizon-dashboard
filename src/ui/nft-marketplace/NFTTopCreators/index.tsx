@@ -10,6 +10,9 @@ import {
 } from '@nextui-org/table';
 import { Avatar, Progress } from '@nextui-org/react';
 
+// constants
+import { ROW_CREATOR } from '@/constants/topCreator';
+
 // components
 import { Text, Button } from '@/components';
 
@@ -48,8 +51,9 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
 
   const formatDataCreator = (row: Creator, key: keyof Creator) => {
     const { avatar, userName, rating, artwork } = row;
+    const { USER_NAME, ART_WORK, RATING } = ROW_CREATOR;
     switch (key) {
-      case 'userName':
+      case USER_NAME:
         return (
           <div className="flex items-center pl-7">
             <Avatar src={avatar} alt={userName} size="sm" className="mr-2" />
@@ -63,7 +67,7 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
           </div>
         );
 
-      case 'artwork':
+      case ART_WORK:
         return (
           <Text
             as="span"
@@ -74,7 +78,7 @@ const NFTTopCreators = ({ data }: TopCreatorsProps) => {
           </Text>
         );
 
-      case 'rating':
+      case RATING:
         return (
           <Progress
             aria-label="Rating"
