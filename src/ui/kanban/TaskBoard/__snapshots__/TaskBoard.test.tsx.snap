@@ -3,10 +3,10 @@
 exports[`TaskBoard Should match snapshot 1`] = `
 <div>
   <div
-    class="flex gap-6 w-full xl:max-w-[950px] 2.5xl:max-w-[1090px] 3xl:max-w-[1200px] 4xl:max-w-[1580px] overflow-x-auto"
+    class="flex gap-6 w-full xl:max-w-[950px] 2.5xl:max-w-[1090px] 3xl:max-w-[1300px] 4xl:max-w-[1580px] overflow-x-auto"
   >
     <div
-      class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+      class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -71,7 +71,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+      class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -136,7 +136,7 @@ exports[`TaskBoard Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+      class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -207,10 +207,10 @@ exports[`TaskBoard Should match snapshot 1`] = `
 exports[`TaskBoard Should match snapshot 2`] = `
 <div>
   <div
-    class="flex gap-6 w-full xl:max-w-[950px] 2.5xl:max-w-[1090px] 3xl:max-w-[1200px] 4xl:max-w-[1580px] overflow-x-auto"
+    class="flex gap-6 w-full xl:max-w-[950px] 2.5xl:max-w-[1090px] 3xl:max-w-[1300px] 4xl:max-w-[1580px] overflow-x-auto"
   >
     <div
-      class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+      class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -1113,7 +1113,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
       </div>
     </div>
     <div
-      class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+      class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"
@@ -2016,7 +2016,7 @@ exports[`TaskBoard Should match snapshot 2`] = `
       </div>
     </div>
     <div
-      class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+      class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
     >
       <div
         class="flex justify-between pl-6 pr-4"

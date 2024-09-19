@@ -3,7 +3,7 @@
 exports[`Column tests Should match snapshot 1`] = `
 <div>
   <div
-    class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+    class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
   >
     <div
       class="flex justify-between pl-6 pr-4"
@@ -73,7 +73,7 @@ exports[`Column tests Should match snapshot 1`] = `
 exports[`Column tests Should match snapshot 2`] = `
 <div>
   <div
-    class="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
+    class="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo"
   >
     <div
       class="flex justify-between pl-6 pr-4"

@@ -49,7 +49,7 @@ const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
   };
 
   return (
-    <div className="w-[514px] min-w-[390px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo">
+    <div className="min-w-[390px] 3xl:w-[380px] 4xl:min-w-[450px] h-fit pb-4 pt-6 rounded-md bg-white dark:bg-indigo">
       <div className="flex justify-between pl-6 pr-4">
         <Text size={TEXT_SIZE.lg} as="h2" className="max-w-[90%]">
           {formatStatus(status)}
