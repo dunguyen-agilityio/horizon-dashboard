@@ -122,7 +122,7 @@ export const EditTaskModal = ({
     ],
   );
 
-  const { control, handleSubmit, formState } = useForm({
+  const { control, handleSubmit, reset, formState } = useForm({
     defaultValues: initialValue,
   });
 
@@ -184,11 +184,17 @@ export const EditTaskModal = ({
     onClose();
   };
 
+  const handleOnClose = () => {
+    reset(initialValue);
+    onClose();
+  };
+
   return (
     <Modal
       size="3xl"
       isOpen={isOpen}
       onOpenChange={onOpenChange}
+      onClose={handleOnClose}
       placement="center"
       scrollBehavior="outside"
       classNames={{
