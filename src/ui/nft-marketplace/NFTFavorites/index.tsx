@@ -1,31 +1,19 @@
 // Components
 import NFTCard from '../NFTCard';
 import { ItemNotFound } from '@/components';
-import Pagination from '@/components/Pagination';
 
 // Constants
 import { PUBLIC_ROUTES } from '@/constants';
 
 // Models
-import { NFTResponse } from '@/models/NFT';
-
-// Types
-import { StrapiResponse } from '@/types/strapi';
-
-// Utils
-import { formatNFTResponse } from '@/utils/nft';
+import { NFTData } from '@/models/NFT';
+import { formatUser } from '@/utils/user';
 
 interface INFTFavoriteProps {
-  listFavorites: StrapiResponse<NFTResponse>[];
-  pageSize: number;
-  activePage: number;
+  listFavorites: NFTData[];
 }
 
-const NFTFavorites = ({
-  listFavorites,
-  pageSize,
-  activePage,
-}: INFTFavoriteProps) => {
+const NFTFavorites = ({ listFavorites }: INFTFavoriteProps) => {
   if (listFavorites.length === 0)
     return (
       <ItemNotFound
@@ -40,26 +28,22 @@ const NFTFavorites = ({
     <div className="flex justify-center mt-1 sm:mt-4">
       <div className="flex flex-wrap justify-center gap-5 sm:justify-start max-w-[738px] xl:max-w-[1084px] 2xl:max-w-[1500px] w-full">
         {listFavorites.map((nft) => {
-          const { members, author, ...favorite } = formatNFTResponse(nft);
+          const { members, author, ...favorite } = nft;
           return (
             <NFTCard
               key={favorite.id}
               data-testid={`nft-card-${favorite.id}`}
               isShowIcon={false}
-              author={author}
+              author={formatUser(author)}
               members={members}
               {...favorite}
             />
           );
         })}
-        {!!listFavorites.length && (
-          <div className="w-full flex justify-center lg:justify-end my-8">
-            <Pagination pageCount={pageSize} currentPage={activePage} />
-          </div>
-        )}
       </div>
     </div>
   );
 };
 
 export default NFTFavorites;
+export { default as NFTFavoritesSkeleton } from './NFTFavoritesSkeleton';
