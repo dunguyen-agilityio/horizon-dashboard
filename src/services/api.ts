@@ -1,3 +1,4 @@
+import { auth } from '@/auth.config';
 import { API_ENDPOINT } from '@/constants/environment';
 
 type RequestOption = Omit<RequestInit, 'body'> & { body?: object };
@@ -21,16 +22,29 @@ class APIClient {
     url: string,
     init?: RequestOption,
   ): Promise<SuccessResponse<T> | FailedResponse> => {
+    const session = await auth();
+
     const { method = 'GET', body, headers, ...rest } = init || {};
+
+    const hasBody = method === 'POST' || method === 'PUT';
+
+    const customHeader = {
+      ...headers,
+      ...(hasBody && {
+        'Content-Type': 'application/json',
+      }),
+      ...(session?.user && { Authorization: `Bearer ${session.user.token}` }),
+    };
 
     const options = {
       method,
-      ...((method === 'POST' || method === 'PUT') && {
-        headers: { 'Content-Type': 'application/json', ...headers },
+      headers: customHeader,
+      ...(hasBody && {
         body: JSON.stringify(body),
       }),
       ...rest,
     };
+
     try {
       const res = await fetch(`${API_ENDPOINT}/${url}`, options);
 
