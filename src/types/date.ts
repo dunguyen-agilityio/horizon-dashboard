@@ -10,6 +10,8 @@ export type DateTimeParts = {
   millisecond: number;
 };
 
+export type TDateOnly = Pick<DateTimeParts, 'year' | 'month' | 'day'>;
+
 export interface ITimeRangePicker {
   start: CalendarDate;
   end: CalendarDate;
