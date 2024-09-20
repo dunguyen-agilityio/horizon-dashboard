@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSearchParams, usePathname } from 'next/navigation';
-import { useDateFormatter } from '@react-aria/i18n';
 
 // Components
 import { DateRangePicker } from '@nextui-org/date-picker';
@@ -15,16 +14,14 @@ import { PARAMS } from '@/constants/params';
 import { ITimeRangePicker } from '@/types/date';
 
 // Utils
-import { getLocalTimeZone, CalendarDate } from '@internationalized/date';
-import { parseDateRange } from '@/utils/format';
+import { CalendarDate } from '@internationalized/date';
+import { parseDateRanged } from '@/utils/format';
 
 const DateRangePickerComponent = () => {
   const [value, setValue] = useState<{
     start: CalendarDate;
     end: CalendarDate;
   } | null>();
-
-  const formatter = useDateFormatter();
 
   const { push } = useRouter();
   const pathname = usePathname();
@@ -34,15 +31,10 @@ const DateRangePickerComponent = () => {
 
   const handleOnTimeChange = (value: ITimeRangePicker) => {
     setValue(value);
-    const formatDateRange = formatter.formatRange(
-      value.start.toDate(getLocalTimeZone()),
-      value.end.toDate(getLocalTimeZone()),
-    );
+    const formatDateRange = parseDateRanged(value.start, value.end);
 
-    const dateRange = parseDateRange(formatDateRange);
-
-    params.set(PARAMS.START_DATE, dateRange.startDate);
-    params.set(PARAMS.END_DATE, dateRange.endDate);
+    params.set(PARAMS.START_DATE, formatDateRange.startDate);
+    params.set(PARAMS.END_DATE, formatDateRange.endDate);
     push(`${pathname}?${params.toString()}`);
   };
 
