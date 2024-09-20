@@ -3,7 +3,6 @@
 // Libs
 import { cn } from '@nextui-org/theme';
 import { useMemo, useState } from 'react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Components
 import {
@@ -19,7 +18,7 @@ import {
 import { Text } from '@/components';
 import { Avatar } from '@nextui-org/avatar';
 import { Progress } from '@nextui-org/progress';
-import { Pagination } from '@nextui-org/pagination';
+import Pagination from '@/components/Pagination';
 
 // Models
 import { ContributorData, ContributorResponse } from '@/types/contributor';
@@ -29,7 +28,6 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
 // Constants
 import { SORT_TYPES } from '@/constants/sort';
-import { PARAMS } from '@/constants/params';
 import {
   CONTRIBUTOR_COLUMN,
   CONTRIBUTOR_HEADER,
@@ -67,14 +65,14 @@ const formatContributor = (
   if (value === undefined) return null;
 
   switch (columnKey) {
-    case 'template':
+    case CONTRIBUTOR_HEADER.TEMPLATE:
       return (
         <Text size={TEXT_SIZE.sm} className="font-bold">
           {value}
         </Text>
       );
 
-    case 'fullName':
+    case CONTRIBUTOR_HEADER.FULL_NAME:
       return (
         <div className="flex items-center gap-2">
           <Avatar
@@ -100,7 +98,7 @@ const formatContributor = (
         </div>
       );
 
-    case 'createdAt':
+    case CONTRIBUTOR_HEADER.CREATE_AT:
       return (
         <Text
           size={TEXT_SIZE.sm}
@@ -129,12 +127,6 @@ const formatContributor = (
 
 const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
   const [descriptor, setDescriptor] = useState<SortDescriptor>();
-
-  const { push } = useRouter();
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-
-  const params = new URLSearchParams(searchParams);
 
   const dataFormat = useMemo(() => {
     let format: ContributorData[] = [];
@@ -183,11 +175,6 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
     }
   };
 
-  const handleChangePage = (page: number) => {
-    params.set(PARAMS.PAGE, String(page));
-    push(`${pathname}?${params.toString()}`);
-  };
-
   return (
     <Table
       aria-label="contributors table"
@@ -197,15 +184,10 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
         pageCount > 0 && (
           <div className="flex w-full justify-center">
             <Pagination
-              isCompact
-              showControls
-              showShadow
               color="primary"
-              page={page}
-              total={pageCount}
-              onChange={handleChangePage}
+              currentPage={page}
+              pageCount={pageCount}
               data-testid="pagination"
-              classNames={{ wrapper: 'max-w-full justify-center' }}
             />
           </div>
         )

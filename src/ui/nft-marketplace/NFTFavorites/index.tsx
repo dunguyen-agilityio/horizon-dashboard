@@ -1,11 +1,7 @@
-'use client';
-
-import { useState } from 'react';
-
 // Components
 import NFTCard from '../NFTCard';
-import { Pagination } from '@nextui-org/pagination';
 import { ItemNotFound } from '@/components';
+import Pagination from '@/components/Pagination';
 
 // Constants
 import { PUBLIC_ROUTES } from '@/constants';
@@ -30,8 +26,6 @@ const NFTFavorites = ({
   pageSize,
   activePage,
 }: INFTFavoriteProps) => {
-  const [currentPage, setCurrentPage] = useState<number>(activePage);
-
   if (listFavorites.length === 0)
     return (
       <ItemNotFound
@@ -60,15 +54,7 @@ const NFTFavorites = ({
         })}
         {!!listFavorites.length && (
           <div className="w-full flex justify-center lg:justify-end my-8">
-            <Pagination
-              data-testid="pagination"
-              showControls
-              showShadow
-              color="primary"
-              total={pageSize}
-              page={currentPage}
-              onChange={setCurrentPage}
-            />
+            <Pagination pageCount={pageSize} currentPage={activePage} />
           </div>
         )}
       </div>
