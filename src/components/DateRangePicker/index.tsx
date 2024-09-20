@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSearchParams, usePathname } from 'next/navigation';
 
@@ -14,7 +14,7 @@ import { PARAMS } from '@/constants/params';
 import { ITimeRangePicker } from '@/types/date';
 
 // Utils
-import { CalendarDate } from '@internationalized/date';
+import { CalendarDate, parseDate } from '@internationalized/date';
 import { parseDateRanged } from '@/utils/format';
 
 const DateRangePickerComponent = () => {
@@ -29,6 +29,9 @@ const DateRangePickerComponent = () => {
 
   const params = new URLSearchParams(searchParams);
 
+  const queryStartDate = searchParams.get(PARAMS.START_DATE) ?? null;
+  const queryEndDate = searchParams.get(PARAMS.END_DATE) ?? null;
+
   const handleOnTimeChange = (value: ITimeRangePicker) => {
     setValue(value);
     const formatDateRange = parseDateRanged(value.start, value.end);
@@ -37,6 +40,15 @@ const DateRangePickerComponent = () => {
     params.set(PARAMS.END_DATE, formatDateRange.endDate);
     push(`${pathname}?${params.toString()}`);
   };
+
+  useEffect(() => {
+    if (queryStartDate && queryEndDate) {
+      setValue({
+        start: parseDate(queryStartDate),
+        end: parseDate(queryEndDate),
+      });
+    }
+  }, [queryStartDate, queryEndDate]);
 
   return (
     <DateRangePicker
