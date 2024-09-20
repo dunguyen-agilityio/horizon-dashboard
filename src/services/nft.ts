@@ -1,4 +1,4 @@
-import { NFTResponse } from '@/models/NFT';
+import { NFTData, NFTResponse } from '@/models/NFT';
 import { User } from '@/models/User';
 import { apiClient } from './api';
 import { API_ENTITY } from '@/constants';
@@ -7,17 +7,17 @@ import { StrapiModelWithPagination, StrapiResponse } from '@/types/strapi';
 type UserFavoriteResponse = User & {
   favorite: {
     id: string;
-    nfts: NFTResponse[];
+    nfts: NFTData[];
   } | null;
 };
 
 export const getNFTsFavorite = async () => {
   const searchParams = new URLSearchParams({
-    '[populate][favorite][populate][nfts][populate][image]': 'url',
+    '[populate][favorite][populate][nfts][populate][image]': '*',
     '[populate][favorite][populate][nfts][populate][members][populate][avatar]':
-      'url',
+      '*',
     '[populate][favorite][populate][nfts][populate][author][populate][avatar]':
-      'url',
+      '*',
   });
 
   const { data, error } = await apiClient.get<UserFavoriteResponse>(
