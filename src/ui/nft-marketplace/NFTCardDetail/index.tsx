@@ -1,50 +1,52 @@
 // Components
 import Image from 'next/image';
-import { Text } from '@/components';
+import { ErrorFallback, Text } from '@/components';
 
 // Constants
-import { NFT_IMAGES } from '@/constants/images';
+import { API_ENTITY } from '@/constants';
+
+// Services
+import { apiClient } from '@/services/api';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
+import { NFTResponse } from '@/models/NFT';
+import { formatNFTResponse } from '@/utils/nft';
+import { StrapiModel, StrapiResponse } from '@/types/strapi';
 
 interface NFTCardDetailProps {
   id: number;
 }
 
-const NFTCardDetail = async (_: NFTCardDetailProps) => {
-  // TODO: should handle call api here ()
+const NFTCardDetail = async ({ id }: NFTCardDetailProps) => {
+  const { data, error } = await apiClient.get<
+    StrapiModel<StrapiResponse<NFTResponse>>
+  >(`${API_ENTITY.NFTS}/${id}?populate=*`);
+
+  if (error)
+    return (
+      <ErrorFallback
+        message={error.message}
+        className="h-[860px] bg-gray dark:bg-indigo-dark"
+      />
+    );
+
+  const { name, author, image, description, price } = formatNFTResponse(
+    data.data,
+  );
 
   return (
     <div className="flex gap-10 pb-20 flex-wrap 2xl:flex-nowrap">
       <div className="relative h-[450px] w-[1090px] rounded-md overflow-hidden">
-        <Image
-          src={NFT_IMAGES.DEFAULT}
-          alt="NFT Cover"
-          className="object-cover"
-          fill
-        />
+        <Image src={image.url} alt="NFT Cover" className="object-cover" fill />
       </div>
       <div className="flex flex-col xl:w-2/3 2xl:w-1/3 gap-5">
-        <Text size={TEXT_SIZE['2xl']}>Product detail</Text>
-        <div className="flex gap-2 items-center">
-          <Text className="font-bold">Name:</Text> Mesh Gradients
-        </div>
-        <div className="flex gap-2 items-center">
-          <Text className="font-bold">Author:</Text> Adela Parkson
-        </div>
-        <Text
-          className="text-blue-450 font-bold"
-          size={TEXT_SIZE.sm}
-        >{`Current Bid: ${123} USD`}</Text>
-        <Text className="w-2/3 xl:w-full">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not
-          only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+        <Text size={TEXT_SIZE['2xl']}>{name}</Text>
+        <Text>By {author.fullName}</Text>
+        <Text className="text-blue-450" size={TEXT_SIZE.md}>
+          Current bid {price} $
         </Text>
+        <Text className="w-full md:w-2/3 lg:w-full">{description}</Text>
       </div>
     </div>
   );

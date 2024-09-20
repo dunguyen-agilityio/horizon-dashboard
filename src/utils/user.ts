@@ -18,7 +18,7 @@ export const formatUserResponse = (
 
   const hasAvatar = avatarData && id;
 
-  return new User({
+  return formatUser({
     ...rest,
     role: { name: role?.attributes.name ?? '' },
     ...(hasAvatar && {
