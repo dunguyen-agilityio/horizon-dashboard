@@ -30,14 +30,14 @@ exports[`NTFHistory should match snapshot 1`] = `
           class="flex items-center gap-4"
         >
           <img
-            alt="Colorful Heaven"
+            alt="Mesh Gradients"
             class="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
             data-nimg="1"
             decoding="async"
             height="66"
             loading="lazy"
-            src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
-            srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
+            src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=256&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=256&q=75 2x"
             style="color: transparent;"
             width="66"
           />
@@ -53,7 +53,7 @@ exports[`NTFHistory should match snapshot 1`] = `
               class="text-primary dark:text-white leading-small text-small text-secondary"
             >
               By 
-              Mark Benjamin
+              User 1
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           <p
             class="text-primary dark:text-white text-medium font-bold"
           >
-            1.33
+            1.23
              $
           </p>
         </div>
@@ -73,169 +73,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           <p
             class="text-primary dark:text-white text-medium text-secondary"
           >
-            2h ago
-          </p>
-        </div>
-      </div>
-      <div
-        class="flex gap-8 justify-between p-4 xs:p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
-      >
-        <div
-          class="flex items-center gap-4"
-        >
-          <img
-            alt="Abstract Colors"
-            class="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
-            data-nimg="1"
-            decoding="async"
-            height="66"
-            loading="lazy"
-            src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
-            srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
-            style="color: transparent;"
-            width="66"
-          />
-          <div
-            class="flex flex-col"
-          >
-            <p
-              class="text-primary dark:text-white text-medium leading-tiny font-bold"
-            >
-              Colorful Heaven
-            </p>
-            <p
-              class="text-primary dark:text-white leading-small text-small text-secondary"
-            >
-              By 
-              Esthera Jackson
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <p
-            class="text-primary dark:text-white text-medium font-bold"
-          >
-            0.91
-             $
-          </p>
-        </div>
-        <div
-          class="hidden xs:flex items-center"
-        >
-          <p
-            class="text-primary dark:text-white text-medium text-secondary"
-          >
-            6h ago
-          </p>
-        </div>
-      </div>
-      <div
-        class="flex gap-8 justify-between p-4 xs:p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
-      >
-        <div
-          class="flex items-center gap-4"
-        >
-          <img
-            alt="ETH AI Brain"
-            class="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
-            data-nimg="1"
-            decoding="async"
-            height="66"
-            loading="lazy"
-            src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
-            srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
-            style="color: transparent;"
-            width="66"
-          />
-          <div
-            class="flex flex-col"
-          >
-            <p
-              class="text-primary dark:text-white text-medium leading-tiny font-bold"
-            >
-              Colorful Heaven
-            </p>
-            <p
-              class="text-primary dark:text-white leading-small text-small text-secondary"
-            >
-              By 
-              Nick Wilson
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <p
-            class="text-primary dark:text-white text-medium font-bold"
-          >
-            2.82
-             $
-          </p>
-        </div>
-        <div
-          class="hidden xs:flex items-center"
-        >
-          <p
-            class="text-primary dark:text-white text-medium text-secondary"
-          >
-            5h ago
-          </p>
-        </div>
-      </div>
-      <div
-        class="flex gap-8 justify-between p-4 xs:p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
-      >
-        <div
-          class="flex items-center gap-4"
-        >
-          <img
-            alt="Swipe Circles"
-            class="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
-            data-nimg="1"
-            decoding="async"
-            height="66"
-            loading="lazy"
-            src="/_next/image?url=%2Fnft-default.webp&w=256&q=75"
-            srcset="/_next/image?url=%2Fnft-default.webp&w=96&q=75 1x, /_next/image?url=%2Fnft-default.webp&w=256&q=75 2x"
-            style="color: transparent;"
-            width="66"
-          />
-          <div
-            class="flex flex-col"
-          >
-            <p
-              class="text-primary dark:text-white text-medium leading-tiny font-bold"
-            >
-              Colorful Heaven
-            </p>
-            <p
-              class="text-primary dark:text-white leading-small text-small text-secondary"
-            >
-              By 
-              Peter Will
-            </p>
-          </div>
-        </div>
-        <div
-          class="flex items-center"
-        >
-          <p
-            class="text-primary dark:text-white text-medium font-bold"
-          >
-            2.32
-             $
-          </p>
-        </div>
-        <div
-          class="hidden xs:flex items-center"
-        >
-          <p
-            class="text-primary dark:text-white text-medium text-secondary"
-          >
-            1d ago
+            Invalid Date
           </p>
         </div>
       </div>

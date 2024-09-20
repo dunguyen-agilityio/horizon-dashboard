@@ -10,6 +10,7 @@ export class NFT {
   members!: string[];
   price!: number;
   image?: string;
+  createdAt!: Date;
 
   constructor(nft: NFT) {
     Object.assign(this, nft);
@@ -19,10 +20,12 @@ export class NFT {
 export type NFTData = Omit<NFT, 'author' | 'members' | 'image'> & {
   author: TUser;
   members: TUser[];
-  image?: Omit<TImage, 'id'>;
+  image: TImage;
 };
 
-export type NFTDataExtend = Omit<NFTData, 'author'> & { author: User };
+export type NFTDataExtend = Omit<NFTData, 'author'> & {
+  author: User;
+};
 
 export type NFTResponse = Omit<NFT, 'author' | 'members' | 'image'> & {
   author: StrapiModel<StrapiResponse<UserResponse>>;
