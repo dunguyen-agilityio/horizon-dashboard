@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 // Mocks
 import { MOCK_NFTS_RESPONSE } from '@/mocks/nft';
 
-import NTFRecentlyAdd from '.';
+import NTFRecentlyAdd from './NTFRecentlyAdd';
 import { formatNFTResponse } from '@/utils/nft';
 
 describe('NFTRecentlyAdd', () => {
