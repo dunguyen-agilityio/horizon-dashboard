@@ -10,6 +10,7 @@ export const formatNFTResponse = ({
     author,
     image,
     members: { data: members = [] },
+    createdAt,
     ...rest
   },
 }: StrapiResponse<NFTResponse>): NFTDataExtend => {
@@ -18,6 +19,7 @@ export const formatNFTResponse = ({
   return {
     id,
     ...rest,
+    createdAt: new Date(createdAt),
     author: formatUserResponse(author.data),
     members: members.map(formatUserResponse),
     image: { hash, url },
