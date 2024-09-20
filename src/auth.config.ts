@@ -1,5 +1,5 @@
 // Libs
-import NextAuth, { DefaultSession } from 'next-auth';
+import NextAuth from 'next-auth';
 import { cookies } from 'next/headers';
 import credentials from 'next-auth/providers/credentials';
 
@@ -11,16 +11,6 @@ import { AuthResponse } from '@/types/auth';
 
 // Constants
 import { AUTH_ROUTES, API_TOKEN, PUBLIC_ROUTES, API_ENTITY } from './constants';
-
-declare module 'next-auth' {
-  interface User {
-    token: string;
-  }
-
-  interface Session {
-    user: User & DefaultSession['user'];
-  }
-}
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -52,20 +42,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         cookies().set(API_TOKEN, jwt);
 
-        return { ...user, token: jwt };
+        return user;
       },
     }),
   ],
   pages: { signIn: AUTH_ROUTES.SIGN_IN },
   callbacks: {
-    async jwt({ user, token }) {
-      if (token) Object.assign(token, user);
-      return token;
-    },
-    async session({ session, token }) {
-      Object.assign(session.user, token);
-      return session;
-    },
     authorized: ({ auth, request: { nextUrl } }) => {
       const isAuthenticated = !!auth?.user;
 
