@@ -81,14 +81,14 @@ export const Task = ({
               );
             })}
           </AvatarGroup>
-          {labels && (
+          {labels?.length > 0 ? (
             <Chip
               color={getColorByLabel(labels[0])}
               className="text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
             >
               {labels[0]}
             </Chip>
-          )}
+          ) : null}
         </div>
       </div>
       <EditTaskModal
