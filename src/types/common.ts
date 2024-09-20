@@ -6,3 +6,11 @@ export type TColumn = {
   allowsSorting?: boolean;
   visibleOnMobile?: boolean;
 };
+
+export type TVariant =
+  | 'primary'
+  | 'default'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'danger';
