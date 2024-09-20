@@ -81,7 +81,7 @@ export const Task = ({
               );
             })}
           </AvatarGroup>
-          {labels && (
+          {!!labels?.length && (
             <Chip
               color={getColorByLabel(labels[0])}
               className="text-white uppercase text-xs leading-[15px] rounded-[10px] py-[6.5px] px-[25px]"
