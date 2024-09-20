@@ -13,12 +13,14 @@ import { PARAMS } from '@/constants/params';
 
 interface IPaginationProps {
   color?: TVariant;
+  isCompact?: boolean;
   currentPage: number;
   pageCount: number;
 }
 
 const Pagination = ({
   color = 'primary',
+  isCompact = false,
   currentPage,
   pageCount,
 }: IPaginationProps) => {
@@ -35,7 +37,7 @@ const Pagination = ({
 
   return (
     <PaginationNextUI
-      isCompact
+      isCompact={isCompact}
       showControls
       showShadow
       color={color}

@@ -184,6 +184,7 @@ const ContributorTable = ({ data, pageCount, page }: ContributorTableProps) => {
         pageCount > 0 && (
           <div className="flex w-full justify-center">
             <Pagination
+              isCompact
               color="primary"
               currentPage={page}
               pageCount={pageCount}
