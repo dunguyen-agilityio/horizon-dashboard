@@ -11,6 +11,7 @@ export class NFT {
   price!: number;
   image?: string;
   createdAt!: Date;
+  description?: string;
 
   constructor(nft: NFT) {
     Object.assign(this, nft);
