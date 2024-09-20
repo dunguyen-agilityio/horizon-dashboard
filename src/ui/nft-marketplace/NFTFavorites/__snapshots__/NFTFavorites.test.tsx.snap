@@ -140,7 +140,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
               role="navigation"
             >
               <ul
-                class="flex flex-nowrap h-fit max-w-fit relative gap-1 items-center overflow-visible rounded-medium"
+                class="flex flex-nowrap h-fit relative gap-1 items-center overflow-visible rounded-medium max-w-full justify-center"
                 data-slot="wrapper"
               >
                 <span
@@ -395,7 +395,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
             role="navigation"
           >
             <ul
-              class="flex flex-nowrap h-fit max-w-fit relative gap-1 items-center overflow-visible rounded-medium"
+              class="flex flex-nowrap h-fit relative gap-1 items-center overflow-visible rounded-medium max-w-full justify-center"
               data-slot="wrapper"
             >
               <span
