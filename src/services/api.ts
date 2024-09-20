@@ -23,6 +23,8 @@ class APIClient {
   ): Promise<SuccessResponse<T> | FailedResponse> => {
     const { method = 'GET', body, headers, ...rest } = init || {};
 
+    await new Promise((res) => setTimeout(res, 3000));
+
     const options = {
       method,
       ...((method === 'POST' || method === 'PUT') && {
