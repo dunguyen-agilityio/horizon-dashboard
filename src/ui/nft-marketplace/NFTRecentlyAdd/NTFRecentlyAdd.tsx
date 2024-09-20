@@ -23,7 +23,7 @@ const NTFRecentlyAdd = ({ recentlyList }: NTFRecentlyAddProps) => {
     useScroll<HTMLDivElement>();
 
   return (
-    <div className="">
+    <div>
       <div className="flex justify-between pb-5">
         <Text className="font-bold text-[24px]">Recently Added</Text>
         <div className="flex gap-5">
