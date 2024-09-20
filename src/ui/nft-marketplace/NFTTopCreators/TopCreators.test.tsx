@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import TopCreators from '.';
+import TopCreators from './NFTTopCreators';
 import { MOCK_CREATORS } from '@/mocks/creators';
 
 describe('TopCreators tests', () => {

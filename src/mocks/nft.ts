@@ -18,6 +18,7 @@ export const MOCK_NFTS: NFTData[] = [
     price: 1.23,
     image: { url: NFT_IMAGES.DEFAULT, hash: 'mock hash' },
     members: MOCK_USERS,
+    createdAt: new Date('2024-08-17T07:25:04.188Z'),
   },
 ];
 
@@ -30,6 +31,7 @@ export const MOCK_NFTS_RESPONSE: StrapiResponse<NFTResponse>[] = [
       price: 1.23,
       members: { data: MOCK_USERS_RESPONSE },
       image: { data: MOCK_IMAGE_RESPONSE },
+      createdAt: new Date('2024-08-17T07:25:04.188Z'),
     },
   },
 ];
