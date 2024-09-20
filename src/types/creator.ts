@@ -1,7 +1,8 @@
-export interface Creator {
-  id: string;
-  avatar: string;
-  userName: string;
+import { TUser } from '@/models/User';
+
+export type Creator = Pick<
+  TUser,
+  'id' | 'username' | 'avatar' | 'createdAt' | 'rating'
+> & {
   artwork: number;
-  rating: number;
-}
+};
