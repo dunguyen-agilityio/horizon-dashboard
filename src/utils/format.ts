@@ -1,4 +1,4 @@
-import { DateTimeParts } from '@/types/date';
+import { DateTimeParts, TDateOnly } from '@/types/date';
 
 export const formatDateRelativeToNow = (date: Date) => {
   const currentDate = new Date();
@@ -62,27 +62,22 @@ export const formatNumber = (number: number) => {
 
   return decimal ? `${formattedNumber}.${decimal}` : formattedNumber;
 };
+
+const formatDate = ({ year, month, day }: TDateOnly) => {
+  const formattedMonth = String(month).padStart(2, '0');
+  const formattedDay = String(day).padStart(2, '0');
+  return `${year}-${formattedMonth}-${formattedDay}`;
+};
+
 /**
- * Parses a date range string (e.g., "2024-09-01 – 2024-09-15") and returns
- * an object with formatted start and end dates in 'YYYY-MM-DD' format.
+ * Takes startDate and endDate objects and returns an object with formatted
+ * start and end dates in 'YYYY-MM-DD' format.
  *
- * @param {string} dateRange - The date range string to be parsed, separated by '–'.
+ * @param {DateObject} startDate - The start date object { day, month, year }.
+ * @param {DateObject} endDate - The end date object { day, month, year }.
  * @returns {Object} - An object containing `startDate` and `endDate` in 'YYYY-MM-DD' format.
  */
-
-export const parseDateRange = (dateRange: string) => {
-  // Split the string by the '–' character to separate the start and end dates
-  const [startDate, endDate] = dateRange.split('–').map((date) => {
-    const parsedDate = new Date(date.trim());
-
-    const year = parsedDate.getFullYear();
-    const month = String(parsedDate.getMonth() + 1).padStart(2, '0'); // First month is 01
-    const day = String(parsedDate.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  });
-
-  return {
-    startDate,
-    endDate,
-  };
-};
+export const parseDateRanged = (startDate: TDateOnly, endDate: TDateOnly) => ({
+  startDate: formatDate(startDate),
+  endDate: formatDate(endDate),
+});

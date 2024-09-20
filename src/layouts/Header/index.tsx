@@ -6,7 +6,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 // Constants
 import { PRIVATE_ROUTES } from '@/constants/routes';
-import { QUERY_KEY } from '@/constants/common';
+import { PARAMS } from '@/constants/params';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
@@ -44,14 +44,14 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
 
   const breadcrumbs = getBreadcrumbs(pathname);
 
-  const query = searchParams.get(QUERY_KEY) ?? '';
+  const query = searchParams.get(PARAMS.SEARCH) ?? '';
 
   const handleSearch = (value: string) => {
     const params = new URLSearchParams(searchParams);
     if (value) {
-      params.set(QUERY_KEY, value);
+      params.set(PARAMS.SEARCH, value);
     } else {
-      params.delete(QUERY_KEY);
+      params.delete(PARAMS.SEARCH);
     }
     push(`${pathname}?${params.toString()}`);
   };
