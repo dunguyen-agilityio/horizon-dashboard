@@ -4,7 +4,7 @@ export const QUERY = {
 };
 
 export const PAGE_SIZE = {
-  SMALL: '5',
+  SMALL: '6',
   MEDIUM: '8',
   HIGH: '10',
 };
