@@ -73,7 +73,7 @@ exports[`NTFHistory should match snapshot 1`] = `
           <p
             class="text-primary dark:text-white text-medium text-secondary"
           >
-            Invalid Date
+            17 Aug
           </p>
         </div>
       </div>
