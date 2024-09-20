@@ -14,6 +14,7 @@ interface IContributorParams {
   startDate?: string;
   endDate?: string;
   pageSize?: string;
+  searchValue?: string;
   cacheOptions?: RequestCache;
 }
 
@@ -22,12 +23,17 @@ export const getContributor = ({
   pageSize = PAGE_SIZE.HIGH,
   startDate,
   endDate,
+  searchValue,
   cacheOptions,
 }: IContributorParams) => {
   const FILTERS =
     startDate &&
     endDate &&
-    `filters[createdAt][$gte]=${startDate}&filters[createdAt][$lte]=${endDate}`;
+    `filters[users_permissions_user][createdAt][$gte]=${startDate}&filters[users_permissions_user][createdAt][$lte]=${endDate}`;
+
+  const SEARCH_QUERY =
+    searchValue &&
+    `filters[users_permissions_user][firstName][$containsi]=${searchValue}`;
 
   const queryParams = new URLSearchParams({
     'pagination[page]': page,
@@ -38,7 +44,7 @@ export const getContributor = ({
 
   return apiClient.get<
     StrapiModelWithPagination<StrapiResponse<ContributorResponse>[]>
-  >(`${API_ENTITY.CONTRIBUTORS}?${queryParams}&${FILTERS}`, {
+  >(`${API_ENTITY.CONTRIBUTORS}?${queryParams}&${FILTERS}&${SEARCH_QUERY}`, {
     cache: cacheOptions,
   });
 };

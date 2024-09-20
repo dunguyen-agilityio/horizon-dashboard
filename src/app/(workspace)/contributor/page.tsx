@@ -17,13 +17,14 @@ const ContributorPage = async ({
 }: {
   searchParams: ISearchParams;
 }) => {
-  const { page = '1', startDate, endDate } = searchParams;
+  const { page = '1', startDate, endDate, search } = searchParams;
 
   const { data, error } = await getContributor({
     page,
     startDate: startDate,
     endDate: `${endDate}T23:59:59.999Z`, // To get all time of end date
-    pageSize: PAGE_SIZE.MEDIUM,
+    pageSize: PAGE_SIZE.SMALL,
+    searchValue: search,
   });
 
   if (error)
