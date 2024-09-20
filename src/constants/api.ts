@@ -8,4 +8,7 @@ export const API_ENTITY = {
   FORGET_PASSWORD: 'auth/forgot-password',
   RESET_PASSWORD: 'auth/reset-password',
   CONTRIBUTORS: 'contributors',
+  TOP_CONTRIBUTORS: 'contributor-nft',
+  FAVORITES: 'favorites',
+  NFTS: 'nfts',
 };
