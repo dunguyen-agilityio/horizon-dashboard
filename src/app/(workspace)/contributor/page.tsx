@@ -23,7 +23,7 @@ const ContributorPage = async ({
     page,
     startDate: startDate,
     endDate: `${endDate}T23:59:59.999Z`, // To get all time of end date
-    pageSize: PAGE_SIZE.SMALL,
+    pageSize: PAGE_SIZE.MEDIUM,
     searchValue: search,
   });
 

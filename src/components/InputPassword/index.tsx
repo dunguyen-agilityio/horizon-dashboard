@@ -10,14 +10,14 @@ import { Input } from '@nextui-org/input';
 import { EyeFilled, EyeSlashFilled } from '@/icons';
 
 interface IInputPasswordProps {
+  value: string;
+  label?: string;
   isReadOnly?: boolean;
   isDisabled?: boolean;
   isInvalid?: boolean;
-  value?: string;
   placeholder?: string;
   errorMessage?: string;
-  label?: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
 const InputPassword = ({

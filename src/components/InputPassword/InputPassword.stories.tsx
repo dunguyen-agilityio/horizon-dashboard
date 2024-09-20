@@ -13,11 +13,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: { onChange: fn() },
+  args: { onChange: fn(), value: 'password' },
 };
 
 export const InputPasswordIsDisable: Story = {
   args: {
+    onChange: fn(),
     value: 'Password strong',
     isDisabled: true,
   },
@@ -25,6 +26,7 @@ export const InputPasswordIsDisable: Story = {
 
 export const InputPasswordWithPlaceholder: Story = {
   args: {
+    ...InputPasswordIsDisable.args,
     placeholder: 'Password is read only',
   },
 };
