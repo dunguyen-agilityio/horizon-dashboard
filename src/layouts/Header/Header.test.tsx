@@ -39,7 +39,7 @@ describe('Header tests', () => {
       target: { value: mockSearch },
     });
     jest.advanceTimersByTime(1000);
-    expect(mockPush).toHaveBeenNthCalledWith(1, `/?q=${mockSearch}`);
+    expect(mockPush).toHaveBeenNthCalledWith(1, `/?search=${mockSearch}`);
   });
 
   it('Should push search query correctly', async () => {
