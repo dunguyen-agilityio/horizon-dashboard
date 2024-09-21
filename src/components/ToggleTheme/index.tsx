@@ -8,6 +8,9 @@ import { useEffect, useState } from 'react';
 import Moon from '@/icons/Moon';
 import Button from '../Button';
 
+// Constants
+import { THEME } from '@/constants/theme';
+
 interface ToggleThemeProps {
   className?: string;
   variant?: 'primary' | 'secondary';
@@ -27,10 +30,10 @@ const ToggleTheme = ({
 
   if (!isMounted) return <div className="min-w-[34px] h-[34px]" />;
 
-  const isDark = theme === 'dark';
+  const isDark = theme === THEME.DARK;
 
   const handleChangeTheme = () => {
-    setTheme(isDark ? 'light' : 'dark');
+    setTheme(isDark ? THEME.LIGHT : THEME.DARK);
   };
 
   const isPrimary = variant === 'primary';
