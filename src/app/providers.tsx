@@ -7,16 +7,19 @@ import { ThemeProvider } from 'next-themes';
 // provider
 import ToastProvider from '@/contexts/toast/ToastProvider';
 
+// Constants
+import { THEME } from '@/constants/theme';
+
 const Providers = ({ children }: React.PropsWithChildren) => {
   const { push } = useRouter();
 
   return (
     <NextUIProvider navigate={push}>
       <ThemeProvider
-        defaultTheme="light"
+        defaultTheme={THEME.LIGHT}
         enableSystem
         attribute="class"
-        themes={['light', 'dark']}
+        themes={[THEME.LIGHT, THEME.DARK]}
       >
         <ToastProvider>{children}</ToastProvider>
       </ThemeProvider>
