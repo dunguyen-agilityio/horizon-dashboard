@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { Text } from '@/components';
 import FavoriteIcon from '@/icons/Favorite';
 import { Button } from '@nextui-org/button';
+import ImageWithBlur from '@/components/ImageWithBlur';
 import { Avatar, AvatarGroup } from '@nextui-org/avatar';
 
 // Constants
@@ -52,11 +53,11 @@ const NFTCard = ({
     >
       <div className="bg-white dark:bg-indigo rounded-md p-5">
         <div className="relative w-[308px] h-[205px] rounded-[18px] overflow-hidden">
-          <Image
+          <ImageWithBlur
             src={image?.url || NFT_IMAGES.DEFAULT}
             alt={name}
             fill
-            className="object-cover"
+            additionalClasses="object-cover"
           />
           {isShowIcon && (
             <Button

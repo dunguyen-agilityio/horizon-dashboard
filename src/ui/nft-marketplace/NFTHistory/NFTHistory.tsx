@@ -1,7 +1,6 @@
-import Image from 'next/image';
-
 // components
 import { Text, Button } from '@/components';
+import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Utils
 import { formatDateRelativeToNow } from '@/utils/format';
@@ -36,12 +35,12 @@ const NFTHistory = ({ historyList }: NFTHistoryProps) => (
             className="flex gap-8 justify-between p-4 xs:p-5 rounded-md hover:shadow-md hover:dark:bg-indigo-light"
           >
             <div className="flex items-center gap-4">
-              <Image
+              <ImageWithBlur
                 src={image.url}
                 alt={name}
                 width={66}
                 height={66}
-                className="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
+                additionalClasses="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
               />
               <div className="flex flex-col">
                 <Text className="leading-tiny font-bold">Colorful Heaven</Text>
