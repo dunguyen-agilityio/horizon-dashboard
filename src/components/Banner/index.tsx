@@ -1,6 +1,6 @@
 // Component
-import Image from 'next/image';
 import { Text } from '@/components';
+import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
@@ -9,12 +9,12 @@ const Banner = () => (
   <div className="w-[300px] h-[250px] flex items-end justify-center">
     <div className="w-[228px] h-[190px] bg-gradient-to-br from-purple-750 to-blue-450 rounded-2xl relative">
       <div className="w-[94px] h-[94px] top-[-47px] left-[65px] relative bg-gradient-to-br from-purple-750 to-blue-450 rounded-full border-5 border-white dark:border-indigo">
-        <Image
+        <ImageWithBlur
           src="/vector.webp"
           width={41}
           height={41}
           alt="vector"
-          className="absolute top-[22px] left-[22px]"
+          additionalClasses="absolute top-[22px] left-[22px]"
         />
       </div>
       <div className="absolute top-[70px]">
