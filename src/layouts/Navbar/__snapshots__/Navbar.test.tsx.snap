@@ -250,9 +250,10 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
                   decoding="async"
                   height="41"
                   loading="lazy"
+                  sizes=""
                   src="/_next/image?url=%2Fvector.webp&w=96&q=75"
                   srcset="/_next/image?url=%2Fvector.webp&w=48&q=75 1x, /_next/image?url=%2Fvector.webp&w=96&q=75 2x"
-                  style="color: transparent;"
+                  style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
                   width="41"
                 />
               </div>
