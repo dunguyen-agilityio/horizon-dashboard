@@ -1,8 +1,8 @@
 // Components
-import Image from 'next/image';
 import { Link } from '@nextui-org/link';
 import { Text, BoxIcon } from '@/components';
 import { Card, CardBody } from '@nextui-org/card';
+import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Icons
 import { Pen } from '@/icons/';
@@ -32,11 +32,11 @@ const ProjectCard = ({
           <BoxIcon icon={<Pen />} />
         </div>
         <div className="relative w-20 h-20 my-2 sm:my-0 rounded-2xl overflow-hidden">
-          <Image
+          <ImageWithBlur
             fill
             src={imageProject}
             alt="project-detail"
-            className="object-cover"
+            additionalClasses="object-cover"
           />
         </div>
         <div className="mb-2 sm:ml-2 xl:ml-0 sm:mb-0 flex items-center">
