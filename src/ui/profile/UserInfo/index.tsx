@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Avatar } from '@nextui-org/avatar';
 import { Text } from '@/components';
+import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Constants
 import { PROFILE_IMAGES } from '@/constants/images';
@@ -33,11 +34,11 @@ const UserInfo = ({
 }: IUserInfoProps) => (
   <div className="dark:bg-indigo bg-white p-[17px] rounded-md">
     <div className="w-full h-[131px] relative">
-      <Image
+      <ImageWithBlur
         fill
         src={BACKGROUND}
         alt="background-profile"
-        className="object-cover rounded-2xl"
+        additionalClasses="object-cover rounded-2xl"
         sizes="(max-width: 768px) 315px,
               (min-width: 769px) and (max-width: 1024px) 396px,
               (min-width: 1025px) 518px"

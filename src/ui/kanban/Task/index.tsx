@@ -7,6 +7,7 @@ import Text from '@/components/Text';
 import { Chip } from '@nextui-org/chip';
 import Button from '@/components/Button';
 import { Avatar, AvatarGroup } from '@nextui-org/avatar';
+import ImageWithBlur from '@/components/ImageWithBlur';
 import EditTaskModal from '@/ui/kanban/EditTaskModal';
 
 // Types
@@ -58,7 +59,7 @@ export const Task = ({
         </div>
         {cover && (
           <div className="relative min-h-[285px] min-w-[308px]">
-            <Image src={cover} alt="cover" fill />
+            <ImageWithBlur src={cover} alt="cover" fill />
           </div>
         )}
         <Text as="p" variant={TEXT_VARIANT.SECONDARY}>

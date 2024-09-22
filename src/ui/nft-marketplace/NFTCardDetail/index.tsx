@@ -1,6 +1,6 @@
 // Components
-import Image from 'next/image';
 import { ErrorFallback, Text } from '@/components';
+import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Constants
 import { API_ENTITY } from '@/constants';
@@ -38,7 +38,12 @@ const NFTCardDetail = async ({ id }: NFTCardDetailProps) => {
   return (
     <div className="flex gap-10 pb-20 flex-wrap 2xl:flex-nowrap">
       <div className="relative h-[450px] w-[1090px] rounded-md overflow-hidden">
-        <Image src={image.url} alt="NFT Cover" className="object-cover" fill />
+        <ImageWithBlur
+          src={image.url}
+          alt="NFT Cover"
+          additionalClasses="object-cover"
+          fill
+        />
       </div>
       <div className="flex flex-col xl:w-2/3 2xl:w-1/3 gap-5">
         <Text size={TEXT_SIZE['2xl']}>{name}</Text>

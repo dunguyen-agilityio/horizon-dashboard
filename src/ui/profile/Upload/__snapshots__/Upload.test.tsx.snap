@@ -5,12 +5,14 @@ exports[`UploadFile ui should match snapshot 1`] = `
   <div
     class="flex flex-col sm:flex-row items-center gap-9 p-7 bg-white rounded-md dark:bg-indigo sm:h-[365px]"
   >
-    <div
-      class=""
-    >
-      <div
+    <div>
+      <label
         class="flex flex-col gap-6 justify-center items-center bg-grayest dark:bg-indigo-light w-[268px] h-[311px] rounded-md border-dashed border-2 border-amber-450 dark:border-secondary"
       >
+        <input
+          class="hidden"
+          type="file"
+        />
         <i
           class="h-6 flex justify-center items-center hover:cursor-pointer w-12 h-14fill-indigo-light fill-blue-450 dark:fill-white"
         >
@@ -38,7 +40,7 @@ exports[`UploadFile ui should match snapshot 1`] = `
             PNG, JPG and GIF files are allowed
           </p>
         </div>
-      </div>
+      </label>
     </div>
     <div
       class="flex flex-col justify-around text-center sm:text-start"

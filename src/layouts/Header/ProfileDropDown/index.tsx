@@ -15,9 +15,9 @@ import {
   PopoverTrigger,
   useDisclosure,
 } from '@nextui-org/react';
-import Image from 'next/image';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
+import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Mocks
 import { MOCK_USERS } from '@/mocks/user';
@@ -67,12 +67,12 @@ const ProfileDropDown = () => {
           className="focus-visible:outline-none aria-expanded:scale-1 aria-expanded:opacity-100"
           data-testid="profile-trigger-btn"
         >
-          <Image
+          <ImageWithBlur
             width={40}
             height={40}
             src={avatar.url}
             alt={username}
-            className="min-w-10 rounded-full"
+            additionalClasses="min-w-10 rounded-full"
           />
         </button>
       </PopoverTrigger>
