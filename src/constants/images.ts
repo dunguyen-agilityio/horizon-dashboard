@@ -17,4 +17,7 @@ export const USER_IMAGE = {
   DEFAULT: '/default-avatar.webp',
 };
 
+export const BLUR_IMAGE =
+  'data:image/gif;base64,R0lGODlhAQABAPAAAHB+rv///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
+
 export { Wallpaper };
