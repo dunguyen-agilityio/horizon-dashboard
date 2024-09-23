@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import { parseAbsoluteToLocal, ZonedDateTime } from '@internationalized/date';
 
 // Components
 import {
@@ -17,12 +18,11 @@ import {
   SharedSelection,
 } from '@nextui-org/react';
 
-import { parseAbsoluteToLocal } from '@internationalized/date';
-
 import { BoxIcon, Text } from '@/components';
 
 // hooks
 import { useTask } from '@/hooks/useTask';
+import useToast from '@/contexts/toast';
 
 // Types
 import { DateTimeParts } from '@/types/date';
@@ -35,10 +35,12 @@ import { TUser, User } from '@/models/User';
 // Mocks
 import { Note } from '@/icons';
 import { MOCK_USERS } from '@/mocks/user';
+import { UPDATE_DUE_DATE_ERROR, UPDATE_START_DATE_ERROR } from '@/mocks/toast';
 
 // utils
 import { convertToUTCString } from '@/utils/format';
 import { getUpdatedAssignMembers } from '@/utils/task';
+import { validateDates } from '@/utils/validation';
 
 interface IEditTaskModalProps {
   id: string;
@@ -122,7 +124,9 @@ export const EditTaskModal = ({
     ],
   );
 
-  const { control, handleSubmit, reset, formState } = useForm({
+  const { showToast } = useToast();
+
+  const { control, handleSubmit, reset, formState, getValues } = useForm({
     defaultValues: initialValue,
   });
 
@@ -187,6 +191,28 @@ export const EditTaskModal = ({
   const handleOnClose = () => {
     reset(initialValue);
     onClose();
+  };
+
+  const handleChangeStartDate = (
+    date: ZonedDateTime,
+    onChange: (value: ZonedDateTime | null) => void,
+  ) => {
+    if (!validateDates(date, getValues('dueDate'))) {
+      showToast(UPDATE_START_DATE_ERROR);
+      return onChange(null);
+    }
+    return onChange(date);
+  };
+
+  const handleChangeDueDate = (
+    date: ZonedDateTime,
+    onChange: (value: ZonedDateTime | null) => void,
+  ) => {
+    if (!validateDates(getValues('startDate'), date)) {
+      showToast(UPDATE_DUE_DATE_ERROR);
+      return onChange(null);
+    }
+    return onChange(date);
   };
 
   return (
@@ -326,8 +352,11 @@ export const EditTaskModal = ({
                         label="Start date"
                         hideTimeZone
                         showMonthAndYearPickers
+                        granularity="minute"
                         value={field.value}
-                        onChange={field.onChange}
+                        onChange={(date) =>
+                          handleChangeStartDate(date, field.onChange)
+                        }
                       />
                     )}
                   />
@@ -340,8 +369,11 @@ export const EditTaskModal = ({
                         label="Due date"
                         showMonthAndYearPickers
                         hideTimeZone
+                        granularity="minute"
                         value={field.value}
-                        onChange={field.onChange}
+                        onChange={(date) =>
+                          handleChangeDueDate(date, field.onChange)
+                        }
                       />
                     )}
                   />

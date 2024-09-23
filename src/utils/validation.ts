@@ -1,3 +1,5 @@
+import { DateTimeParts } from '@/types/date';
+
 /**
  * Validates that the confirm password matches the original password.
  *
@@ -16,4 +18,18 @@ export const validateConfirmPassword = (
     return message || 'Your confirmation passwords do not match';
   }
   return true;
+};
+
+export const validateDates = (
+  startDate: DateTimeParts | null,
+  dueDate: DateTimeParts | null,
+) => {
+  if (!startDate || !dueDate) return true;
+
+  const start = new Date(
+    `${startDate.year}-${startDate.month}-${startDate.day}`,
+  );
+  const due = new Date(`${dueDate.year}-${dueDate.month}-${dueDate.day}`);
+
+  return due > start;
 };
