@@ -13,7 +13,7 @@ import { FOOTER_ROUTES } from '@/constants/routes';
 import { TEXT_SIZE } from '@/types/text';
 
 const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
-  <div className="flex bg-white dark:bg-indigo-dark px-4 sm:p-0 h-screen">
+  <div className="flex bg-white dark:bg-indigo-dark px-4 sm:p-0 flex-1">
     <main className="flex-1 flex justify-center py-10">
       <div className="w-fit flex flex-col justify-between">
         <div className="w-full flex justify-between">

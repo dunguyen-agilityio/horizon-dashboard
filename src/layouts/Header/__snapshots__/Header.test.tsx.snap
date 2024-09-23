@@ -7,9 +7,7 @@ exports[`Header tests Should match snapshot 1`] = `
   >
     <div
       class="flex flex-col gap-1 mr-2"
-    >
-      0
-    </div>
+    />
     <div
       class="h-fit p-[10px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center"
     >

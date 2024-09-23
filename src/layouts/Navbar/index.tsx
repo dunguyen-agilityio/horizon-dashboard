@@ -4,14 +4,14 @@
 import { usePathname } from 'next/navigation';
 
 // Components
-import { Banner, Brand, NavItem } from '@/components';
 import {
   Navbar as NavComponent,
   NavbarContent,
   NavbarBrand,
-  Divider,
   NavbarItem,
-} from '@nextui-org/react';
+} from '@nextui-org/navbar';
+import { Banner, Brand, NavItem } from '@/components';
+import { Divider } from '@nextui-org/divider';
 
 // Constants
 import { NAV_ROUTES, AUTH_ROUTES } from '@/constants/routes';
@@ -25,7 +25,7 @@ const Navbar = ({ isAuthenticated }: NavbarProps) => {
 
   return (
     <NavComponent
-      className="bg-white w-[290px] dark:bg-indigo h-screen"
+      className="bg-white w-navbar dark:bg-indigo h-screen"
       classNames={{
         wrapper: 'px-0 flex-col h-full',
       }}
