@@ -23,7 +23,7 @@ const SummaryCards = ({
   task,
   trending,
 }: Earning) => (
-  <div className="flex flex-col flex-wrap xs:grid xs:grid-cols-2 xs:grid-rows-3 md:grid-cols-3 md:grid-rows-2 2xl:flex 2xl:flex-row 2xl:flex-nowrap gap-5">
+  <div className="flex flex-col flex-wrap xs:grid md:grid-cols-3 md:grid-rows-2 2xl:flex 2xl:flex-row 2xl:flex-nowrap gap-5">
     <SummaryCard
       title="Earnings"
       counter={earning}
