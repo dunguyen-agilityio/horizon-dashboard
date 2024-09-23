@@ -5,7 +5,7 @@ exports[`NFTCard tests Should match snapshot 1`] = `
   <a
     class="relative"
     data-testid="nft-card"
-    href="/nft-marketplace/1"
+    href="/template/1"
   >
     <div
       class="bg-white dark:bg-indigo rounded-md p-5"

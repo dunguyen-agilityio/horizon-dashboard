@@ -64,7 +64,7 @@ exports[`NFTRecentlyAdd should match snapshot 1`] = `
           <a
             class="relative"
             data-testid="nft-card"
-            href="/nft-marketplace/1"
+            href="/template/1"
           >
             <div
               class="bg-white dark:bg-indigo rounded-md p-5"
@@ -263,7 +263,7 @@ exports[`NFTRecentlyAdd should match snapshot 1`] = `
         <a
           class="relative"
           data-testid="nft-card"
-          href="/nft-marketplace/1"
+          href="/template/1"
         >
           <div
             class="bg-white dark:bg-indigo rounded-md p-5"
