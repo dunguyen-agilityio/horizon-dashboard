@@ -1,9 +1,9 @@
 // Components
 import Logo from '@/components/Logo';
 import { Link } from '@nextui-org/link';
+import Image from 'next/image';
 import { ToggleTheme, Text } from '@/components';
 import BackNavigation from '@/ui/auth/BackNavigation';
-import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Constants
 import { Wallpaper } from '@/constants';
@@ -30,7 +30,7 @@ const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
     </main>
 
     <div className="w-1/2 2xl:w-2/5 h-screen relative hidden xl:flex justify-center items-end pb-10">
-      <ImageWithBlur
+      <Image
         src={Wallpaper}
         alt="wall-paper"
         fill
