@@ -24,10 +24,12 @@ import { Heart } from '@/icons';
 
 // Utils
 import { debounce } from '@/utils/debounce';
-import { getBreadcrumbs } from '@/utils/route';
 
 // Mocks
 import { MOCK_NOTIFIES } from '@/mocks/notify';
+
+// Hooks
+import useBreadcrumbs from '@/hooks/useBreadcrumbs';
 
 interface HeaderProps {
   isAuthenticated: boolean;
@@ -42,7 +44,7 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
 
   const pathname = usePathname();
 
-  const breadcrumbs = getBreadcrumbs(pathname);
+  const breadcrumbs = useBreadcrumbs();
 
   const query = searchParams.get(PARAMS.SEARCH) ?? '';
 
@@ -61,7 +63,7 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
   return (
     <header className="relative flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0 w-full xl:pl-2.5">
       <div className="flex flex-col gap-1 mr-2">
-        {breadcrumbs.length && (
+        {!!breadcrumbs.length && (
           <>
             <div className="flex justify-start w-1/2">
               <MenuBar isAuthenticated={isAuthenticated} />
