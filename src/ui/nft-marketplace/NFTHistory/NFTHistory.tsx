@@ -44,7 +44,7 @@ const NFTHistory = ({ historyList }: NFTHistoryProps) => (
                 className="rounded-xl w-10 h-10 xs:w-[66px] xs:h-[66px] object-cover"
               />
               <div className="flex flex-col">
-                <Text className="leading-tiny font-bold">Colorful Heaven</Text>
+                <Text className="leading-tiny font-bold">{name}</Text>
                 <Text className="leading-small text-small text-secondary">
                   By {author.fullName}
                 </Text>
