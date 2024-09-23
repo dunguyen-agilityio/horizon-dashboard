@@ -33,7 +33,7 @@ export const getContributor = ({
 
   const SEARCH_QUERY =
     searchValue &&
-    `filters[users_permissions_user][firstName][$containsi]=${searchValue}`;
+    `filters[$or][0][users_permissions_user][firstName][$containsi]=${searchValue}&filters[$or][1][users_permissions_user][lastName][$containsi]=${searchValue}`;
 
   const queryParams = new URLSearchParams({
     'pagination[page]': page,

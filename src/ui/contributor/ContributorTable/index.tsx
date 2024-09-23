@@ -34,7 +34,7 @@ import {
 } from '@/constants/tableColumns';
 
 // Utils
-import { formatShortDate } from '@/utils/format';
+import { capitalizeFirstLetter, formatShortDate } from '@/utils/format';
 import { mapContributorsData } from '@/utils/contributor';
 import { compareDate, compareString, compareNumber } from '@/utils/compare';
 
@@ -87,7 +87,7 @@ const formatContributor = (
               className="font-bold text-sm min-w-[100px] xs:min-w-full"
               data-testid="table-cell-fullName"
             >
-              {value}
+              {capitalizeFirstLetter(value)}
             </Text>
             <Text
               variant={TEXT_VARIANT.SECONDARY}

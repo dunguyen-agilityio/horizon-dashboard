@@ -81,3 +81,15 @@ export const parseDateRanged = (startDate: TDateOnly, endDate: TDateOnly) => ({
   startDate: formatDate(startDate),
   endDate: formatDate(endDate),
 });
+
+/**
+ * Capitalizes the first letter of a given string.
+ *
+ * @param content - The input string to be capitalized.
+ * @returns A new string with the first letter in uppercase.
+ */
+
+export const capitalizeFirstLetter = (content: string): string => {
+  if (!content) return '';
+  return content.charAt(0).toUpperCase() + content.slice(1);
+};
