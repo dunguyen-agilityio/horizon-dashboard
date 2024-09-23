@@ -113,7 +113,7 @@ exports[`NFTRecentlyAdd should match snapshot 1`] = `
               >
                 <div>
                   <p
-                    class="text-primary dark:text-white text-extra font-bold leading-large text-large"
+                    class="text-primary dark:text-white text-extra font-bold leading-large text-large truncate max-w-60"
                   >
                     Mesh Gradients
                   </p>
@@ -312,7 +312,7 @@ exports[`NFTRecentlyAdd should match snapshot 1`] = `
             >
               <div>
                 <p
-                  class="text-primary dark:text-white text-extra font-bold leading-large text-large"
+                  class="text-primary dark:text-white text-extra font-bold leading-large text-large truncate max-w-60"
                 >
                   Mesh Gradients
                 </p>
