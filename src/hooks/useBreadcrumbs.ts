@@ -14,41 +14,41 @@ import { getParams, isRouteMatch } from '@/utils/route';
 const useBreadcrumbs = () => {
   const pathname = usePathname();
 
-  const [breadCrumbs, setBreadCrumbs] = useState<RouteWithoutIcon[]>([]);
+  const [breadcrumbs, setBreadcrumbs] = useState<RouteWithoutIcon[]>([]);
 
   useEffect(() => {
-    for (const route of ROUTES) {
-      const { href, title } = route;
+    const getBreadcrumbs = () => {
+      for (const route of ROUTES) {
+        const { href, title } = route;
 
-      if (pathname.includes(href)) {
-        const filterRoutes: RouteWithoutIcon[] = [];
-
-        switch (true) {
-          case pathname.includes(PUBLIC_ROUTES.NFT_MARKETPLACE):
-            filterRoutes.push({ href, title });
+        if (pathname.includes(href)) {
+          const breadcrumbs: RouteWithoutIcon[] = [];
+          if (pathname.includes(PUBLIC_ROUTES.NFT_MARKETPLACE)) {
+            breadcrumbs.push({ href, title });
 
             if (isRouteMatch(pathname, PUBLIC_ROUTES.NFT_MARKETPLACE_DETAIL)) {
-              filterRoutes.push({
-                title: getParams(
-                  pathname,
-                  PUBLIC_ROUTES.NFT_MARKETPLACE_DETAIL,
-                ).join('/'),
+              const nftId = getParams(
+                pathname,
+                PUBLIC_ROUTES.NFT_MARKETPLACE_DETAIL,
+              ).join('/');
+
+              breadcrumbs.push({
+                title: nftId,
                 href: pathname,
               });
             }
-            break;
 
-          default:
-            filterRoutes.push({ href, title });
-            break;
+            setBreadcrumbs(breadcrumbs);
+            return;
+          }
         }
-
-        setBreadCrumbs(filterRoutes);
       }
-    }
+    };
+
+    getBreadcrumbs();
   }, [pathname]);
 
-  return breadCrumbs;
+  return breadcrumbs;
 };
 
 export default useBreadcrumbs;
