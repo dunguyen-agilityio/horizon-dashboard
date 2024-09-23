@@ -17,8 +17,8 @@ export const PRIVATE_ROUTES = {
 };
 
 export const PUBLIC_ROUTES = {
-  NFT_MARKETPLACE: '/nft-marketplace',
-  NFT_MARKETPLACE_DETAIL: '/nft-marketplace/:id',
+  NFT_MARKETPLACE: '/template',
+  NFT_MARKETPLACE_DETAIL: '/template/:id',
   CONTRIBUTOR: '/contributor',
   LICENSE: '/license',
   BLOG: '/blog',

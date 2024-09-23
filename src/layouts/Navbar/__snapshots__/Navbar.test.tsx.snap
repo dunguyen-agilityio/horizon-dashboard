@@ -79,7 +79,7 @@ exports[`Navbar component Navbar should render match snapshot 1`] = `
         >
           <a
             class="flex justify-between"
-            href="/nft-marketplace"
+            href="/template"
           >
             <div
               class="flex w-full items-center gap-3 pl-0 xl:pl-8 py-2 hover:bg-gray hover:dark:bg-indigo-light"

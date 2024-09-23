@@ -15,7 +15,7 @@ exports[`Footer component Footer should render match snapshot 1`] = `
     >
       <a
         class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
-        href="/nft-marketplace"
+        href="/template"
         role="link"
         tabindex="0"
       >
