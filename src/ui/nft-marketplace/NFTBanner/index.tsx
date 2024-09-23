@@ -1,7 +1,7 @@
 // Components
 import Link from 'next/link';
+import Image from 'next/image';
 import { Text } from '@/components';
-import ImageWithBlur from '@/components/ImageWithBlur';
 
 // Constants
 import { NFT_IMAGES } from '@/constants/images';
@@ -14,11 +14,11 @@ const { COVER } = NFT_IMAGES;
 const NFTBanner = () => (
   <div className="relative h-[420px] rounded-md bg-blue-450 dark:bg-purple-750 overflow-hidden">
     <div className="absolute right-0 h-[350px] w-full max-w-[1090px]">
-      <ImageWithBlur
+      <Image
         src={COVER}
         alt="NFT Cover"
         fill
-        additionalClasses="object-cover"
+        className="object-cover"
         sizes="(max-width: 440px) 60vw, 100vw"
       />
     </div>
