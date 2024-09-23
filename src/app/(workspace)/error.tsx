@@ -13,7 +13,7 @@ const Error = ({
   error: Error & { digest?: string };
   reset: () => void;
 }) => (
-  <div className="w-full h-screen flex flex-col justify-center items-center bg-gray-100">
+  <div className="w-full flex-1 flex flex-col justify-center items-center bg-gray-100">
     <div className="text-center">
       <Text
         as="h1"

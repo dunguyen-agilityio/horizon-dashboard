@@ -10,11 +10,11 @@ const RootLayout = async ({ children }: React.PropsWithChildren) => {
   const isAuthenticated = !!(await auth())?.user;
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-1">
       <div className="hidden xl:block">
         <Navbar isAuthenticated={isAuthenticated} />
       </div>
-      <div className="flex-grow flex flex-col w-full items-center pt-4 md:pt-[50px] px-2 md:px-5 gap-5">
+      <div className="flex-grow flex flex-col w-full xl:w-main items-center pt-4 md:pt-[50px] px-2 md:px-5 gap-5">
         <Suspense>
           <Header isAuthenticated={isAuthenticated} />
         </Suspense>

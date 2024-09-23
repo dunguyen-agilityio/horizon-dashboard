@@ -3,8 +3,9 @@ export const height = {
 };
 
 export const width = {
-  header: '290px',
   card: '382px',
+  navbar: '290px',
+  main: 'calc(100% - 290px)',
 };
 
 export const maxWidth = {
