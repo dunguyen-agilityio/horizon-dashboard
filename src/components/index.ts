@@ -11,3 +11,4 @@ export { default as ItemNotFound } from './ItemNotFound';
 export { default as ToggleTheme } from './ToggleTheme';
 export { default as SelectFlag } from './SelectFlag';
 export { default as ErrorFallback } from './ErrorFallback';
+export { default as NotFound } from './NotFound';
