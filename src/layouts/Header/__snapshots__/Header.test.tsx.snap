@@ -22,7 +22,7 @@ exports[`Header tests Should match snapshot 1`] = `
         <div
           class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 data-[hover=true]:bg-default-200 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background md:w-96 xl:w-fit bg-gray group-data-[focus=true]:bg-gray dark:bg-indigo-dark dark:group-data-[focus=true]:bg-indigo-dark rounded-[30px]"
           data-slot="input-wrapper"
-          role="button"
+          data-testid="search-wrapper"
           style="cursor: text;"
         >
           <div
@@ -75,6 +75,7 @@ exports[`Header tests Should match snapshot 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="notifications-button"
           class="z-10 subpixel-antialiased focus-visible:outline-none aria-expanded:scale-1 aria-expanded:opacity-100"
           data-slot="trigger"
           data-testid="notify-button"
@@ -108,6 +109,7 @@ exports[`Header tests Should match snapshot 1`] = `
           </svg>
         </i>
         <button
+          aria-label="theme-button"
           class="z-0 group relative box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none text-default-foreground data-[hover=true]:opacity-hover min-w-fit h-fit rounded-full flex justify-center items-center p-2 bg-transparent"
           type="button"
         >

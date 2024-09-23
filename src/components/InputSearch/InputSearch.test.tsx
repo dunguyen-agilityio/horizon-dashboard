@@ -14,10 +14,8 @@ describe('Input search tests', () => {
   });
 
   it('Should auto focus input when user click start content', async () => {
-    const { getByRole, getByTestId } = render(
-      <InputSearch onSearch={mockSearch} />,
-    );
-    const startContent = getByRole('button');
+    const { getByTestId } = render(<InputSearch onSearch={mockSearch} />);
+    const startContent = getByTestId('search-wrapper');
     expect(startContent).toBeInTheDocument();
     fireEvent.click(startContent);
 
