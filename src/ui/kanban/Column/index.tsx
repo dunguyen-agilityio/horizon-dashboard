@@ -29,11 +29,12 @@ import '@/styles/scroll.css';
 
 interface ColumnProps {
   status: STATUS;
+  query: string;
 }
 
-const Column = ({ status }: React.PropsWithChildren<ColumnProps>) => {
+const Column = ({ status, query }: React.PropsWithChildren<ColumnProps>) => {
   const [isAdding, setIsAdding] = useState(false);
-  const { tasks, isLoading, addTask } = useTask(status);
+  const { tasks, isLoading, addTask } = useTask(status, query);
 
   const handleShowTaskForm = () => {
     setIsAdding(true);

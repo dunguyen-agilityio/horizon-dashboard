@@ -1,4 +1,4 @@
-import { act, fireEvent, render, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@/utils/test-utils';
 import Column from '.';
 import { STATUS } from '@/models/Task';
 import { useTask } from '@/hooks/useTask';
@@ -9,7 +9,7 @@ jest.mock('@/hooks/useTask', () => ({
 }));
 
 describe('Column tests', () => {
-  const setup = () => render(<Column status={STATUS.BACKLOG} />);
+  const setup = () => render(<Column status={STATUS.BACKLOG} query="" />);
 
   afterEach(() => {
     jest.clearAllMocks();

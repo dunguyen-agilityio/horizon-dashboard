@@ -31,39 +31,65 @@ import {
   deleteDoc,
 } from '@/config/firebaseConfig';
 
+import { orderBy, startAt, endAt } from 'firebase/firestore';
+
 export const getTasksInRealTime = (
   setTasks: (tasks: Task[]) => void,
+  setIsLoading: (loading: boolean) => void,
   status: string,
+  searchTerm: string,
 ): (() => void) => {
   const tasksRef = collection(fireStore, 'tasks');
 
-  const tasksQuery = query(tasksRef, where('status', '==', status));
+  let tasksQuery;
+  if (searchTerm) {
+    tasksQuery = query(
+      tasksRef,
+      where('status', '==', status),
+      orderBy('title'),
+      startAt(searchTerm),
+      endAt(searchTerm + '\uf8ff'),
+    );
+  } else {
+    tasksQuery = query(tasksRef, where('status', '==', status));
+  }
 
   const unsubscribe = onSnapshot(tasksQuery, (snapshot) => {
     const tasks: Task[] = [];
     snapshot.forEach((doc) => {
       tasks.push({ id: doc.id, ...doc.data() } as Task);
     });
+
     setTasks(tasks);
+    setIsLoading(false);
   });
 
   return unsubscribe;
 };
 
-export const useTask = (status: string) => {
+export const useTask = (status: string, searchTerm: string = '') => {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [filteredTasks, setFilteredTasks] = useState<Task[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const { showToast } = useToast();
 
   useEffect(() => {
     setIsLoading(true);
-    const unsubscribe = getTasksInRealTime((tasks) => {
-      setTasks(tasks);
-      setIsLoading(false);
-    }, status);
+    const unsubscribe = getTasksInRealTime(setTasks, setIsLoading, status, '');
 
     return () => unsubscribe();
   }, [status]);
+
+  useEffect(() => {
+    if (searchTerm) {
+      const filtered = tasks.filter((task) =>
+        task.title.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
+      setFilteredTasks(filtered);
+    } else {
+      setFilteredTasks(tasks);
+    }
+  }, [tasks, searchTerm]);
 
   const addTask = async (task: TaskFormData) => {
     try {
@@ -111,5 +137,11 @@ export const useTask = (status: string) => {
     }
   };
 
-  return { tasks, isLoading, addTask, updateTask, removeTask };
+  return {
+    tasks: filteredTasks,
+    isLoading,
+    addTask,
+    updateTask,
+    removeTask,
+  };
 };
