@@ -81,9 +81,11 @@ const formatDataCreator = (row: Creator, key: keyof Creator) => {
       return (
         <Progress
           aria-label="Rating"
+          size="sm"
           value={rating}
+          showValueLabel
           classNames={{
-            base: 'pr-3 h-2',
+            base: 'pr-3',
             indicator: 'bg-blue-450 dark:bg-purple-750',
           }}
         />
