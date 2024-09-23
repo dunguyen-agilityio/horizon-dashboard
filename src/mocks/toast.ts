@@ -41,3 +41,17 @@ export const REMOVE_TASK_ERROR = {
   type: TOAST.ERROR,
   timeOut: 3000,
 };
+
+export const UPDATE_START_DATE_ERROR = {
+  title: 'Error',
+  message: 'Start date must be less than due date',
+  type: TOAST.ERROR,
+  timeOut: 3000,
+};
+
+export const UPDATE_DUE_DATE_ERROR = {
+  title: 'Error',
+  message: 'Start date must be greater than end date',
+  type: TOAST.ERROR,
+  timeOut: 3000,
+};
