@@ -3,7 +3,7 @@ import useBreadcrumbs from '../useBreadcrumbs';
 import { PUBLIC_ROUTES } from '@/constants';
 import { usePathname } from 'next/navigation';
 
-describe('getBreadcrumbs utils tests', () => {
+describe('usePathname tests', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
