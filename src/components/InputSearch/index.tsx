@@ -66,11 +66,7 @@ const InputSearch = forwardRef<HTMLInputElement, InputSearchProps>(
 
     return (
       <Component {...getBaseProps()}>
-        <div
-          {...getInputWrapperProps()}
-          role="button"
-          onClick={handleClickStartContent}
-        >
+        <div {...getInputWrapperProps()} onClick={handleClickStartContent}>
           {innerWrapper}
         </div>
       </Component>
