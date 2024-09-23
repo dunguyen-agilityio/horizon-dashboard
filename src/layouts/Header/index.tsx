@@ -90,7 +90,11 @@ const Header = ({ isAuthenticated }: HeaderProps) => {
         )}
       </div>
       <div className="h-fit p-[10px] bg-white dark:bg-indigo rounded-[30px] flex gap-6 items-center">
-        <InputSearch onSearch={debounce(handleSearch)} defaultValue={query} />
+        <InputSearch
+          key={`search-${query}`}
+          onSearch={debounce(handleSearch)}
+          defaultValue={query}
+        />
         <div className="absolute top-0 right-0 xl:static flex gap-2 sm:gap-6 items-center">
           {isAuthenticated && <Notification notifies={MOCK_NOTIFIES} />}
           {isAuthenticated && (

@@ -28,6 +28,7 @@ const Notification = ({ notifies }: NotificationProps) => {
     >
       <PopoverTrigger>
         <button
+          aria-label="notifications-button"
           className="focus-visible:outline-none aria-expanded:scale-1 aria-expanded:opacity-100"
           data-testid="notify-button"
         >

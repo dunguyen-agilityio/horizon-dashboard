@@ -41,6 +41,7 @@ const ToggleTheme = ({
   return (
     <Button
       size="fit"
+      aria-label="theme-button"
       onClick={handleChangeTheme}
       className={cn(
         'rounded-full flex justify-center items-center',
