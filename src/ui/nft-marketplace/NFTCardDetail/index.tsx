@@ -1,39 +1,19 @@
 // Components
-import { ErrorFallback, Text } from '@/components';
+import { Text } from '@/components';
 import ImageWithBlur from '@/components/ImageWithBlur';
-
-// Constants
-import { API_ENTITY } from '@/constants';
-
-// Services
-import { apiClient } from '@/services/api';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
 import { NFTResponse } from '@/models/NFT';
 import { formatNFTResponse } from '@/utils/nft';
-import { StrapiModel, StrapiResponse } from '@/types/strapi';
+import { StrapiResponse } from '@/types/strapi';
 
 interface NFTCardDetailProps {
-  id: number;
+  data: StrapiResponse<NFTResponse>;
 }
 
-const NFTCardDetail = async ({ id }: NFTCardDetailProps) => {
-  const { data, error } = await apiClient.get<
-    StrapiModel<StrapiResponse<NFTResponse>>
-  >(`${API_ENTITY.NFTS}/${id}?populate=*`);
-
-  if (error)
-    return (
-      <ErrorFallback
-        message={error.message}
-        className="h-[860px] bg-gray dark:bg-indigo-dark"
-      />
-    );
-
-  const { name, author, image, description, price } = formatNFTResponse(
-    data.data,
-  );
+const NFTCardDetail = async ({ data }: NFTCardDetailProps) => {
+  const { name, author, image, description, price } = formatNFTResponse(data);
 
   return (
     <div className="flex gap-10 pb-20 flex-wrap 2xl:flex-nowrap">

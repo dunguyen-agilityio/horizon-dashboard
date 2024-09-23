@@ -1,9 +1,11 @@
-import { Suspense } from 'react';
-
 // component
-import NFTDetailSkeleton from '@/components/Skeleton/NFTDetailSkeleton';
 import NFTCardDetail from '@/ui/nft-marketplace/NFTCardDetail';
 import NFTCardWrapper from '@/ui/nft-marketplace/NFTCardWrapper';
+import { StrapiModel, StrapiResponse } from '@/types/strapi';
+import { NFTResponse } from '@/models/NFT';
+import { apiClient } from '@/services/api';
+import { API_ENTITY } from '@/constants';
+import { notFound } from 'next/navigation';
 
 interface NFTMarketDetailProps {
   params: {
@@ -11,13 +13,16 @@ interface NFTMarketDetailProps {
   };
 }
 
-const NFTMarketDetail = ({ params: { id } }: NFTMarketDetailProps) => {
+const NFTMarketDetail = async ({ params: { id } }: NFTMarketDetailProps) => {
+  const { data, error } = await apiClient.get<
+    StrapiModel<StrapiResponse<NFTResponse>>
+  >(`${API_ENTITY.NFTS}/${id}?populate=*`);
+
+  if (error) return notFound();
+
   return (
     <div className="flex flex-col">
-      <Suspense fallback={<NFTDetailSkeleton />}>
-        <NFTCardDetail id={id} />
-      </Suspense>
-
+      <NFTCardDetail data={data.data} />
       <NFTCardWrapper />
     </div>
   );
