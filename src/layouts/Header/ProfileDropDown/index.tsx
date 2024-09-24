@@ -73,15 +73,20 @@ const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
           <Text size={TEXT_SIZE.md} className="font-bold">
             {username}
           </Text>
-          <Button className="justify-start" variant="flat" onClick={onOpen}>
-            Logout
+          <Button
+            data-testId="button-sign-out"
+            className="justify-start"
+            variant="flat"
+            onClick={onOpen}
+          >
+            Sign Out
           </Button>
           {isOpen && (
             <Modal
               isOpen
               onOpenChange={onClose}
               isDismissable={false}
-              data-testid="confirm-logout-modal"
+              data-testid="confirm-signOut-modal"
             >
               <ModalContent className="bg-white dark:bg-content1">
                 <ModalHeader className="flex flex-col gap-1">
@@ -94,8 +99,12 @@ const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
                   <Button color="danger" variant="light" onPress={handleClose}>
                     Close
                   </Button>
-                  <Button color="primary" onPress={handleLogout}>
-                    Logout
+                  <Button
+                    data-testId="modal-button-sign-out"
+                    color="primary"
+                    onPress={handleLogout}
+                  >
+                    Sign Out
                   </Button>
                 </ModalFooter>
               </ModalContent>
