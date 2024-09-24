@@ -14,9 +14,20 @@ jest.mock('@/config/firebaseConfig', () => ({
   where: jest.fn(),
 }));
 
+const mockPush = jest.fn();
+
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn().mockImplementation(() => ({
+    push: mockPush,
+  })),
+  useSearchParams: jest.fn().mockImplementation(() => new URLSearchParams()),
+  usePathname: jest.fn().mockImplementation(() => '/'),
+}));
+
 describe('getTasksInRealTime', () => {
   let mockSetTasks: jest.Mock;
   let mockUnsubscribe: jest.Mock;
+  const mockSetLoading = jest.fn();
 
   beforeEach(() => {
     mockSetTasks = jest.fn();
@@ -52,7 +63,12 @@ describe('getTasksInRealTime', () => {
 
   it('should fetch tasks with the given status in real-time', () => {
     const status = 'IN_PROGRESS';
-    const unsubscribe = getTasksInRealTime(mockSetTasks, status);
+    const unsubscribe = getTasksInRealTime(
+      mockSetTasks,
+      mockSetLoading,
+      status,
+      '',
+    );
 
     expect(query).toHaveBeenCalledWith(
       collection(fireStore, 'tasks'),

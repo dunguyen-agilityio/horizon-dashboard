@@ -9,7 +9,7 @@ jest.mock('@/hooks/useTask', () => ({
 }));
 
 describe('Column tests', () => {
-  const setup = () => render(<Column status={STATUS.BACKLOG} />);
+  const setup = () => render(<Column status={STATUS.BACKLOG} query="" />);
 
   afterEach(() => {
     jest.clearAllMocks();

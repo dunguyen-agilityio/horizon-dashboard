@@ -7,6 +7,16 @@ jest.mock('@/hooks/useTask', () => ({
   useTask: jest.fn(),
 }));
 
+const mockPush = jest.fn();
+
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn().mockImplementation(() => ({
+    push: mockPush,
+  })),
+  useSearchParams: jest.fn().mockImplementation(() => new URLSearchParams()),
+  usePathname: jest.fn().mockImplementation(() => '/'),
+}));
+
 describe('TaskBoard', () => {
   afterEach(() => {
     jest.clearAllMocks();
