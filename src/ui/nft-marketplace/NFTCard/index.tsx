@@ -72,7 +72,7 @@ const NFTCard = ({
         </div>
         <div className="flex justify-between pt-5">
           <div>
-            <Text size={TEXT_SIZE.lg} className="text-large">
+            <Text size={TEXT_SIZE.lg} className="text-large truncate max-w-60">
               {name}
             </Text>
             <Text
