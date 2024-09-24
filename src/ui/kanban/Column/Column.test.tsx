@@ -1,8 +1,8 @@
-import { act, fireEvent, render, waitFor } from '@testing-library/react';
 import Column from '.';
 import { STATUS } from '@/models/Task';
 import { useTask } from '@/hooks/useTask';
 import { MOCK_TASKS } from '@/mocks/task';
+import { render, act, fireEvent, waitFor } from '@/utils/test-utils';
 
 jest.mock('@/hooks/useTask', () => ({
   useTask: jest.fn(),

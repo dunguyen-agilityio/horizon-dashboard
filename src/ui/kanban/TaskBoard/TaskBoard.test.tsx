@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react';
-
+import { render } from '@/utils/test-utils';
 import TaskBoard from '.';
 import { useTask } from '@/hooks/useTask';
 import { MOCK_TASKS } from '@/mocks/task';

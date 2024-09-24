@@ -151,12 +151,21 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                   aria-valuemin="0"
                   aria-valuenow="90"
                   aria-valuetext="90%"
-                  class="flex flex-col gap-2 w-full pr-3 h-2"
+                  class="flex flex-col gap-2 w-full pr-3"
                   id="react-aria-:r2:"
                   role="progressbar"
                 >
                   <div
-                    class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+                    class="flex justify-between"
+                  >
+                    <span
+                      class="text-small"
+                    >
+                      90%
+                    </span>
+                  </div>
+                  <div
+                    class="z-0 relative bg-default-300/50 overflow-hidden h-1 rounded-full"
                   >
                     <div
                       class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
@@ -226,12 +235,21 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                   aria-valuemin="0"
                   aria-valuenow="80"
                   aria-valuetext="80%"
-                  class="flex flex-col gap-2 w-full pr-3 h-2"
+                  class="flex flex-col gap-2 w-full pr-3"
                   id="react-aria-:r5:"
                   role="progressbar"
                 >
                   <div
-                    class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+                    class="flex justify-between"
+                  >
+                    <span
+                      class="text-small"
+                    >
+                      80%
+                    </span>
+                  </div>
+                  <div
+                    class="z-0 relative bg-default-300/50 overflow-hidden h-1 rounded-full"
                   >
                     <div
                       class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
@@ -300,12 +318,21 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                   aria-valuemin="0"
                   aria-valuenow="60"
                   aria-valuetext="60%"
-                  class="flex flex-col gap-2 w-full pr-3 h-2"
+                  class="flex flex-col gap-2 w-full pr-3"
                   id="react-aria-:r8:"
                   role="progressbar"
                 >
                   <div
-                    class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+                    class="flex justify-between"
+                  >
+                    <span
+                      class="text-small"
+                    >
+                      60%
+                    </span>
+                  </div>
+                  <div
+                    class="z-0 relative bg-default-300/50 overflow-hidden h-1 rounded-full"
                   >
                     <div
                       class="h-full rounded-full transition-transform !duration-500 bg-blue-450 dark:bg-purple-750"
