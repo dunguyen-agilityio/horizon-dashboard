@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 // Components
 import {
+  Avatar,
   Modal,
   ModalBody,
   ModalContent,
@@ -17,10 +18,6 @@ import {
 } from '@nextui-org/react';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
-import ImageWithBlur from '@/components/ImageWithBlur';
-
-// Mocks
-import { MOCK_USERS } from '@/mocks/user';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
@@ -28,14 +25,12 @@ import { TEXT_SIZE } from '@/types/text';
 // Actions
 import { handleSignOut } from '@/actions/auth';
 
-// Constants
-import { USER_IMAGE } from '@/constants';
+interface IProfileDropdownProps {
+  avatar: string;
+  username: string;
+}
 
-const MOCK_PROFILE = MOCK_USERS[0];
-
-const ProfileDropDown = () => {
-  const { avatar = { url: USER_IMAGE.DEFAULT }, username } = MOCK_PROFILE;
-
+const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -67,13 +62,7 @@ const ProfileDropDown = () => {
           className="focus-visible:outline-none aria-expanded:scale-1 aria-expanded:opacity-100"
           data-testid="profile-trigger-btn"
         >
-          <ImageWithBlur
-            width={40}
-            height={40}
-            src={avatar.url}
-            alt={username}
-            additionalClasses="min-w-10 rounded-full"
-          />
+          <Avatar src={avatar} alt={username} />
         </button>
       </PopoverTrigger>
       <PopoverContent
