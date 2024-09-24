@@ -21,11 +21,10 @@ const useBreadcrumbs = () => {
       for (const route of ROUTES) {
         const { href, title } = route;
 
+        const breadcrumbs: RouteWithoutIcon[] = [];
         if (pathname.includes(href)) {
-          const breadcrumbs: RouteWithoutIcon[] = [];
+          breadcrumbs.push({ href, title });
           if (pathname.includes(PUBLIC_ROUTES.NFT_MARKETPLACE)) {
-            breadcrumbs.push({ href, title });
-
             if (isRouteMatch(pathname, PUBLIC_ROUTES.NFT_MARKETPLACE_DETAIL)) {
               const nftId = getParams(
                 pathname,
@@ -37,10 +36,9 @@ const useBreadcrumbs = () => {
                 href: pathname,
               });
             }
-
-            setBreadcrumbs(breadcrumbs);
-            return;
           }
+          setBreadcrumbs(breadcrumbs);
+          return;
         }
       }
     };
