@@ -95,7 +95,7 @@ const ConfirmEmailForm = ({
         isLoading={isLoading}
       >
         {!isLoading && (
-          <Text size={TEXT_SIZE.md} className="font-bold leading-4">
+          <Text size={TEXT_SIZE.md} className="text-white font-bold leading-4">
             Continue
           </Text>
         )}

@@ -11,6 +11,9 @@ import ProfileDropDown from '.';
 
 import { signOut } from '@/auth.config';
 
+// Mocks
+import { MOCK_AVATAR, MOCK_USERS } from '@/mocks/user';
+
 jest.mock('@/auth.config', () => ({
   signOut: jest.fn(),
 }));
@@ -23,12 +26,22 @@ jest.mock('next/headers', () => ({
 
 describe('ProfileDropDown tests', () => {
   it('Should match snapshot', () => {
-    const { container } = render(<ProfileDropDown />);
+    const { container } = render(
+      <ProfileDropDown
+        avatar={MOCK_AVATAR.url}
+        username={MOCK_USERS[0].username}
+      />,
+    );
     expect(container).toMatchSnapshot();
   });
 
   it('Should show profile DropdownContent when click Trigger button', () => {
-    const { getByTestId } = render(<ProfileDropDown />);
+    const { getByTestId } = render(
+      <ProfileDropDown
+        avatar={MOCK_AVATAR.url}
+        username={MOCK_USERS[0].username}
+      />,
+    );
     expect(
       queryByTestId(document.documentElement, 'profile-content'),
     ).not.toBeInTheDocument();
@@ -42,82 +55,97 @@ describe('ProfileDropDown tests', () => {
     ).toBeInTheDocument();
   });
 
-  it('Should show ConfirmLogoutModal when click Logout button', () => {
-    const { getByTestId } = render(<ProfileDropDown />);
+  it('Should show ConfirmSignOutModal when click Sign Out button', () => {
+    const { getByTestId } = render(
+      <ProfileDropDown
+        avatar={MOCK_AVATAR.url}
+        username={MOCK_USERS[0].username}
+      />,
+    );
 
     act(() => {
       fireEvent.click(getByTestId('profile-trigger-btn'));
     });
 
     act(() => {
-      fireEvent.click(getByText(document.documentElement, 'Logout'));
+      fireEvent.click(getByText(document.documentElement, 'Sign Out'));
     });
 
     expect(
-      queryByTestId(document.documentElement, 'confirm-logout-modal'),
+      queryByTestId(document.documentElement, 'confirm-signOut-modal'),
     ).toBeInTheDocument();
   });
 
-  it('Should show Hidden ConfirmLogoutModal when click Close button', async () => {
-    const { getByTestId } = render(<ProfileDropDown />);
+  it('Should hidden ConfirmSignOutModal when click Close button', async () => {
+    const { getByTestId } = render(
+      <ProfileDropDown
+        avatar={MOCK_AVATAR.url}
+        username={MOCK_USERS[0].username}
+      />,
+    );
 
     act(() => {
       fireEvent.click(getByTestId('profile-trigger-btn'));
     });
 
     act(() => {
-      fireEvent.click(getByText(document.documentElement, 'Logout'));
+      fireEvent.click(getByTestId('button-sign-out'));
     });
 
     fireEvent.click(getByText(document.documentElement, 'Close'));
 
     await waitFor(() => {
       expect(
-        queryByTestId(document.documentElement, 'confirm-logout-modal'),
+        queryByTestId(document.documentElement, 'confirm-signOut-modal'),
       ).not.toBeInTheDocument();
     });
   });
 
-  it('Should show Hidden ConfirmLogoutModal when click Logout button', async () => {
-    const { getByTestId } = render(<ProfileDropDown />);
+  it('Should hidden ConfirmSignOutModal when click Sign Out button', async () => {
+    const { getByTestId } = render(
+      <ProfileDropDown
+        avatar={MOCK_AVATAR.url}
+        username={MOCK_USERS[0].username}
+      />,
+    );
 
     act(() => {
       fireEvent.click(getByTestId('profile-trigger-btn'));
     });
 
     act(() => {
-      fireEvent.click(getByText(document.documentElement, 'Logout'));
+      fireEvent.click(getByTestId('button-sign-out'));
     });
 
     const modal = queryByTestId(
       document.documentElement,
-      'confirm-logout-modal',
+      'confirm-signOut-modal',
     );
 
-    fireEvent.click(getByText(modal!, 'Logout'));
+    fireEvent.click(getByTestId('modal-button-sign-out'));
 
     await waitFor(() => {
       expect(modal).toBeInTheDocument();
     });
   });
 
-  it('Should show Hidden ConfirmLogoutModal when click Logout button', async () => {
-    const { getByTestId } = render(<ProfileDropDown />);
+  it('Should trigger function signOut when click Sign Out button', async () => {
+    const { getByTestId } = render(
+      <ProfileDropDown
+        avatar={MOCK_AVATAR.url}
+        username={MOCK_USERS[0].username}
+      />,
+    );
 
     act(() => {
       fireEvent.click(getByTestId('profile-trigger-btn'));
     });
 
     act(() => {
-      fireEvent.click(getByText(document.documentElement, 'Logout'));
+      fireEvent.click(getByTestId('button-sign-out'));
     });
 
-    const modal = queryByTestId(
-      document.documentElement,
-      'confirm-logout-modal',
-    );
-
-    fireEvent.click(getByText(modal!, 'Logout'));
+    fireEvent.click(getByTestId('modal-button-sign-out'));
     (signOut as jest.Mock).mockResolvedValue(true);
     await waitFor(() => {
       expect(signOut).toHaveBeenCalled();

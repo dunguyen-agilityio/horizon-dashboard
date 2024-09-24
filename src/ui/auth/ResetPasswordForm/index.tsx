@@ -138,7 +138,10 @@ const ResetPasswordForm = ({ code }: ResetPasswordFormProps) => {
           color="primary"
         >
           {!isPending && (
-            <Text size={TEXT_SIZE.sm} className="font-bold leading-4">
+            <Text
+              size={TEXT_SIZE.sm}
+              className="text-white font-bold leading-4"
+            >
               Update Password
             </Text>
           )}
