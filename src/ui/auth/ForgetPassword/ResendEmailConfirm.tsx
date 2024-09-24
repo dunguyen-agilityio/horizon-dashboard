@@ -45,7 +45,7 @@ const ResendEmail = ({ email, isLoading, onResent }: ResendEmailProps) => {
           <Text
             size={TEXT_SIZE.md}
             variant={TEXT_VARIANT.SECONDARY}
-            className="font-bold leading-4"
+            className="text-white font-bold leading-4"
           >
             {time ? `${time}s` : 'Resend email'}
           </Text>
