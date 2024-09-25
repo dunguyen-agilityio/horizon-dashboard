@@ -1,12 +1,21 @@
-// component
-import NFTCardDetail from '@/ui/nft-marketplace/NFTCardDetail';
-import { StrapiModel, StrapiResponse } from '@/types/strapi';
-import { NFTResponse } from '@/models/NFT';
-import { apiClient } from '@/services/api';
-import { API_ENTITY } from '@/constants';
-import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import { notFound } from 'next/navigation';
+
+// Components
+import NFTCardDetail from '@/ui/nft-marketplace/NFTCardDetail';
 import { HorizontalNFTsSkeleton, NFTRelated } from '@/ui/nft-marketplace';
+
+// Types
+import { StrapiModel, StrapiResponse } from '@/types/strapi';
+
+// Models
+import { NFTResponse } from '@/models/NFT';
+
+// Services
+import { apiClient } from '@/services/api';
+
+// Constants
+import { API_ENTITY } from '@/constants';
 
 interface NFTMarketDetailProps {
   params: {
