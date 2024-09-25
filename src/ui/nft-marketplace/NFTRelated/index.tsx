@@ -3,10 +3,10 @@ import { ErrorFallback } from '@/components';
 import NTFRelated from './NTFRelated';
 
 // Services
-import { getNFTsRelated } from '@/services/nft';
+import useNFTRelated from '@/hooks/useNFT';
 
 const NTFRelatedContainer = async () => {
-  const { data, error } = await getNFTsRelated();
+  const { data, error } = await useNFTRelated();
 
   if (error) {
     return <ErrorFallback message={error.message} />;

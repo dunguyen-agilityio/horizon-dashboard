@@ -5,10 +5,7 @@ import NFTCard from '../NFTCard';
 import { Button, Text } from '@/components';
 
 // Models
-import { NFTResponse } from '@/models/NFT';
-
-// Types
-import { StrapiResponse } from '@/types/strapi';
+import { NFTDataExtend } from '@/models/NFT';
 
 // Icons
 import { ArrowLeft, ArrowRight } from '@/icons';
@@ -16,11 +13,8 @@ import { ArrowLeft, ArrowRight } from '@/icons';
 // Hooks
 import useScroll from '@/hooks/useScroll';
 
-// Utils
-import { formatNFTResponse } from '@/utils/nft';
-
 interface NTFRelatedProps {
-  relatedList: StrapiResponse<NFTResponse>[];
+  relatedList: NFTDataExtend[];
 }
 
 const NTFRelated = ({ relatedList }: NTFRelatedProps) => {
@@ -53,16 +47,13 @@ const NTFRelated = ({ relatedList }: NTFRelatedProps) => {
         className="flex gap-5 overflow-x-auto scroll-smooth hide-scrollbar"
         ref={ref}
       >
-        {relatedList.map((item) => {
-          const formatter = formatNFTResponse(item);
-          return (
-            <NFTCard
-              key={item.id}
-              {...formatter}
-              data-testid={`nft-card-${item.id}`}
-            />
-          );
-        })}
+        {relatedList.map((item) => (
+          <NFTCard
+            key={item.id}
+            {...item}
+            data-testid={`nft-card-${item.id}`}
+          />
+        ))}
       </div>
     </div>
   );
