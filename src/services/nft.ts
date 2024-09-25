@@ -65,3 +65,21 @@ export const getNFTsHistory = async () => {
 
   return { data: data?.data || [], error };
 };
+
+export const getNFTsRelated = async () => {
+  const searchParams = new URLSearchParams({
+    'sort[0]': 'updatedAt:desc',
+    '[populate][image]': '*',
+    '[populate][members][populate][avatar]': '*',
+    '[populate][author][populate][avatar]': '*',
+    '[pagination][page]': '1',
+    '[pagination][pageSize]': '6',
+  });
+
+  const { data, error } = await apiClient.get<NFTsResponse>(
+    `${API_ENTITY.NFTS}?${searchParams.toString()}`,
+    { cache: 'no-store' },
+  );
+
+  return { data: data?.data || [], error };
+};
