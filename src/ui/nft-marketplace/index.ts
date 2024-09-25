@@ -2,6 +2,7 @@ export { default as NFTBanner } from './NFTBanner';
 export { default as NFTFavorites } from './NFTFavorites';
 export { default as NFTHistory } from './NFTHistory';
 export { default as NFTRecentlyAdd } from './NFTRecentlyAdd';
+export { default as NFTRelated } from './NFTRelated';
 export { default as NFTTopCreators } from './NFTTopCreators';
 export { default as NFTTrending } from './NFTTrending';
 export { default as NFTHistorySkeleton } from './NFTHistory/NFTHistorySkeleton';
