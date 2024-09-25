@@ -105,7 +105,7 @@ export const useTask = (status: string, searchTerm: string = '') => {
     taskId: string,
     title: string,
     status: STATUS,
-    description: RawDraftContentState,
+    description: RawDraftContentState | null,
     labels: LABEL[],
     assignMembers: User[],
     startedDate?: string | null,

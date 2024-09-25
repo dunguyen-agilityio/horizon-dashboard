@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { parseAbsoluteToLocal, ZonedDateTime } from '@internationalized/date';
 import {
@@ -90,6 +90,7 @@ const selectStyle = {
 interface IEditTaskProps {
   title: string;
   status: STATUS[];
+  description?: EditorState;
   selectedMembers: string[];
   selectedLabels: LABEL[];
   startDate: DateTimeParts | null;
@@ -120,14 +121,11 @@ export const EditTaskModal = ({
     ? EditorState.createWithContent(convertFromRaw(description))
     : EditorState.createEmpty();
 
-  const [descriptionEditorState, setDescriptionEditorState] =
-    useState(editorState);
-
   const initialValue = useMemo(
     () => ({
       title: title || '',
       status: [status],
-      description: descriptionEditorState,
+      description: editorState,
       startDate: startDateTask ? parseAbsoluteToLocal(startDateTask) : null,
       dueDate: dueDateTask ? parseAbsoluteToLocal(dueDateTask) : null,
       selectedLabels: labels.map((label) => label),
@@ -136,7 +134,7 @@ export const EditTaskModal = ({
     [
       title,
       status,
-      description,
+      editorState,
       startDateTask,
       dueDateTask,
       labels,
@@ -180,6 +178,7 @@ export const EditTaskModal = ({
     const {
       title,
       status,
+      description,
       selectedLabels,
       startDate,
       dueDate,
@@ -189,15 +188,15 @@ export const EditTaskModal = ({
       selectedMembers,
     ) as User[];
 
-    const description = convertToRaw(
-      descriptionEditorState.getCurrentContent(),
-    );
+    const descriptionEditor = description
+      ? convertToRaw(description.getCurrentContent())
+      : null;
 
     await updateTask(
       id,
       title,
       status[0],
-      description,
+      descriptionEditor,
       selectedLabels,
       updatedAssignMembers,
       convertToUTCString(startDate),
@@ -289,7 +288,7 @@ export const EditTaskModal = ({
                         editorClassName="editor-description"
                         editorState={field.value}
                         onEditorStateChange={(editorState) => {
-                          setDescriptionEditorState(editorState);
+                          // setDescriptionEditorState(editorState);
                           field.onChange(editorState);
                         }}
                         toolbar={{
