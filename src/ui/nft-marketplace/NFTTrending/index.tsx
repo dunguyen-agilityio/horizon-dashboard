@@ -1,12 +1,12 @@
 // Services
-import { getNFTsRecentlyAdded } from '@/services/nft';
+import { getNFTsRelated } from '@/services/nft';
 
 // Components
 import NFTTrending from './NFTTrending';
 import { ErrorFallback } from '@/components';
 
 const NFTTrendingContainer = async () => {
-  const { data, error } = await getNFTsRecentlyAdded();
+  const { data, error } = await getNFTsRelated();
 
   if (error) {
     return <ErrorFallback message={error.message} />;
