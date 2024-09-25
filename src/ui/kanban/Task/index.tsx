@@ -63,7 +63,7 @@ export const Task = ({
           </div>
         )}
         <Text as="p" variant={TEXT_VARIANT.SECONDARY}>
-          {description}
+          {description ? `${description.blocks[0].text}` : ''}
         </Text>
         <div className="flex justify-between mt-5 items-center">
           <AvatarGroup isBordered max={3}>
@@ -97,13 +97,13 @@ export const Task = ({
         labels={labels}
         isOpen={isOpenModalEdit}
         assignMembers={assignees}
-        description={description}
         onOpenChange={onOpenChange}
         onClose={onClose}
         id={id}
         status={status}
         startDateTask={validStartDate}
         dueDateTask={validDueDate}
+        description={description}
       />
     </>
   );

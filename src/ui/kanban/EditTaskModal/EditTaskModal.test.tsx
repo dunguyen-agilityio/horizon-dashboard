@@ -45,6 +45,8 @@ describe('EditTaskModal tests', () => {
         onClose={() => {}}
       />,
     );
-    expect(getByText(MOCK_TASKS[0].description)).toBeInTheDocument();
+    expect(
+      getByText(MOCK_TASKS[0].description.blocks[0].text),
+    ).toBeInTheDocument();
   });
 });

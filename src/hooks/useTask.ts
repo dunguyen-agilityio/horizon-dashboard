@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { RawDraftContentState } from 'draft-js';
 
 // context
 import useToast from '@/contexts/toast';
@@ -104,7 +105,7 @@ export const useTask = (status: string, searchTerm: string = '') => {
     taskId: string,
     title: string,
     status: STATUS,
-    description: string,
+    description: RawDraftContentState,
     labels: LABEL[],
     assignMembers: User[],
     startedDate?: string | null,

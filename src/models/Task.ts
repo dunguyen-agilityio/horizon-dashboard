@@ -1,3 +1,4 @@
+import { RawDraftContentState } from 'draft-js';
 import { TUser } from './User';
 
 export const enum LABEL {
@@ -16,7 +17,7 @@ export const enum STATUS {
 export class Task {
   id!: string;
   title!: string;
-  description!: string;
+  description!: RawDraftContentState;
   createdAt!: Date | string;
   updatedAt!: Date | string;
   dueDate?: string;
@@ -29,7 +30,7 @@ export class Task {
   constructor(task?: Task) {
     const {
       title = '',
-      description = '',
+      description,
       createdAt,
       updatedAt,
       dueDate,

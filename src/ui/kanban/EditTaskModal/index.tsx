@@ -1,6 +1,14 @@
-import { useMemo } from 'react';
+import dynamic from 'next/dynamic';
+import { useMemo, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { parseAbsoluteToLocal, ZonedDateTime } from '@internationalized/date';
+import {
+  EditorState,
+  convertToRaw,
+  convertFromRaw,
+  RawDraftContentState,
+} from 'draft-js';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 // Components
 import {
@@ -11,7 +19,6 @@ import {
   ModalFooter,
   Button,
   Input,
-  Textarea,
   Select,
   SelectItem,
   DatePicker,
@@ -46,8 +53,8 @@ interface IEditTaskModalProps {
   id: string;
   isOpen: boolean;
   title: string;
-  description: string;
   status: STATUS;
+  description?: RawDraftContentState;
   labels?: LABEL[];
   assignMembers?: TUser[];
   startDateTask: string;
@@ -83,19 +90,25 @@ const selectStyle = {
 interface IEditTaskProps {
   title: string;
   status: STATUS[];
-  description: string;
   selectedMembers: string[];
   selectedLabels: LABEL[];
   startDate: DateTimeParts | null;
   dueDate: DateTimeParts | null;
 }
 
+const Editor = dynamic(
+  () => import('react-draft-wysiwyg').then((mod) => mod.Editor),
+  {
+    ssr: false,
+  },
+);
+
 export const EditTaskModal = ({
   id,
   isOpen,
   title,
-  description,
   status,
+  description,
   labels = [],
   assignMembers = [],
   onOpenChange,
@@ -103,11 +116,18 @@ export const EditTaskModal = ({
   startDateTask,
   dueDateTask,
 }: IEditTaskModalProps) => {
+  const editorState = description
+    ? EditorState.createWithContent(convertFromRaw(description))
+    : EditorState.createEmpty();
+
+  const [descriptionEditorState, setDescriptionEditorState] =
+    useState(editorState);
+
   const initialValue = useMemo(
     () => ({
       title: title || '',
       status: [status],
-      description: description || '',
+      description: descriptionEditorState,
       startDate: startDateTask ? parseAbsoluteToLocal(startDateTask) : null,
       dueDate: dueDateTask ? parseAbsoluteToLocal(dueDateTask) : null,
       selectedLabels: labels.map((label) => label),
@@ -115,12 +135,12 @@ export const EditTaskModal = ({
     }),
     [
       title,
+      status,
       description,
       startDateTask,
       dueDateTask,
       labels,
       assignMembers,
-      status,
     ],
   );
 
@@ -160,7 +180,6 @@ export const EditTaskModal = ({
     const {
       title,
       status,
-      description,
       selectedLabels,
       startDate,
       dueDate,
@@ -169,6 +188,10 @@ export const EditTaskModal = ({
     const updatedAssignMembers = getUpdatedAssignMembers(
       selectedMembers,
     ) as User[];
+
+    const description = convertToRaw(
+      descriptionEditorState.getCurrentContent(),
+    );
 
     await updateTask(
       id,
@@ -251,29 +274,41 @@ export const EditTaskModal = ({
           </ModalHeader>
           <ModalBody>
             <div className="flex flex-col justify-between lg:flex-row gap-4 px-3">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 w-full">
                 <div className="flex items-center gap-2">
                   <Text className="font-bold">Description</Text>
                   <BoxIcon icon={<Note />} customClass="fill-secondary" />
                 </div>
-                <Controller
-                  name="description"
-                  control={control}
-                  render={({ field }) => (
-                    <Textarea
-                      data-testid="textarea-description"
-                      rows={9}
-                      aria-label="textarea-description"
-                      disableAutosize
-                      classNames={{
-                        inputWrapper: 'w-full lg:w-[400px]',
-                        input:
-                          'group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white',
-                      }}
-                      {...field}
-                    />
-                  )}
-                />
+                <div className="bg-gray dark:bg-indigo-light rounded-md editor-container w-[300px]  ">
+                  <Controller
+                    name="description"
+                    control={control}
+                    render={({ field }) => (
+                      <Editor
+                        toolbarClassName="editor-toolbar"
+                        editorClassName="editor-description"
+                        editorState={field.value}
+                        onEditorStateChange={(editorState) => {
+                          setDescriptionEditorState(editorState);
+                          field.onChange(editorState);
+                        }}
+                        toolbar={{
+                          options: ['inline', 'history'],
+                          inline: {
+                            options: [
+                              'bold',
+                              'italic',
+                              'underline',
+                              'strikethrough',
+                            ],
+                          },
+                          list: { options: ['unordered', 'ordered'] },
+                        }}
+                        placeholder="Write something here..."
+                      />
+                    )}
+                  />
+                </div>
               </div>
               <div>
                 <div className="flex flex-row flex-wrap md:flex-nowrap md:flex-col lg:flex-col gap-2 md:justify-center min-w-[250px]">
