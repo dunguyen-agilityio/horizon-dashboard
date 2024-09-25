@@ -1,5 +1,5 @@
 // Types
-import { NFTResponse, type NFTData } from '@/models/NFT';
+import { NFTDataExtend, NFTResponse, type NFTData } from '@/models/NFT';
 
 // Constants
 import { NFT_IMAGES } from '@/constants/images';
@@ -33,5 +33,12 @@ export const MOCK_NFTS_RESPONSE: StrapiResponse<NFTResponse>[] = [
       image: { data: MOCK_IMAGE_RESPONSE },
       createdAt: new Date('2024-08-17T07:25:04.188Z'),
     },
+  },
+];
+
+export const MOCK_NFTS_RELATED_RESPONSE: NFTDataExtend[] = [
+  {
+    ...MOCK_NFTS[0],
+    author: { ...MOCK_USER, fullName: 'Adele Skim' },
   },
 ];
