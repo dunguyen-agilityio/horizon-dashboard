@@ -29,6 +29,7 @@ const NTFRecentlyAdd = ({ recentlyList }: NTFRecentlyAddProps) => {
         <div className="flex gap-5">
           <Button
             isIconOnly
+            aria-label="arrow left icon"
             onClick={handleScrollLeft}
             className="bg-white dark:bg-default [&_path]:stroke-blue-450 [&_path]:dark:stroke-white rounded-full"
           >
@@ -36,6 +37,7 @@ const NTFRecentlyAdd = ({ recentlyList }: NTFRecentlyAddProps) => {
           </Button>
           <Button
             isIconOnly
+            aria-label="arrow right icon"
             onClick={handleScrollRight}
             className="bg-white dark:bg-default [&_path]:stroke-blue-450 [&_path]:dark:stroke-white rounded-full"
           >

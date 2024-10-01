@@ -25,6 +25,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
         Team Members
       </Text>
       <button
+        aria-label="add icon"
         className="p-[10px] rounded-[10px] bg-gray dark:bg-indigo-light disabled:cursor-not-allowed disabled:opacity-80"
         disabled
       >
@@ -34,6 +35,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
       </button>
     </div>
     <Listbox
+      aria-label="Members list"
       items={members}
       classNames={{ list: 'gap-4', base: 'flex-1 px-0 sm:px-4' }}
     >
@@ -64,6 +66,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
             <button
               disabled
               className="disabled:cursor-not-allowed disabled:opacity-80"
+              aria-label="more icon"
             >
               <BoxIcon icon={<More />} customClass="fill-secondary" />
             </button>

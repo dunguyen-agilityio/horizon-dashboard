@@ -62,6 +62,7 @@ const NFTCard = ({
           {isShowIcon && (
             <Button
               isIconOnly
+              aria-label="favorite icon"
               data-testid="like-btn"
               className="absolute top-[14px] right-[14px] bg-transparent rounded-full"
               onClick={handleLike}
