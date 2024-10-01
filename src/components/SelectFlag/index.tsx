@@ -31,6 +31,7 @@ const SelectFlag = ({ defaultFlag = FLAG_KEYS[0] }: SelectFlagProps) => {
           popoverContent: 'w-fit bg-white dark:bg-indigo-light',
           innerWrapper: 'hidden',
         }}
+        aria-label="select flag"
         popoverProps={{
           classNames: { base: 'w-[200px] -left-[150px] sm:left-0' },
         }}

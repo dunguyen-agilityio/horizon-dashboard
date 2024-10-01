@@ -31,6 +31,7 @@ exports[`TableCheck tests Should match snapshot 1`] = `
         width="60"
       />
       <button
+        aria-label="watch icon"
         class="p-[10px] rounded-xl absolute top-[14px] right-[14px] bg-gradient-gray backdrop:blur-[25px] disabled:cursor-default"
         disabled=""
       >

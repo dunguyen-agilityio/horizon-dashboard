@@ -36,12 +36,14 @@ const NFTTrending = ({ trends }: NFTTrendingProps) => {
           <Button
             isIconOnly
             onClick={handleScrollLeft}
+            aria-label="arrow left icon"
             className="bg-white dark:bg-default [&_path]:stroke-blue-450 [&_path]:dark:stroke-white rounded-full"
           >
             <ArrowLeft />
           </Button>
           <Button
             isIconOnly
+            aria-label="arrow right icon"
             onClick={handleScrollRight}
             className="bg-white dark:bg-default [&_path]:stroke-blue-450 [&_path]:dark:stroke-white rounded-full"
           >

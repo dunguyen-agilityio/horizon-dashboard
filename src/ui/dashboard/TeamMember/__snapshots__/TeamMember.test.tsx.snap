@@ -14,6 +14,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
         Team Members
       </h2>
       <button
+        aria-label="add icon"
         class="p-[10px] rounded-[10px] bg-gray dark:bg-indigo-light disabled:cursor-not-allowed disabled:opacity-80"
         disabled=""
       >
@@ -45,10 +46,12 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
       </button>
     </div>
     <div
+      aria-label="Members list"
       class="w-full relative flex flex-col gap-1 p-1 flex-1 px-0 sm:px-4"
       data-slot="base"
     >
       <ul
+        aria-label="Members list"
         class="w-full flex flex-col outline-none gap-4"
         data-slot="list"
         id="react-aria-:r0:"
@@ -98,6 +101,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               </div>
             </div>
             <button
+              aria-label="more icon"
               class="disabled:cursor-not-allowed disabled:opacity-80"
               disabled=""
             >
@@ -176,6 +180,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               </div>
             </div>
             <button
+              aria-label="more icon"
               class="disabled:cursor-not-allowed disabled:opacity-80"
               disabled=""
             >
@@ -254,6 +259,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               </div>
             </div>
             <button
+              aria-label="more icon"
               class="disabled:cursor-not-allowed disabled:opacity-80"
               disabled=""
             >
@@ -332,6 +338,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
               </div>
             </div>
             <button
+              aria-label="more icon"
               class="disabled:cursor-not-allowed disabled:opacity-80"
               disabled=""
             >

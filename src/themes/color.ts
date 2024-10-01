@@ -2,7 +2,7 @@ export const colors = {
   white: '#fff',
   black: '#000',
   primary: '#2b3674',
-  secondary: '#a3aed0',
+  secondary: '#5b6173',
   warning: '#ffb547',
   success: '#01b574',
   error: '#e31a1a',
@@ -11,7 +11,7 @@ export const colors = {
   grayest: '#fafcfe',
   'indigo-dark': '#0b1437',
   'indigo-light': '#1b254b',
-  foreground: '#707eae',
+  foreground: '#3a4f8f',
   'army-green': '#273156',
   indigo: '#111C44',
   amber: {
@@ -27,7 +27,7 @@ export const colors = {
     750: '#7551ff',
   },
   green: {
-    700: '#05cd99',
+    700: '#00856a',
   },
   red: { 50: '#feefee', 750: '#ee5d50' },
 };

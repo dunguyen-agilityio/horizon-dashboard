@@ -20,6 +20,7 @@ const CashBackCard = () => (
       />
       <button
         disabled
+        aria-label="watch icon"
         className="p-[10px] rounded-xl absolute top-[14px] right-[14px] bg-gradient-gray backdrop:blur-[25px] disabled:cursor-default"
       >
         <Watch />
