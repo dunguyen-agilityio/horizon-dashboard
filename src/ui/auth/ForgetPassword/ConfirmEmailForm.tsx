@@ -12,6 +12,9 @@ import { MESSAGES, REGEX_EMAIL } from '@/constants';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 import { ResetPasswordFormData } from '@/types/auth';
 
+// Style
+import { STYLE_INPUT } from '@/styles/input';
+
 const resetPasswordInitValues: ResetPasswordFormData = {
   email: '',
 };
@@ -56,7 +59,7 @@ const ConfirmEmailForm = ({
           as="h2"
           size={TEXT_SIZE['md']}
           variant={TEXT_VARIANT.TERTIARY}
-          className="leading-6"
+          className="leading-6 !text-primary"
         >
           Enter your email address and we will send you instructions to reset
           your password.
@@ -80,6 +83,7 @@ const ConfirmEmailForm = ({
             labelPlacement="outside"
             placeholder="Enter your email"
             isInvalid={invalid}
+            classNames={STYLE_INPUT}
             errorMessage={error?.message}
             {...field}
           />

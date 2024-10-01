@@ -4,12 +4,12 @@ import { ChangeEventHandler, useState } from 'react';
 
 // Components
 import BoxIcon from '@/components/BoxIcon';
-import { Input } from '@nextui-org/input';
+import { Input, InputProps } from '@nextui-org/input';
 
 // Icons
 import { EyeFilled, EyeSlashFilled } from '@/icons';
 
-interface IInputPasswordProps {
+interface IInputPasswordProps extends InputProps {
   value: string;
   label?: string;
   isReadOnly?: boolean;

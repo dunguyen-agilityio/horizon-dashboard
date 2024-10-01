@@ -5,6 +5,11 @@ import SignUpContent from '@/ui/auth/SignUpContent';
 // Types
 import { TEXT_SIZE, TEXT_VARIANT } from '@/types/text';
 
+// Constant
+import { SIGN_UP } from '@/constants/metadata';
+
+export const metadata = SIGN_UP;
+
 const SignUpPage = () => (
   <div>
     <div className="mb-4">
@@ -15,7 +20,7 @@ const SignUpPage = () => (
         as="h2"
         size={TEXT_SIZE['md']}
         variant={TEXT_VARIANT.TERTIARY}
-        className="leading-6"
+        className="leading-6 text-primary"
       >
         Join now to explore unique creations from artists worldwide!
       </Text>

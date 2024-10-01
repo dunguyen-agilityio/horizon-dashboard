@@ -22,6 +22,9 @@ import useToast from '@/contexts/toast';
 import { useState } from 'react';
 import { MESSAGES } from '@/constants';
 
+// Style
+import { STYLE_INPUT } from '@/styles/input';
+
 const signinFormInitValues: SignInFormData = {
   identifier: '',
   password: '',
@@ -71,7 +74,7 @@ const SignInContent = () => {
 
   return (
     <form onSubmit={handleSubmit(signIn)} className="relative">
-      <div className="pt-3 mb-8 flex flex-col gap-6">
+      <div className="pt-3 mb-8 flex flex-col gap-6 \\\">
         <Controller
           name="identifier"
           control={control}
@@ -85,6 +88,7 @@ const SignInContent = () => {
               placeholder="Your username or email"
               isInvalid={invalid}
               errorMessage={error?.message}
+              classNames={STYLE_INPUT}
               {...field}
             />
           )}
@@ -97,6 +101,7 @@ const SignInContent = () => {
             <InputPassword
               isInvalid={invalid}
               errorMessage={error?.message}
+              classNames={STYLE_INPUT}
               {...field}
             />
           )}
@@ -138,7 +143,7 @@ const SignInContent = () => {
         as="h2"
         size={TEXT_SIZE['md']}
         variant={TEXT_VARIANT.TERTIARY}
-        className="leading-6"
+        className="leading-6 !text-primary dark:!text-white"
       >
         Don’t have an account yet?
         <Link
