@@ -78,7 +78,7 @@ exports[`ProjectCard tests Should match snapshot 1`] = `
               class="flex items-center gap-[5px]"
             >
               <p
-                class="text-secondary dark:text-secondary text-small font-medium"
+                class="text-secondary dark:text-white text-small font-medium"
               >
                 project #2
               </p>

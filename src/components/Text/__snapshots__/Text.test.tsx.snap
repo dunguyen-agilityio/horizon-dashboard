@@ -13,7 +13,7 @@ exports[`Text tests Should match snapshot 1`] = `
 exports[`Text tests Should match snapshot 2`] = `
 <div>
   <h1
-    class="text-secondary dark:text-secondary text-2xl font-bold leading-2xl"
+    class="text-secondary dark:text-white text-2xl font-bold leading-2xl"
   >
     Hello Wold!
   </h1>
@@ -23,7 +23,7 @@ exports[`Text tests Should match snapshot 2`] = `
 exports[`Text tests Should match snapshot 3`] = `
 <div>
   <h1
-    class="text-secondary dark:text-secondary text-2xl font-bold leading-2xl"
+    class="text-secondary dark:text-white text-2xl font-bold leading-2xl"
   >
     Hello Wold!
   </h1>

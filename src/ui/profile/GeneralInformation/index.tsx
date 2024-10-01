@@ -36,7 +36,8 @@ const customClass =
   'px-2 py-3 dark:bg-indigo-light shadow-light-card dark:shadow-none hover:bg-white rounded-md';
 
 const customClassNames = {
-  label: 'group-data-[filled-within=true]:text-secondary',
+  label:
+    'group-data-[filled-within=true]:text-secondary group-data-[filled-within=true]:dark:text-white',
   input:
     'group-data-[has-value=true]:text-primary group-data-[has-value=true]:dark:text-white',
   inputWrapper:
@@ -159,7 +160,7 @@ const GeneralInformation = () => {
               showMonthAndYearPickers
               className={customClass}
               classNames={{
-                base: '[&_span]:text-secondary [&_div]:bg-white [&_div]:dark:bg-indigo-light',
+                base: '[&_span]:text-secondary [&_span]:dark:text-white [&_div]:bg-white [&_div]:dark:bg-indigo-light',
               }}
               {...field}
             />

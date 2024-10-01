@@ -51,7 +51,7 @@ exports[`TableCheck tests Should match snapshot 1`] = `
         </span>
         <div>
           <span
-            class="text-secondary dark:text-secondary text-tiny font-bold !leading-5 block"
+            class="text-secondary dark:text-white text-tiny font-bold !leading-5 block"
           >
             Business Design
           </span>

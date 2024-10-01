@@ -13,8 +13,8 @@ const sizes: { [key in TEXT_SIZE]: string } = {
 
 const variants: { [key in TEXT_VARIANT]: string } = {
   [TEXT_VARIANT.PRIMARY]: 'text-primary dark:text-white',
-  [TEXT_VARIANT.SECONDARY]: 'text-secondary dark:text-secondary',
-  [TEXT_VARIANT.TERTIARY]: 'text-foreground dark:text-secondary',
+  [TEXT_VARIANT.SECONDARY]: 'text-secondary dark:text-white',
+  [TEXT_VARIANT.TERTIARY]: 'text-foreground dark:text-white',
   [TEXT_VARIANT.QUATERNARY]: 'text-blue-450 dark:text-white',
 };
 
