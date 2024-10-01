@@ -49,7 +49,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 tabindex="-1"
               >
                 <p
-                  class="text-secondary dark:text-secondary text-small font-medium"
+                  class="text-secondary dark:text-white text-small font-medium"
                 >
                   Name
                 </p>
@@ -62,7 +62,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 tabindex="-1"
               >
                 <p
-                  class="text-secondary dark:text-secondary text-small font-medium"
+                  class="text-secondary dark:text-white text-small font-medium"
                 >
                   Artworks
                 </p>
@@ -75,7 +75,7 @@ exports[`TopCreators tests Should match snapshot 1`] = `
                 tabindex="-1"
               >
                 <p
-                  class="text-secondary dark:text-secondary text-small font-medium"
+                  class="text-secondary dark:text-white text-small font-medium"
                 >
                   Rating
                 </p>

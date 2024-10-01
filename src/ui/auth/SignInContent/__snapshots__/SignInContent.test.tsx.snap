@@ -209,7 +209,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
         </p>
       </button>
       <h2
-        class="text-foreground dark:text-secondary text-medium leading-6 !text-primary dark:!text-white"
+        class="text-foreground dark:text-white text-medium leading-6 !text-primary dark:!text-white"
       >
         Don’t have an account yet?
         <a

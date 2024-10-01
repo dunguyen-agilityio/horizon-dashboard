@@ -94,7 +94,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                   User 1
                 </span>
                 <span
-                  class="text-tiny font-medium text-secondary"
+                  class="text-tiny font-medium text-secondary dark:text-white"
                 >
                   Creative Director
                 </span>
@@ -173,7 +173,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                   User 2
                 </span>
                 <span
-                  class="text-tiny font-medium text-secondary"
+                  class="text-tiny font-medium text-secondary dark:text-white"
                 >
                   Product Designer
                 </span>
@@ -252,7 +252,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                   User 3
                 </span>
                 <span
-                  class="text-tiny font-medium text-secondary"
+                  class="text-tiny font-medium text-secondary dark:text-white"
                 >
                   Product Designer
                 </span>
@@ -331,7 +331,7 @@ exports[`TeamMembers tests Should match snapshot 1`] = `
                   User 4
                 </span>
                 <span
-                  class="text-tiny font-medium text-secondary"
+                  class="text-tiny font-medium text-secondary dark:text-white"
                 >
                   Junior Graphic Designer
                 </span>

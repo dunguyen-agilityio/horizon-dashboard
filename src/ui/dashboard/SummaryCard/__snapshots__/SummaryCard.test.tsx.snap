@@ -34,7 +34,7 @@ exports[`SummaryCard tests Should match snapshot 1`] = `
       class="flex flex-col gap-[3px]"
     >
       <span
-        class="text-secondary dark:text-secondary text-small font-medium"
+        class="text-secondary dark:text-white text-small font-medium"
       >
         Earnings
       </span>

@@ -35,7 +35,7 @@ exports[`UploadFile ui should match snapshot 1`] = `
             Upload Files
           </p>
           <p
-            class="text-primary dark:text-white font-normal text-secondary dark:!text-secondary text-[12px] text-center"
+            class="text-primary dark:text-white font-normal text-secondary dark:text-white text-[12px] text-center"
           >
             PNG, JPG and GIF files are allowed
           </p>
@@ -52,7 +52,7 @@ exports[`UploadFile ui should match snapshot 1`] = `
           Complete your profile
         </p>
         <p
-          class="text-primary dark:text-white text-medium font-normal text-secondary dark:!text-secondary"
+          class="text-primary dark:text-white text-medium font-normal text-secondary dark:text-white"
         >
           Stay on the pulse of distributed projects with an anline whiteboard to plan, coordinate and discuss
         </p>

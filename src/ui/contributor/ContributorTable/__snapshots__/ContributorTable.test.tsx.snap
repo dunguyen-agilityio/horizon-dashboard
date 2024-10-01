@@ -36,7 +36,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               tabindex="-1"
             >
               <span
-                class="text-secondary dark:text-secondary text-small font-medium"
+                class="text-secondary dark:text-white text-small font-medium"
               >
                 Name
               </span>
@@ -71,7 +71,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               tabindex="-1"
             >
               <span
-                class="text-secondary dark:text-secondary text-small font-medium"
+                class="text-secondary dark:text-white text-small font-medium"
               >
                 Template
               </span>
@@ -106,7 +106,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               tabindex="-1"
             >
               <span
-                class="text-secondary dark:text-secondary text-small font-medium"
+                class="text-secondary dark:text-white text-small font-medium"
               >
                 Date
               </span>
@@ -141,7 +141,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
               tabindex="-1"
             >
               <span
-                class="text-secondary dark:text-secondary text-small font-medium"
+                class="text-secondary dark:text-white text-small font-medium"
               >
                 Rating
               </span>
@@ -213,7 +213,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     User 1
                   </b>
                   <span
-                    class="text-secondary dark:text-secondary lowercase text-sm hidden xs:inline-block"
+                    class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
                   >
                     @Adela Parkson
                   </span>
@@ -320,7 +320,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     User 2
                   </b>
                   <span
-                    class="text-secondary dark:text-secondary lowercase text-sm hidden xs:inline-block"
+                    class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
                   >
                     @user2
                   </span>
@@ -426,7 +426,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     User 3
                   </b>
                   <span
-                    class="text-secondary dark:text-secondary lowercase text-sm hidden xs:inline-block"
+                    class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
                   >
                     @user3
                   </span>
@@ -533,7 +533,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     User 4
                   </b>
                   <span
-                    class="text-secondary dark:text-secondary lowercase text-sm hidden xs:inline-block"
+                    class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
                   >
                     @user4
                   </span>

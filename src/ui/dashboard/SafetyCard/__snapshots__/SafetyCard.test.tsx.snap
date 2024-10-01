@@ -47,7 +47,7 @@ exports[`TableCheck tests Should match snapshot 1`] = `
          in-app with a tap
       </p>
       <p
-        class="text-secondary dark:text-secondary text-small font-medium"
+        class="text-secondary dark:text-white text-small font-medium"
       >
         Discover our cards benefits, with one tap.
       </p>

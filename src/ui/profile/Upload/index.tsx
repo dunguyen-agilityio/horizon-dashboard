@@ -23,7 +23,7 @@ const UploadProfile = () => (
           >
             Upload Files
           </Text>
-          <Text className="font-normal text-secondary dark:!text-secondary text-[12px] text-center">
+          <Text className="font-normal text-secondary dark:text-white text-[12px] text-center">
             PNG, JPG and GIF files are allowed
           </Text>
         </div>
@@ -32,7 +32,7 @@ const UploadProfile = () => (
     <div className="flex flex-col justify-around text-center sm:text-start">
       <div>
         <Text className="font-bold text-[24px]">Complete your profile</Text>
-        <Text className="font-normal text-secondary dark:!text-secondary">
+        <Text className="font-normal text-secondary dark:text-white">
           Stay on the pulse of distributed projects with an anline whiteboard to
           plan, coordinate and discuss
         </Text>

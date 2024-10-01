@@ -121,7 +121,7 @@ exports[`NFTRelated should match snapshot 1`] = `
                     Mesh Gradients
                   </p>
                   <p
-                    class="text-secondary dark:text-secondary text-small font-medium"
+                    class="text-secondary dark:text-white text-small font-medium"
                   >
                     By Adele Skim
                   </p>
@@ -323,7 +323,7 @@ exports[`NFTRelated should match snapshot 1`] = `
                   Mesh Gradients
                 </p>
                 <p
-                  class="text-secondary dark:text-secondary text-small font-medium"
+                  class="text-secondary dark:text-white text-small font-medium"
                 >
                   By Adele Skim
                 </p>

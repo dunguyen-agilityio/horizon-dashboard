@@ -14,7 +14,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
         All Projects
       </p>
       <p
-        class="text-secondary dark:text-secondary text-medium leading-[26px] tracking-tight mb-7"
+        class="text-secondary dark:text-white text-medium leading-[26px] tracking-tight mb-7"
       >
         Here you can find more details about your projects. Keep you user engaged by providing meaningful information.
       </p>
@@ -98,7 +98,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
                   class="flex items-center gap-[5px]"
                 >
                   <p
-                    class="text-secondary dark:text-secondary text-small font-medium"
+                    class="text-secondary dark:text-white text-small font-medium"
                   >
                     project #3
                   </p>
@@ -235,7 +235,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
                   class="flex items-center gap-[5px]"
                 >
                   <p
-                    class="text-secondary dark:text-secondary text-small font-medium"
+                    class="text-secondary dark:text-white text-small font-medium"
                   >
                     project #3
                   </p>
@@ -372,7 +372,7 @@ exports[`PersonalProjects tests Should match snapshot 1`] = `
                   class="flex items-center gap-[5px]"
                 >
                   <p
-                    class="text-secondary dark:text-secondary text-small font-medium"
+                    class="text-secondary dark:text-white text-small font-medium"
                   >
                     project #1
                   </p>

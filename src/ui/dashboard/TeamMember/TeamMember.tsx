@@ -56,7 +56,8 @@ const TeamMember = ({ members }: TeamMemberProps) => (
               description={role.name}
               classNames={{
                 name: 'text-medium font-bold',
-                description: 'text-tiny font-medium text-secondary',
+                description:
+                  'text-tiny font-medium text-secondary dark:text-white',
               }}
               avatarProps={{
                 src: avatar?.url,

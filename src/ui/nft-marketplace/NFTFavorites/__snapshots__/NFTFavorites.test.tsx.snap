@@ -44,7 +44,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
                     Mesh Gradients
                   </p>
                   <p
-                    class="text-secondary dark:text-secondary text-small font-medium"
+                    class="text-secondary dark:text-white text-small font-medium"
                   >
                     By User 1
                   </p>
@@ -169,7 +169,7 @@ exports[`NTFFavorites should match snapshot 1`] = `
                   Mesh Gradients
                 </p>
                 <p
-                  class="text-secondary dark:text-secondary text-small font-medium"
+                  class="text-secondary dark:text-white text-small font-medium"
                 >
                   By User 1
                 </p>
