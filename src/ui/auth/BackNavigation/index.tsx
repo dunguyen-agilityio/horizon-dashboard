@@ -17,9 +17,6 @@ import {
   PUBLIC_ROUTES,
 } from '@/constants';
 
-// Types
-import { TEXT_VARIANT } from '@/types/text';
-
 const BackNavigation = () => {
   const pathname = usePathname();
 
@@ -48,10 +45,8 @@ const BackNavigation = () => {
 
   return (
     <Link href={href} className="h-fit flex items-center gap-1">
-      <BoxIcon icon={<Back />} customClass="fill-secondary" />
-      <Text variant={TEXT_VARIANT.SECONDARY} className="ml-1">
-        {`Back to ${title}`}
-      </Text>
+      <BoxIcon icon={<Back />} customClass="fill-primary" />
+      <Text className="ml-1 text-primary">{`Back to ${title}`}</Text>
     </Link>
   );
 };

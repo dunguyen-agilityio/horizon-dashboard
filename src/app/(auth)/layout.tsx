@@ -22,7 +22,7 @@ const AuthenticateLayout = ({ children }: React.PropsWithChildren) => (
         </div>
         {children}
         <div className="h-[60px] flex items-center">
-          <Text className="text-secondary text-center" size={TEXT_SIZE.sm}>
+          <Text className="text-primary text-center" size={TEXT_SIZE.sm}>
             © 2022 Horizon UI. All Rights Reserved. Made with love by Simple!
           </Text>
         </div>

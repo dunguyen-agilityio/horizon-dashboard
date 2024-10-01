@@ -27,6 +27,9 @@ import { handleSignUp } from '@/actions/auth';
 // Hooks
 import useToast from '@/contexts/toast';
 
+// Style
+import { STYLE_INPUT } from '@/styles/input';
+
 const signUpFormInitValues: SignUpFormData = {
   username: '',
   email: '',
@@ -91,6 +94,7 @@ const SignUpContent = () => {
               labelPlacement="outside"
               placeholder="Enter your email"
               isInvalid={invalid}
+              classNames={STYLE_INPUT}
               errorMessage={error?.message}
               {...field}
             />
@@ -112,6 +116,7 @@ const SignUpContent = () => {
               size="lg"
               label="User name"
               labelPlacement="outside"
+              classNames={STYLE_INPUT}
               placeholder="Enter your user name"
               isInvalid={invalid}
               errorMessage={error?.message}
@@ -132,6 +137,7 @@ const SignUpContent = () => {
           render={({ field, fieldState: { error, invalid } }) => (
             <InputPassword
               isInvalid={invalid}
+              classNames={STYLE_INPUT}
               errorMessage={error?.message}
               {...field}
             />
@@ -149,6 +155,7 @@ const SignUpContent = () => {
             <InputPassword
               label="Confirm Password"
               isInvalid={invalid}
+              classNames={STYLE_INPUT}
               errorMessage={error?.message}
               placeholder="Enter password confirm"
               {...field}
