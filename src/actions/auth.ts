@@ -2,6 +2,7 @@
 
 // Libs
 import { cookies } from 'next/headers';
+import { revalidateTag } from 'next/cache';
 
 // Config
 import { signIn, signOut } from '@/auth.config';
@@ -18,6 +19,7 @@ import {
   AuthResponse,
   SignUpPayload,
   SignUpResponse,
+  UpdateInfo,
 } from '@/types/auth';
 
 // Services
@@ -55,3 +57,21 @@ export const handleSignUp = async (payload: SignUpPayload) =>
   await apiClient.post<SignUpResponse>(API_ENTITY.SIGN_UP, {
     body: payload,
   });
+
+export const updateUser = async (id: string, payload: UpdateInfo) => {
+  try {
+    const response = await apiClient.put(`users/${id}`, {
+      body: payload,
+    });
+
+    if (response.error) {
+      throw new Error(response.error.message || 'Failed to update user');
+    }
+
+    revalidateTag('userInfo');
+
+    return response.data;
+  } catch (error) {
+    throw new Error(`Error during update: ${(error as Error).message}`);
+  }
+};

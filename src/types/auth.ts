@@ -39,4 +39,10 @@ type SignUpSuccessResponse = {
   error: null;
 };
 
+export type UpdateInfo = {
+  username: string;
+  avatar?: string;
+  phoneNumber: string;
+};
+
 export type SignUpResponse = SignUpSuccessResponse | SignUpErrorResponse;

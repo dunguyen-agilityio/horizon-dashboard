@@ -21,12 +21,13 @@ import Button from '@/components/Button';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
+import { TImage } from '@/models/Image';
 
 // Actions
 import { handleSignOut } from '@/actions/auth';
 
 interface IProfileDropdownProps {
-  avatar: string;
+  avatar?: TImage;
   username: string;
 }
 
@@ -62,7 +63,7 @@ const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
           className="focus-visible:outline-none aria-expanded:scale-1 aria-expanded:opacity-100"
           data-testid="profile-trigger-btn"
         >
-          <Avatar src={avatar} alt={username} />
+          <Avatar src={avatar?.url} alt={username} />
         </button>
       </PopoverTrigger>
       <PopoverContent

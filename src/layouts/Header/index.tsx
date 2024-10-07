@@ -10,7 +10,7 @@ import { PARAMS } from '@/constants/params';
 
 // Types
 import { TEXT_SIZE } from '@/types/text';
-import { User } from 'next-auth';
+import { User } from '@/models/User';
 
 // Components
 import Notification from './Notification';
@@ -34,14 +34,14 @@ import useBreadcrumbs from '@/hooks/useBreadcrumbs';
 
 interface HeaderProps {
   isAuthenticated: boolean;
-  userData?: User;
+  userData: User;
 }
 
 const breadcrumbStyle =
   'dark:[&_:is(span,a)]:text-white [&_*:is(span,a)]:text-foreground';
 
 const Header = ({ isAuthenticated, userData }: HeaderProps) => {
-  const { avatar = '', username = '' } = userData ?? {};
+  const { avatar, username = '' } = userData ?? {};
 
   const searchParams = useSearchParams();
   const { push } = useRouter();

@@ -21,6 +21,7 @@ export const MOCK_USERS: TUser[] = [
     createdAt: new Date('2024-08-17T07:25:04.188Z'),
     rating: 29,
     avatar: MOCK_AVATAR,
+    phoneNumber: '123555141',
   },
   {
     id: '2',
@@ -31,6 +32,7 @@ export const MOCK_USERS: TUser[] = [
     createdAt: new Date('2024-08-13T07:25:04.188Z'),
     rating: 72,
     avatar: MOCK_AVATAR,
+    phoneNumber: '123555141',
   },
   {
     id: '3',
@@ -41,6 +43,7 @@ export const MOCK_USERS: TUser[] = [
     createdAt: new Date('2024-01-13T07:25:04.188Z'),
     rating: 89,
     avatar: MOCK_AVATAR,
+    phoneNumber: '123555141',
   },
   {
     id: '4',
@@ -51,6 +54,7 @@ export const MOCK_USERS: TUser[] = [
     createdAt: new Date('2024-08-18T07:25:04.188Z'),
     rating: 52,
     avatar: MOCK_AVATAR,
+    phoneNumber: '123555141',
   },
 ];
 
@@ -78,3 +82,9 @@ export const MOCK_USERS_RESPONSE: StrapiResponse<UserResponse>[] =
     },
     id,
   }));
+
+export const MOCK_USER_INFO = {
+  fullName: 'John Doe',
+  phoneNumber: '123456789',
+  avatar: '',
+};

@@ -9,6 +9,7 @@ export class User {
   email: string;
   username: string;
   avatar?: TImage;
+  phoneNumber: string;
   role: Role;
   createdAt: Date;
   rating: number;
@@ -23,6 +24,7 @@ export class User {
     role,
     username,
     avatar,
+    phoneNumber,
   }: TUser) {
     this.id = id;
     this.rating = rating;
@@ -33,6 +35,7 @@ export class User {
     this.lastName = lastName;
     this.firstName = firstName;
     this.createdAt = new Date(createdAt);
+    this.phoneNumber = phoneNumber;
   }
 
   get fullName() {
