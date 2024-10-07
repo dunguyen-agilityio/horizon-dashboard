@@ -1,7 +1,14 @@
 import { auth } from '@/auth.config';
 import { API_ENDPOINT } from '@/constants/environment';
 
-type RequestOption = Omit<RequestInit, 'body'> & { body?: object };
+type RequestOption = Omit<RequestInit, 'body'> & {
+  body?: object;
+  next?: {
+    revalidate?: number;
+    tags?: string[];
+    cache?: 'no-store';
+  };
+};
 
 type SuccessResponse<T> = { data: T; error: null };
 type FailedResponse = { data: null; error: { message: string } };
@@ -24,7 +31,7 @@ class APIClient {
   ): Promise<SuccessResponse<T> | FailedResponse> => {
     const session = await auth();
 
-    const { method = 'GET', body, headers, ...rest } = init || {};
+    const { method = 'GET', body, headers, next, ...rest } = init || {};
 
     const hasBody = method === 'POST' || method === 'PUT';
 
@@ -43,6 +50,7 @@ class APIClient {
         body: JSON.stringify(body),
       }),
       ...rest,
+      ...(next && { next }),
     };
 
     try {

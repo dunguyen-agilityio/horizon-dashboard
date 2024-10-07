@@ -15,8 +15,12 @@ import { AUTH_ROUTES, API_TOKEN, PUBLIC_ROUTES, API_ENTITY } from './constants';
 declare module 'next-auth' {
   interface User {
     token: string;
-    avatar?: string;
+    avatar?: {
+      hash: string;
+      url: string;
+    };
     username?: string;
+    phoneNumber: string;
   }
 
   interface Session {
@@ -54,7 +58,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         cookies().set(API_TOKEN, jwt);
 
-        return { ...user, token: jwt, avatar: user.avatar?.url };
+        return {
+          ...user,
+          token: jwt,
+          avatar: user.avatar,
+          phoneNumber: user.phoneNumber,
+        };
       },
     }),
   ],

@@ -18,6 +18,7 @@ const { BACKGROUND } = PROFILE_IMAGES;
 interface IUserInfoProps {
   avatar?: string;
   username: string;
+  phoneNumber?: string;
   role: Role;
   postsTotal?: number;
   followersCount?: number;
@@ -26,6 +27,7 @@ interface IUserInfoProps {
 
 const UserInfo = ({
   avatar,
+  phoneNumber,
   username,
   role,
   postsTotal = 0,
@@ -58,6 +60,7 @@ const UserInfo = ({
         <Text className="text-[20px] text-center font-extrabold">
           {username}
         </Text>
+        <Text className="text-center">{phoneNumber}</Text>
         <Text
           size={TEXT_SIZE.sm}
           variant={TEXT_VARIANT.SECONDARY}

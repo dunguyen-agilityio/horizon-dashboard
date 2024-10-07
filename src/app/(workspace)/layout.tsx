@@ -6,9 +6,15 @@ import { Header, Navbar, Footer } from '@/layouts';
 // Config
 import { auth } from '@/auth.config';
 
+// Services
+import { getUserInfo } from '@/services/user';
+
+// Model
+import { User } from '@/models/User';
+
 const RootLayout = async ({ children }: React.PropsWithChildren) => {
   const isAuthenticated = !!(await auth())?.user;
-  const userData = (await auth())?.user;
+  const userData = (await getUserInfo()) as User;
 
   return (
     <div className="flex flex-1">
