@@ -202,6 +202,7 @@ export const EditTaskModal = ({
       convertToUTCString(startDate),
       convertToUTCString(dueDate),
     );
+    reset(editTask);
     onClose();
   };
 
@@ -288,7 +289,6 @@ export const EditTaskModal = ({
                         editorClassName="editor-description"
                         editorState={field.value}
                         onEditorStateChange={(editorState) => {
-                          // setDescriptionEditorState(editorState);
                           field.onChange(editorState);
                         }}
                         toolbar={{
