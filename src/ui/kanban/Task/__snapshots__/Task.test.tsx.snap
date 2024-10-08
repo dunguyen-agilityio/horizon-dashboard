@@ -86,7 +86,7 @@ exports[`Task tests Should match snapshot 1`] = `
             tabindex="-1"
           >
             <img
-              alt="User 1"
+              alt="Adela Parkson"
               class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
               data-nimg="1"
               decoding="async"
@@ -103,7 +103,7 @@ exports[`Task tests Should match snapshot 1`] = `
             tabindex="-1"
           >
             <img
-              alt="User 2"
+              alt="user2"
               class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
               data-nimg="1"
               decoding="async"
@@ -120,7 +120,7 @@ exports[`Task tests Should match snapshot 1`] = `
             tabindex="-1"
           >
             <img
-              alt="User 3"
+              alt="user3"
               class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
               data-nimg="1"
               decoding="async"

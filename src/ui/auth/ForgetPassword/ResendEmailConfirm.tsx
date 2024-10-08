@@ -36,7 +36,7 @@ const ResendEmail = ({ email, isLoading, onResent }: ResendEmailProps) => {
         isDisabled={isDisabled}
         onClick={onResent}
         color="primary"
-        className="w-full py-7 mt-6"
+        className="w-full py-7 mt-6 bg-blue-450 dark:bg-purple-750"
         type="submit"
         data-testid="resend-btn"
         isLoading={isLoading}
