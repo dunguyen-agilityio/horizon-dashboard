@@ -131,7 +131,7 @@ const ResetPasswordForm = ({ code }: ResetPasswordFormProps) => {
         />
         <Button
           isDisabled={isDisabled}
-          className="w-full py-7 mt-6"
+          className="w-full py-7 mt-6 bg-blue-450 dark:bg-purple-750"
           type="submit"
           data-testid="update-password-btn"
           isLoading={isPending}

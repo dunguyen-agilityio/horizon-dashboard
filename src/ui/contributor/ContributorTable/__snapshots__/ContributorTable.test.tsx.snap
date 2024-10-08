@@ -198,7 +198,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="User 1"
+                    alt="Adela Parkson"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                   />
@@ -210,7 +210,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     class="text-primary dark:text-white font-bold text-sm min-w-[100px] xs:min-w-full"
                     data-testid="table-cell-fullName"
                   >
-                    User 1
+                    Adela Parkson
                   </b>
                   <span
                     class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
@@ -305,7 +305,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="User 2"
+                    alt="user2"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                   />
@@ -317,7 +317,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     class="text-primary dark:text-white font-bold text-sm min-w-[100px] xs:min-w-full"
                     data-testid="table-cell-fullName"
                   >
-                    User 2
+                    User2
                   </b>
                   <span
                     class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
@@ -411,7 +411,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="User 3"
+                    alt="user3"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                   />
@@ -423,7 +423,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     class="text-primary dark:text-white font-bold text-sm min-w-[100px] xs:min-w-full"
                     data-testid="table-cell-fullName"
                   >
-                    User 3
+                    User3
                   </b>
                   <span
                     class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"
@@ -518,7 +518,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                   tabindex="-1"
                 >
                   <img
-                    alt="User 4"
+                    alt="user4"
                     class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                     src="https://res.cloudinary.com/dn5vw6fjp/image/upload/v1726630608/image_de1e29b0b7.png"
                   />
@@ -530,7 +530,7 @@ exports[`Contributor Table Tests Should match snapshot 1`] = `
                     class="text-primary dark:text-white font-bold text-sm min-w-[100px] xs:min-w-full"
                     data-testid="table-cell-fullName"
                   >
-                    User 4
+                    User4
                   </b>
                   <span
                     class="text-secondary dark:text-white lowercase text-sm hidden xs:inline-block"

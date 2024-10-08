@@ -5,7 +5,7 @@ import { Text } from '@/components';
 import { TEXT_SIZE } from '@/types/text';
 
 const NotFound = () => (
-  <div className="w-full flex-1 flex flex-col justify-center items-center bg-gray-100">
+  <div className="w-full min-h-screen flex-1 flex flex-col justify-center items-center bg-gray-100">
     <div className="text-center">
       <Text
         as="h1"

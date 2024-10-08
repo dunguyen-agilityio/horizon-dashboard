@@ -6,7 +6,7 @@ import { formatStrapiModel } from './strapi';
 export const formatUser = (data: TUser) => {
   const user = new User(data);
 
-  return { ...user, fullName: user.fullName };
+  return { ...user, fullName: user.username };
 };
 
 export const formatUserResponse = (
