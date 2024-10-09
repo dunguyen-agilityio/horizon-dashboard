@@ -25,7 +25,7 @@ const RootLayout = async ({ children }: React.PropsWithChildren) => {
         <Suspense>
           <Header isAuthenticated={isAuthenticated} userData={userData} />
         </Suspense>
-        <main className="flex-grow flex flex-col w-full max-w-screen-5xl h-auto bg-gray dark:bg-indigo-dark gap-[30px] px-0">
+        <main className="scrollbar flex-grow flex flex-col w-full max-w-screen-5xl h-0 overflow-y-auto bg-gray dark:bg-indigo-dark gap-[30px] px-0 pr-4">
           {children}
         </main>
         <Footer />
