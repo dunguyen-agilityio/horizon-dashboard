@@ -34,13 +34,13 @@ describe('SignInContent tests', () => {
 
   it('Should render Email and Password label', () => {
     const { getByLabelText } = render(<SignInContent />);
-    expect(getByLabelText('Email or username')).toBeInTheDocument();
+    expect(getByLabelText('Email or user name')).toBeInTheDocument();
     expect(getByLabelText('Password')).toBeInTheDocument();
   });
 
   it('Should render placeholder on input of Email and Password', () => {
     const { getByPlaceholderText } = render(<SignInContent />);
-    expect(getByPlaceholderText('Your username or email')).toBeInTheDocument();
+    expect(getByPlaceholderText('Your user name or email')).toBeInTheDocument();
     expect(getByPlaceholderText('Min. 8 characters')).toBeInTheDocument();
   });
 
@@ -65,7 +65,7 @@ describe('SignInContent tests', () => {
     const mockPassword = 'Abcd@1234';
 
     act(() => {
-      fireEvent.change(getByLabelText('Email or username'), {
+      fireEvent.change(getByLabelText('Email or user name'), {
         target: { value: mockUserName },
       });
 

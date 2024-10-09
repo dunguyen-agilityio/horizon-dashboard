@@ -88,9 +88,9 @@ const SignInContent = () => {
             <Input
               isRequired
               size="lg"
-              label="Email or username"
+              label="Email or user name"
               labelPlacement="outside"
-              placeholder="Your username or email"
+              placeholder="Your user name or email"
               isInvalid={invalid}
               errorMessage={error?.message}
               classNames={STYLE_INPUT}

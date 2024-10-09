@@ -38,9 +38,17 @@ export const identifierRules = {
   required: 'This field is required',
   minLength: {
     value: 6,
-    message: 'Username must be at least 6 characters',
+    message: 'User name must be at least 6 characters',
   },
 };
+
+export const emailRules = (regexEmail: RegExp) => ({
+  required: 'Email is required',
+  pattern: {
+    value: regexEmail,
+    message: 'Invalid email address',
+  },
+});
 
 export const passwordRules = (regexPassword: RegExp) => ({
   required: 'Password is required',

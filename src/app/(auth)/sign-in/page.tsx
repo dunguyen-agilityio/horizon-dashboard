@@ -17,7 +17,7 @@ const SignInPage = () => (
       Sign In
     </Text>
     <Text as="h2" size={TEXT_SIZE['md']} className="leading-6 text-primary">
-      Enter your username or email with password to sign in!
+      Enter your user name or email with password to sign in!
     </Text>
     <Divider className="bg-amber-450 dark:bg-slate-700 mt-6 mb-3" />
     <SignInContent />
