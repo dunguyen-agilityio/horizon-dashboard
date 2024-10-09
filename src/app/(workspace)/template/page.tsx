@@ -15,7 +15,7 @@ import {
 import '@/styles/scroll.css';
 
 const NFTMarketPage = () => (
-  <div className="flex flex-col xl:grid xl:grid-cols-[calc(100%-504px)_484px] xl:grid-rows-[420px_1fr] gap-5">
+  <div className="flex flex-col xl:grid xl:grid-cols-[calc(100%-504px)_484px] xl:grid-rows-[420px_1fr] gap-5 overflow-x-hidden">
     <div className="col-span-2 2xl:col-span-1">
       <NFTBanner />
     </div>
