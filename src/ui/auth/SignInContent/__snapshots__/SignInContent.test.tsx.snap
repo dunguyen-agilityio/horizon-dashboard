@@ -12,7 +12,7 @@ exports[`SignInContent tests Should match snapshot 1`] = `
       class="relative"
     >
       <div
-        class="pt-3 mb-8 flex flex-col gap-6 \\\\\\"
+        class="pt-3 mb-8 flex flex-col gap-6"
       >
         <div
           class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_12px)]"

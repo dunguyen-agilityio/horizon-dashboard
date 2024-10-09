@@ -33,3 +33,19 @@ export const validateDates = (
 
   return due > start;
 };
+
+export const identifierRules = {
+  required: 'This field is required',
+  minLength: {
+    value: 6,
+    message: 'Username must be at least 6 characters',
+  },
+};
+
+export const passwordRules = (regexPassword: RegExp) => ({
+  required: 'Password is required',
+  pattern: {
+    value: regexPassword,
+    message: 'Invalid password format',
+  },
+});

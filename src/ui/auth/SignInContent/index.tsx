@@ -20,10 +20,15 @@ import { handleSignIn } from '@/actions/auth';
 import { useRouter } from 'next/navigation';
 import useToast from '@/contexts/toast';
 import { useState } from 'react';
-import { MESSAGES } from '@/constants';
 
 // Style
 import { STYLE_INPUT } from '@/styles/input';
+
+// Constants
+import { MESSAGES, REGEX_PASSWORD } from '@/constants';
+
+// Utils
+import { identifierRules, passwordRules } from '@/utils/validation';
 
 const signinFormInitValues: SignInFormData = {
   identifier: '',
@@ -74,11 +79,11 @@ const SignInContent = () => {
 
   return (
     <form onSubmit={handleSubmit(signIn)} className="relative">
-      <div className="pt-3 mb-8 flex flex-col gap-6 \\\">
+      <div className="pt-3 mb-8 flex flex-col gap-6">
         <Controller
           name="identifier"
           control={control}
-          rules={{ required: 'This field is required' }}
+          rules={identifierRules}
           render={({ field, fieldState: { error, invalid } }) => (
             <Input
               isRequired
@@ -96,7 +101,7 @@ const SignInContent = () => {
         <Controller
           name="password"
           control={control}
-          rules={{ required: 'Password is required' }}
+          rules={passwordRules(REGEX_PASSWORD)}
           render={({ field, fieldState: { error, invalid } }) => (
             <InputPassword
               isInvalid={invalid}

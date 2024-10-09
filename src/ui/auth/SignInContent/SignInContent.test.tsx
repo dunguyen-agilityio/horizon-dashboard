@@ -61,8 +61,8 @@ describe('SignInContent tests', () => {
     (signIn as jest.Mock).mockResolvedValue(true);
     const { getByLabelText, getByTestId } = render(<SignInContent />);
 
-    const mockUserName = 'user';
-    const mockPassword = '123456';
+    const mockUserName = 'user123';
+    const mockPassword = 'Abcd@1234';
 
     act(() => {
       fireEvent.change(getByLabelText('Email or username'), {
