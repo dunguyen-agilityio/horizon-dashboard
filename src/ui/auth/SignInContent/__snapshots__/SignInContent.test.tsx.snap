@@ -38,21 +38,21 @@ exports[`SignInContent tests Should match snapshot 1`] = `
                 for="react-aria-:r0:"
                 id="react-aria-:r1:"
               >
-                Email or username
+                Email or user name
               </label>
               <div
                 class="inline-flex w-full items-center h-full box-border"
                 data-slot="inner-wrapper"
               >
                 <input
-                  aria-label="Email or username"
+                  aria-label="Email or user name"
                   aria-labelledby="react-aria-:r0: react-aria-:r1:"
                   aria-required="true"
                   class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-medium group-data-[has-value=true]:text-default-foreground"
                   data-slot="input"
                   id="react-aria-:r0:"
                   name="identifier"
-                  placeholder="Your username or email"
+                  placeholder="Your user name or email"
                   type="text"
                   value=""
                 />

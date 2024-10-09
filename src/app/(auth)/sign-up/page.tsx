@@ -14,7 +14,7 @@ const SignUpPage = () => (
   <div>
     <div className="mb-4">
       <Text as="h1" size={TEXT_SIZE['2xl']} className="leading-[56px]">
-        Register your account
+        Sign up your account
       </Text>
       <Text
         as="h2"

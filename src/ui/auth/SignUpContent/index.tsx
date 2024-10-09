@@ -19,7 +19,12 @@ import { REGEX_EMAIL, REGEX_PASSWORD } from '@/constants/regex';
 import { AUTH_ROUTES } from '@/constants';
 
 // Utils
-import { validateConfirmPassword } from '@/utils/validation';
+import {
+  emailRules,
+  identifierRules,
+  passwordRules,
+  validateConfirmPassword,
+} from '@/utils/validation';
 
 // Actions
 import { handleSignUp } from '@/actions/auth';
@@ -64,7 +69,7 @@ const SignUpContent = () => {
         title: 'Failed',
         message: error.message,
         type: 'error',
-        timeOut: 3000,
+        timeOut: 5000,
       });
       setIsLoading(false);
       return;
@@ -79,13 +84,7 @@ const SignUpContent = () => {
         <Controller
           name="email"
           control={control}
-          rules={{
-            required: 'This field is required',
-            pattern: {
-              value: REGEX_EMAIL,
-              message: 'Invalid email address',
-            },
-          }}
+          rules={emailRules(REGEX_EMAIL)}
           render={({ field, fieldState: { error, invalid } }) => (
             <Input
               isRequired
@@ -103,13 +102,7 @@ const SignUpContent = () => {
         <Controller
           name="username"
           control={control}
-          rules={{
-            required: 'This field is required',
-            minLength: {
-              value: 6,
-              message: 'Username must be at least 6 characters ',
-            },
-          }}
+          rules={identifierRules}
           render={({ field, fieldState: { error, invalid } }) => (
             <Input
               isRequired
@@ -127,13 +120,7 @@ const SignUpContent = () => {
         <Controller
           name="password"
           control={control}
-          rules={{
-            required: 'This field is required',
-            pattern: {
-              value: REGEX_PASSWORD,
-              message: 'Invalid password format',
-            },
-          }}
+          rules={passwordRules(REGEX_PASSWORD)}
           render={({ field, fieldState: { error, invalid } }) => (
             <InputPassword
               isInvalid={invalid}

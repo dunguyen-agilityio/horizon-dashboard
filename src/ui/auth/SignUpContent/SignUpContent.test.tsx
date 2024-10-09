@@ -62,7 +62,7 @@ describe('SignUpContent tests', () => {
     });
 
     await waitFor(() => {
-      expect(getByText('This field is required')).toBeInTheDocument();
+      expect(getByText('Password is required')).toBeInTheDocument();
     });
   });
 
