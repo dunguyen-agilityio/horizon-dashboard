@@ -28,7 +28,7 @@ describe('ProfileDropDown tests', () => {
   it('Should match snapshot', () => {
     const { container } = render(
       <ProfileDropDown
-        avatar={MOCK_AVATAR.url}
+        avatar={MOCK_AVATAR}
         username={MOCK_USERS[0].username}
       />,
     );
@@ -38,7 +38,7 @@ describe('ProfileDropDown tests', () => {
   it('Should show profile DropdownContent when click Trigger button', () => {
     const { getByTestId } = render(
       <ProfileDropDown
-        avatar={MOCK_AVATAR.url}
+        avatar={MOCK_AVATAR}
         username={MOCK_USERS[0].username}
       />,
     );
@@ -58,7 +58,7 @@ describe('ProfileDropDown tests', () => {
   it('Should show ConfirmSignOutModal when click Sign Out button', () => {
     const { getByTestId } = render(
       <ProfileDropDown
-        avatar={MOCK_AVATAR.url}
+        avatar={MOCK_AVATAR}
         username={MOCK_USERS[0].username}
       />,
     );
@@ -79,7 +79,7 @@ describe('ProfileDropDown tests', () => {
   it('Should hidden ConfirmSignOutModal when click Close button', async () => {
     const { getByTestId } = render(
       <ProfileDropDown
-        avatar={MOCK_AVATAR.url}
+        avatar={MOCK_AVATAR}
         username={MOCK_USERS[0].username}
       />,
     );
@@ -104,7 +104,7 @@ describe('ProfileDropDown tests', () => {
   it('Should hidden ConfirmSignOutModal when click Sign Out button', async () => {
     const { getByTestId } = render(
       <ProfileDropDown
-        avatar={MOCK_AVATAR.url}
+        avatar={MOCK_AVATAR}
         username={MOCK_USERS[0].username}
       />,
     );
@@ -132,7 +132,7 @@ describe('ProfileDropDown tests', () => {
   it('Should trigger function signOut when click Sign Out button', async () => {
     const { getByTestId } = render(
       <ProfileDropDown
-        avatar={MOCK_AVATAR.url}
+        avatar={MOCK_AVATAR}
         username={MOCK_USERS[0].username}
       />,
     );
