@@ -33,7 +33,7 @@ interface IProfileDropdownProps {
 
 const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
   const [isVisible, setIsVisible] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClose = () => {
@@ -45,7 +45,9 @@ const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
   };
 
   const handleLogout = async () => {
+    setIsLoading(true);
     await handleSignOut();
+    setIsLoading(false);
     handleClose();
   };
 
@@ -109,6 +111,7 @@ const ProfileDropDown = ({ avatar, username }: IProfileDropdownProps) => {
               <Button
                 data-testId="modal-button-sign-out"
                 color="primary"
+                isLoading={isLoading}
                 onPress={handleLogout}
               >
                 Sign Out

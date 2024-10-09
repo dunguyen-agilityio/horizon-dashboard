@@ -37,7 +37,7 @@ const TeamMember = ({ members }: TeamMemberProps) => (
     <Listbox
       aria-label="Members list"
       items={members}
-      classNames={{ list: 'gap-4', base: 'flex-1 px-0 sm:px-4' }}
+      classNames={{ list: 'gap-4', base: 'flex-1' }}
     >
       {(item) => {
         const { id, fullName, avatar, role } = formatUser(item);
