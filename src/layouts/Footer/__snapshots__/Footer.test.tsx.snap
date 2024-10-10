@@ -3,7 +3,7 @@
 exports[`Footer component Footer should render match snapshot 1`] = `
 <div>
   <footer
-    class="sticky bottom-0 z-50 w-full bg-gray dark:bg-indigo-dark flex flex-col justify-between items-center px-1 gap-2 lg:gap-0 lg:flex-row xl:px-7 mb-6"
+    class="sticky bottom-0 z-30 w-full bg-gray dark:bg-indigo-dark flex flex-col justify-between items-center px-1 gap-2 lg:gap-0 lg:flex-row xl:px-7 pb-6"
   >
     <p
       class="text-primary dark:text-white text-small font-medium text-secondary text-center"

@@ -3,7 +3,7 @@
 exports[`NTFHistory should match snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col bg-white dark:bg-indigo rounded-md w-full 4xl:max-w-nftCard overflow-auto shadow-md pb-[46px] pt-[19px]"
+    class="flex flex-col bg-white dark:bg-indigo rounded-md w-full xl:max-w-nftCard overflow-auto shadow-md pb-[46px] pt-[19px]"
   >
     <div
       class="flex items-center justify-between p-3 xs:p-[18px]"
@@ -15,6 +15,7 @@ exports[`NTFHistory should match snapshot 1`] = `
       </p>
       <button
         class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
+        disabled=""
         type="button"
       >
         See all

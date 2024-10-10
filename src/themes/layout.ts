@@ -9,7 +9,7 @@ export const width = {
 };
 
 export const maxWidth = {
-  nftCard: '484px',
+  nftCard: '480px',
 };
 
 export const screens = {

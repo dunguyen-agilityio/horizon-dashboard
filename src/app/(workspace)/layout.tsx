@@ -21,11 +21,11 @@ const RootLayout = async ({ children }: React.PropsWithChildren) => {
       <div className="hidden xl:block">
         <Navbar isAuthenticated={isAuthenticated} />
       </div>
-      <div className="flex-grow flex flex-col w-full xl:w-main items-center pt-4 md:pt-[50px] px-2 md:px-5 gap-5">
+      <div className="flex-grow flex flex-col w-full min-h-screen xl:w-main items-center px-2 md:px-5 gap-5">
         <Suspense>
           <Header isAuthenticated={isAuthenticated} userData={userData} />
         </Suspense>
-        <main className="scrollbar flex-grow flex flex-col w-full max-w-screen-5xl h-0 overflow-y-auto bg-gray dark:bg-indigo-dark gap-[30px] px-0 pr-4">
+        <main className="scrollbar flex-grow flex flex-col w-full max-w-screen-5xl h-auto overflow-y-auto bg-gray dark:bg-indigo-dark gap-[30px] px-0">
           {children}
         </main>
         <Footer />

@@ -40,7 +40,7 @@ const ContributorPage = async ({
 
   return (
     <>
-      <div className="flex w-full justify-center mt-4 xs:justify-end">
+      <div className="flex w-full justify-center mt-4 xs:justify-end mb-5">
         <DateRangePicker />
       </div>
       <ContributorTable

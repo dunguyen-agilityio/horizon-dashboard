@@ -104,61 +104,55 @@ const formatDataCreator = (row: Creator, key: keyof Creator) => {
   }
 };
 
-const NFTTopCreators = ({ data }: TopCreatorsProps) => {
-  const handleSeeAll = () => {
-    // TODO: Should handle it later
-  };
+const NFTTopCreators = ({ data }: TopCreatorsProps) => (
+  <div className="flex flex-col bg-white dark:bg-indigo-light rounded-md w-full xl:max-w-nftCard overflow-auto shadow-md pt-[19px]">
+    <div className="flex items-center justify-between p-[18px]">
+      <Text className="leading-8 font-poppins font-bold text-blue-450">
+        Top Creators
+      </Text>
 
-  return (
-    <div className="flex flex-col bg-white dark:bg-indigo-light rounded-md w-full 4xl:max-w-nftCard overflow-auto shadow-md pt-[19px]">
-      <div className="flex items-center justify-between p-[18px]">
-        <Text className="leading-8 font-poppins font-bold text-blue-450">
-          Top Creators
-        </Text>
-
-        <Button
-          className="text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
-          onClick={handleSeeAll}
-        >
-          See all
-        </Button>
-      </div>
-
-      <Table
-        classNames={{
-          thead: 'bg-transparent',
-          tbody: 'bg-gray dark:bg-indigo',
-        }}
-        className="mt-3 first:[&_*:is(th,td)]:pr-0 [&_*:is(th,td)]:bg-transparent [&_*:is(th,td)]:dark:transparent [&>div]:p-0 [&>div]:bg-transparent [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-4 [&>div]:overflow-visible"
+      <Button
+        className="text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
+        disabled
       >
-        <TableHeader columns={columns}>
-          {({ key, label }) => (
-            <TableColumn key={key} className={key === 'userName' ? 'pl-7' : ''}>
-              <Text variant={TEXT_VARIANT.SECONDARY} size={TEXT_SIZE.sm}>
-                {label}
-              </Text>
-            </TableColumn>
-          )}
-        </TableHeader>
-        <TableBody items={data} emptyContent="No creator to display.">
-          {(item) => (
-            <TableRow key={item.id}>
-              {(columnKey) => (
-                <TableCell
-                  className={cn(
-                    columnKey === 'userName' ? 'px-0' : '',
-                    'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
-                  )}
-                >
-                  {formatDataCreator(item, columnKey as keyof Creator)}
-                </TableCell>
-              )}
-            </TableRow>
-          )}
-        </TableBody>
-      </Table>
+        See all
+      </Button>
     </div>
-  );
-};
+
+    <Table
+      classNames={{
+        thead: 'bg-transparent',
+        tbody: 'bg-gray dark:bg-indigo',
+      }}
+      className="mt-3 first:[&_*:is(th,td)]:pr-0 [&_*:is(th,td)]:bg-transparent [&_*:is(th,td)]:dark:transparent [&>div]:p-0 [&>div]:bg-transparent [&>div]:shadow-none [&_*:is(th,td)]:pt-2 [&_*:is(th,td)]:pb-4 [&>div]:overflow-visible"
+    >
+      <TableHeader columns={columns}>
+        {({ key, label }) => (
+          <TableColumn key={key} className={key === 'userName' ? 'pl-7' : ''}>
+            <Text variant={TEXT_VARIANT.SECONDARY} size={TEXT_SIZE.sm}>
+              {label}
+            </Text>
+          </TableColumn>
+        )}
+      </TableHeader>
+      <TableBody items={data} emptyContent="No creator to display.">
+        {(item) => (
+          <TableRow key={item.id}>
+            {(columnKey) => (
+              <TableCell
+                className={cn(
+                  columnKey === 'userName' ? 'px-0' : '',
+                  'group-aria-[selected=false]:group-data-[hover=true]:bg-transparent',
+                )}
+              >
+                {formatDataCreator(item, columnKey as keyof Creator)}
+              </TableCell>
+            )}
+          </TableRow>
+        )}
+      </TableBody>
+    </Table>
+  </div>
+);
 
 export default NFTTopCreators;
