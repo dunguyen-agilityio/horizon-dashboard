@@ -65,7 +65,7 @@ const Header = ({ isAuthenticated, userData }: HeaderProps) => {
   const handleNavigateFavoritePage = () => push(PRIVATE_ROUTES.NFT_FAVORITES);
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0 w-full xl:pl-2.5">
+    <header className="pt-4 md:pt-[50px] sticky top-0 z-30 bg-gray dark:bg-indigo-dark flex justify-between flex-col gap-4 sm:items-end sm:flex-row sm:gap-0 w-full xl:pl-2.5">
       <div className="flex flex-col gap-1 mr-2">
         {!!breadcrumbs.length && (
           <>
@@ -99,7 +99,7 @@ const Header = ({ isAuthenticated, userData }: HeaderProps) => {
           onSearch={debounce(handleSearch)}
           defaultValue={query}
         />
-        <div className="absolute top-0 right-0 xl:static flex gap-2 sm:gap-6 items-center">
+        <div className="absolute top-4 md:top-14 right-0 xl:static flex gap-2 sm:gap-6 items-center">
           {isAuthenticated && <Notification notifies={MOCK_NOTIFIES} />}
           {isAuthenticated && (
             <BoxIcon

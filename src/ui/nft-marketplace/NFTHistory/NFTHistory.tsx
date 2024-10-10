@@ -13,13 +13,16 @@ interface NFTHistoryProps {
 }
 
 const NFTHistory = ({ historyList }: NFTHistoryProps) => (
-  <div className="flex flex-col bg-white dark:bg-indigo rounded-md w-full 4xl:max-w-nftCard overflow-auto shadow-md pb-[46px] pt-[19px]">
+  <div className="flex flex-col bg-white dark:bg-indigo rounded-md w-full xl:max-w-nftCard overflow-auto shadow-md pb-[46px] pt-[19px]">
     <div className="flex items-center justify-between p-3 xs:p-[18px]">
       <Text className="leading-8 font-poppins font-bold text-blue-450">
         History
       </Text>
 
-      <Button className="text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]">
+      <Button
+        className="text-blue-450 dark:text-white font-medium bg-gray dark:bg-purple-750 rounded-[70px]"
+        disabled
+      >
         See all
       </Button>
     </div>
