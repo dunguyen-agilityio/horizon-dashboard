@@ -45,6 +45,7 @@ export const ImageWithBlur = ({
     objectFit={objectFit}
     className={additionalClasses}
     blurDataURL={BLUR_IMAGE}
+    quality={100}
   />
 );
 

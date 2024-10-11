@@ -2,7 +2,7 @@ import { Skeleton } from '@nextui-org/skeleton';
 
 const NFTDetailSkeleton = () => (
   <div className="flex gap-10 pb-20 flex-wrap 2xl:flex-nowrap">
-    <div className="relative h-[450px] w-[1090px] rounded-md overflow-hidden">
+    <div className="relative h-[450px] w-[900px] rounded-md overflow-hidden">
       <Skeleton className="w-full h-full dark:bg-indigo-dark" />
     </div>
     <div className="flex flex-col xl:w-2/3 2xl:w-1/3 gap-5">
