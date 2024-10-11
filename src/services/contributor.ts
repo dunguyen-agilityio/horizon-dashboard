@@ -31,9 +31,10 @@ export const getContributor = ({
     endDate &&
     `filters[users_permissions_user][createdAt][$gte]=${startDate}&filters[users_permissions_user][createdAt][$lte]=${endDate}`;
 
+  // search by username
   const SEARCH_QUERY =
     searchValue &&
-    `filters[$or][0][users_permissions_user][firstName][$containsi]=${searchValue}&filters[$or][1][users_permissions_user][lastName][$containsi]=${searchValue}`;
+    `filters[$or][0][users_permissions_user][username][$containsi]=${searchValue}`;
 
   const queryParams = new URLSearchParams({
     'pagination[page]': page,
