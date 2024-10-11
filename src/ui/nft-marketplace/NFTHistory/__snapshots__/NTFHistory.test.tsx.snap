@@ -38,8 +38,8 @@ exports[`NTFHistory should match snapshot 1`] = `
             height="66"
             loading="lazy"
             sizes=""
-            src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=256&q=75"
-            srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=256&q=75 2x"
+            src="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=256&q=100"
+            srcset="/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=96&q=100 1x, /_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdn5vw6fjp%2Fimage%2Fupload%2Fv1726630608%2Fimage_de1e29b0b7.png&w=256&q=100 2x"
             style="color: transparent; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
             width="66"
           />

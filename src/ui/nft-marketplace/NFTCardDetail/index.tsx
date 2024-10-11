@@ -17,11 +17,12 @@ const NFTCardDetail = async ({ data }: NFTCardDetailProps) => {
 
   return (
     <div className="flex gap-10 pb-20 flex-wrap 2xl:flex-nowrap">
-      <div className="relative h-[450px] w-[1090px] rounded-md overflow-hidden">
+      <div className="relative h-[450px] w-[900px] rounded-md overflow-hidden">
         <ImageWithBlur
           src={image.url}
           alt="NFT Cover"
-          additionalClasses="object-cover"
+          additionalClasses="object-fit"
+          sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 900px"
           fill
         />
       </div>
